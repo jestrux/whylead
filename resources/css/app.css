@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #f26b21;
+    --color-primary-light: #f4fff3;
+    --color-accent: #19124b;
+    --color-primary-dark: #d55612;
+    --color-canvas: #ffffff;
+    --color-content: #000000;
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+.btn {
+    @apply transition-all duration-150 inline-flex uppercase tracking-wide text-white items-center justify-center border bg-primary hover:bg-primary-dark border-primary;
+}
+
+.btn:not(.btn-sm) {
+    @apply font-bold gap-2 text-base/none px-5 py-4 rounded-lg;
+}
+
+.btn-sm {
+    @apply font-semibold gap-1 text-sm/none px-3 py-2.5 rounded-md;
+}
+
+.btn.btn-outline {
+    @apply text-current border-current bg-transparent hover:opacity-60;
+}
+
+strong {
+    @apply text-primary font-semibold;
+}
+
+.outline-text {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px currentColor;
+}
+
+* {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    font-weight: 500;
+}
