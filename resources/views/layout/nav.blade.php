@@ -111,7 +111,7 @@
             <x-menu-item url="{{ url('#') }}">About Us</x-menu-item>
 
             <div class="relative">
-                <a href="#" class="btn btn-sm">
+                <a href="#" class="btn btn-xs">
                     <span class="capitalize my-1 mx-2">
                         Start thriving
                     </span>

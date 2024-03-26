@@ -1,19 +1,22 @@
-<section class="mt-16 lg:mt-40 pt-12s pb-6 md:pb-16 px-2 lg:px-0">
+<section class="py-10 lg:py-24 px-2 lg:px-0">
     <div class="max-w-6xl mx-auto flex flex-col gap-12 items-center">
         <div class="text-center">
-            <h2 class="text-2xl font-bold md:text-[40px]">
-                Frequently asked questions
+            <h2 class="text-2xl md:text-5xl/[1.3] font-bold uppercase">
+                Frequently
+                <span class="hidden md:inline"><br /></span>
+                asked
+                <span class="font-normal">questions</span>
             </h2>
 
-            <p class="mt-3 text-xl leading-loose opacity-80">
-                Here are some of the questions that our customers ask often.
-            </p>
+            {{-- <p class="mt-3 text-xl leading-loose opacity-80">
+                Here are some of the questions that people such as yourself ask us often.
+            </p> --}}
         </div>
 
         @pierdata('FAQ')
         <div x-data="{
             expanded: -1,
-            indices: {{collect($data)->keys()}},
+            indices: {{ collect($data)->keys() }},
             get visibleIndices() {
                 return this.indices.slice(0, 3);
             },

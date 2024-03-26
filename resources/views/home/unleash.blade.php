@@ -1,4 +1,4 @@
-<section class="bg-black text-white" x-data="{
+<section class="bg-black text-white relative" x-data="{
     current: 0,
     target: 1,
     roll() {
@@ -21,46 +21,57 @@
         requestAnimationFrame(handle);
     }
 }" x-intersect.once.threshold.65="roll()">
-    <div class="py-10 lg:py-16 relative max-w-7xl mx-auto">
+    <img class="absolute inset-0 size-full object-cover opacity-20"
+        src="https://img.freepik.com/free-photo/group-afro-americans-working-together_1303-8971.jpg?w=2000&t=st=1711451492~exp=1711452092~hmac=eebe50bf03950c1cf0d9b5abcd86f9f0a6749d7df99199e59ca725df3814559b"
+        alt="" />
+
+    <div class="py-10 lg:py-14 relative max-w-7xl mx-auto">
         <div class="flex flex-col gap-4 lg:gap-12 items-center justify-center">
             <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-2xl lg:text-4xl/[1.2]">
-                    <span class="lg:text-[60px]/[1.2] font-bold uppercase tracking-wide">
+                <h2 class="text-2xl lg:text-5xl/[1.3] font-bold max-w-4xl">
+                    <span class="uppercase tracking-wide">
                         <span class="font-light">Unleash</span>
-                        <span class="hidden md:inline"><br /></span>
                         the potential
+                        <span class="hidden md:inline"><br /></span>
+                        <span class="font-light">of your organisation</span>
                     </span>
-
-                    <span class="hidden md:inline"><br /></span>
-
-                    <span class="font-normal inline-block pt-1 leading-snug">in your people, team and
-                        organisation</span>
                 </h2>
 
-                <a href="#" class="mt-8 btn">
+                <a href="#" class="mt-6 btn">
                     Thrive with WhyLead
                 </a>
             </div>
 
-            <div class="mt-12 w-full">
-                <ul role="list" class="px-6 flex flex-col gap-12 lg:flex-row lg:justify-between">
+            <div class="w-full">
+                <ul role="list" class="px-6 flex flex-col lg:grid grid-cols-3 justify-between gap-8">
                     @php
                         $numbers = [
                             [
                                 'percent' => 100,
                                 'color' => '#22C55D',
-                                'label' => 'of clients told us our solutions addressed their pain points.',
+                                'title' => 'Effective tailored solutions',
+                                // 'description' =>
+                                //     'Every client has seen their challenges turn into opportunities for growth with our tailored solutions.',
+                                'description' =>
+                                    'Every client has seen their challenges turn into opportunities for growth',
                             ],
                             [
                                 'percent' => 98,
                                 'color' => '#3C82F6',
-                                'label' =>
-                                    'of clients told us they have identified new possibilities for improvement after our sessions.',
+                                'title' => 'Post-engagement growth',
+                                'description' =>
+                                    'Nearly all clients discover new growth avenues post-engagement with our expertise after working with WhyLead.',
+                                'description' =>
+                                    'Nearly all clients discover new growth avenues post-engagement with our expertise',
                             ],
                             [
                                 'percent' => 82,
                                 'color' => '#EBB305',
-                                'label' => 'of clients told us the training programs improved their skills.',
+                                'title' => 'Team skill improvement',
+                                // 'description' =>
+                                //     'Most of the clients who have worked with WhyLead managed to improve their skills through our programs.',
+                                'description' =>
+                                    'Most of the clients who have worked with WhyLead managed to improve their skills through.',
                             ],
                         ];
                     @endphp
@@ -74,9 +85,9 @@
                             }
                         @endphp
 
-                        <li class="flex flex-col items-center justify-center gap-3 text-center">
+                        <li class="flex flex-col items-center text-center gap-3">
                             <div class="relative">
-                                <svg class="-rotate-90 size-40 lg:size-72" viewBox="0 0 120 120" stroke-width="8">
+                                <svg class="-rotate-90 size-40 lg:size-34" viewBox="0 0 120 120" stroke-width="6">
                                     <circle cx="60" cy="60" r="54" fill="none" stroke="currentColor"
                                         stroke-opacity="0.2" />
                                     <circle cx="60" cy="60" r="54" fill="none"
@@ -86,16 +97,21 @@
                                         x-bind:stroke-dashoffset="`calc(100 - ${Math.min({{ $progress }}, Math.floor({{ $progress }} * current))})`" />
                                 </svg>
 
-                                <div
-                                    class="absolute inset-0 flex items-center justify-center font-light text-3xl lg:text-6xl">
+                                <div class="absolute inset-0 flex items-center justify-center text-4xl">
                                     <span
                                         x-text="Math.min({{ $percent }}, Math.floor({{ $percent }} * current))"></span>%
                                 </div>
                             </div>
 
-                            <span class="font-light leading-loose max-w-xs">
-                                {{ $entry['label'] }}
-                            </span>
+                            <div class="mb-3">
+                                <h3 class="text-xl font-semibold">
+                                    {{ $entry['title'] }}
+                                </h3>
+
+                                <p class="mt-1.5 text-sm/loose opacity-70">
+                                    {{ $entry['description'] }}
+                                </p>
+                            </div>
                         </li>
                     @endforeach
                 </ul>

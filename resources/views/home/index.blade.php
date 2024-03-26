@@ -16,7 +16,9 @@
         </div>
     </div>
 
-    @include('home.impact')
+    @include('home.unlock-potential')
+
+    @include('home.unleash')
 
     @include('home.faqs')
 

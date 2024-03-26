@@ -37,12 +37,16 @@
                     @apply transition-all duration-150 inline-flex uppercase tracking-wide text-white items-center justify-center border bg-primary hover:bg-primary-dark border-primary;
                 }
 
-                .btn:not(.btn-sm) {
+                .btn:not(.btn-sm):not(.btn-xs) {
                     @apply font-bold gap-2 text-base/none px-5 py-4 rounded-lg;
                 }
 
                 .btn-sm {
                     @apply font-semibold gap-1 text-sm/none px-3 py-2.5 rounded-md;
+                }
+
+                .btn-xs {
+                    @apply gap-1 font-semibold text-sm/none px-2 py-1.5 rounded-md;
                 }
 
                 .btn.btn-outline {
