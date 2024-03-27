@@ -1,0 +1,23 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-DEW05OmH.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/fonts/gotham-bold.woff": {
+    "file": "assets/gotham-bold-BMZRIApb.woff",
+    "src": "resources/fonts/gotham-bold.woff"
+  },
+  "resources/fonts/gotham-book.woff": {
+    "file": "assets/gotham-book-Cv5ccy6O.woff",
+    "src": "resources/fonts/gotham-book.woff"
+  },
+  "resources/fonts/gotham-light.woff": {
+    "file": "assets/gotham-light-BQwj-Ljs.woff",
+    "src": "resources/fonts/gotham-light.woff"
+  },
+  "resources/fonts/gotham-medium.woff": {
+    "file": "assets/gotham-medium-DudCetnN.woff",
+    "src": "resources/fonts/gotham-medium.woff"
+  }
+}
