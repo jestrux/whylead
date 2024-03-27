@@ -1455,7 +1455,7 @@
                                                     <div
                                                         class="transition-all duration-200 max-h-0 overflow-hidden"
                                                         :style="expanded == index ?
-                                                    `max-height:  ${ $el.scrollHeight }px` : ''"
+                                                        `max-height:  ${ $el.scrollHeight }px` : ''"
                                                     >
                                                         <p
                                                             class="mb-3 -mt-1 text-base leading-loose text-content/70"
@@ -1724,13 +1724,13 @@
                             <div
                                 class="group transition-colors relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6"
                                 x-bind:class="effectiveLeaders ?
-                                'pointer-events-none bg-white lg:bg-white/5 lg:ring-1 lg:ring-inset lg:ring-white/20 text-accent lg:text-white' :
-                                'text-white/70 lg:text-white'"
+                                    'pointer-events-none bg-white lg:bg-white/5 lg:ring-1 lg:ring-inset lg:ring-white/20 text-accent lg:text-white' :
+                                    'text-white/70 lg:text-white'"
                             >
                                 <div
                                     class="transition absolute inset-0 bg-white/5 scale-x-0 origin-left group-hover:scale-x-100 rounded-l-xl"
                                     x-bind:class="effectiveLeaders ? 'scale-x-100' :
-                                    'group-hover:scale-x-100'"
+                                        'group-hover:scale-x-100'"
                                 ></div>
 
                                 <div
@@ -1771,13 +1771,13 @@
                             <div
                                 class="group transition-colors relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6"
                                 x-bind:class="!effectiveLeaders ?
-                                'pointer-events-none bg-white lg:bg-white/5 lg:ring-1 lg:ring-inset lg:ring-white/20 text-accent lg:text-white' :
-                                'text-white/70 lg:text-white'"
+                                    'pointer-events-none bg-white lg:bg-white/5 lg:ring-1 lg:ring-inset lg:ring-white/20 text-accent lg:text-white' :
+                                    'text-white/70 lg:text-white'"
                             >
                                 <div
                                     class="transition absolute inset-0 bg-white/5 scale-x-0 origin-left group-hover:scale-x-100 rounded-l-xl"
                                     x-bind:class="!effectiveLeaders ? 'scale-x-100' :
-                                    'group-hover:scale-x-100'"
+                                        'group-hover:scale-x-100'"
                                 ></div>
 
                                 <div
@@ -2971,7 +2971,7 @@
                         >
                             <img
                                 class="absolute inset-0 size-full rounded-2xl object-cover object-top"
-                                src="https://img.freepik.com/free-photo/team-business-people-collaborating-plan-financial-strategy-doing-teamwork-create-sales-report-laptop-office-employees-working-project-strategy-analyze-career-growth_482257-39530.jpg?t=st=1711451788~exp=1711455388~hmac=f1a48dbfd4dc5be458121dbf6223d7a8571489426ae87868507a86a95d8046c0&amp;w=2000"
+                                src="https://res.cloudinary.com/sfp-app/image/upload/v1711540972/z87huht3tyivdybtg6hv.jpg"
                             />
 
                             <div
@@ -2999,7 +2999,7 @@
                         >
                             <img
                                 class="absolute inset-0 size-full rounded-2xl object-cover object-top"
-                                src="https://img.freepik.com/free-photo/authentic-small-youthful-marketing-agency_23-2150167354.jpg?t=st=1711451869~exp=1711455469~hmac=30ed1cb4cd24d64a5d53d52482dcc0f299006070d368b252a708b0cd16256325&amp;w=2000"
+                                src="https://res.cloudinary.com/sfp-app/image/upload/v1711540989/ykp8fjasngktaayokhab.jpg"
                             />
 
                             <div
@@ -3027,7 +3027,7 @@
                         >
                             <img
                                 class="absolute inset-0 size-full rounded-2xl object-cover object-top"
-                                src="https://img.freepik.com/free-photo/full-shot-silhouettes-people-jumping-sunset_23-2150557430.jpg?w=2000&amp;t=st=1711537141~exp=1711537741~hmac=67cf875150d7413430a23b7dd6bdf447d01f707cf40a1f2100e41c28aeed2f0a"
+                                src="https://res.cloudinary.com/sfp-app/image/upload/v1711540237/sxj9meo6zbkadvvlkw15.jpg"
                             />
 
                             <div
@@ -3135,7 +3135,7 @@
                             >
                                 <img
                                     class="rotate-6 scale-125 w-full h-full object-cover object-top"
-                                    src="https://img.freepik.com/free-photo/front-view-young-people-hostel_23-2150446750.jpg?t=st=1711496237~exp=1711499837~hmac=c251df7a4bc21a3fa337269454dbe4fedc63248063769b191fce96305ea1c0a0&w=2000"
+                                    src="https://res.cloudinary.com/sfp-app/image/upload/v1711540531/vudvwz3j0vmlsqslsjio.jpg"
                                     alt=""
                                 />
 
@@ -4375,32 +4375,32 @@
 
         <section
             x-data="{
-    current: 0,
-    target: 1,
-    roll() {
-        this.current = 0;
-        const interval = 100;
-        const step = 0.1;
-        var rafReference;
+        current: 0,
+        target: 1,
+        roll() {
+            this.current = 0;
+            const interval = 100;
+            const step = 0.1;
+            var rafReference;
 
-        const handle = () => {
-            if (this.current < this.target) {
-                this.current += step;
+            const handle = () => {
+                if (this.current < this.target) {
+                    this.current += step;
 
-                setTimeout(() => rafReference = requestAnimationFrame(handle), 80);
-            } else {
-                cancelAnimationFrame(handle);
-                this.current = this.target;
-            }
-        };
+                    setTimeout(() => rafReference = requestAnimationFrame(handle), 80);
+                } else {
+                    cancelAnimationFrame(handle);
+                    this.current = this.target;
+                }
+            };
 
-        requestAnimationFrame(handle);
-    }
-}"
+            requestAnimationFrame(handle);
+        }
+    }"
             x-intersect.once.threshold.65="roll()"
             class="bg-black text-white relative bg-fixed bg-center"
             style="
-                background-image: url('https://img.freepik.com/free-photo/group-afro-americans-working-together_1303-8971.jpg?w=2000&t=st=1711451492~exp=1711452092~hmac=eebe50bf03950c1cf0d9b5abcd86f9f0a6749d7df99199e59ca725df3814559b');
+                background-image: url('https://res.cloudinary.com/sfp-app/image/upload/v1711541008/tunaeun0pvs42u6g1mks.jpg');
             "
         >
             <div class="absolute inset-0 bg-black/95 opacity-90"></div>
@@ -4614,18 +4614,18 @@
 
                 <div
                     x-data="{
-            expanded: -1,
-            indices: [0,1,2,3,4,5],
-            get visibleIndices() {
-                return this.indices.slice(0, 3);
-            },
-            shuffle(array) {
-                return [...array].sort(() => Math.random() - 0.5);
-            },
-            init() {
-                this.indices = this.shuffle(this.shuffle(this.indices));
-            },
-        }"
+                expanded: -1,
+                indices: [0,1,2,3,4,5],
+                get visibleIndices() {
+                    return this.indices.slice(0, 3);
+                },
+                shuffle(array) {
+                    return [...array].sort(() => Math.random() - 0.5);
+                },
+                init() {
+                    this.indices = this.shuffle(this.shuffle(this.indices));
+                },
+            }"
                     class="flex-1 w-full border-b divide-y border-stroke divide-stroke"
                 >
                     <button

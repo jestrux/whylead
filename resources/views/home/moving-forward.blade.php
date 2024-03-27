@@ -61,7 +61,7 @@
                     <div
                         class="relative rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
                         <img class="rotate-6 scale-125 w-full h-full object-cover object-top"
-                            src="https://img.freepik.com/free-photo/front-view-young-people-hostel_23-2150446750.jpg?t=st=1711496237~exp=1711499837~hmac=c251df7a4bc21a3fa337269454dbe4fedc63248063769b191fce96305ea1c0a0&w=2000"
+                            src="https://res.cloudinary.com/sfp-app/image/upload/v1711540531/vudvwz3j0vmlsqslsjio.jpg"
                             alt="" />
 
                         <div class="absolute inset-0 flex items-center justify-center">

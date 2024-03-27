@@ -23,14 +23,14 @@
                         [
                             // 'image' =>
                             'image' =>
-                                'https://img.freepik.com/free-photo/team-business-people-collaborating-plan-financial-strategy-doing-teamwork-create-sales-report-laptop-office-employees-working-project-strategy-analyze-career-growth_482257-39530.jpg?t=st=1711451788~exp=1711455388~hmac=f1a48dbfd4dc5be458121dbf6223d7a8571489426ae87868507a86a95d8046c0&w=2000',
+                                'https://res.cloudinary.com/sfp-app/image/upload/v1711540972/z87huht3tyivdybtg6hv.jpg',
                             //     'https://img.freepik.com/free-photo/group-afro-americans-working-together_1303-8971.jpg?w=2000&t=st=1711451492~exp=1711452092~hmac=eebe50bf03950c1cf0d9b5abcd86f9f0a6749d7df99199e59ca725df3814559b',
                             'title' => 'Tell Us Your Unique Needs',
                             // 'title' => 'Tell Us About Your Organisation\'s unique Needs',
                         ],
                         [
                             'image' =>
-                                'https://img.freepik.com/free-photo/authentic-small-youthful-marketing-agency_23-2150167354.jpg?t=st=1711451869~exp=1711455469~hmac=30ed1cb4cd24d64a5d53d52482dcc0f299006070d368b252a708b0cd16256325&w=2000',
+                                'https://res.cloudinary.com/sfp-app/image/upload/v1711540989/ykp8fjasngktaayokhab.jpg',
                             // 'title' => 'We Co-Create a Custom-made Solution just for you',
                             'title' => 'We Co-Create a Solution',
                         ],
@@ -38,7 +38,7 @@
                             // 'image' =>
                             //     'https://img.freepik.com/free-photo/happy-business-team-celebrating-success_1262-21070.jpg?t=st=1711452063~exp=1711455663~hmac=3166141d46a0c03ee0c29daaa920a4324a697d6cf2d8565b7d4752fae52f2c99&w=900',
                             'image' =>
-                                'https://img.freepik.com/free-photo/full-shot-silhouettes-people-jumping-sunset_23-2150557430.jpg?w=2000&t=st=1711537141~exp=1711537741~hmac=67cf875150d7413430a23b7dd6bdf447d01f707cf40a1f2100e41c28aeed2f0a',
+                                'https://res.cloudinary.com/sfp-app/image/upload/v1711540237/sxj9meo6zbkadvvlkw15.jpg',
                             // 'title' => 'You Unlock a Thriving Organisation',
                             'title' => 'Unlock a Thriving Organisation',
                         ],

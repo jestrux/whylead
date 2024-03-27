@@ -21,7 +21,7 @@
         requestAnimationFrame(handle);
     }
 }" x-intersect.once.threshold.65="roll()" class="bg-black text-white relative bg-fixed bg-center"
-    style="background-image: url('https://img.freepik.com/free-photo/group-afro-americans-working-together_1303-8971.jpg?w=2000&t=st=1711451492~exp=1711452092~hmac=eebe50bf03950c1cf0d9b5abcd86f9f0a6749d7df99199e59ca725df3814559b')">
+    style="background-image: url('https://res.cloudinary.com/sfp-app/image/upload/v1711541008/tunaeun0pvs42u6g1mks.jpg')">
     {{-- <img class="absolute inset-0 size-full object-cover opacity-20"
         src="https://img.freepik.com/free-photo/group-afro-americans-working-together_1303-8971.jpg?w=2000&t=st=1711451492~exp=1711452092~hmac=eebe50bf03950c1cf0d9b5abcd86f9f0a6749d7df99199e59ca725df3814559b"
         alt="" /> --}}
