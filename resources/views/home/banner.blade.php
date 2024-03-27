@@ -45,8 +45,8 @@
             <div class="flex-1 py-12 flex flex-col justify-center items-center md:max-w-5xl mx-auto lg:text-center">
                 <h1 class="text-3xl md:text-6xl/[1.2] font-bold mb-2 md:mb-4">
                     Strategic Leaps
-                    begin with a single,
-                    intentional
+                    Begin With a Single,
+                    Intentional
                     Step
                 </h1>
                 <p class="max-w-3xl mb-8 md:text-xl md:leading-loose opacity-90">
@@ -73,9 +73,9 @@
     </section>
 </div>
 
-<section class="bg-white px-6 lg:px-0">
+<section class="px-6 lg:px-0">
     <div class="flex flex-col items-center justify-center">
-        <p class="max-w-2xl mx-auto my-8 text-center text-base/loose opacity-50">
+        <p class="max-w-2xl mx-auto my-8 text-center text-lg/loose opacity-70">
             Chosen as Trusted Partners to Build Thriving Leaders, Cultures, Teams and Organizations by These
             Organizations
         </p>

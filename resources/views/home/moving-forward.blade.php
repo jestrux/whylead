@@ -1,5 +1,5 @@
-<section class="sbg-neutral-100">
-    <div class="px-6 lg:px-0 py-12 lg:pt-36 lg:pb-20 relative max-w-7xl mx-auto">
+<section class="bg-content/5">
+    <div class="px-6 lg:px-0 py-12 lg:py-20 relative max-w-7xl mx-auto">
         <div class="lg:grid grid-cols-2 gap-16">
             <div class="md:hidden">
                 <a href="#" class="block relative">
@@ -27,61 +27,30 @@
                 </a>
             </div>
 
-            <div class="pt-6 space-y-2 lg:space-y-4">
+            <div class="pt-6 flex flex-col gap-2">
                 <h2 class="text-2xl lg:text-5xl/[1.2] font-bold max-w-4xl">
-                    <span class="uppercase tracking-wide">
-                        <span class="outline-text">Thriving</span>
-                        in
-                        <span class="hidden md:inline"><br /></span>
-                        <span class="outline-texts">the middle</span>
+                    <span class="uppercase tracking-wides">
+                        <span class="outline-text">If everyone is</span>
+                        moving
+                        forward together,
+                        <span class="outline-text">then</span>
+                        {{-- <span class="hidden md:inline"><br /></span>> --}}
+                        success
+                        <span class="outline-text">takes care of itself</span>
+                        {{-- <span class="outline-text">Thriving</span>
+                        <span class="hidden md:inline"><br /></span>>
+                        <span class="outline-text">Thriving</span> --}}
                     </span>
                 </h2>
 
-                <p class="text-lg lg:text-xl font-bold">
-                    Thriving middle managers lead to a thriving organization
-                </p>
-
                 <p class="text-base/loose opacity-70">
-                    This program is designed to empower middle managers to thrive as change and alignment agents by
-                    inspiring their teams’ conviction, commitment, and a sense of congruence to drive strategic results
-                    for
-                    the organization. Key Outcomes for participating organizations include:
+                    Henry Ford was right. Organizations can only thrive consistently when the teams are healthy and
+                    people are aligned. We work with your teams to foster oneness through SPR.
                 </p>
 
-                <ul role="list" class="-my-2 divide-y divide-black/5">
-                    @php
-                        $checklist = [
-                            'Grow your Revenue and increase Your Profit ',
-                            'A happier workplace for all',
-                            'Alignment in delivering strategic outcomes',
-                        ];
-                    @endphp
-
-                    @foreach ($checklist as $item)
-                        <li class="flex items-center gap-3 py-2">
-                            <svg class="size-8 flex-none opacity-60" viewBox="0 0 24 24">
-                                <circle class="" cx="12" cy="12" r="8.25" stroke="currentColor"
-                                    stroke-width="1" stroke-opacity="1" fill="none" />
-                                <path
-                                    d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"
-                                    fill="currentColor"></path>
-                            </svg>
-
-                            <span class="text-base opacity-70">
-                                {{ $item }}
-                            </span>
-                        </li>
-                    @endforeach
-
-                    <li class="pt-5 pb-2 text-sm/relaxed opacity-60">
-                        Made up of individuals who are passionate about the mission, committed to results, and of high
-                        character.
-                    </li>
-                </ul>
-
-                <div class="sflex flex-col md:flex-row items-center gap-3">
+                <div class="mt-3 gap-3">
                     <a href="#" class="btn w-full md:w-auto">
-                        Sign up now
+                        Build a thriving team today
                     </a>
                 </div>
             </div>
@@ -92,7 +61,7 @@
                     <div
                         class="relative rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
                         <img class="rotate-6 scale-125 w-full h-full object-cover object-top"
-                            src="https://images.unsplash.com/photo-1622675103136-e4b90c9a33d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDMzfHxsZWFkZXJzaGlwJTIwdHJhaW5pbmd8ZW58MHx8fHwxNzA4NDMxMTM0fDA&ixlib=rb-4.0.3&q=80&w=1080"
+                            src="https://img.freepik.com/free-photo/front-view-young-people-hostel_23-2150446750.jpg?t=st=1711496237~exp=1711499837~hmac=c251df7a4bc21a3fa337269454dbe4fedc63248063769b191fce96305ea1c0a0&w=2000"
                             alt="" />
 
                         <div class="absolute inset-0 flex items-center justify-center">

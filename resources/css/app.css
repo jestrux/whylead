@@ -1,5 +1,29 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: "Gotham";
+    font-weight: 300;
+    src: url("../fonts/gotham-light.woff");
+}
+
+@font-face {
+    font-family: "Gotham";
+    font-weight: 500;
+    src: url("../fonts/gotham-book.woff");
+}
+
+@font-face {
+    font-family: "Gotham";
+    font-weight: 600;
+    src: url("../fonts/gotham-medium.woff");
+}
+
+@font-face {
+    font-family: "Gotham";
+    font-weight: 700;
+    src: url("../fonts/gotham-bold.woff");
+}
+
 @theme {
     --color-primary: #f26b21;
     --color-primary-light: #f4fff3;

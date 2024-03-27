@@ -131,16 +131,16 @@
         <div class="fixed inset-0 z-50 bg-black/50 flex items-center justify-between">
             <div class="w-full max-w-6xl mx-auto relative">
                 <button x-on:click="challenge = null"
-                    class="absolute p-1 rounded right-3 lg:-right-3 -top-4 lg:-top-3 z-50 bg-black text-white">
+                    class="absolute p-1 rounded right-3 lg:-right-3 -top-4 lg:-top-3 z-50 bg-content text-canvas">
                     <svg class="size-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
                     </svg>
                 </button>
 
-                <div class="relative lg:grid grid-cols-12 bg-white rounded-2xl overflow-hidden">
+                <div class="relative lg:grid grid-cols-12 bg-card border border-stroke rounded-2xl overflow-hidden">
                     <div class="relative z-10 col-span-7 flex flex-col max-h-[85dvh] lg:max-h-[70dvh] overflow-auto">
                         <div class="p-8">
-                            <h3 class="text-accent uppercase font-bold tracking-wide text-xl/none"
+                            <h3 class="text-accent dark:text-content uppercase font-bold tracking-wide text-xl/none"
                                 x-text="challenge.title">
                                 Build thriving teams
                             </h3>
@@ -158,7 +158,7 @@
                             </p>
 
                             <div class="my-6">
-                                <h5 class="text-accent text-sm/none uppercase font-bold tracking-wide mb-5">
+                                <h5 class="text-accent dark:text-content/70 text-sm/none uppercase font-bold tracking-wide mb-5">
                                     Recommended solutions
                                 </h5>
 
@@ -166,7 +166,7 @@
                                     <template x-for="(solution, index) in challenge.solutions">
                                         <li>
                                             <div
-                                                class="flex flex-col px-4 min-h-full w-full rounded-lg border border-black/[0.15] border-t-2 border-t-primary">
+                                                class="flex flex-col px-4 min-h-full w-full rounded-lg bg-content/5 border border-black/[0.15] border-t-2 border-t-primary">
 
                                                 <h3 class="mt-4 font-semibold" x-text="solution.title">
                                                 </h3>
@@ -178,8 +178,8 @@
                                                 <ul x-show="solution.checklist" role="list" class="mb-3 text-sm">
                                                     <template x-for="(item, index) in solution.checklist">
                                                         <li class="flex items-center gap-2 py-2"
-                                                            x-bind:class="{ 'border-t': index > 0 }">
-                                                            <svg class="size-5 flex-none text-accent"
+                                                            x-bind:class="{ 'border-t border-stroke': index > 0 }">
+                                                            <svg class="size-5 flex-none text-accent dark:text-content/50"
                                                                 viewBox="0 0 24 24">
                                                                 <path
                                                                     d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"
@@ -195,7 +195,7 @@
                                                 </ul>
 
                                                 <button
-                                                    class="self-end mt-auto mb-2 -mr-3 btn btn-outline btn-sm capitalize !text-black/80 border-none"
+                                                    class="self-end mt-auto mb-2 -mr-3 btn btn-outline btn-sm capitalize !text-content/80 border-none"
                                                     x-on:click="challenge = null">
                                                     Get started
 
@@ -218,7 +218,7 @@
                             src="https://images.unsplash.com/photo-1573164574511-73c773193279?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDR8fGFmcmljYW4lMjBhbWVyaWNhbiUyMGxlYWRlcnN8ZW58MHx8fHwxNzA5NjM2OTQwfDA&ixlib=rb-4.0.3&q=80&w=1080"
                             x-bind:src="challenge.image" alt="" />
 
-                        <svg class="h-full absolute z-10 -translate-x-3 scale-110" fill="white"
+                        <svg class="h-full absolute z-10 -translate-x-3 scale-110 text-card" fill="currentColor"
                             viewBox="0 0 160.288 1440">
                             <path
                                 d="M 32 1440 L 48 1392 C 64 1344 96 1248 122.7 1152 C 149 1056 171 960 154.7 864 C 139 768 85 672 69.3 576 C 53 480 75 384 69.3 288 C 64 192 32 96 16 48 L 8.81745e-14 0 L 0 1440 Z" />
@@ -230,21 +230,24 @@
     </template>
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-3xl sm:text-center">
-            <h2 class="text-2xl lg:text-5xl/[1.3] font-bold max-w-4xl">
+        <div class="mx-auto max-w-4xl sm:text-center">
+            <h2 class="text-2xl lg:text-5xl/[1.2] font-bold max-w-4xl">
                 <span class="uppercase tracking-wide">
-                    <span class="font-normal">Pick </span>
+                    <span class="outline-text">Pick </span>
                     your top
                     <span class="hidden md:inline"><br /></span>
                     leadership
-                    <span class="font-normal">challenges</span>
+                    <span class="outline-text">challenges</span>
                 </span>
             </h2>
             {{-- <h2 class="text-2xl lg:text-[40px]/tight font-bold">
                 Pick Your Top Leadership Challenges
             </h2> --}}
 
-            <p class="mt-2 text-lg/relaxed text-gray-600">
+            {{-- <p class="mt-4 text-lg/relaxed">
+                Click one of the challenges below to get started.
+            </p> --}}
+            <p class="mt-5 text-xl">
                 Click one of the challenges below to get started.
             </p>
         </div>
@@ -338,7 +341,7 @@
                 @endphp
                 <li>
                     <button x-on:click="openChallenge({{ $loop->index }})"
-                        class="{{ $isEven ? 'bg-accent text-white' : 'bg-white' }} group hover:scale-105 transition flex flex-col gap-3 min-h-full w-full rounded-2xl border border-black/5  shadow px-6 py-6 text-left">
+                        class="{{ $isEven ? 'bg-accent text-white' : 'bg-card dark:bg-content/5' }} group hover:scale-105 transition flex flex-col gap-3 min-h-full w-full rounded-2xl border border-black/5  shadow px-6 py-6 text-left">
                         <svg class="size-8" viewBox="0 0 24 24">
                             <path class="text-primary" fill="none" stroke="currentColor" stroke-linecap="round"
                                 stroke-linejoin="round" d="{{ $challenge['icon'] }}" />

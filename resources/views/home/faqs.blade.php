@@ -1,11 +1,12 @@
-<section class="py-10 lg:py-24 px-2 lg:px-0">
+<section class="py-10 lg:py-14 px-2 lg:px-0">
     <div class="max-w-6xl mx-auto flex flex-col gap-12 items-center">
         <div class="text-center">
-            <h2 class="text-2xl md:text-5xl/[1.3] font-bold uppercase">
-                Frequently
-                <span class="hidden md:inline"><br /></span>
-                asked
-                <span class="font-normal">questions</span>
+            <h2 class="text-2xl md:text-5xl/[1.2] font-bold uppercase tracking-wide">
+                <span class="outline-text">Frequently
+                    <span class="hidden md:inline"><br /></span>
+                    asked
+                </span>
+                questions
             </h2>
 
             {{-- <p class="mt-3 text-xl leading-loose opacity-80">
@@ -26,7 +27,7 @@
             init() {
                 this.indices = this.shuffle(this.shuffle(this.indices));
             },
-        }" class="flex-1 w-full border-b divide-y">
+        }" class="flex-1 w-full border-b divide-y border-stroke divide-stroke">
             @foreach ($data as $e)
                 @php
                     $i = $loop->index;

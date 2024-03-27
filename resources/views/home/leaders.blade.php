@@ -49,11 +49,11 @@
     ];
 @endphp
 
-<div class="mt-14 rounded-3xl bg-accent text-canvas max-w-7xl mx-auto relative">
+<div class="mt-14 rounded-3xl bg-accent text-white max-w-7xl mx-auto relative">
     <div class="sp-16 lg:grid grid-cols-2" x-data="{ effectiveLeaders: true }">
         <div class="p-8 lg:px-0 lg:pt-12 lg:pl-16">
             <div class="lg:pr-14">
-                <h2 class="text-2xl md:text-3xl/relaxed font-semibold mb-2 md:mb-4 tracking-tight uppercase">
+                <h2 class="text-2xl md:text-3xl/[1.4] font-semibold uppercase tracking-wide mb-2 md:mb-4">
                     Are your leaders steering you
                     towards success?
                 </h2>
@@ -74,9 +74,9 @@
 
                     <div class="group transition-colors relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6"
                         x-bind:class="{{ $flag }} ?
-                            'pointer-events-none bg-canvas lg:bg-canvas/5 lg:ring-1 lg:ring-inset lg:ring-canvas/20 text-accent lg:text-canvas' :
-                            'text-canvas/70 lg:text-canvas'">
-                        <div class="transition absolute inset-0 bg-canvas/5 scale-x-0 origin-left group-hover:scale-x-100 rounded-l-xl"
+                            'pointer-events-none bg-white lg:bg-white/5 lg:ring-1 lg:ring-inset lg:ring-white/20 text-accent lg:text-white' :
+                            'text-white/70 lg:text-white'">
+                        <div class="transition absolute inset-0 bg-white/5 scale-x-0 origin-left group-hover:scale-x-100 rounded-l-xl"
                             x-bind:class="{{ $flag }} ? 'scale-x-100' :
                                 'group-hover:scale-x-100'">
                         </div>
@@ -103,7 +103,7 @@
             </div>
         </div>
 
-        <div class="p-8 lg:p-14 flex flex-col border-l border-canvas/10">
+        <div class="p-8 lg:p-14 flex flex-col border-l border-white/10">
             @foreach ($choices as $item)
                 @php
                     $positive = $loop->index == 0;
@@ -149,7 +149,7 @@
 
     <div class="hidden lg:flex justify-center absolute -bottom-16 inset-x-0">
         <a href="#"
-            class="group flex flex-col items-center justify-center text-center gap-3 h-32 w-32 bg-white text-black/80 rounded-full">
+            class="group flex flex-col items-center justify-center text-center gap-3 h-32 w-32 bg-canvas text-content/80 rounded-full">
             <div class="text-xs/relaxed font-bold">
                 Develop<br /> thriving leaders
             </div>

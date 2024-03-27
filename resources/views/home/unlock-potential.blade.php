@@ -2,13 +2,13 @@
     <div class="relative max-w-7xl mx-auto">
         <div class="flex flex-col gap-4 lg:gap-12 items-center justify-center">
             <div class="max-w-5xl mx-auto text-center">
-                <h2 class="text-2xl lg:text-5xl/[1.3] font-bold max-w-4xl">
-                    <span class="uppercase tracking-wide">
-                        <span class="font-normal">Unlock your</span>
+                <h2 class="text-2xl lg:text-5xl/[1.2] font-bold max-w-4xl">
+                    <span class="uppercase">
+                        <span class="outline-text">Unlock your</span>
                         thriving organization
-                        <span class="font-normal">in </span>
-                        <span class="font-normals">3</span>
-                        <span class="font-normal"> steps</span>
+                        <span class="outline-text">in </span>
+                        3
+                        <span class="outline-text"> steps</span>
                     </span>
                 </h2>
 
@@ -17,7 +17,7 @@
                 </p> --}}
             </div>
 
-            <ul role="list" class="mx-auto mt-8 grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <ul role="list" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 @php
                     $steps = [
                         [
@@ -47,8 +47,8 @@
 
                 @foreach ($steps as $step)
                     <li
-                        class="bg-accent text-white border border-white relative min-h-full w-full rounded-2xl overflow-hidden p-6 text-left">
-                        <img class="absolute inset-0 size-full rounded-2xl object-cover object-top sopacity-30"
+                        class="text-white border border-stroke shadow-sm relative min-h-full w-full rounded-2xl overflow-hidden p-6 text-left">
+                        <img class="absolute inset-0 size-full rounded-2xl object-cover object-top"
                             src="{{ $step['image'] }}" />
 
                         @if ($loop->index < 2)
@@ -60,11 +60,12 @@
                         </small> --}}
 
                         <div class="min-h-full relative flex items-start flex-col justify-between gap-3 lg:p-2">
-                            <small class="text- py-3 px-5 rounded-full border border-white uppercase tracking-widest">
-                                Step 0{{ $loop->iteration }}
+                            <small
+                                class="inline-flex text-sm/none py-2 px-3 rounded-full border border-white bg-white/10 uppercase tracking-widest">
+                                <span class="mt-px">Step 0{{ $loop->iteration }}</span>
                             </small>
 
-                            <div class="flex-1 min-h-56"></div>
+                            <div class="flex-1 min-h-40"></div>
 
                             <h3 class="text-4xl/[1.25] sfont-bold">
                                 {{ $step['title'] }}
@@ -81,9 +82,9 @@
                 @endforeach
             </ul>
 
-            <div class="mt-8 text-center">
-                <p class="text-2xl">Ready to take your organisation to the next level?</p>
-                <a href="#" class="mt-8 btn">
+            <div class="text-center">
+                <p class="text-xl opacity-70">Ready to take your organisation to the next level?</p>
+                <a href="#" class="mt-6 btn">
                     Tell us your needs
                 </a>
             </div>

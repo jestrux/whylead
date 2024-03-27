@@ -8,7 +8,7 @@
     @include('home.leaders')
 
     <div class="relative">
-        <div class="absolute inset-0 bg-gradient-to-t from-primary/10 via-primary/10 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/10 dark:from-content/5 via-primary/10 dark:via-content/5 to-transparent"></div>
 
         <div class="relative">
             @include('home.challenges')
@@ -17,6 +17,10 @@
     </div>
 
     @include('home.unlock-potential')
+
+    @include('home.moving-forward')
+
+    @include('home.working-with-whylead')
 
     @include('home.unleash')
 

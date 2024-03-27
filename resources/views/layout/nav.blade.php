@@ -55,7 +55,7 @@
 </style>
 
 <section id="mainNavigationMenu"
-    class="sticky -top-px inset-x-0 z-50 bg-transparent lg:text-white lg:transition-colors duration-300">
+    class="sticky -top-px inset-x-0 z-50 bg-transparent lg:text-content lg:transition-colors duration-300 border-stroke">
     <div class="relative flex items-center justify-between p-3 md:hidden">
         <a href="#" class="ml-1 -mb-5">
             @include('common.logo', ['fill' => '#fff'])
@@ -144,7 +144,7 @@
     const mainNavigationBarObserver = new IntersectionObserver(
         ([e]) => {
             const stuck = e.intersectionRatio < 1;
-            ["md:shadow-sm", "md:border-b", "md:bg-white", "text-black"].map(c => mainNavigationBar.classList
+            ["md:shadow-sm", "md:border-b", "md:bg-card", "text-content"].map(c => mainNavigationBar.classList
                 .toggle(c, stuck));
             [
                 "md:bg-transparent", "lg:text-white"

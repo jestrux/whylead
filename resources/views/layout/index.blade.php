@@ -28,6 +28,30 @@
                 display: none !important;
             }
 
+            :root {
+                --accent-color: 25 18 75;
+                --stroke-color: 226 232 240;
+                --border-color: #e2e8f0;
+                --canvas-color: 255 255 255;
+                --card-color: 255 255 255;
+                --content-color: 0 0 0;
+            }
+
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --accent-color: 36 27 99;
+                    --stroke-color: 53 53 53;
+                    --border-color: rgba(255, 255, 255, 0.16);
+                    --canvas-color: 24 24 24;
+                    --card-color: 37 37 37;
+                    --content-color: 255 255 255;
+                }
+
+                input[type="date"] {
+                    color-scheme: dark;
+                }
+            }
+
             @layer components {
                 :root {
                     --primary-color: #f26b21;
@@ -62,18 +86,31 @@
                 }
 
                 .outline-text {
-                    -webkit-text-fill-color: transparent;
-                    -webkit-text-stroke: 2px currentColor;
+                    -webkit-text-fill-color: rgb(var(--content-color) / 0.01);
+                    -webkit-text-stroke: 0.7px rgb(var(--content-color) / 1);
+                }
+
+                .text-white .outline-text {
+                    --content-color: 255 255 255;
                 }
             }
 
             * {
-                /* font-family: "Figtree", sans-serif; */
-                font-family: "Montserrat", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                /* font-family: "Montserrat", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+                font-family: "Gotham", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                font-family: "Gotham", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             }
 
             body {
-                font-family: "Montserrat", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                /* font-family: "Montserrat", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+                font-family: "Gotham", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                 font-weight: 500;
             }
         </style>
@@ -85,10 +122,12 @@
                         colors: {
                             primary: "#F26B21",
                             "primary-light": "#f4fff3",
-                            accent: "#19124B",
                             "primary-dark": "#d55612",
-                            "canvas": "#FFFFFF",
-                            "content": "#000000",
+                            accent: "rgb(var(--accent-color) / <alpha-value>)",
+                            canvas: "rgb(var(--canvas-color) / <alpha-value>)",
+                            card: "rgb(var(--card-color) / <alpha-value>)",
+                            content: "rgb(var(--content-color) / <alpha-value>)",
+                            stroke: "rgb(var(--content-color) / 0.15)",
                         },
                     },
                 },
@@ -97,7 +136,7 @@
     @endif
 </head>
 
-<body>
+<body class="bg-canvas text-content">
     @include('layout.nav')
 
     @yield('content')
