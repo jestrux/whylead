@@ -30,7 +30,7 @@
     <div class="py-10 lg:pt-12 relative max-w-7xl mx-auto">
         <div class="flex flex-col gap-4 lg:gap-12 items-center justify-center">
             <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-2xl lg:text-5xl/[1.2] font-bold max-w-4xl">
+                <h2 class="text-2xl lg:text-5xl font-bold max-w-4xl">
                     <span class="uppercase tracking-wide">
                         <span class="outline-text">Unleash</span>
                         the potential

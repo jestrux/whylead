@@ -129,7 +129,7 @@
 <section x-data="challenges" class="pt-20 sm:pt-40">
     <template x-if="challenge">
         <div class="fixed inset-0 z-50 bg-black/50 flex items-center justify-between">
-            <div class="w-full max-w-6xl mx-auto relative">
+            <div class="w-full max-w-5xl mx-auto relative">
                 <button x-on:click="challenge = null"
                     class="absolute p-1 rounded right-3 lg:-right-3 -top-4 lg:-top-3 z-50 bg-content text-canvas">
                     <svg class="size-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -138,7 +138,7 @@
                 </button>
 
                 <div class="relative lg:grid grid-cols-12 bg-card border border-stroke rounded-2xl overflow-hidden">
-                    <div class="relative z-10 col-span-7 flex flex-col max-h-[85dvh] lg:max-h-[70dvh] overflow-auto">
+                    <div class="relative z-10 col-span-7 flex flex-col max-h-[85dvh] overflow-auto">
                         <div class="p-8">
                             <h3 class="text-accent dark:text-content uppercase font-bold tracking-wide text-xl/none"
                                 x-text="challenge.title">
@@ -157,7 +157,7 @@
                                 voluptatum quisquam.
                             </p>
 
-                            <div class="my-6">
+                            <div class="my-6 min-h-[300px]">
                                 <h5
                                     class="text-accent dark:text-content/70 text-sm/none uppercase font-bold tracking-wide mb-5">
                                     Recommended solutions
@@ -214,7 +214,7 @@
                         </div>
                     </div>
 
-                    <div class="hidden lg:block col-span-5 min-h-[500px] m-2 rounded-xl overflow-hidden relative">
+                    <div class="hidden lg:block col-span-5 min-h-full m-2 rounded-xl overflow-hidden relative">
                         <img class="absolute w-full h-full object-cover bg-black/5"
                             src="https://images.unsplash.com/photo-1573164574511-73c773193279?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDR8fGFmcmljYW4lMjBhbWVyaWNhbiUyMGxlYWRlcnN8ZW58MHx8fHwxNzA5NjM2OTQwfDA&ixlib=rb-4.0.3&q=80&w=1080"
                             x-bind:src="challenge.image" alt="" />
@@ -237,7 +237,7 @@
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-4xl sm:text-center">
-            <h2 class="text-2xl lg:text-5xl/[1.2] font-bold max-w-4xl">
+            <h2 class="text-2xl lg:text-5xl font-bold max-w-4xl">
                 <span class="uppercase tracking-wide">
                     <span class="outline-text">Pick </span>
                     your top
@@ -289,8 +289,18 @@
             $challenges = [
                 [
                     'icon' =>
+                        'M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z',
+                    'title' => 'Managing Adversity and Fostering Alignment',
+                ],
+                [
+                    'icon' =>
                         'M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941',
                     'title' => 'Helping Teams Grow',
+                ],
+                [
+                    'icon' =>
+                        'M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18',
+                    'title' => 'Inspiring and Motivating teams',
                 ],
                 [
                     'icon' =>
@@ -301,16 +311,6 @@
                     'icon' =>
                         'M9 9V4.5M9 9H4.5M9 9 3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5 5.25 5.25',
                     'title' => 'Executive Alignment',
-                ],
-                [
-                    'icon' =>
-                        'M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z',
-                    'title' => 'Managing Adversity and Fostering Alignment',
-                ],
-                [
-                    'icon' =>
-                        'M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18',
-                    'title' => 'Inspiring and Motivating teams',
                 ],
                 [
                     'icon' =>

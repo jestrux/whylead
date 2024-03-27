@@ -1,7 +1,7 @@
-<section class="py-10 lg:py-14 px-2 lg:px-0">
-    <div class="max-w-6xl mx-auto flex flex-col gap-12 items-center">
+<section class="py-10 lg:py-14">
+    <div class="max-w-6xl mx-auto px-8 flex flex-col gap-12 items-center">
         <div class="text-center">
-            <h2 class="text-2xl md:text-5xl/[1.2] font-bold uppercase tracking-wide">
+            <h2 class="text-2xl md:text-5xl font-bold uppercase tracking-wide">
                 <span class="outline-text">Frequently
                     <span class="hidden md:inline"><br /></span>
                     asked

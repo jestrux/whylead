@@ -2,8 +2,8 @@
 <script>
     document.addEventListener('alpine:init', () => {
         Alpine.data("coursePopup", () => ({
-            // showPrompt: true,
-            showPrompt: !localStorage.initialPopupShown,
+            showPrompt: true,
+            // showPrompt: !localStorage.initialPopupShown,
             courses: {!! json_encode($data) !!},
             course: null,
             init() {
@@ -14,26 +14,25 @@
 </script>
 @endpierdata()
 
-<div x-cloak x-show="showPrompt" class="hidden fixed inset-0 z-50 bg-black/50 lg:flex items-center justify-between"
+<div x-cloak x-show="showPrompt" class="hidden fixed inset-0 z-50 bg-black/70 lg:flex items-center justify-between"
     x-data="coursePopup">
-    <div class="w-full max-w-6xl mx-auto relative">
-        <button x-on:click="showPrompt = false" class="absolute p-1 rounded -right-3 -top-3 z-50 bg-content text-canvas">
+    <div class="w-full max-w-4xl mx-auto relative">
+        <button x-on:click="showPrompt = false" class="absolute p-1 rounded -right-3 -top-3 z-50 bg-content text-canvas border border-white/30">
             <svg class="size-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
             </svg>
         </button>
 
         <div x-show="!course" class="grid grid-cols-12 bg-card border border-stroke rounded-2xl overflow-hidden">
-            <div class="col-span-7 p-16 relative z-10">
-                <h3 class="uppercase font-bold tracking-wide text-3xl text-">
+            <div class="col-span-7 p-10 relative z-10 h-full overflow-y-auto max-h-[420px]">
+                <h3 class="uppercase font-bold tracking-wide text-2xl">
                     Your partner in building a thriving
                     organization
                 </h3>
 
-                <p class="mt-3 text-lg/relaxed">
-                    If you came to WhyLead for a specific reason, please click that reason below or just click the ‘X’
-                    and
-                    explore our plartform
+                <p class="mt-2 leading-relaxed">
+                    If you came to WhyLead for a specific reason, please click the reason below or just continue
+                    to explore our plartform.
                 </p>
 
                 <div class="mt-5 space-y-2">
@@ -43,7 +42,7 @@
                         <template x-for="_course in courses">
                             <li>
                                 <button x-on:click="course = _course"
-                                    class="text-content/70 group hover:bg-content/5 hover:text-content transition-colors flex items-center justify-between border border-stroke hover:border-content/30 rounded-md py-3 pl-4 pr-2.5 w-full font-medium uppercase tracking-wide">
+                                    class="text-content/70 group hover:bg-content/5 hover:text-content transition-colors flex items-center justify-between border border-stroke hover:border-content/30 rounded-md py-3 pl-4 pr-2.5 w-full text-sm/none font-medium uppercase tracking-wide">
                                     <span x-text="_course.title"></span>
 
                                     <svg class="w-5 h-5 opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all"
@@ -74,7 +73,7 @@
 
         <template x-if="course">
             <div class="relative grid grid-cols-12 bg-card border border-stroke rounded-2xl overflow-hidden">
-                <div class="relative z-50 col-span-7 flex flex-col">
+                <div class="relative z-50 col-span-7 flex flex-col h-full overflow-y-auto max-h-[420px]">
                     <div class="m-4 flex items-center">
                         <button x-on:click="course = null"
                             class="self-start btn btn-outline btn-sm border-none !text-primary">
@@ -175,7 +174,7 @@
                     </div>
                 </div>
 
-                <div class="col-span-5 min-h-[500px] m-2 rounded-xl soverflow-hidden relative">
+                <div class="col-span-5 m-2 rounded-xl soverflow-hidden relative">
                     <img class="absolute w-full h-full object-cover bg-black/5"
                         src="https://images.unsplash.com/photo-1573164574511-73c773193279?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDR8fGFmcmljYW4lMjBhbWVyaWNhbiUyMGxlYWRlcnN8ZW58MHx8fHwxNzA5NjM2OTQwfDA&ixlib=rb-4.0.3&q=80&w=1080"
                         x-bind:src="course.image" alt="" />

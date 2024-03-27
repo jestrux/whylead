@@ -1,6 +1,6 @@
 <section class="sbg-neutral-100">
-    <div class="px-6 lg:px-0 py-12 lg:pt-36 lg:pb-20 relative max-w-7xl mx-auto">
-        <div class="lg:grid grid-cols-2 gap-16">
+    <div class="px-8 py-12 lg:pt-36 lg:pb-20 relative max-w-7xl mx-auto">
+        <div class="lg:grid grid-cols-2 gap-16 items-center">
             <div class="md:hidden">
                 <a href="#" class="block relative">
                     <div
@@ -28,7 +28,7 @@
             </div>
 
             <div class="pt-6 space-y-2 lg:space-y-4">
-                <h2 class="text-2xl lg:text-5xl/[1.2] font-bold max-w-4xl">
+                <h2 class="text-2xl lg:text-5xl font-bold max-w-4xl">
                     <span class="uppercase tracking-wide">
                         <span class="outline-text">Thriving</span>
                         in

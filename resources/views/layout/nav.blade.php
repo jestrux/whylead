@@ -87,7 +87,7 @@
     </div>
 
     <div id="mainNavigationMenuItems"
-        class="max-w-7xl mx-auto fixed top-0 bottom-0 flex flex-col px-8 py-8 md:flex-row items-centers md:justify-between md:relative md:bg-transparent md:px-0 md:py-0">
+        class="max-w-7xl mx-auto fixed top-0 bottom-0 flex flex-col px-8 py-8 md:flex-row items-centers md:justify-between md:relative md:bg-transparent md:py-0">
         <nav role="off-canvas" class="w-full flex items-center justify-center mt-12 md:w-auto md:mt-0">
             <ul class="w-full relative z-50 md:flex flex-col justify-center items-center h-full md:flex-row md:gap-x-8">
                 {{-- <x-menu-item exact url="/">Home</x-menu-item> --}}
@@ -117,7 +117,7 @@
                     </span>
                 </a>
 
-                <small class="block absolute inset-x-0 text-xs -bottom-5 mb-px left-0 opacity-50 text-center">
+                <small class="block absolute inset-x-0 text-xs -bottom-5 mb-1 left-0 opacity-50 text-center">
                     connect with us now
                     {{-- call: +255 746 750 750 --}}
                 </small>

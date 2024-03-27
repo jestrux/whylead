@@ -43,124 +43,119 @@
                         'M11.412 15.655 9.75 21.75l3.745-4.012M9.257 13.5H3.75l2.659-2.849m2.048-2.194L14.25 2.25 12 10.5h8.25l-4.707 5.043M8.457 8.457 3 3m5.457 5.457 7.086 7.086m0 0L21 21',
                     'title' => 'Unable to inspire growth & commitment',
                 ],
-                // 'The leader fails to inspire true dedication, resulting in a team that hesitates to make decisions or fully invest in shared goals.',
             ],
         ],
     ];
 @endphp
 
-<div class="mt-14 rounded-3xl bg-accent text-white max-w-7xl mx-auto relative">
-    <div class="sp-16 lg:grid grid-cols-2" x-data="{ effectiveLeaders: true }">
-        <div class="p-8 lg:px-0 lg:pt-12 lg:pl-16">
-            <div class="lg:pr-14">
-                <h2 class="text-2xl md:text-3xl/[1.4] font-semibold uppercase tracking-wide mb-2 md:mb-4">
-                    Are your leaders steering you
-                    towards success?
-                </h2>
+<div class="mt-14 max-w-7xl mx-auto px-8">
 
-                {{-- <p class="mb-4 md:text-lg/loose opacity-80">
-                    Leaders make or break businesses, use our simple, free checklist to find out how effective your
-                    leaders are.
-                </p> --}}
-            </div>
+    <div class="rounded-3xl bg-accent text-white relative">
+        <div class="sp-16 lg:grid grid-cols-2" x-data="{ effectiveLeaders: true }">
+            <div class="p-8 lg:px-0 lg:pt-12 lg:pl-16">
+                <div class="lg:pr-14">
+                    <h2 class="text-2xl md:text-3xl/[1.3] font-semibold uppercase tracking-wide mb-2 md:mb-4">
+                        Are your leaders steering you
+                        towards success?
+                    </h2>
+                </div>
 
-            <div class="mt-8 flex flex-col gap-2">
-                @foreach ($choices as $item)
-                    @php
-                        $positive = $loop->index == 0;
-                        $flag = ($positive ? '' : '!') . 'effectiveLeaders';
-                        $action = 'effectiveLeaders = ' . ($positive ? 'true' : 'false');
-                    @endphp
+                <div class="mt-8 flex flex-col gap-2">
+                    @foreach ($choices as $item)
+                        @php
+                            $positive = $loop->index == 0;
+                            $flag = ($positive ? '' : '!') . 'effectiveLeaders';
+                            $action = 'effectiveLeaders = ' . ($positive ? 'true' : 'false');
+                        @endphp
 
-                    <div class="group transition-colors relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6"
-                        x-bind:class="{{ $flag }} ?
-                            'pointer-events-none bg-white lg:bg-white/5 lg:ring-1 lg:ring-inset lg:ring-white/20 text-accent lg:text-white' :
-                            'text-white/70 lg:text-white'">
-                        <div class="transition absolute inset-0 bg-white/5 scale-x-0 origin-left group-hover:scale-x-100 rounded-l-xl"
-                            x-bind:class="{{ $flag }} ? 'scale-x-100' :
-                                'group-hover:scale-x-100'">
-                        </div>
-
-                        <div class="transition-transform"
-                            x-bind:class="{{ $flag }} ? 'translate-x-2' : 'group-hover:translate-x-2'">
-                            <h3 style="color: {{ $item['color'] }}">
-                                <button x-on:click="{{ $action }}" class="text-lg font-bold"
-                                    id="headlessui-tabs-tab-:R2jaanla:" role="tab" type="button"
-                                    aria-selected="true" tabindex="0" data-headlessui-state="selected"
-                                    aria-controls="headlessui-tabs-panel-:Rlaanla:">
-                                    <span
-                                        class="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none"></span>
-                                    {{ $item['title'] }}
-                                </button>
-                            </h3>
-
-                            <p class="mt-1s hidden text-sm/loose lg:block font-light">
-                                {{ $item['description'] }}
-                            </p>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-
-        <div class="p-8 lg:p-14 flex flex-col border-l border-white/10">
-            @foreach ($choices as $item)
-                @php
-                    $positive = $loop->index == 0;
-                    $flag = ($positive ? '' : '!') . 'effectiveLeaders';
-                @endphp
-
-                <div @if (!$positive) x-cloak @endif x-show="{{ $flag }}"
-                    class="flex-1 flex flex-col gap-12">
-                    @foreach ($item['indicators'] as $indicator)
-                        <div class="text-xl flex items-start gap-4">
-                            <div style="background: {{ $item['color'] }}"
-                                class="text-black/70 size-10 flex items-center justify-center rounded-lg">
-                                <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="{{ $indicator['icon'] }}" />
-                                </svg>
+                        <div class="group transition-colors relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6"
+                            x-bind:class="{{ $flag }} ?
+                                'pointer-events-none bg-white lg:bg-white/5 lg:ring-1 lg:ring-inset lg:ring-white/20 text-accent lg:text-white' :
+                                'text-white/70 lg:text-white'">
+                            <div class="transition absolute inset-0 bg-white/5 scale-x-0 origin-left group-hover:scale-x-100 rounded-l-xl"
+                                x-bind:class="{{ $flag }} ? 'scale-x-100' :
+                                    'group-hover:scale-x-100'">
                             </div>
 
-                            <div class="flex-1 -mt-px">
-                                <h3 class="text-lg lg:text-xl">
-                                    {{ $indicator['title'] }}
+                            <div class="transition-transform"
+                                x-bind:class="{{ $flag }} ? 'translate-x-2' : 'group-hover:translate-x-2'">
+                                <h3 style="color: {{ $item['color'] }}">
+                                    <button x-on:click="{{ $action }}" class="text-lg font-bold uppercase"
+                                        id="headlessui-tabs-tab-:R2jaanla:" role="tab" type="button"
+                                        aria-selected="true" tabindex="0" data-headlessui-state="selected"
+                                        aria-controls="headlessui-tabs-panel-:Rlaanla:">
+                                        <span
+                                            class="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none"></span>
+                                        {{ $item['title'] }}
+                                    </button>
                                 </h3>
 
-                                <p class="mt-1 text-sm/relaxed lg:text-base/loose font-light lg:block opacity-80">
-                                    All of your receipts organized into
-                                    one place, as long as you don't
-                                    mind typing in the data by hand. All of your receipts
-                                    organized.
+                                <p class="mt-1s hidden text-sm/loose lg:block font-light">
+                                    {{ $item['description'] }}
                                 </p>
                             </div>
                         </div>
                     @endforeach
                 </div>
-            @endforeach
-        </div>
-    </div>
-
-    <div class="px-8 pb-8 lg:hidden">
-        <a href="#" class="btn w-full">
-            Develop thriving leaders
-        </a>
-    </div>
-
-    <div class="hidden lg:flex justify-center absolute -bottom-16 inset-x-0">
-        <a href="#"
-            class="group flex flex-col items-center justify-center text-center gap-3 h-32 w-32 bg-canvas text-content/80 rounded-full">
-            <div class="text-xs/relaxed font-bold">
-                Develop<br /> thriving leaders
             </div>
 
-            <svg class="w-7 h-7 text-primary group-hover:animate-bounce" fill="none" viewBox="0 0 24 24"
-                stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
-            </svg>
-        </a>
-    </div>
+            <div class="p-8 lg:p-14 flex flex-col border-l border-white/10">
+                @foreach ($choices as $item)
+                    @php
+                        $positive = $loop->index == 0;
+                        $flag = ($positive ? '' : '!') . 'effectiveLeaders';
+                    @endphp
 
-    {{-- <img class="rounded-3xl absolute inset-0 w-full h-full object-cover" src="https://i.ytimg.com/vi/obkwb1BjcwE/hq720.jpg"
-        alt="" /> --}}
+                    <div @if (!$positive) x-cloak @endif x-show="{{ $flag }}"
+                        class="flex-1 flex flex-col gap-12">
+                        @foreach ($item['indicators'] as $indicator)
+                            <div class="text-xl flex items-start gap-4">
+                                <div style="background: {{ $item['color'] }}"
+                                    class="text-black/70 size-10 flex items-center justify-center rounded-lg">
+                                    <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="{{ $indicator['icon'] }}" />
+                                    </svg>
+                                </div>
+
+                                <div class="flex-1 -mt-px">
+                                    <h3 class="text-lg lg:text-xl">
+                                        {{ $indicator['title'] }}
+                                    </h3>
+
+                                    <p class="mt-1 text-sm/relaxed lg:text-base/loose font-light lg:block opacity-80">
+                                        All of your receipts organized into
+                                        one place, as long as you don't
+                                        mind typing in the data by hand. All of your receipts
+                                        organized.
+                                    </p>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                @endforeach
+            </div>
+        </div>
+
+        <div class="px-8 pb-8 lg:hidden">
+            <a href="#" class="btn w-full">
+                Develop thriving leaders
+            </a>
+        </div>
+
+        <div class="hidden lg:flex justify-center absolute -bottom-16 inset-x-0">
+            <a href="#"
+                class="group flex flex-col items-center justify-center text-center gap-3 size-36 bg-canvas text-content/80 rounded-full">
+                <div class="text-xs/relaxed font-bold uppercase">
+                    Develop<br /> thriving leaders
+                </div>
+
+                <svg class="w-7 h-7 text-primary group-hover:animate-bounce" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+                </svg>
+            </a>
+        </div>
+    </div>
 </div>

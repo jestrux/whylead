@@ -43,7 +43,7 @@
     <section id="banner" class="text-white overflow-hidden px-4 md:px-0 pt-20 lg:pt-40 lg:pb-16 -mt-24 relative">
         <div class="w-full max-w-[1400px] mx-auto px-6">
             <div class="flex-1 py-12 flex flex-col justify-center items-center md:max-w-5xl mx-auto lg:text-center">
-                <h1 class="text-3xl md:text-6xl/[1.2] font-bold mb-2 md:mb-4">
+                <h1 class="text-3xl md:text-5xl/[1.2] font-bold mb-2 md:mb-4">
                     Strategic Leaps
                     Begin With a Single,
                     Intentional
@@ -76,8 +76,7 @@
 <section class="px-6 lg:px-0">
     <div class="flex flex-col items-center justify-center">
         <p class="max-w-2xl mx-auto my-8 text-center text-lg/loose opacity-70">
-            Chosen as Trusted Partners to Build Thriving Leaders, Cultures, Teams and Organizations by These
-            Organizations
+            Chosen as a Trusted Partner to Build Thriving Leaders, Teams, Cultures and Organizations.
         </p>
         <div
             class="max-w-5xl mx-auto flex gap-6 md:gap-y-6 md:gap-x-14 md:flex items-center justify-between flex-wrap grayscale">

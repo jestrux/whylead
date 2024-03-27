@@ -1,5 +1,5 @@
 @php
-    $height = $height ?? '50';
+    $height = $height ?? '40';
 @endphp
 
 <svg xmlns="http://www.w3.org/2000/svg" height="{{ $height }}" viewBox="0 0 382.209 201.801">

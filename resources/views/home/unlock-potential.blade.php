@@ -1,8 +1,8 @@
 <section class="py-10 lg:py-24">
-    <div class="relative max-w-7xl mx-auto">
+    <div class="relative max-w-7xl mx-auto px-8">
         <div class="flex flex-col gap-4 lg:gap-12 items-center justify-center">
             <div class="max-w-5xl mx-auto text-center">
-                <h2 class="text-2xl lg:text-5xl/[1.2] font-bold max-w-4xl">
+                <h2 class="text-2xl lg:text-5xl font-bold max-w-4xl">
                     <span class="uppercase">
                         <span class="outline-text">Unlock your</span>
                         thriving organization
@@ -38,7 +38,7 @@
                             // 'image' =>
                             //     'https://img.freepik.com/free-photo/happy-business-team-celebrating-success_1262-21070.jpg?t=st=1711452063~exp=1711455663~hmac=3166141d46a0c03ee0c29daaa920a4324a697d6cf2d8565b7d4752fae52f2c99&w=900',
                             'image' =>
-                                'https://img.freepik.com/free-photo/full-shot-silhouettes-people-jumping-sunset_23-2150557430.jpg?t=st=1711452228~exp=1711455828~hmac=c3f987cce900c4aa666f90f311343628b531460a58c638792c70f0ca90f7326f&w=2000',
+                                'https://img.freepik.com/free-photo/full-shot-silhouettes-people-jumping-sunset_23-2150557430.jpg?w=2000&t=st=1711537141~exp=1711537741~hmac=67cf875150d7413430a23b7dd6bdf447d01f707cf40a1f2100e41c28aeed2f0a',
                             // 'title' => 'You Unlock a Thriving Organisation',
                             'title' => 'Unlock a Thriving Organisation',
                         ],

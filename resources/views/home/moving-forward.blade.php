@@ -1,5 +1,5 @@
 <section class="bg-content/5">
-    <div class="px-6 lg:px-0 py-12 lg:py-20 relative max-w-7xl mx-auto">
+    <div class="px-8 py-12 lg:py-20 relative max-w-7xl mx-auto">
         <div class="lg:grid grid-cols-2 gap-16">
             <div class="md:hidden">
                 <a href="#" class="block relative">
@@ -28,7 +28,7 @@
             </div>
 
             <div class="pt-6 flex flex-col gap-2">
-                <h2 class="text-2xl lg:text-5xl/[1.2] font-bold max-w-4xl">
+                <h2 class="text-2xl lg:text-5xl font-bold max-w-4xl">
                     <span class="uppercase tracking-wides">
                         <span class="outline-text">If everyone is</span>
                         moving
