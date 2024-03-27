@@ -55,7 +55,7 @@
 </style>
 
 <section id="mainNavigationMenu"
-    class="sticky -top-px inset-x-0 z-50 bg-transparent lg:text-content lg:transition-colors duration-300 border-stroke">
+    class="sticky -top-px inset-x-0 z-50 lg:transition-colors duration-300 border-stroke md:bg-card text-content">
     <div class="relative flex items-center justify-between p-3 md:hidden">
         <a href="#" class="ml-1 -mb-5">
             @include('common.logo', ['fill' => '#fff'])
@@ -91,7 +91,7 @@
         <nav role="off-canvas" class="w-full flex items-center justify-center mt-12 md:w-auto md:mt-0">
             <ul class="w-full relative z-50 md:flex flex-col justify-center items-center h-full md:flex-row md:gap-x-8">
                 {{-- <x-menu-item exact url="/">Home</x-menu-item> --}}
-                <x-menu-item url="{{ url('#') }}">Consultancy</x-menu-item>
+                <x-menu-item url="{{ url('/consultancy') }}">Consultancy</x-menu-item>
                 <x-menu-item url="{{ url('#') }}">Podcast</x-menu-item>
                 {{-- <x-menu-item url="{{ url('#') }}">About Us</x-menu-item> --}}
                 <x-menu-item class="md:hidden" url="{{ url('/contact-us') }}">Contact Us</x-menu-item>
@@ -117,7 +117,8 @@
                     </span>
                 </a>
 
-                <small class="block absolute inset-x-0 text-[11px] font-semibold -bottom-5 mb-1 left-0 opacity-50 text-center">
+                <small
+                    class="block absolute inset-x-0 text-[11px] font-semibold -bottom-5 mb-1 left-0 opacity-50 text-center">
                     Connect With Us Now
                     {{-- call: +255 746 750 750 --}}
                 </small>
@@ -130,11 +131,18 @@
     </div>
 </section>
 
-
-
 <script>
     const mainNavigationBar = document.querySelector("#mainNavigationMenu");
     const mainSiteLogoImage = document.querySelector("#mainSiteLogo");
+
+    @isset($isHomePage)
+        const collapsedClasses = ["md:bg-transparent", "lg:text-white"];
+        const raisedClasses = ["md:shadow-sm", "md:border-b", "md:bg-card", "text-content"];
+    @else
+        const collapsedClasses = [];
+        const raisedClasses = ["md:shadow-sm", "md:border-b", "md:bg-card", "text-content"];
+    @endisset
+
 
     function toggleMenu() {
         mainNavigationBar.classList.toggle('open');
@@ -144,11 +152,9 @@
     const mainNavigationBarObserver = new IntersectionObserver(
         ([e]) => {
             const stuck = e.intersectionRatio < 1;
-            ["md:shadow-sm", "md:border-b", "md:bg-card", "text-content"].map(c => mainNavigationBar.classList
+            raisedClasses.map(c => mainNavigationBar.classList
                 .toggle(c, stuck));
-            [
-                "md:bg-transparent", "lg:text-white"
-            ].map(c => mainNavigationBar.classList.toggle(c, !stuck))
+            collapsedClasses.map(c => mainNavigationBar.classList.toggle(c, !stuck))
         }, {
             threshold: [1]
         }

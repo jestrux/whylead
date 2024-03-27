@@ -1,3 +1,7 @@
+@php
+    $isHomePage = true;
+@endphp
+
 @extends('layout.index')
 
 @section('content')

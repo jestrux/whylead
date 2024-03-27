@@ -637,7 +637,7 @@
                             class="w-full h-fulls text-center md:w-auto md:text-left"
                         >
                             <a
-                                href="#"
+                                href="consultancy.html"
                                 class="flex items-center h-full px-1 py-4 md:py-0 md:mr-4 text-3xl md:text-sm font-bold uppercase tracking-wide border-transparent font-semibolds opacity-60 hover:opacity-70 text-center"
                             >
                                 Consultancy
@@ -658,7 +658,7 @@
                             class="w-full h-fulls text-center md:w-auto md:text-left md:hidden"
                         >
                             <a
-                                href="http://localhost:8000/contact-us"
+                                href="#"
                                 class="flex items-center h-full px-1 py-4 md:py-0 md:mr-4 text-3xl md:text-sm font-bold uppercase tracking-wide border-transparent font-semibolds opacity-60 hover:opacity-70 text-center"
                             >
                                 Contact Us
@@ -670,7 +670,7 @@
                 <div class="relative items-center hidden md:flex md:-ml-12">
                     <a
                         id="mainSiteLogo"
-                        href="http://localhost:8000"
+                        href="index.html"
                         class="-mt-6 pb-12 transition-transform duration-300 origin-top-left sscale-125"
                     >
                         <span class="inline-block translate-y-12">
@@ -1078,31 +1078,25 @@
         </section>
 
         <script>
-            const mainNavigationBar = document.querySelector(
-                "#mainNavigationMenu"
-            );
+            const mainNavigationBar = document.querySelector("#mainNavigationMenu");
             const mainSiteLogoImage = document.querySelector("#mainSiteLogo");
 
+            const collapsedClasses = ["md:bg-transparent", "lg:text-white"];
+            const raisedClasses = ["md:shadow-sm", "md:border-b", "md:bg-card", "text-content"];
+
             function toggleMenu() {
-                mainNavigationBar.classList.toggle("open");
-                document.body.classList.toggle("overflow-hidden");
+                mainNavigationBar.classList.toggle('open');
+                document.body.classList.toggle('overflow-hidden');
             }
 
             const mainNavigationBarObserver = new IntersectionObserver(
                 ([e]) => {
                     const stuck = e.intersectionRatio < 1;
-                    [
-                        "md:shadow-sm",
-                        "md:border-b",
-                        "md:bg-card",
-                        "text-content",
-                    ].map((c) => mainNavigationBar.classList.toggle(c, stuck));
-                    ["md:bg-transparent", "lg:text-white"].map((c) =>
-                        mainNavigationBar.classList.toggle(c, !stuck)
-                    );
-                },
-                {
-                    threshold: [1],
+                    raisedClasses.map(c => mainNavigationBar.classList
+                        .toggle(c, stuck));
+                    collapsedClasses.map(c => mainNavigationBar.classList.toggle(c, !stuck))
+                }, {
+                    threshold: [1]
                 }
             );
 
@@ -5330,7 +5324,7 @@
                 >
                     <div>
                         <div class="flex items-center">
-                            <a href="http://localhost:8000">
+                            <a href="index.html">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     height="40"
@@ -5716,7 +5710,7 @@
                             </a>
                             <a
                                 class="relative -mx-3 -my-2 rounded-lg px-3 py-2 text-sm opacity-70 hover:opacity-100 transition-opacity delay-150 hover:delay-0"
-                                href="/#"
+                                href="consultancy.html"
                                 ><span class="relative z-10"> Consultancy</span>
                             </a>
                             <a
