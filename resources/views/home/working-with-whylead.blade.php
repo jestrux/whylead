@@ -1,8 +1,8 @@
-<section class="py-10 lg:py-24">
+<section class="py-10 lg:py-20">
     <div class="relative max-w-7xl mx-auto px-8">
         <div class="flex flex-col gap-4 lg:gap-12 items-center justify-center">
             <div class="max-w-5xl mx-auto text-center">
-                <h2 class="text-2xl lg:text-5xl font-bold max-w-4xl">
+                <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">
                     <span class="uppercase">
                         <span class="outline-text">What </span>
                         working with<span class="hidden md:inline"><br /></span> whylead

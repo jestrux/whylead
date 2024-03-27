@@ -62,7 +62,7 @@
                 }
 
                 .btn:not(.btn-sm):not(.btn-xs) {
-                    @apply font-bold gap-2 text-base/none px-5 py-4 rounded-lg;
+                    @apply font-semibold gap-1 text-sm/none px-4 py-3.5 rounded-md;
                 }
 
                 .btn-sm {
@@ -86,8 +86,10 @@
                 }
 
                 .outline-text {
-                    -webkit-text-fill-color: rgb(var(--content-color) / 0.01);
-                    -webkit-text-stroke: 0.7px rgb(var(--content-color) / 1);
+                    /* -webkit-text-fill-color: rgb(var(--content-color) / 0.01); */
+                    /* -webkit-text-stroke: 0.7px rgb(var(--content-color) / 0.7); */
+                    font-weight: 300;
+                    opacity: 0.7;
                 }
 
                 .text-white .outline-text {
@@ -112,6 +114,14 @@
                 /* font-family: "Montserrat", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
                 font-family: "Gotham", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                 font-weight: 500;
+            }
+
+            @media (min-width: 1024px) {
+                .lg\:text-4xl {
+                    /* font-size: 2.25rem; */
+                    /* line-height: 5rem !; */
+                    line-height: 1.2 !important;
+                }
             }
         </style>
 

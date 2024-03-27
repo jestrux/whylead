@@ -42,7 +42,7 @@
 }
 
 .btn:not(.btn-sm):not(.btn-xs) {
-    @apply font-bold gap-2 text-base/none px-5 py-4 rounded-lg;
+    @apply font-semibold gap-1 text-sm/none px-3 py-2.5 rounded-md;
 }
 
 .btn-sm {
@@ -62,8 +62,8 @@ strong {
 }
 
 .outline-text {
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 2px currentColor;
+    /* -webkit-text-fill-color: transparent; */
+    /* -webkit-text-stroke: 2px currentColor; */
 }
 
 * {

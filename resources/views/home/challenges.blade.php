@@ -1,8 +1,8 @@
 <script>
     document.addEventListener("alpine:init", () => {
         Alpine.data("challenges", () => ({
-            openChallenge(index) {
-                var challenge = Object.assign({}, this.challenges[index]);
+            openChallenge(name) {
+                var challenge = Object.assign({}, this.challenges.find((c) => c.title == name));
                 challenge.solutions = challenge.solutions.map((solution) => {
                     return this.solutions.find((s) => s.title == solution);
                 });
@@ -126,7 +126,7 @@
     });
 </script>
 
-<section x-data="challenges" class="pt-20 sm:pt-40">
+<section x-data="challenges" class="pt-20 sm:pt-24">
     <template x-if="challenge">
         <div class="fixed inset-0 z-50 bg-black/50 flex items-center justify-between">
             <div class="w-full max-w-5xl mx-auto relative">
@@ -138,7 +138,7 @@
                 </button>
 
                 <div class="relative lg:grid grid-cols-12 bg-card border border-stroke rounded-2xl overflow-hidden">
-                    <div class="relative z-10 col-span-7 flex flex-col max-h-[85dvh] overflow-auto">
+                    <div class="relative z-10 col-span-7 flex flex-col max-h-[500px] overflow-auto">
                         <div class="p-8">
                             <h3 class="text-accent dark:text-content uppercase font-bold tracking-wide text-xl/none"
                                 x-text="challenge.title">
@@ -178,7 +178,7 @@
 
                                                 <ul x-show="solution.checklist" role="list" class="mb-3 text-sm">
                                                     <template x-for="(item, index) in solution.checklist">
-                                                        <li class="flex items-center gap-2 py-2"
+                                                        <li class="flex items-center gap-1 py-2"
                                                             x-bind:class="{ 'border-t border-stroke': index > 0 }">
                                                             <svg class="size-5 flex-none text-accent dark:text-content/50"
                                                                 viewBox="0 0 24 24">
@@ -190,13 +190,13 @@
                                                                     stroke-width="1" stroke-linecap="round"
                                                                     stroke-linejoin="round" />
                                                             </svg>
-                                                            <span class="text-sm/none opacity-70" x-text="item"></span>
+                                                            <span class="text-xs/none opacity-70" x-text="item"></span>
                                                         </li>
                                                     </template>
                                                 </ul>
 
                                                 <button
-                                                    class="self-end mt-auto mb-2 -mr-3 btn btn-outline btn-sm capitalize !text-content/80 border-none"
+                                                    class="self-end mt-auto mb-2 -mr-3 btn btn-outline btn-xs capitalize !text-content/80 border-none"
                                                     x-on:click="challenge = null">
                                                     Get started
 
@@ -237,13 +237,13 @@
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-4xl sm:text-center">
-            <h2 class="text-2xl lg:text-5xl font-bold max-w-4xl">
+            <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">
                 <span class="uppercase tracking-wide">
                     <span class="outline-text">Pick </span>
                     your top
                     <span class="hidden md:inline"><br /></span>
                     leadership
-                    <span class="outline-text">challenges</span>
+                    <span class="outline-text">challenge</span>
                 </span>
             </h2>
             {{-- <h2 class="text-2xl lg:text-[40px]/tight font-bold">
@@ -253,8 +253,8 @@
             {{-- <p class="mt-4 text-lg/relaxed">
                 Click one of the challenges below to get started.
             </p> --}}
-            <p class="mt-5 text-xl">
-                Click one of the challenges below to get started.
+            <p class="mt-5 text-lg opacity-70">
+                Click your top challenge below to discover targeted solutions.
             </p>
         </div>
 
@@ -346,7 +346,7 @@
                     $isEven = $i > 0 && $i % 2 == 0;
                 @endphp
                 <li>
-                    <button x-on:click="openChallenge({{ $loop->index }})"
+                    <button x-on:click="openChallenge(`{{ $challenge['title'] }}`)"
                         class="{{ $isEven ? 'bg-accent text-white' : 'bg-card dark:bg-content/5' }} group hover:scale-105 transition flex flex-col gap-3 min-h-full w-full rounded-2xl border border-black/5  shadow px-6 py-6 text-left">
                         <svg class="size-8" viewBox="0 0 24 24">
                             <path class="text-primary" fill="none" stroke="currentColor" stroke-linecap="round"

@@ -20,7 +20,8 @@
 
         requestAnimationFrame(handle);
     }
-}" x-intersect.once.threshold.65="roll()" class="bg-black text-white relative bg-fixed bg-center"
+}" x-intersect.once.threshold.65="roll()"
+    class="bg-black text-white relative bg-fixed bg-center"
     style="background-image: url('https://res.cloudinary.com/sfp-app/image/upload/v1711541008/tunaeun0pvs42u6g1mks.jpg')">
     {{-- <img class="absolute inset-0 size-full object-cover opacity-20"
         src="https://img.freepik.com/free-photo/group-afro-americans-working-together_1303-8971.jpg?w=2000&t=st=1711451492~exp=1711452092~hmac=eebe50bf03950c1cf0d9b5abcd86f9f0a6749d7df99199e59ca725df3814559b"
@@ -30,12 +31,12 @@
     <div class="py-10 lg:pt-12 relative max-w-7xl mx-auto">
         <div class="flex flex-col gap-4 lg:gap-12 items-center justify-center">
             <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-2xl lg:text-5xl font-bold max-w-4xl">
+                <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">
                     <span class="uppercase tracking-wide">
-                        <span class="outline-text">Unleash</span>
-                        the potential
+                        <span class="outline-text">Working With </span>
+                        WhyLead
                         <span class="hidden md:inline"><br /></span>
-                        <span class="outline-text">of your organisation</span>
+                        Makes a Real Impact
                     </span>
                 </h2>
 
@@ -88,7 +89,7 @@
 
                     <li class="flex flex-col items-center text-center gap-3">
                         <div class="relative">
-                            <svg class="-rotate-90 size-40 lg:size-34" viewBox="0 0 120 120" stroke-width="6">
+                            <svg class="-rotate-90 size-40 lg:size-34" viewBox="0 0 120 120" stroke-width="8">
                                 <circle cx="60" cy="60" r="54" fill="none" stroke="currentColor"
                                     stroke-opacity="0.2" />
                                 <circle cx="60" cy="60" r="54" fill="none"
@@ -98,20 +99,24 @@
                                     x-bind:stroke-dashoffset="`calc(100 - ${Math.min({{ $progress }}, Math.floor({{ $progress }} * current))})`" />
                             </svg>
 
-                            <div class="absolute inset-0 flex items-center justify-center text-4xl">
+                            <div class="absolute inset-0 flex items-center justify-center text-4xl font-semibold">
                                 <span
                                     x-text="Math.min({{ $percent }}, Math.floor({{ $percent }} * current))"></span>%
                             </div>
                         </div>
 
                         <div>
-                            <h3 class="text-xl font-semibold">
+                            {{-- <h3 class="text-xl font-semibold">
                                 {{ $entry['title'] }}
-                            </h3>
+                            </h3> --}}
 
-                            <p class="mt-1.5 text-sm/loose opacity-70">
+                            <p class="mt-1.5 text-sm/relaxed">
                                 {{ $entry['description'] }}
                             </p>
+
+                            {{-- <p class="mt-1.5 text-xl/relaxed px-5">
+                                {{ $entry['description'] }}
+                            </p> --}}
                         </div>
                     </li>
                 @endforeach

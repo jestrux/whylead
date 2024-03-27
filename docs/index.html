@@ -7,27 +7,13 @@
         <meta name="title" content="" />
         <meta name="description" content="" />
 
-        <title></title>
+        <title>WhyLead</title>
         <link
             href="http://localhost:8000/img/icon.png"
             rel="shortcut icon"
             type="image/png"
         />
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet"
-        />
-
-        <script
-            type="module"
-            src="http://[::1]:5174/@vite/client"
-            data-navigate-track="reload"
-        ></script>
         <link rel="stylesheet" href="assets/app-DEW05OmH.css" />
         <script src="https://cdn.tailwindcss.com"></script>
 
@@ -70,7 +56,7 @@
                 }
 
                 .btn:not(.btn-sm):not(.btn-xs) {
-                    @apply font-bold gap-2 text-base/none px-5 py-4 rounded-lg;
+                    @apply font-semibold gap-1 text-sm/none px-4 py-3.5 rounded-md;
                 }
 
                 .btn-sm {
@@ -94,8 +80,10 @@
                 }
 
                 .outline-text {
-                    -webkit-text-fill-color: rgb(var(--content-color) / 0.01);
-                    -webkit-text-stroke: 0.7px rgb(var(--content-color) / 1);
+                    /* -webkit-text-fill-color: rgb(var(--content-color) / 0.01); */
+                    /* -webkit-text-stroke: 0.7px rgb(var(--content-color) / 0.7); */
+                    font-weight: 300;
+                    opacity: 0.7;
                 }
 
                 .text-white .outline-text {
@@ -126,6 +114,14 @@
                     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
                     "Helvetica Neue", sans-serif;
                 font-weight: 500;
+            }
+
+            @media (min-width: 1024px) {
+                .lg\:text-4xl {
+                    /* font-size: 2.25rem; */
+                    /* line-height: 5rem !; */
+                    line-height: 1.2 !important;
+                }
             }
         </style>
 
@@ -1122,117 +1118,80 @@
                     // showPrompt: !localStorage.initialPopupShown,
                     courses: [
                         {
-                            _id: "bf261cb6-a404-45c9-996a-57bb3b56767f",
-                            image: "https:\/\/images.unsplash.com\/photo-1573164574511-73c773193279?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDR8fGFmcmljYW4lMjBhbWVyaWNhbiUyMGxlYWRlcnN8ZW58MHx8fHwxNzA5NjM2OTQwfDA&ixlib=rb-4.0.3&q=80&w=1080",
-                            title: "Build thriving teams",
-                            description:
-                                "Thriving teams start with the knowledge that not all that go alone are meant to be alone. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus tempora, assumenda mollitia eius reprehenderit qui, fugiat quae nobis ipsum natus amet ea nostrum dicta ipsam nihil? Ea eum voluptatum quisquam.",
-                            prompt: "Ready to start building thriving teams?",
-                            created_at: "2024-03-26 07:53:28",
-                            updated_at: "2024-03-26 08:03:43",
-                            order: 1,
-                            faqs: [
-                                {
-                                    _id: "cfaq1",
-                                    question:
-                                        "What is the goal of the corporate Leadership course?",
-                                    answer: "The goal of our Corporate Leadership course is to equip you with the skills and knowledge necessary to become an effective leader within your organization. Through interactive learning experiences and practical application of leadership concepts, you will gain insight into how to motivate and engage your team, improve communication, and lead with integrity.",
-                                    created_at: "2024-03-26 07:50:52",
-                                    updated_at: "2024-03-26 07:50:52",
-                                    order: 1,
-                                },
-                                {
-                                    _id: "cfaq2",
-                                    question:
-                                        "Who is the Leadership training designed for?",
-                                    answer: "Our Corporate Leadership course is designed for professionals in leadership positions or those who aspire to leadership roles in their organizations. It is suitable for both seasoned executives and those who are new to leadership positions.",
-                                    created_at: "2024-03-26 07:50:52",
-                                    updated_at: "2024-03-26 07:50:52",
-                                    order: 1,
-                                },
-                                {
-                                    _id: "cfaq3",
-                                    question: "How is the training delivered?",
-                                    answer: "The training sessions at WhyLead are interactive, immersive and an intensive hands-on programme. We offer 3 modes of delivery and participants can choose from instructor-led classroom-based group coaching, one-on-one training sessions and high-quality live and interactive online sessions at their convenience.",
-                                    created_at: "2024-03-26 07:50:52",
-                                    updated_at: "2024-03-26 07:50:52",
-                                    order: 1,
-                                },
-                                {
-                                    _id: "cfaq4",
-                                    question: "What is your refund policy?",
-                                    answer: "At WhyLead, if a participant doesn\u2019t wish to proceed with the training after registration for any reason, he or she is entitled to a 100% refund. However, the refund will be issued only if we are notified in writing within 2 days from the date of registration. The refund will be processed within 4 weeks from the date of withdrawal.",
-                                    created_at: "2024-03-26 07:50:52",
-                                    updated_at: "2024-03-26 07:50:52",
-                                    order: 1,
-                                },
-                            ],
-                        },
-                        {
                             _id: "96ab7e40-7df2-4991-b5b0-4ebd5c0eb0e1",
                             image: "https:\/\/images.unsplash.com\/photo-1573496774426-fe3db3dd1731?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDU4fHxhZnJpY2FuJTIwYW1lcmljYW4lMjBsZWFkZXJzaGlwfGVufDB8fHx8MTcwOTY0NDE0M3ww&ixlib=rb-4.0.3&q=80&w=1080",
-                            title: "Train my leadership team",
+                            title: "Develop Thriving Leaders",
                             description:
-                                "Train your leadership team start with the knowledge that not all that go alone are meant to be alone. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus tempora, assumenda mollitia eius reprehenderit qui, fugiat quae nobis ipsum natus amet ea nostrum dicta ipsam nihil? Ea eum voluptatum quisquam.",
-                            prompt: "Ready to start training your leadership team?",
+                                "Thriving leaders are those who exhibit a dynamic blend of emotional intelligence, effective communication, and problem-solving skills. They are adept at giving and receiving feedback, coaching for performance, and leading by example. Their leadership transcends traditional management, focusing instead on fostering a culture of inclusivity, innovation, and continuous improvement.",
+                            prompt: "Ready to develop thriving leaders?",
                             created_at: "2024-03-26 07:53:28",
-                            updated_at: "2024-03-26 07:53:28",
+                            updated_at: "2024-03-27 14:19:04",
                             order: 1,
                             faqs: [
+                                {
+                                    _id: "972b0f88-ee52-461d-acaa-5c5438acc46a",
+                                    question:
+                                        "They Nurture a Positive Organizational Culture",
+                                    answer: "By embodying and promoting the organization's values, thriving leaders play a crucial role in shaping a positive organizational culture. This culture not only attracts top talent but also fosters loyalty and satisfaction among existing employees, reducing turnover and building a strong employer brand.",
+                                    created_at: "2024-03-27 13:55:45",
+                                    updated_at: "2024-03-27 13:55:45",
+                                    order: 3,
+                                },
                                 {
                                     _id: "cfaq5",
                                     question:
-                                        "How will participants\u2019 progress be evaluated and assessed?",
-                                    answer: "Our Corporate Leadership training includes assessment methods to evaluate participants' knowledge. With a combination of quizzes, assignments, and projects, we evaluate progress and ensure that participants are mastering the course material.",
+                                        "Enhanced Team Productivity and Effectiveness",
+                                    answer: "Thriving leaders inspire their teams to achieve higher levels of productivity and effectiveness. Their ability to effectively communicate, give constructive feedback, and coach for performance directly contributes to a more motivated, engaged, and high-performing team.",
                                     created_at: "2024-03-26 07:50:52",
-                                    updated_at: "2024-03-26 07:50:52",
+                                    updated_at: "2024-03-27 13:54:54",
                                     order: 1,
                                 },
                                 {
                                     _id: "cfaq6",
-                                    question: "What is your refund policy?",
-                                    answer: "At WhyLead, if a participant doesn\u2019t wish to proceed with the training after registration for any reason, he or she is entitled to a 100% refund. However, the refund will be issued only if we are notified in writing within 2 days from the date of registration. The refund will be processed within 4 weeks from the date of withdrawal.",
+                                    question:
+                                        "Improved Decision-Making and Strategic Execution",
+                                    answer: "By embodying and promoting values of emotional intelligence and customer centricity, thriving leaders play a crucial role in shaping a positive organizational culture. This culture not only attracts top talent but also fosters loyalty and satisfaction among existing employees, reducing turnover and building a strong employer brand.",
                                     created_at: "2024-03-26 07:50:52",
-                                    updated_at: "2024-03-26 07:50:52",
-                                    order: 1,
+                                    updated_at: "2024-03-27 14:14:32",
+                                    order: 2,
                                 },
                             ],
                         },
                         {
-                            _id: "5d7cf5fd-1928-45fe-a1f9-2ba344f13bde",
-                            image: "https:\/\/images.unsplash.com\/photo-1442118325940-300e8fe327d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDIzfHxhZnJpY2FuJTIwYW1lcmljYW4lMjBsZWFkZXJzfGVufDB8fHx8MTcwOTY0NDA3Nnww&ixlib=rb-4.0.3&q=80&w=1080",
-                            title: "Strengthen \/ transform our culture",
+                            _id: "bf261cb6-a404-45c9-996a-57bb3b56767f",
+                            image: "https:\/\/images.unsplash.com\/photo-1573164574511-73c773193279?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDR8fGFmcmljYW4lMjBhbWVyaWNhbiUyMGxlYWRlcnN8ZW58MHx8fHwxNzA5NjM2OTQwfDA&ixlib=rb-4.0.3&q=80&w=1080",
+                            title: "Thriving Teams",
                             description:
-                                "Strengthening your culture start with the knowledge that not all that go alone are meant to be alone. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus tempora, assumenda mollitia eius reprehenderit qui, fugiat quae nobis ipsum natus amet ea nostrum dicta ipsam nihil? Ea eum voluptatum quisquam.",
-                            prompt: "Ready to strengthen \/ transform your culture?",
+                                "At the heart of thriving teams lies open communication, joyful collaboration, and the courage to challenge norms. These elements define team health and are pivotal in driving an organization toward its goals through our SPR model. Our approach leverages your unique strategy, operational model, and culture, aiming to nurture these core characteristics through specialized offsite retreats and tailored long-term engagements.",
+                            prompt: "Ready to start building thriving teams?",
                             created_at: "2024-03-26 07:53:28",
-                            updated_at: "2024-03-26 07:53:28",
-                            order: 1,
+                            updated_at: "2024-03-27 13:40:49",
+                            order: 2,
                             faqs: [
                                 {
-                                    _id: "cfaq7",
+                                    _id: "cfaq1",
                                     question:
-                                        "How will our corporate leaders benefit from your consultation?",
-                                    answer: "Our Corporate Leadership course will benefit you by providing you with the skills and knowledge needed to improve your leadership effectiveness. You will learn practical strategies for motivating and engaging your team, resolving conflicts, and leading with integrity, all of which will help you achieve your goals as a leader.",
+                                        "Retaining Your Competitive Advantage",
+                                    answer: "Innovative and continuous improvement from thriving teams will give your organization a significant competitive edge. In markets where differentiation is key, the unique ideas and solutions generated by well-aligned teams can be a game-changer.",
                                     created_at: "2024-03-26 07:50:52",
-                                    updated_at: "2024-03-26 07:50:52",
-                                    order: 1,
+                                    updated_at: "2024-03-27 14:21:47",
+                                    order: 3,
                                 },
                                 {
-                                    _id: "cfaq8",
-                                    question:
-                                        "How will participants\u2019 progress be evaluated and assessed?",
-                                    answer: "Our Corporate Leadership training includes assessment methods to evaluate participants' knowledge. With a combination of quizzes, assignments, and projects, we evaluate progress and ensure that participants are mastering the course material.",
+                                    _id: "cfaq3",
+                                    question: "Long-Term Sustainability",
+                                    answer: "Teams that thrive on open communication, collaboration, and the ability to challenge constructively are more adaptable and resilient. This adaptability is crucial for sustaining success in the ever-evolving market landscape.",
                                     created_at: "2024-03-26 07:50:52",
-                                    updated_at: "2024-03-26 07:50:52",
-                                    order: 1,
+                                    updated_at: "2024-03-27 14:21:03",
+                                    order: 2,
                                 },
                                 {
-                                    _id: "cfaq9",
-                                    question: "What is your refund policy?",
-                                    answer: "At WhyLead, if a participant doesn\u2019t wish to proceed with the training after registration for any reason, he or she is entitled to a 100% refund. However, the refund will be issued only if we are notified in writing within 2 days from the date of registration. The refund will be processed within 4 weeks from the date of withdrawal.",
+                                    _id: "cfaq4",
+                                    question:
+                                        "Performance Improvement in the Short-Term",
+                                    answer: "A team that works well together achieves goals more swiftly and effectively, contributing directly to the organization's short-term performance metrics.",
                                     created_at: "2024-03-26 07:50:52",
-                                    updated_at: "2024-03-26 07:50:52",
+                                    updated_at: "2024-03-27 14:13:55",
                                     order: 1,
                                 },
                             ],
@@ -1240,30 +1199,79 @@
                         {
                             _id: "563f5a51-63cb-489b-a7d0-67adc9e68e12",
                             image: "https:\/\/images.unsplash.com\/photo-1483058712412-4245e9b90334?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDE1fHxwZXJmb3JtYW5jZSUyMGNoYXJ0fGVufDB8fHx8MTcwOTY0NDI5Nnww&ixlib=rb-4.0.3&q=80&w=1080",
-                            title: "Improve our perfomance management",
+                            title: "Performance Management",
                             description:
-                                "Improve your perfomance management starts with the knowledge that not all that go alone are meant to be alone. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus tempora, assumenda mollitia eius reprehenderit qui, fugiat quae nobis ipsum natus amet ea nostrum dicta ipsam nihil? Ea eum voluptatum quisquam.",
+                                "Performance management is the backbone of thriving in the competitive marketplace by focusing on what truly counts: the growth and motivation of your people. It embodies a comprehensive approach to identify, encourage, and nurture the aspirations, motivations, and commitments of individuals towards organizational goals.",
                             prompt: "Ready to improve your perfomance management?",
                             created_at: "2024-03-26 07:53:28",
-                            updated_at: "2024-03-26 07:53:28",
-                            order: 1,
+                            updated_at: "2024-03-27 14:08:31",
+                            order: 3,
                             faqs: [
+                                {
+                                    _id: "a66f8685-9fa3-45cf-aaf0-752869088232",
+                                    question:
+                                        "Continuous Organizational Improvement",
+                                    answer: "Performance management is not a static process; it is dynamic, with regular assessments and adjustments based on data-driven insights. This continuous cycle of evaluation and improvement keeps the organization agile and responsive to change, ensuring long-term success and adaptability.",
+                                    created_at: "2024-03-27 14:08:04",
+                                    updated_at: "2024-03-27 14:08:04",
+                                    order: 3,
+                                },
                                 {
                                     _id: "cfaq10",
                                     question:
-                                        "What is the goal of the corporate Leadership course?",
-                                    answer: "The goal of our Corporate Leadership course is to equip you with the skills and knowledge necessary to become an effective leader within your organization. Through interactive learning experiences and practical application of leadership concepts, you will gain insight into how to motivate and engage your team, improve communication, and lead with integrity.",
+                                        "Enhanced Motivation and Engagement",
+                                    answer: "By fostering an environment where self-motivation and personal growth are encouraged, performance management increases employee engagement and satisfaction. This leads to higher productivity levels and a reduced turnover rate.",
                                     created_at: "2024-03-26 07:50:52",
-                                    updated_at: "2024-03-26 07:50:52",
-                                    order: 1,
+                                    updated_at: "2024-03-27 14:05:23",
+                                    order: 2,
                                 },
                                 {
                                     _id: "cfaq11",
-                                    question: "What is your refund policy?",
-                                    answer: "At WhyLead, if a participant doesn\u2019t wish to proceed with the training after registration for any reason, he or she is entitled to a 100% refund. However, the refund will be issued only if we are notified in writing within 2 days from the date of registration. The refund will be processed within 4 weeks from the date of withdrawal.",
+                                    question: "Strategic Alignment",
+                                    answer: "Through the alignment of individual goals with the organization\u2019s strategic objectives, performance management ensures that every team member is working towards the same end goal, thereby streamlining efforts and maximizing efficiency.",
                                     created_at: "2024-03-26 07:50:52",
-                                    updated_at: "2024-03-26 07:50:52",
+                                    updated_at: "2024-03-27 14:00:52",
                                     order: 1,
+                                },
+                            ],
+                        },
+                        {
+                            _id: "5d7cf5fd-1928-45fe-a1f9-2ba344f13bde",
+                            image: "https:\/\/images.unsplash.com\/photo-1442118325940-300e8fe327d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDIzfHxhZnJpY2FuJTIwYW1lcmljYW4lMjBsZWFkZXJzfGVufDB8fHx8MTcwOTY0NDA3Nnww&ixlib=rb-4.0.3&q=80&w=1080",
+                            title: "STRENGTHEN\/TRANSFORM OUR CULTURE",
+                            description:
+                                "A Thriving Workplace Culture is the bedrock of organizational success. This culture fosters a deep sense of satisfaction, commitment, and unity, driving people to collaborate effectively and contribute at their highest potential. At WhyLead, we harness the power of our Workplace Happiness Index to provide you with empirical data, enabling informed, data-driven decisions to nurture such a culture.",
+                            prompt: "Ready to strengthen \/ transform your culture?",
+                            created_at: "2024-03-26 07:53:28",
+                            updated_at: "2024-03-27 13:47:34",
+                            order: 4,
+                            faqs: [
+                                {
+                                    _id: "cfaq7",
+                                    question:
+                                        "Attracting and Retaining Top Talent",
+                                    answer: "A thriving culture acts as a magnet for top talent and plays a crucial role in retention strategies. The cost savings from reduced turnover, combined with the invaluable input of satisfied, high-performing employees, contribute directly to the organization's bottom line and competitive edge.",
+                                    created_at: "2024-03-26 07:50:52",
+                                    updated_at: "2024-03-27 14:24:20",
+                                    order: 1,
+                                },
+                                {
+                                    _id: "cfaq8",
+                                    question:
+                                        "Revenue Growth and Increased Profitability\/Impact",
+                                    answer: "The direct correlation between a positive workplace culture and financial performance cannot be overstated. Organizations with thriving cultures see noticeable improvements in revenue and profitability and\/or impact, as a result of higher productivity, innovation, and reduced costs associated with employee turnover.",
+                                    created_at: "2024-03-26 07:50:52",
+                                    updated_at: "2024-03-27 14:24:45",
+                                    order: 2,
+                                },
+                                {
+                                    _id: "cfaq9",
+                                    question:
+                                        "Enhanced Productivity and Innovation",
+                                    answer: "By cultivating a culture where employees are motivated and engaged, organizations experience a significant boost in productivity and innovation. Employees in such environments are more likely to think creatively, propose innovative solutions, and go the extra mile, driving the organization forward.",
+                                    created_at: "2024-03-26 07:50:52",
+                                    updated_at: "2024-03-27 14:25:22",
+                                    order: 3,
                                 },
                             ],
                         },
@@ -1271,6 +1279,12 @@
                     course: null,
                     init() {
                         localStorage.initialPopupShown = true;
+                        this.courses = this.courses.map(function (course) {
+                            course.faqs = course.faqs.sort(function (a, b) {
+                                return a.order - b.order;
+                            });
+                            return course;
+                        });
                     },
                 }));
             });
@@ -1381,7 +1395,9 @@
                         <div
                             class="relative z-50 col-span-7 flex flex-col h-full overflow-y-auto max-h-[420px]"
                         >
-                            <div class="m-4 flex items-center">
+                            <div
+                                class="p-4 flex items-center bg-card sticky top-0"
+                            >
                                 <button
                                     x-on:click="course = null"
                                     class="self-start btn btn-outline btn-sm border-none !text-primary"
@@ -1455,7 +1471,7 @@
                                                     <div
                                                         class="transition-all duration-200 max-h-0 overflow-hidden"
                                                         :style="expanded == index ?
-                                                        `max-height:  ${ $el.scrollHeight }px` : ''"
+                                                    `max-height:  ${ $el.scrollHeight }px` : ''"
                                                     >
                                                         <p
                                                             class="mb-3 -mt-1 text-base leading-loose text-content/70"
@@ -1502,7 +1518,7 @@
                             </div>
 
                             <div
-                                class="relative z-10 pt-3 pb-2 pl-2 border-t border-stroke mt-auto flex items-center justify-between"
+                                class="sticky bottom-0 bg-card z-10 pt-3 pb-2 pl-2 border-t border-stroke mt-auto flex items-center justify-between"
                             >
                                 <span
                                     class="ml-3 opacity-60"
@@ -1515,7 +1531,7 @@
 
                                 <button
                                     x-on:click="showPrompt = false"
-                                    class="btn btn-sm srounded-r-full"
+                                    class="btn btn-sm srounded-r-full flex-shrink-0"
                                 >
                                     Contact Us
 
@@ -1617,18 +1633,17 @@
                         <h1
                             class="text-3xl md:text-5xl/[1.2] font-bold mb-2 md:mb-4"
                         >
-                            Strategic Leaps Begin With a Single, Intentional
-                            Step
+                            Strategic Leaps Begin
+                            <span class="hidden md:inline"><br /></span>
+                            With a Single, Intentional Step
                         </h1>
                         <p
                             class="max-w-3xl mb-8 md:text-xl md:leading-loose opacity-90"
                         >
-                            With proven years of experience and a lot of
-                            impactful client engagements, you can rest assured
-                            that you'll be in safe hands. The impact we create
-                            with your <span class="font-bold">Leaders</span> and
-                            <span class="font-bold">Culture</span> will lead to
-                            a <span class="font-bold">Thriving</span>
+                            The impact We Create With Your
+                            <span class="font-bold">Leaders, Culture</span>, and
+                            Organization Will Lead to a
+                            <span class="font-bold">Thriving</span>
                             Organization
                         </p>
 
@@ -1652,55 +1667,91 @@
                     Chosen as a Trusted Partner to Build Thriving Leaders,
                     Teams, Cultures and Organizations.
                 </p>
-                <div
-                    class="max-w-5xl mx-auto flex gap-6 md:gap-y-6 md:gap-x-14 md:flex items-center justify-between flex-wrap grayscale"
-                >
-                    <img
-                        class="h-8"
-                        src="https://uongozi.or.tz/newsite/wp-content/uploads/2022/04/Uongozi_Institute_logo02.svg"
-                    />
-                    <img
-                        class="h-12"
-                        src="https://www.una.or.tz/wp-content/uploads/2020/09/UNA-Tanzania.png"
-                    />
-                    <img
-                        class="h-8"
-                        src="https://www.ubongo.org/wp-content/uploads/2018/04/Logo@2x.png"
-                    />
-                    <img
-                        class="h-8"
-                        src="https://knauf.co.tz/wp-content/uploads/2021/01/Blue-logo.svg"
-                    />
-                    <img
-                        class="h-8"
-                        src="https://www.goodneighbors.or.tz/wp-content/uploads/2021/06/Good-Neighbors-Tanzania-logo.png"
-                    />
-                    <img
-                        class="h-8"
-                        src="https://malala.org/packs/static/images/malala-primary-logo-large-0a880532137530e3eed5.svg"
-                    />
-                    <img
-                        class="h-12"
-                        src="https://pbs.twimg.com/media/EL0KdOHXUAEti4R.png"
-                    />
-                    <img
-                        class="h-8"
-                        src="https://janegoodall.org/wp-content/themes/joyn-child/images/2021_JGI_LOGO_SIGNATURE_GREEN_420.png"
-                    />
 
-                    <span
-                        class="h-8 hidden lg:inline-flex items-center font-bold italic"
-                        >Trusted Globally</span
+                <div class="px-8 space-y-6">
+                    <div
+                        class="flex gap-6 lg:gap-8 items-center justify-between"
                     >
+                        <img
+                            class="grayscale h-6"
+                            src="https://malala.org/packs/static/images/malala-primary-logo-large-0a880532137530e3eed5.svg"
+                        />
 
-                    <img
-                        class="h-8"
-                        src="https://seeklogo.com/images/O/oryx-energies-logo-DB6F52BE4E-seeklogo.com.png"
-                    />
-                    <img
-                        class="h-8"
-                        src="https://partners.givingtuesday.ca/gtuploads/partners/60d3219c810acDOT%20Horizontal%20Logo%20-%20RGB.png"
-                    />
+                        <img
+                            class="grayscale h-12"
+                            src="https://womenlifthealth.jobsoid.com/PortalJob/GetPortalLogo?size=medium"
+                        />
+
+                        <img
+                            class="grayscale h-10"
+                            src="https://www.greenclimate.fund/sites/default/files/organisation/logo-crdb.png"
+                        />
+
+                        <img
+                            class="grayscale h-8"
+                            src="https://seeklogo.com/images/O/oryx-energies-logo-DB6F52BE4E-seeklogo.com.png"
+                        />
+
+                        <img
+                            class="grayscale h-8"
+                            src="https://janegoodall.org/wp-content/themes/joyn-child/images/2021_JGI_LOGO_SIGNATURE_GREEN_420.png"
+                        />
+
+                        <img
+                            class="grayscale h-8"
+                            src="https://www.ubongo.org/wp-content/uploads/2018/04/Logo@2x.png"
+                        />
+
+                        <img
+                            class="grayscale h-8"
+                            src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/RTI_International_%28logo%29.svg/1200px-RTI_International_%28logo%29.svg.png"
+                        />
+                    </div>
+
+                    <div
+                        class="flex gap-6 lg:gap-8 items-center justify-between"
+                    >
+                        <img
+                            class="grayscale h-12"
+                            src="https://www.una.or.tz/wp-content/uploads/2020/09/UNA-Tanzania.png"
+                        />
+
+                        <img
+                            class="grayscale h-8"
+                            src="https://knauf.co.tz/wp-content/uploads/2021/01/Blue-logo.svg"
+                        />
+
+                        <img
+                            class="grayscale h-6"
+                            src="https://uongozi.or.tz/newsite/wp-content/uploads/2022/04/Uongozi_Institute_logo02.svg"
+                        />
+
+                        <img
+                            class="grayscale h-8"
+                            src="https://www.guidestar.org/ViewEdoc.aspx?eDocId=9408228&approved=True"
+                        />
+
+                        <span
+                            class="flex-shrink-0 text-base/none text-primary hidden lg:inline-flex items-center font-bold uppercase italic"
+                        >
+                            Trusted Globally
+                        </span>
+
+                        <img
+                            class="grayscale h-14"
+                            src="https://www.ihi.or.tz/static/images/ihilogo.png"
+                        />
+
+                        <img
+                            class="grayscale h-5"
+                            src="https://partners.givingtuesday.ca/gtuploads/partners/60d3219c810acDOT%20Horizontal%20Logo%20-%20RGB.png"
+                        />
+
+                        <img
+                            class="grayscale h-8"
+                            src="https://nest360.org/wp-content/uploads/2021/04/NEST360_horizontal_logo_fullcolour.png"
+                        />
+                    </div>
                 </div>
             </div>
         </section>
@@ -1714,7 +1765,7 @@
                     <div class="p-8 lg:px-0 lg:pt-12 lg:pl-16">
                         <div class="lg:pr-14">
                             <h2
-                                class="text-2xl md:text-3xl/[1.3] font-semibold uppercase tracking-wide mb-2 md:mb-4"
+                                class="text-2xl/[1.3] font-semibold uppercase tracking-wide mb-2 md:mb-4"
                             >
                                 Are your leaders steering you towards success?
                             </h2>
@@ -1724,13 +1775,13 @@
                             <div
                                 class="group transition-colors relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6"
                                 x-bind:class="effectiveLeaders ?
-                                    'pointer-events-none bg-white lg:bg-white/5 lg:ring-1 lg:ring-inset lg:ring-white/20 text-accent lg:text-white' :
-                                    'text-white/70 lg:text-white'"
+                                'pointer-events-none bg-white lg:bg-white/5 lg:ring-1 lg:ring-inset lg:ring-white/20 text-accent lg:text-white' :
+                                'text-white/70 lg:text-white'"
                             >
                                 <div
                                     class="transition absolute inset-0 bg-white/5 scale-x-0 origin-left group-hover:scale-x-100 rounded-l-xl"
                                     x-bind:class="effectiveLeaders ? 'scale-x-100' :
-                                        'group-hover:scale-x-100'"
+                                    'group-hover:scale-x-100'"
                                 ></div>
 
                                 <div
@@ -1771,13 +1822,13 @@
                             <div
                                 class="group transition-colors relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6"
                                 x-bind:class="!effectiveLeaders ?
-                                    'pointer-events-none bg-white lg:bg-white/5 lg:ring-1 lg:ring-inset lg:ring-white/20 text-accent lg:text-white' :
-                                    'text-white/70 lg:text-white'"
+                                'pointer-events-none bg-white lg:bg-white/5 lg:ring-1 lg:ring-inset lg:ring-white/20 text-accent lg:text-white' :
+                                'text-white/70 lg:text-white'"
                             >
                                 <div
                                     class="transition absolute inset-0 bg-white/5 scale-x-0 origin-left group-hover:scale-x-100 rounded-l-xl"
                                     x-bind:class="!effectiveLeaders ? 'scale-x-100' :
-                                        'group-hover:scale-x-100'"
+                                    'group-hover:scale-x-100'"
                                 ></div>
 
                                 <div
@@ -1845,17 +1896,17 @@
                                 </div>
 
                                 <div class="flex-1 -mt-px">
-                                    <h3 class="text-lg lg:text-xl">
-                                        They empower and develop their teams
+                                    <h3 class="text-lg">
+                                        They Empower and Develop Their Teams
                                     </h3>
 
                                     <p
-                                        class="mt-1 text-sm/relaxed lg:text-base/loose font-light lg:block opacity-80"
+                                        class="mt-1 text-sm/relaxed font-light lg:block opacity-80"
                                     >
-                                        All of your receipts organized into one
-                                        place, as long as you don't mind typing
-                                        in the data by hand. All of your
-                                        receipts organized.
+                                        They invest in their team&#039;s growth,
+                                        fostering an environment where skills
+                                        flourish and confidence is built,
+                                        driving organizational progress.
                                     </p>
                                 </div>
                             </div>
@@ -1880,17 +1931,17 @@
                                 </div>
 
                                 <div class="flex-1 -mt-px">
-                                    <h3 class="text-lg lg:text-xl">
-                                        They embrace and champion change
+                                    <h3 class="text-lg">
+                                        They Embrace and Champion Change
                                     </h3>
 
                                     <p
-                                        class="mt-1 text-sm/relaxed lg:text-base/loose font-light lg:block opacity-80"
+                                        class="mt-1 text-sm/relaxed font-light lg:block opacity-80"
                                     >
-                                        All of your receipts organized into one
-                                        place, as long as you don't mind typing
-                                        in the data by hand. All of your
-                                        receipts organized.
+                                        By being adaptable and proactive about
+                                        change, these leaders ensure the
+                                        organization stays relevant and ahead of
+                                        industry trends.
                                     </p>
                                 </div>
                             </div>
@@ -1915,17 +1966,17 @@
                                 </div>
 
                                 <div class="flex-1 -mt-px">
-                                    <h3 class="text-lg lg:text-xl">
-                                        They are agents for strategic alignment
+                                    <h3 class="text-lg">
+                                        They are Agents For Strategic Alignment
                                     </h3>
 
                                     <p
-                                        class="mt-1 text-sm/relaxed lg:text-base/loose font-light lg:block opacity-80"
+                                        class="mt-1 text-sm/relaxed font-light lg:block opacity-80"
                                     >
-                                        All of your receipts organized into one
-                                        place, as long as you don't mind typing
-                                        in the data by hand. All of your
-                                        receipts organized.
+                                        They ensure every team effort is
+                                        cohesively directed towards the
+                                        organization&#039;s overarching goals,
+                                        maximizing efficiency and impact
                                     </p>
                                 </div>
                             </div>
@@ -1957,18 +2008,17 @@
                                 </div>
 
                                 <div class="flex-1 -mt-px">
-                                    <h3 class="text-lg lg:text-xl">
-                                        They add to strategic &amp; cultural
-                                        misalignment
+                                    <h3 class="text-lg">
+                                        They Add to Strategic &amp; Cultural
+                                        Misalignment
                                     </h3>
 
                                     <p
-                                        class="mt-1 text-sm/relaxed lg:text-base/loose font-light lg:block opacity-80"
+                                        class="mt-1 text-sm/relaxed font-light lg:block opacity-80"
                                     >
-                                        All of your receipts organized into one
-                                        place, as long as you don't mind typing
-                                        in the data by hand. All of your
-                                        receipts organized.
+                                        They create confusion and discord,
+                                        undermining team alignment and
+                                        organizational integrity.
                                     </p>
                                 </div>
                             </div>
@@ -1993,18 +2043,18 @@
                                 </div>
 
                                 <div class="flex-1 -mt-px">
-                                    <h3 class="text-lg lg:text-xl">
-                                        Unable to Navigate change &amp;
-                                        uncertainty
+                                    <h3 class="text-lg">
+                                        Unable to Navigate Uncertainty &amp;
+                                        Change
                                     </h3>
 
                                     <p
-                                        class="mt-1 text-sm/relaxed lg:text-base/loose font-light lg:block opacity-80"
+                                        class="mt-1 text-sm/relaxed font-light lg:block opacity-80"
                                     >
-                                        All of your receipts organized into one
-                                        place, as long as you don't mind typing
-                                        in the data by hand. All of your
-                                        receipts organized.
+                                        Their inability to steer through
+                                        uncertain times results in missed
+                                        opportunities and potential stagnation,
+                                        leaving the organization vulnerable.
                                     </p>
                                 </div>
                             </div>
@@ -2029,18 +2079,18 @@
                                 </div>
 
                                 <div class="flex-1 -mt-px">
-                                    <h3 class="text-lg lg:text-xl">
-                                        Unable to inspire growth &amp;
-                                        commitment
+                                    <h3 class="text-lg">
+                                        Unable to Inspire Growth &amp;
+                                        Commitment
                                     </h3>
 
                                     <p
-                                        class="mt-1 text-sm/relaxed lg:text-base/loose font-light lg:block opacity-80"
+                                        class="mt-1 text-sm/relaxed font-light lg:block opacity-80"
                                     >
-                                        All of your receipts organized into one
-                                        place, as long as you don't mind typing
-                                        in the data by hand. All of your
-                                        receipts organized.
+                                        They struggle to cultivate a dedicated
+                                        workforce, significantly impacting
+                                        productivity and organizational growth
+                                        potential.
                                     </p>
                                 </div>
                             </div>
@@ -2093,10 +2143,10 @@
                 <script>
                     document.addEventListener("alpine:init", () => {
                         Alpine.data("challenges", () => ({
-                            openChallenge(index) {
+                            openChallenge(name) {
                                 var challenge = Object.assign(
                                     {},
-                                    this.challenges[index]
+                                    this.challenges.find((c) => c.title == name)
                                 );
                                 challenge.solutions = challenge.solutions.map(
                                     (solution) => {
@@ -2251,7 +2301,7 @@
                     });
                 </script>
 
-                <section x-data="challenges" class="pt-20 sm:pt-40">
+                <section x-data="challenges" class="pt-20 sm:pt-24">
                     <template x-if="challenge">
                         <div
                             class="fixed inset-0 z-50 bg-black/50 flex items-center justify-between"
@@ -2280,7 +2330,7 @@
                                     class="relative lg:grid grid-cols-12 bg-card border border-stroke rounded-2xl overflow-hidden"
                                 >
                                     <div
-                                        class="relative z-10 col-span-7 flex flex-col max-h-[85dvh] overflow-auto"
+                                        class="relative z-10 col-span-7 flex flex-col max-h-[500px] overflow-auto"
                                     >
                                         <div class="p-8">
                                             <h3
@@ -2344,7 +2394,7 @@
                                                                         x-for="(item, index) in solution.checklist"
                                                                     >
                                                                         <li
-                                                                            class="flex items-center gap-2 py-2"
+                                                                            class="flex items-center gap-1 py-2"
                                                                             x-bind:class="{ 'border-t border-stroke': index > 0 }"
                                                                         >
                                                                             <svg
@@ -2367,7 +2417,7 @@
                                                                                 />
                                                                             </svg>
                                                                             <span
-                                                                                class="text-sm/none opacity-70"
+                                                                                class="text-xs/none opacity-70"
                                                                                 x-text="item"
                                                                             ></span>
                                                                         </li>
@@ -2375,7 +2425,7 @@
                                                                 </ul>
 
                                                                 <button
-                                                                    class="self-end mt-auto mb-2 -mr-3 btn btn-outline btn-sm capitalize !text-content/80 border-none"
+                                                                    class="self-end mt-auto mb-2 -mr-3 btn btn-outline btn-xs capitalize !text-content/80 border-none"
                                                                     x-on:click="challenge = null"
                                                                 >
                                                                     Get started
@@ -2432,20 +2482,20 @@
                     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         <div class="mx-auto max-w-4xl sm:text-center">
                             <h2
-                                class="text-2xl lg:text-5xl font-bold max-w-4xl"
+                                class="text-2xl lg:text-4xl font-bold max-w-4xl"
                             >
                                 <span class="uppercase tracking-wide">
                                     <span class="outline-text">Pick </span>
                                     your top
                                     <span class="hidden md:inline"><br /></span>
                                     leadership
-                                    <span class="outline-text">challenges</span>
+                                    <span class="outline-text">challenge</span>
                                 </span>
                             </h2>
 
-                            <p class="mt-5 text-xl">
-                                Click one of the challenges below to get
-                                started.
+                            <p class="mt-5 text-lg opacity-70">
+                                Click your top challenge below to discover
+                                targeted solutions.
                             </p>
                         </div>
 
@@ -2455,7 +2505,7 @@
                         >
                             <li>
                                 <button
-                                    x-on:click="openChallenge(0)"
+                                    x-on:click="openChallenge(`Managing Adversity and Fostering Alignment`)"
                                     class="bg-card dark:bg-content/5 group hover:scale-105 transition flex flex-col gap-3 min-h-full w-full rounded-2xl border border-black/5 shadow px-6 py-6 text-left"
                                 >
                                     <svg class="size-8" viewBox="0 0 24 24">
@@ -2486,7 +2536,7 @@
                             </li>
                             <li>
                                 <button
-                                    x-on:click="openChallenge(1)"
+                                    x-on:click="openChallenge(`Helping Teams Grow`)"
                                     class="bg-accent text-white group hover:scale-105 transition flex flex-col gap-3 min-h-full w-full rounded-2xl border border-black/5 shadow px-6 py-6 text-left"
                                 >
                                     <svg class="size-8" viewBox="0 0 24 24">
@@ -2516,7 +2566,7 @@
                             </li>
                             <li>
                                 <button
-                                    x-on:click="openChallenge(2)"
+                                    x-on:click="openChallenge(`Inspiring and Motivating teams`)"
                                     class="bg-card dark:bg-content/5 group hover:scale-105 transition flex flex-col gap-3 min-h-full w-full rounded-2xl border border-black/5 shadow px-6 py-6 text-left"
                                 >
                                     <svg class="size-8" viewBox="0 0 24 24">
@@ -2546,7 +2596,7 @@
                             </li>
                             <li>
                                 <button
-                                    x-on:click="openChallenge(3)"
+                                    x-on:click="openChallenge(`Nurturing Company Culture`)"
                                     class="bg-accent text-white group hover:scale-105 transition flex flex-col gap-3 min-h-full w-full rounded-2xl border border-black/5 shadow px-6 py-6 text-left"
                                 >
                                     <svg class="size-8" viewBox="0 0 24 24">
@@ -2576,7 +2626,7 @@
                             </li>
                             <li>
                                 <button
-                                    x-on:click="openChallenge(4)"
+                                    x-on:click="openChallenge(`Executive Alignment`)"
                                     class="bg-card dark:bg-content/5 group hover:scale-105 transition flex flex-col gap-3 min-h-full w-full rounded-2xl border border-black/5 shadow px-6 py-6 text-left"
                                 >
                                     <svg class="size-8" viewBox="0 0 24 24">
@@ -2606,7 +2656,7 @@
                             </li>
                             <li>
                                 <button
-                                    x-on:click="openChallenge(5)"
+                                    x-on:click="openChallenge(`Strategic Adaptability and Agility`)"
                                     class="bg-accent text-white group hover:scale-105 transition flex flex-col gap-3 min-h-full w-full rounded-2xl border border-black/5 shadow px-6 py-6 text-left"
                                 >
                                     <svg class="size-8" viewBox="0 0 24 24">
@@ -2636,7 +2686,7 @@
                             </li>
                             <li>
                                 <button
-                                    x-on:click="openChallenge(6)"
+                                    x-on:click="openChallenge(`Leading Through Change`)"
                                     class="bg-card dark:bg-content/5 group hover:scale-105 transition flex flex-col gap-3 min-h-full w-full rounded-2xl border border-black/5 shadow px-6 py-6 text-left"
                                 >
                                     <svg class="size-8" viewBox="0 0 24 24">
@@ -2666,7 +2716,7 @@
                             </li>
                             <li>
                                 <button
-                                    x-on:click="openChallenge(7)"
+                                    x-on:click="openChallenge(`Making Tough Decisions`)"
                                     class="bg-accent text-white group hover:scale-105 transition flex flex-col gap-3 min-h-full w-full rounded-2xl border border-black/5 shadow px-6 py-6 text-left"
                                 >
                                     <svg class="size-8" viewBox="0 0 24 24">
@@ -2696,7 +2746,7 @@
                             </li>
                             <li>
                                 <button
-                                    x-on:click="openChallenge(8)"
+                                    x-on:click="openChallenge(`Fostering Innovation and Collaboration`)"
                                     class="bg-card dark:bg-content/5 group hover:scale-105 transition flex flex-col gap-3 min-h-full w-full rounded-2xl border border-black/5 shadow px-6 py-6 text-left"
                                 >
                                     <svg class="size-8" viewBox="0 0 24 24">
@@ -2768,46 +2818,48 @@
                                 </a>
                             </div>
 
-                            <div class="pt-6 space-y-2 lg:space-y-4">
+                            <div class="pt-6 space-y-2 lg:space-y-2">
                                 <h2
-                                    class="text-2xl lg:text-5xl font-bold max-w-4xl"
+                                    class="text-2xl lg:text-4xl font-bold max-w-4xl"
                                 >
                                     <span class="uppercase tracking-wide">
-                                        <span class="outline-text"
-                                            >Thriving</span
-                                        >
-                                        in
-                                        <span class="hidden md:inline"
-                                            ><br
-                                        /></span>
+                                        Thrive
                                         <span class="outline-texts"
-                                            >the middle</span
-                                        >
+                                            >in the
+                                        </span>
+                                        middle
                                     </span>
                                 </h2>
 
-                                <p class="text-lg lg:text-xl font-bold">
-                                    Thriving middle managers lead to a thriving
-                                    organization
+                                <p class="text-lg lg:text-lg font-semibold">
+                                    Thriving Middle Managers Lead to a Thriving
+                                    Organization
                                 </p>
 
                                 <p class="text-base/loose opacity-70">
-                                    This program is designed to empower middle
-                                    managers to thrive as change and alignment
-                                    agents by inspiring their teams’ conviction,
-                                    commitment, and a sense of congruence to
-                                    drive strategic results for the
-                                    organization. Key Outcomes for participating
-                                    organizations include:
+                                    This is a transformative 10-week program
+                                    tailored for middle managers, focusing on
+                                    empowering them as essential agents of
+                                    growth, alignment, culture, and change
+                                    within their organizations. It tackles the
+                                    unique challenges middle managers face, from
+                                    navigating the demands of both senior
+                                    leadership and direct reports to driving
+                                    strategic goals amid disruptions.
+                                </p>
+
+                                <p>
+                                    Key Outcomes for participating organizations
+                                    include:
                                 </p>
 
                                 <ul
                                     role="list"
                                     class="-my-2 divide-y divide-black/5"
                                 >
-                                    <li class="flex items-center gap-3 py-2">
+                                    <li class="flex items-center gap-2 py-2">
                                         <svg
-                                            class="size-8 flex-none opacity-60"
+                                            class="size-7 flex-none opacity-60"
                                             viewBox="0 0 24 24"
                                         >
                                             <circle
@@ -2827,13 +2879,13 @@
                                         </svg>
 
                                         <span class="text-base opacity-70">
-                                            Grow your Revenue and increase Your
-                                            Profit
+                                            Enhanced Organizational Agility and
+                                            Resilience
                                         </span>
                                     </li>
-                                    <li class="flex items-center gap-3 py-2">
+                                    <li class="flex items-center gap-2 py-2">
                                         <svg
-                                            class="size-8 flex-none opacity-60"
+                                            class="size-7 flex-none opacity-60"
                                             viewBox="0 0 24 24"
                                         >
                                             <circle
@@ -2853,12 +2905,13 @@
                                         </svg>
 
                                         <span class="text-base opacity-70">
-                                            A happier workplace for all
+                                            Improved Strategic Alignment and
+                                            Execution
                                         </span>
                                     </li>
-                                    <li class="flex items-center gap-3 py-2">
+                                    <li class="flex items-center gap-2 py-2">
                                         <svg
-                                            class="size-8 flex-none opacity-60"
+                                            class="size-7 flex-none opacity-60"
                                             viewBox="0 0 24 24"
                                         >
                                             <circle
@@ -2878,17 +2931,17 @@
                                         </svg>
 
                                         <span class="text-base opacity-70">
-                                            Alignment in delivering strategic
-                                            outcomes
+                                            Cultivation of a Culture of
+                                            Innovation and High Performance
                                         </span>
                                     </li>
 
                                     <li
                                         class="pt-5 pb-2 text-sm/relaxed opacity-60"
                                     >
-                                        Made up of individuals who are
-                                        passionate about the mission, committed
-                                        to results, and of high character.
+                                        Join Thrive today and be more than just
+                                        a link in the organizational hierachy;
+                                        be its strongest link.
                                     </li>
                                 </ul>
 
@@ -2919,10 +2972,10 @@
                                             class="absolute inset-0 flex items-center justify-center"
                                         >
                                             <span
-                                                class="w-24 h-24 flex items-center justify-center rounded-full bg-white text-accent"
+                                                class="size-16 flex items-center justify-center rounded-full bg-white text-accent"
                                             >
                                                 <svg
-                                                    class="w-12 ml-1"
+                                                    class="size-8 ml-1"
                                                     fill="currentColor"
                                                     viewBox="0 0 24 24"
                                                     stroke-width="1"
@@ -2951,10 +3004,12 @@
                     class="flex flex-col gap-4 lg:gap-12 items-center justify-center"
                 >
                     <div class="max-w-5xl mx-auto text-center">
-                        <h2 class="text-2xl lg:text-5xl font-bold max-w-4xl">
+                        <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">
                             <span class="uppercase">
                                 <span class="outline-text">Unlock your</span>
-                                thriving organization
+                                thriving
+                                <span class="hidden md:inline"><br /></span>
+                                organization
                                 <span class="outline-text">in </span>
                                 3
                                 <span class="outline-text"> steps</span>
@@ -2982,14 +3037,14 @@
                                 class="min-h-full relative flex items-start flex-col justify-between gap-3 lg:p-2"
                             >
                                 <small
-                                    class="inline-flex text-sm/none py-2 px-3 rounded-full border border-white bg-white/10 uppercase tracking-widest"
+                                    class="inline-flex text-xs/none py-2 px-3 rounded-full border border-white bg-white/10 uppercase tracking-widest"
                                 >
                                     <span class="mt-px">Step 01</span>
                                 </small>
 
                                 <div class="flex-1 min-h-40"></div>
 
-                                <h3 class="text-4xl/[1.25] sfont-bold">
+                                <h3 class="text-3xl">
                                     Tell Us Your Unique Needs
                                 </h3>
                             </div>
@@ -3010,14 +3065,14 @@
                                 class="min-h-full relative flex items-start flex-col justify-between gap-3 lg:p-2"
                             >
                                 <small
-                                    class="inline-flex text-sm/none py-2 px-3 rounded-full border border-white bg-white/10 uppercase tracking-widest"
+                                    class="inline-flex text-xs/none py-2 px-3 rounded-full border border-white bg-white/10 uppercase tracking-widest"
                                 >
                                     <span class="mt-px">Step 02</span>
                                 </small>
 
                                 <div class="flex-1 min-h-40"></div>
 
-                                <h3 class="text-4xl/[1.25] sfont-bold">
+                                <h3 class="text-3xl">
                                     We Co-Create a Solution
                                 </h3>
                             </div>
@@ -3034,14 +3089,14 @@
                                 class="min-h-full relative flex items-start flex-col justify-between gap-3 lg:p-2"
                             >
                                 <small
-                                    class="inline-flex text-sm/none py-2 px-3 rounded-full border border-white bg-white/10 uppercase tracking-widest"
+                                    class="inline-flex text-xs/none py-2 px-3 rounded-full border border-white bg-white/10 uppercase tracking-widest"
                                 >
                                     <span class="mt-px">Step 03</span>
                                 </small>
 
                                 <div class="flex-1 min-h-40"></div>
 
-                                <h3 class="text-4xl/[1.25] sfont-bold">
+                                <h3 class="text-3xl">
                                     Unlock a Thriving Organisation
                                 </h3>
                             </div>
@@ -3049,7 +3104,7 @@
                     </ul>
 
                     <div class="text-center">
-                        <p class="text-xl opacity-70">
+                        <p class="text-lg opacity-70">
                             Ready to take your organisation to the next level?
                         </p>
                         <a href="#" class="mt-6 btn"> Tell us your needs </a>
@@ -3060,7 +3115,7 @@
 
         <section class="bg-content/5">
             <div class="px-8 py-12 lg:py-20 relative max-w-7xl mx-auto">
-                <div class="lg:grid grid-cols-2 gap-16">
+                <div class="lg:grid grid-cols-2 gap-16 items-center">
                     <div class="md:hidden">
                         <a href="#" class="block relative">
                             <div
@@ -3097,8 +3152,8 @@
                         </a>
                     </div>
 
-                    <div class="pt-6 flex flex-col gap-2">
-                        <h2 class="text-2xl lg:text-5xl font-bold max-w-4xl">
+                    <div class="pb-6 flex flex-col gap-2">
+                        <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">
                             <span class="uppercase tracking-wides">
                                 <span class="outline-text">If everyone is</span>
                                 moving forward together,
@@ -3143,10 +3198,10 @@
                                     class="absolute inset-0 flex items-center justify-center"
                                 >
                                     <span
-                                        class="w-24 h-24 flex items-center justify-center rounded-full bg-white text-accent"
+                                        class="size-16 flex items-center justify-center rounded-full bg-white text-accent"
                                     >
                                         <svg
-                                            class="w-12 ml-1"
+                                            class="size-8 ml-1"
                                             fill="currentColor"
                                             viewBox="0 0 24 24"
                                             stroke-width="1"
@@ -3167,13 +3222,13 @@
             </div>
         </section>
 
-        <section class="py-10 lg:py-24">
+        <section class="py-10 lg:py-20">
             <div class="relative max-w-7xl mx-auto px-8">
                 <div
                     class="flex flex-col gap-4 lg:gap-12 items-center justify-center"
                 >
                     <div class="max-w-5xl mx-auto text-center">
-                        <h2 class="text-2xl lg:text-5xl font-bold max-w-4xl">
+                        <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">
                             <span class="uppercase">
                                 <span class="outline-text">What </span>
                                 working with<span class="hidden md:inline"
@@ -4375,28 +4430,28 @@
 
         <section
             x-data="{
-        current: 0,
-        target: 1,
-        roll() {
-            this.current = 0;
-            const interval = 100;
-            const step = 0.1;
-            var rafReference;
+    current: 0,
+    target: 1,
+    roll() {
+        this.current = 0;
+        const interval = 100;
+        const step = 0.1;
+        var rafReference;
 
-            const handle = () => {
-                if (this.current < this.target) {
-                    this.current += step;
+        const handle = () => {
+            if (this.current < this.target) {
+                this.current += step;
 
-                    setTimeout(() => rafReference = requestAnimationFrame(handle), 80);
-                } else {
-                    cancelAnimationFrame(handle);
-                    this.current = this.target;
-                }
-            };
+                setTimeout(() => rafReference = requestAnimationFrame(handle), 80);
+            } else {
+                cancelAnimationFrame(handle);
+                this.current = this.target;
+            }
+        };
 
-            requestAnimationFrame(handle);
-        }
-    }"
+        requestAnimationFrame(handle);
+    }
+}"
             x-intersect.once.threshold.65="roll()"
             class="bg-black text-white relative bg-fixed bg-center"
             style="
@@ -4410,14 +4465,12 @@
                     class="flex flex-col gap-4 lg:gap-12 items-center justify-center"
                 >
                     <div class="max-w-4xl mx-auto text-center">
-                        <h2 class="text-2xl lg:text-5xl font-bold max-w-4xl">
+                        <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">
                             <span class="uppercase tracking-wide">
-                                <span class="outline-text">Unleash</span>
-                                the potential
+                                <span class="outline-text">Working With </span>
+                                WhyLead
                                 <span class="hidden md:inline"><br /></span>
-                                <span class="outline-text"
-                                    >of your organisation</span
-                                >
+                                Makes a Real Impact
                             </span>
                         </h2>
 
@@ -4435,7 +4488,7 @@
                                 <svg
                                     class="-rotate-90 size-40 lg:size-34"
                                     viewBox="0 0 120 120"
-                                    stroke-width="6"
+                                    stroke-width="8"
                                 >
                                     <circle
                                         cx="60"
@@ -4461,7 +4514,7 @@
                                 </svg>
 
                                 <div
-                                    class="absolute inset-0 flex items-center justify-center text-4xl"
+                                    class="absolute inset-0 flex items-center justify-center text-4xl font-semibold"
                                 >
                                     <span
                                         x-text="Math.min(100, Math.floor(100 * current))"
@@ -4471,11 +4524,7 @@
                             </div>
 
                             <div>
-                                <h3 class="text-xl font-semibold">
-                                    Effective tailored solutions
-                                </h3>
-
-                                <p class="mt-1.5 text-sm/loose opacity-70">
+                                <p class="mt-1.5 text-sm/relaxed">
                                     Every client has seen their challenges turn
                                     into opportunities for growth
                                 </p>
@@ -4489,7 +4538,7 @@
                                 <svg
                                     class="-rotate-90 size-40 lg:size-34"
                                     viewBox="0 0 120 120"
-                                    stroke-width="6"
+                                    stroke-width="8"
                                 >
                                     <circle
                                         cx="60"
@@ -4515,7 +4564,7 @@
                                 </svg>
 
                                 <div
-                                    class="absolute inset-0 flex items-center justify-center text-4xl"
+                                    class="absolute inset-0 flex items-center justify-center text-4xl font-semibold"
                                 >
                                     <span
                                         x-text="Math.min(98, Math.floor(98 * current))"
@@ -4525,11 +4574,7 @@
                             </div>
 
                             <div>
-                                <h3 class="text-xl font-semibold">
-                                    Post-engagement growth
-                                </h3>
-
-                                <p class="mt-1.5 text-sm/loose opacity-70">
+                                <p class="mt-1.5 text-sm/relaxed">
                                     Nearly all clients discover new growth
                                     avenues post-engagement with our expertise
                                 </p>
@@ -4543,7 +4588,7 @@
                                 <svg
                                     class="-rotate-90 size-40 lg:size-34"
                                     viewBox="0 0 120 120"
-                                    stroke-width="6"
+                                    stroke-width="8"
                                 >
                                     <circle
                                         cx="60"
@@ -4569,7 +4614,7 @@
                                 </svg>
 
                                 <div
-                                    class="absolute inset-0 flex items-center justify-center text-4xl"
+                                    class="absolute inset-0 flex items-center justify-center text-4xl font-semibold"
                                 >
                                     <span
                                         x-text="Math.min(82, Math.floor(82 * current))"
@@ -4579,11 +4624,7 @@
                             </div>
 
                             <div>
-                                <h3 class="text-xl font-semibold">
-                                    Team skill improvement
-                                </h3>
-
-                                <p class="mt-1.5 text-sm/loose opacity-70">
+                                <p class="mt-1.5 text-sm/relaxed">
                                     Most of the clients who have worked with
                                     WhyLead managed to improve their skills
                                     through.
@@ -4597,11 +4638,11 @@
 
         <section class="py-10 lg:py-14">
             <div
-                class="max-w-6xl mx-auto px-8 flex flex-col gap-12 items-center"
+                class="max-w-5xl mx-auto px-8 flex flex-col gap-8 items-center"
             >
                 <div class="text-center">
                     <h2
-                        class="text-2xl md:text-5xl font-bold uppercase tracking-wide"
+                        class="text-2xl lg:text-4xl font-bold uppercase tracking-wide"
                     >
                         <span class="outline-text"
                             >Frequently
@@ -4614,18 +4655,18 @@
 
                 <div
                     x-data="{
-                expanded: -1,
-                indices: [0,1,2,3,4,5],
-                get visibleIndices() {
-                    return this.indices.slice(0, 3);
-                },
-                shuffle(array) {
-                    return [...array].sort(() => Math.random() - 0.5);
-                },
-                init() {
-                    this.indices = this.shuffle(this.shuffle(this.indices));
-                },
-            }"
+            expanded: -1,
+            indices: [0,1,2,3,4,5,6,7,8],
+            get visibleIndices() {
+                return this.indices.slice(0, 3);
+            },
+            shuffle(array) {
+                return [...array].sort(() => Math.random() - 0.5);
+            },
+            init() {
+                this.indices = this.shuffle(this.shuffle(this.indices));
+            },
+        }"
                     class="flex-1 w-full border-b divide-y border-stroke divide-stroke"
                 >
                     <button
@@ -4637,8 +4678,7 @@
                             <h3
                                 class="mb-5 text-lg font-semibold md:text-lg md:leading-tight"
                             >
-                                What is the goal of the corporate Leadership
-                                course?
+                                What types of training does WhyLead offer?
                             </h3>
                             <div
                                 class="transition-all duration-200 max-h-0 overflow-hidden"
@@ -4647,15 +4687,14 @@
                                 <p
                                     class="mb-3 mt-1 text-base leading-loose text-neutral-900/80"
                                 >
-                                    The goal of our Corporate Leadership course
-                                    is to equip you with the skills and
-                                    knowledge necessary to become an effective
-                                    leader within your organization. Through
-                                    interactive learning experiences and
-                                    practical application of leadership
-                                    concepts, you will gain insight into how to
-                                    motivate and engage your team, improve
-                                    communication, and lead with integrity.
+                                    WhyLead offers a comprehensive range of
+                                    programs focused on leadership development,
+                                    organizational culture, team building, and
+                                    performance management. WhyLead&#039;s
+                                    programs are designed to strengthen and
+                                    transform the thinking and performance of
+                                    individuals and teams within an
+                                    organization.
                                 </p>
                             </div>
                         </div>
@@ -4702,7 +4741,7 @@
                             <h3
                                 class="mb-5 text-lg font-semibold md:text-lg md:leading-tight"
                             >
-                                Who is the Leadership training designed for?
+                                Who is WhyLead&#039;s training for?
                             </h3>
                             <div
                                 class="transition-all duration-200 max-h-0 overflow-hidden"
@@ -4711,12 +4750,12 @@
                                 <p
                                     class="mb-3 mt-1 text-base leading-loose text-neutral-900/80"
                                 >
-                                    Our Corporate Leadership course is designed
-                                    for professionals in leadership positions or
-                                    those who aspire to leadership roles in
-                                    their organizations. It is suitable for both
-                                    seasoned executives and those who are new to
-                                    leadership positions.
+                                    Our training is tailored for organizations
+                                    looking to develop thriving leaders. This
+                                    includes middle managers, senior leaders,
+                                    and teams striving for improved
+                                    collaboration, innovation, and strategic
+                                    alignment.
                                 </p>
                             </div>
                         </div>
@@ -4763,7 +4802,8 @@
                             <h3
                                 class="mb-5 text-lg font-semibold md:text-lg md:leading-tight"
                             >
-                                How is the training delivered?
+                                What is the process of engaging with WhyLead for
+                                training?
                             </h3>
                             <div
                                 class="transition-all duration-200 max-h-0 overflow-hidden"
@@ -4772,14 +4812,14 @@
                                 <p
                                     class="mb-3 mt-1 text-base leading-loose text-neutral-900/80"
                                 >
-                                    The training sessions at WhyLead are
-                                    interactive, immersive and an intensive
-                                    hands-on programme. We offer 3 modes of
-                                    delivery and participants can choose from
-                                    instructor-led classroom-based group
-                                    coaching, one-on-one training sessions and
-                                    high-quality live and interactive online
-                                    sessions at their convenience.
+                                    The process is structured yet flexible to
+                                    meet the unique needs of each organization.
+                                    The process begins with a briefing meeting
+                                    to understand your organization&#039;s
+                                    needs, followed by an assessment to analyze
+                                    your organization’s pain points. We then
+                                    develop and deliver customized solutions to
+                                    ensure we address your actual needs.
                                 </p>
                             </div>
                         </div>
@@ -4826,8 +4866,7 @@
                             <h3
                                 class="mb-5 text-lg font-semibold md:text-lg md:leading-tight"
                             >
-                                How will our corporate leaders benefit from your
-                                consultation?
+                                How much does WhyLead&#039;s training cost?
                             </h3>
                             <div
                                 class="transition-all duration-200 max-h-0 overflow-hidden"
@@ -4836,14 +4875,17 @@
                                 <p
                                     class="mb-3 mt-1 text-base leading-loose text-neutral-900/80"
                                 >
-                                    Our Corporate Leadership course will benefit
-                                    you by providing you with the skills and
-                                    knowledge needed to improve your leadership
-                                    effectiveness. You will learn practical
-                                    strategies for motivating and engaging your
-                                    team, resolving conflicts, and leading with
-                                    integrity, all of which will help you
-                                    achieve your goals as a leader.
+                                    The cost of WhyLead&#039;s training programs
+                                    varies depending on the size of the group,
+                                    the length of the program, and the specific
+                                    needs of the organization. But our
+                                    cohort-based 10-week program, Thrive in the
+                                    Middle is priced at $2500 per participant
+                                    which includes workshops, group coaching
+                                    sessions, and one-on-one coaching. For
+                                    pricing on other specific courses or
+                                    consultancy services, please contact us
+                                    directly for a quote.
                                 </p>
                             </div>
                         </div>
@@ -4891,8 +4933,7 @@
                             <h3
                                 class="mb-5 text-lg font-semibold md:text-lg md:leading-tight"
                             >
-                                How will participants&#039; progress be
-                                evaluated and assessed?
+                                How does WhyLead measure ROI on training?
                             </h3>
                             <div
                                 class="transition-all duration-200 max-h-0 overflow-hidden"
@@ -4901,13 +4942,17 @@
                                 <p
                                     class="mb-3 mt-1 text-base leading-loose text-neutral-900/80"
                                 >
-                                    Our Corporate Leadership training includes
-                                    assessment methods to evaluate
-                                    participants&#039; knowledge. With a
-                                    combination of quizzes, assignments, and
-                                    projects, we evaluate progress and ensure
-                                    that participants are mastering the course
-                                    material.
+                                    WhyLead employs a data-driven approach to
+                                    measure training outcomes by tracking six
+                                    key indicators: participant satisfaction,
+                                    learning outcomes, application and
+                                    implementation of new skills, business
+                                    impact, ROI in financial terms, and
+                                    intangibles such as improved teamwork. To
+                                    ensure lasting impact, WhyLead offers
+                                    post-engagement support, which includes MEL,
+                                    coaching, pulse sessions, and activities
+                                    designed to reinforce intended outcomes.
                                 </p>
                             </div>
                         </div>
@@ -4955,7 +5000,8 @@
                             <h3
                                 class="mb-5 text-lg font-semibold md:text-lg md:leading-tight"
                             >
-                                What is your refund policy?
+                                What makes WhyLead&#039;s training approach
+                                unique?
                             </h3>
                             <div
                                 class="transition-all duration-200 max-h-0 overflow-hidden"
@@ -4964,15 +5010,21 @@
                                 <p
                                     class="mb-3 mt-1 text-base leading-loose text-neutral-900/80"
                                 >
-                                    At WhyLead, if a participant doesn&#039;t
-                                    wish to proceed with the training after
-                                    registration for any reason, he or she is
-                                    entitled to a 100% refund. However, the
-                                    refund will be issued only if we are
-                                    notified in writing within 2 days from the
-                                    date of registration. The refund will be
-                                    processed within 4 weeks from the date of
-                                    withdrawal.
+                                    Our training integrates insights from
+                                    diverse knowledge bodies, offering a
+                                    holistic approach to leadership development.
+                                    The methodology includes pre-assessments,
+                                    in-person workshops, coaching, and practical
+                                    challenges to ensure a comprehensive
+                                    learning experience. Our training is not
+                                    just about imparting knowledge; it&#039;s
+                                    about transforming mindsets and behaviors to
+                                    foster innovation, adaptability, and
+                                    continuous growth. Our methodology
+                                    emphasizes practical application, personal
+                                    transformation, and continuous support,
+                                    ensuring not just learning but becoming the
+                                    leader you aspire to be.
                                 </p>
                             </div>
                         </div>
@@ -5009,9 +5061,218 @@
                             </svg>
                         </div>
                     </button>
+
+                    <button
+                        x-show="visibleIndices.includes(6)"
+                        x-cloak
+                        class="w-full text-left focus:outline-none flex gap-8 md:gap-4 pt-7 pb-2 px-4 md:px-0"
+                        @click="expanded = expanded == 6 ? -1 : 6"
+                    >
+                        <div class="flex-1">
+                            <h3
+                                class="mb-5 text-lg font-semibold md:text-lg md:leading-tight"
+                            >
+                                What is the hidden cost of not developing my
+                                team?
+                            </h3>
+                            <div
+                                class="transition-all duration-200 max-h-0 overflow-hidden"
+                                :style="expanded == 6 ? `max-height:  ${ $el.scrollHeight }px` : ''"
+                            >
+                                <p
+                                    class="mb-3 mt-1 text-base leading-loose text-neutral-900/80"
+                                >
+                                    Don’t ask yourself what happens if I train
+                                    my people and they leave, ask yourself what
+                                    happens If I don’t train my people and they
+                                    stay? The hidden cost of not developing your
+                                    team includes decreased productivity, lower
+                                    employee engagement and satisfaction,
+                                    increased turnover rates, and missed
+                                    opportunities for innovation and growth.
+                                    Failing to invest in team development can
+                                    lead to a lack of alignment with
+                                    organizational goals, diminished team
+                                    morale, and an inability to adapt to
+                                    changing market demands, ultimately
+                                    affecting the organization&#039;s bottom
+                                    line and competitive advantage.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex flex-col justify-between flex-shrink-0"
+                            :class="{ ' rotate-180': expanded == 6 }"
+                        >
+                            <svg
+                                class="w-6 h-6"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    x-show="expanded != 6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M12 4.5v15m7.5-7.5h-15"
+                                    x-transition.opacity
+                                    x-transition:enter.duration.200ms.delay.100ms
+                                    x-transition:leave.duration.200ms
+                                />
+                                <path
+                                    x-show="expanded == 6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M19.5 12h-15"
+                                    x-transition.opacity
+                                    x-transition:enter.duration.200ms
+                                    x-transition:leave.duration.200ms.delay.100ms
+                                />
+                            </svg>
+                        </div>
+                    </button>
+
+                    <button
+                        x-show="visibleIndices.includes(7)"
+                        x-cloak
+                        class="w-full text-left focus:outline-none flex gap-8 md:gap-4 pt-7 pb-2 px-4 md:px-0"
+                        @click="expanded = expanded == 7 ? -1 : 7"
+                    >
+                        <div class="flex-1">
+                            <h3
+                                class="mb-5 text-lg font-semibold md:text-lg md:leading-tight"
+                            >
+                                How does fostering happiness at work drive
+                                company success?
+                            </h3>
+                            <div
+                                class="transition-all duration-200 max-h-0 overflow-hidden"
+                                :style="expanded == 7 ? `max-height:  ${ $el.scrollHeight }px` : ''"
+                            >
+                                <p
+                                    class="mb-3 mt-1 text-base leading-loose text-neutral-900/80"
+                                >
+                                    The Happier Workplace program synthesizes
+                                    key principles from leading experts,
+                                    focusing on trust, respect, fairness, and
+                                    purpose. It&#039;s designed to create a
+                                    comprehensive strategy that addresses the
+                                    holistic well-being of employees, driving
+                                    organizational change from the inside out.
+                                    Our service uses a robust analytics
+                                    framework to assess the effectiveness of
+                                    happiness initiatives on crucial metrics
+                                    like employee engagement, productivity, and
+                                    customer satisfaction. Through surveys,
+                                    performance data, and feedback, we provide
+                                    transparent insights into the tangible
+                                    benefits of adopting the Happier Workplace
+                                    program.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex flex-col justify-between flex-shrink-0"
+                            :class="{ ' rotate-180': expanded == 7 }"
+                        >
+                            <svg
+                                class="w-6 h-6"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    x-show="expanded != 7"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M12 4.5v15m7.5-7.5h-15"
+                                    x-transition.opacity
+                                    x-transition:enter.duration.200ms.delay.100ms
+                                    x-transition:leave.duration.200ms
+                                />
+                                <path
+                                    x-show="expanded == 7"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M19.5 12h-15"
+                                    x-transition.opacity
+                                    x-transition:enter.duration.200ms
+                                    x-transition:leave.duration.200ms.delay.100ms
+                                />
+                            </svg>
+                        </div>
+                    </button>
+
+                    <button
+                        x-show="visibleIndices.includes(8)"
+                        x-cloak
+                        class="w-full text-left focus:outline-none flex gap-8 md:gap-4 pt-7 pb-2 px-4 md:px-0"
+                        @click="expanded = expanded == 8 ? -1 : 8"
+                    >
+                        <div class="flex-1">
+                            <h3
+                                class="mb-5 text-lg font-semibold md:text-lg md:leading-tight"
+                            >
+                                What are the risks of not prioritizing happiness
+                                at work?
+                            </h3>
+                            <div
+                                class="transition-all duration-200 max-h-0 overflow-hidden"
+                                :style="expanded == 8 ? `max-height:  ${ $el.scrollHeight }px` : ''"
+                            >
+                                <p
+                                    class="mb-3 mt-1 text-base leading-loose text-neutral-900/80"
+                                >
+                                    Ignoring the happiness and well-being of
+                                    employees can lead to increased turnover,
+                                    lower productivity, a damaged company
+                                    reputation, and ultimately, diminished
+                                    organizational performance. The cost of
+                                    inaction can far outweigh the investment in
+                                    creating a happier work environment.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex flex-col justify-between flex-shrink-0"
+                            :class="{ ' rotate-180': expanded == 8 }"
+                        >
+                            <svg
+                                class="w-6 h-6"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    x-show="expanded != 8"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M12 4.5v15m7.5-7.5h-15"
+                                    x-transition.opacity
+                                    x-transition:enter.duration.200ms.delay.100ms
+                                    x-transition:leave.duration.200ms
+                                />
+                                <path
+                                    x-show="expanded == 8"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M19.5 12h-15"
+                                    x-transition.opacity
+                                    x-transition:enter.duration.200ms
+                                    x-transition:leave.duration.200ms.delay.100ms
+                                />
+                            </svg>
+                        </div>
+                    </button>
                 </div>
 
-                <p class="mt-2.5 md:mt-6s self-center text-center">
+                <p class="mt-4 md:mt-6s self-center text-center">
                     Got more questions? We'd love to hear from you.
                     <a href="#" class="text-primary font-semibold underline">
                         Contact us now
@@ -5022,20 +5283,23 @@
 
         <section class="lg:mb-20">
             <div
-                class="lg:rounded-3xl bg-content/5 max-w-5xl mx-auto px-6 py-12 lg:py-12 lg:px-16 flex flex-col gap-6 justify-center items-center text-center"
+                class="lg:rounded-3xl bg-content/5 max-w-3xl mx-auto px-6 py-12 lg:py-12 lg:px-16 flex flex-col gap-6 justify-center items-center text-center"
             >
                 <div class="flex-1 flex flex-col items-center">
                     <h2
-                        class="text-2xl md:text-[40px]/[1.2] font-bold uppercase tracking-wide"
+                        class="text-2xl md:text-3xl font-bold uppercase tracking-wide"
                     >
                         <span class="outline-text">Ready to </span>
-                        Build A
+                        Build
+                        <span class="outline-text">a </span>
                         <span class="hidden md:inline"><br /></span>
                         Thriving
                         <span class="outline-texts">Organization?</span>
                     </h2>
 
-                    <p class="mt-3 text-lg/loose opacity-70">
+                    <p
+                        class="mt-3 text-base/relaxed opacity-70 max-w-2xl mx-auto"
+                    >
                         Unsure of the unique impact we can make on your
                         organization?
                         <span class="hidden md:inline"><br /></span>

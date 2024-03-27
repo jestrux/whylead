@@ -44,18 +44,14 @@
         <div class="w-full max-w-[1400px] mx-auto px-6">
             <div class="flex-1 py-12 flex flex-col justify-center items-center md:max-w-5xl mx-auto lg:text-center">
                 <h1 class="text-3xl md:text-5xl/[1.2] font-bold mb-2 md:mb-4">
-                    Strategic Leaps
-                    Begin With a Single,
-                    Intentional
-                    Step
+                    Strategic Leaps Begin
+                    <span class="hidden md:inline"><br /></span>
+                    With a Single,
+                    Intentional Step
                 </h1>
                 <p class="max-w-3xl mb-8 md:text-xl md:leading-loose opacity-90">
-                    With proven years of experience and a lot of impactful
-                    client engagements,
-                    you can rest assured that you'll be in safe hands.
-
-                    The impact we create with your <span class="font-bold">Leaders</span> and
-                    <span class="font-bold">Culture</span> will lead to a <span class="font-bold">Thriving</span>
+                    The impact We Create With Your <span class="font-bold">Leaders, Culture</span>, and Organization
+                    Will Lead to a <span class="font-bold">Thriving</span>
                     Organization
                 </p>
 
@@ -78,26 +74,54 @@
         <p class="max-w-2xl mx-auto my-8 text-center text-lg/loose opacity-70">
             Chosen as a Trusted Partner to Build Thriving Leaders, Teams, Cultures and Organizations.
         </p>
-        <div
-            class="max-w-5xl mx-auto flex gap-6 md:gap-y-6 md:gap-x-14 md:flex items-center justify-between flex-wrap grayscale">
-            <img class="h-8"
-                src="https://uongozi.or.tz/newsite/wp-content/uploads/2022/04/Uongozi_Institute_logo02.svg" />
-            <img class="h-12" src="https://www.una.or.tz/wp-content/uploads/2020/09/UNA-Tanzania.png" />
-            <img class="h-8" src="https://www.ubongo.org/wp-content/uploads/2018/04/Logo@2x.png" />
-            <img class="h-8" src="https://knauf.co.tz/wp-content/uploads/2021/01/Blue-logo.svg" />
-            <img class="h-8"
-                src="https://www.goodneighbors.or.tz/wp-content/uploads/2021/06/Good-Neighbors-Tanzania-logo.png" />
-            <img class="h-8"
-                src="https://malala.org/packs/static/images/malala-primary-logo-large-0a880532137530e3eed5.svg" />
-            <img class="h-12" src="https://pbs.twimg.com/media/EL0KdOHXUAEti4R.png" />
-            <img class="h-8"
-                src="https://janegoodall.org/wp-content/themes/joyn-child/images/2021_JGI_LOGO_SIGNATURE_GREEN_420.png" />
 
-            <span class="h-8 hidden lg:inline-flex items-center font-bold italic">Trusted Globally</span>
+        <div class="px-8 space-y-6">
+            <div class="flex gap-6 lg:gap-8 items-center justify-between">
+                <img class="grayscale h-6"
+                    src="https://malala.org/packs/static/images/malala-primary-logo-large-0a880532137530e3eed5.svg" />
 
-            <img class="h-8" src="https://seeklogo.com/images/O/oryx-energies-logo-DB6F52BE4E-seeklogo.com.png" />
-            <img class="h-8"
-                src="https://partners.givingtuesday.ca/gtuploads/partners/60d3219c810acDOT%20Horizontal%20Logo%20-%20RGB.png" />
+                <img class="grayscale h-12"
+                    src="https://womenlifthealth.jobsoid.com/PortalJob/GetPortalLogo?size=medium" />
+
+                <img class="grayscale h-10"
+                    src="https://www.greenclimate.fund/sites/default/files/organisation/logo-crdb.png" />
+
+                <img class="grayscale h-8"
+                    src="https://seeklogo.com/images/O/oryx-energies-logo-DB6F52BE4E-seeklogo.com.png" />
+
+                <img class="grayscale h-8"
+                    src="https://janegoodall.org/wp-content/themes/joyn-child/images/2021_JGI_LOGO_SIGNATURE_GREEN_420.png" />
+
+                <img class="grayscale h-8" src="https://www.ubongo.org/wp-content/uploads/2018/04/Logo@2x.png" />
+
+                <img class="grayscale h-8"
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/RTI_International_%28logo%29.svg/1200px-RTI_International_%28logo%29.svg.png" />
+            </div>
+
+            <div class="flex gap-6 lg:gap-8 items-center justify-between">
+                <img class="grayscale h-12" src="https://www.una.or.tz/wp-content/uploads/2020/09/UNA-Tanzania.png" />
+
+                <img class="grayscale h-8" src="https://knauf.co.tz/wp-content/uploads/2021/01/Blue-logo.svg" />
+
+                <img class="grayscale h-6"
+                    src="https://uongozi.or.tz/newsite/wp-content/uploads/2022/04/Uongozi_Institute_logo02.svg" />
+
+
+                <img class="grayscale h-8" src="https://www.guidestar.org/ViewEdoc.aspx?eDocId=9408228&approved=True" />
+
+                <span
+                    class="flex-shrink-0 text-base/none text-primary hidden lg:inline-flex items-center font-bold uppercase italic">
+                    Trusted Globally
+                </span>
+
+                <img class="grayscale h-14" src="https://www.ihi.or.tz/static/images/ihilogo.png" />
+
+                <img class="grayscale h-5"
+                    src="https://partners.givingtuesday.ca/gtuploads/partners/60d3219c810acDOT%20Horizontal%20Logo%20-%20RGB.png" />
+
+                <img class="grayscale h-8"
+                    src="https://nest360.org/wp-content/uploads/2021/04/NEST360_horizontal_logo_fullcolour.png" />
+            </div>
         </div>
     </div>
 </section>

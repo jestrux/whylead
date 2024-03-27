@@ -1,7 +1,7 @@
 <section class="py-10 lg:py-14">
-    <div class="max-w-6xl mx-auto px-8 flex flex-col gap-12 items-center">
+    <div class="max-w-5xl mx-auto px-8 flex flex-col gap-8 items-center">
         <div class="text-center">
-            <h2 class="text-2xl md:text-5xl font-bold uppercase tracking-wide">
+            <h2 class="text-2xl lg:text-4xl font-bold uppercase tracking-wide">
                 <span class="outline-text">Frequently
                     <span class="hidden md:inline"><br /></span>
                     asked
@@ -67,7 +67,7 @@
         </div>
         @endpierdata()
 
-        <p class="mt-2.5 md:mt-6s self-center text-center">
+        <p class="mt-4 md:mt-6s self-center text-center">
             Got more questions? We'd love to hear from you.
             <a href="#" class="text-primary font-semibold underline">
                 Contact us now

@@ -8,17 +8,23 @@
             'indicators' => [
                 [
                     'icon' => 'm3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z',
-                    'title' => 'They empower and develop their teams',
+                    'title' => 'They Empower and Develop Their Teams',
+                    'description' =>
+                        "They invest in their team's growth, fostering an environment where skills flourish and confidence is built, driving organizational progress.",
                 ],
                 [
                     'icon' =>
                         'M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99',
-                    'title' => 'They embrace and champion change',
+                    'title' => 'They Embrace and Champion Change',
+                    'description' =>
+                        'By being adaptable and proactive about change, these leaders ensure the organization stays relevant and ahead of industry trends.',
                 ],
                 [
                     'icon' =>
                         'M9 9V4.5M9 9H4.5M9 9 3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5 5.25 5.25',
-                    'title' => 'They are agents for strategic alignment',
+                    'title' => 'They are Agents For Strategic Alignment',
+                    'description' =>
+                        "They ensure every team effort is cohesively directed towards the organization's overarching goals, maximizing efficiency and impact",
                 ],
             ],
         ],
@@ -31,17 +37,23 @@
                 [
                     'icon' =>
                         'M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15',
-                    'title' => 'They add to strategic & cultural misalignment',
+                    'title' => 'They Add to Strategic & Cultural Misalignment',
+                    'description' =>
+                        'They create confusion and discord, undermining team alignment and organizational integrity.',
                 ],
                 [
                     'icon' =>
                         'M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636',
-                    'title' => 'Unable to Navigate change & uncertainty',
+                    'title' => 'Unable to Navigate Uncertainty & Change',
+                    'description' =>
+                        'Their inability to steer through uncertain times results in missed opportunities and potential stagnation, leaving the organization vulnerable.',
                 ],
                 [
                     'icon' =>
                         'M11.412 15.655 9.75 21.75l3.745-4.012M9.257 13.5H3.75l2.659-2.849m2.048-2.194L14.25 2.25 12 10.5h8.25l-4.707 5.043M8.457 8.457 3 3m5.457 5.457 7.086 7.086m0 0L21 21',
-                    'title' => 'Unable to inspire growth & commitment',
+                    'title' => 'Unable to Inspire Growth & Commitment',
+                    'description' =>
+                        'They struggle to cultivate a dedicated workforce, significantly impacting productivity and organizational growth potential.',
                 ],
             ],
         ],
@@ -54,7 +66,7 @@
         <div class="sp-16 lg:grid grid-cols-2" x-data="{ effectiveLeaders: true }">
             <div class="p-8 lg:px-0 lg:pt-12 lg:pl-16">
                 <div class="lg:pr-14">
-                    <h2 class="text-2xl md:text-3xl/[1.3] font-semibold uppercase tracking-wide mb-2 md:mb-4">
+                    <h2 class="text-2xl/[1.3] font-semibold uppercase tracking-wide mb-2 md:mb-4">
                         Are your leaders steering you
                         towards success?
                     </h2>
@@ -120,15 +132,12 @@
                                 </div>
 
                                 <div class="flex-1 -mt-px">
-                                    <h3 class="text-lg lg:text-xl">
+                                    <h3 class="text-lg">
                                         {{ $indicator['title'] }}
                                     </h3>
 
-                                    <p class="mt-1 text-sm/relaxed lg:text-base/loose font-light lg:block opacity-80">
-                                        All of your receipts organized into
-                                        one place, as long as you don't
-                                        mind typing in the data by hand. All of your receipts
-                                        organized.
+                                    <p class="mt-1 text-sm/relaxed font-light lg:block opacity-80">
+                                        {{ $indicator['description'] }}
                                     </p>
                                 </div>
                             </div>

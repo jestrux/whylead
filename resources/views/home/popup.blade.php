@@ -1,4 +1,4 @@
-@pierdata('Course')
+@pierdata(["model" => 'Course', "orderBy" => "order,asc"])
 <script>
     document.addEventListener('alpine:init', () => {
         Alpine.data("coursePopup", () => ({
@@ -8,6 +8,12 @@
             course: null,
             init() {
                 localStorage.initialPopupShown = true;
+                this.courses = this.courses.map(function(course) {
+                    course.faqs = course.faqs.sort(function(a, b) {
+                        return a.order - b.order;
+                    });
+                    return course;
+                })
             }
         }));
     });
@@ -17,7 +23,8 @@
 <div x-cloak x-show="showPrompt" class="hidden fixed inset-0 z-50 bg-black/70 lg:flex items-center justify-between"
     x-data="coursePopup">
     <div class="w-full max-w-4xl mx-auto relative">
-        <button x-on:click="showPrompt = false" class="absolute p-1 rounded -right-3 -top-3 z-50 bg-content text-canvas border border-white/30">
+        <button x-on:click="showPrompt = false"
+            class="absolute p-1 rounded -right-3 -top-3 z-50 bg-content text-canvas border border-white/30">
             <svg class="size-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
             </svg>
@@ -74,7 +81,7 @@
         <template x-if="course">
             <div class="relative grid grid-cols-12 bg-card border border-stroke rounded-2xl overflow-hidden">
                 <div class="relative z-50 col-span-7 flex flex-col h-full overflow-y-auto max-h-[420px]">
-                    <div class="m-4 flex items-center">
+                    <div class="p-4 flex items-center bg-card sticky top-0">
                         <button x-on:click="course = null"
                             class="self-start btn btn-outline btn-sm border-none !text-primary">
                             <svg class="-ml-1 size-4" fill="none" viewBox="0 0 24 24" stroke-width="3"
@@ -149,7 +156,7 @@
                     </div>
 
                     <div
-                        class="relative z-10 pt-3 pb-2 pl-2 border-t border-stroke mt-auto flex items-center justify-between">
+                        class="sticky bottom-0 bg-card z-10 pt-3 pb-2 pl-2 border-t border-stroke mt-auto flex items-center justify-between">
                         {{-- <a href="#" class="btn btn-outline btn-sm !text-black/70">
                         <svg class="-ml-1 size-4" fill="none" viewBox="0 0 24 24" stroke-width="3"
                             stroke="currentColor">
@@ -163,7 +170,7 @@
 
                         <span></span>
 
-                        <button x-on:click="showPrompt = false" class="btn btn-sm srounded-r-full">
+                        <button x-on:click="showPrompt = false" class="btn btn-sm srounded-r-full flex-shrink-0">
                             Contact Us
 
                             <svg class="-mr-1 size-4" fill="none" viewBox="0 0 24 24" stroke-width="3"

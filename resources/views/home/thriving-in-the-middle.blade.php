@@ -27,39 +27,42 @@
                 </a>
             </div>
 
-            <div class="pt-6 space-y-2 lg:space-y-4">
-                <h2 class="text-2xl lg:text-5xl font-bold max-w-4xl">
+            <div class="pt-6 space-y-2 lg:space-y-2">
+                <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">
                     <span class="uppercase tracking-wide">
-                        <span class="outline-text">Thriving</span>
-                        in
-                        <span class="hidden md:inline"><br /></span>
-                        <span class="outline-texts">the middle</span>
+                        Thrive
+                        <span class="outline-texts">in the </span>
+                        middle
                     </span>
                 </h2>
 
-                <p class="text-lg lg:text-xl font-bold">
-                    Thriving middle managers lead to a thriving organization
+                <p class="text-lg lg:text-lg font-semibold">
+                    Thriving Middle Managers Lead to a Thriving Organization
                 </p>
 
                 <p class="text-base/loose opacity-70">
-                    This program is designed to empower middle managers to thrive as change and alignment agents by
-                    inspiring their teams’ conviction, commitment, and a sense of congruence to drive strategic results
-                    for
-                    the organization. Key Outcomes for participating organizations include:
+                    This is a transformative 10-week program tailored for middle managers, focusing on empowering them
+                    as essential agents of growth, alignment, culture, and change within their organizations. It tackles
+                    the unique challenges middle managers face, from navigating the demands of both senior leadership
+                    and direct reports to driving strategic goals amid disruptions.
+                </p>
+
+                <p>
+                    Key Outcomes for participating organizations include:
                 </p>
 
                 <ul role="list" class="-my-2 divide-y divide-black/5">
                     @php
                         $checklist = [
-                            'Grow your Revenue and increase Your Profit ',
-                            'A happier workplace for all',
-                            'Alignment in delivering strategic outcomes',
+                            'Enhanced Organizational Agility and Resilience',
+                            'Improved Strategic Alignment and Execution',
+                            'Cultivation of a Culture of Innovation and High Performance',
                         ];
                     @endphp
 
                     @foreach ($checklist as $item)
-                        <li class="flex items-center gap-3 py-2">
-                            <svg class="size-8 flex-none opacity-60" viewBox="0 0 24 24">
+                        <li class="flex items-center gap-2 py-2">
+                            <svg class="size-7 flex-none opacity-60" viewBox="0 0 24 24">
                                 <circle class="" cx="12" cy="12" r="8.25" stroke="currentColor"
                                     stroke-width="1" stroke-opacity="1" fill="none" />
                                 <path
@@ -74,8 +77,8 @@
                     @endforeach
 
                     <li class="pt-5 pb-2 text-sm/relaxed opacity-60">
-                        Made up of individuals who are passionate about the mission, committed to results, and of high
-                        character.
+                        Join Thrive today and be more than just a link in the organizational hierachy; be its strongest
+                        link.
                     </li>
                 </ul>
 
@@ -96,12 +99,12 @@
                             alt="" />
 
                         <div class="absolute inset-0 flex items-center justify-center">
-                            <span class="w-24 h-24 flex items-center justify-center rounded-full bg-white text-accent">
+                            <span class="size-16 flex items-center justify-center rounded-full bg-white text-accent">
                                 {{-- <svg class="w-14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor">
                                     <path d="M8 5v14l11-7z" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg> --}}
 
-                                <svg class="w-12 ml-1" fill="currentColor" viewBox="0 0 24 24" stroke-width="1"
+                                <svg class="size-8 ml-1" fill="currentColor" viewBox="0 0 24 24" stroke-width="1"
                                     stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />

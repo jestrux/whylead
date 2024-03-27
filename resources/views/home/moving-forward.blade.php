@@ -1,6 +1,6 @@
 <section class="bg-content/5">
     <div class="px-8 py-12 lg:py-20 relative max-w-7xl mx-auto">
-        <div class="lg:grid grid-cols-2 gap-16">
+        <div class="lg:grid grid-cols-2 gap-16 items-center">
             <div class="md:hidden">
                 <a href="#" class="block relative">
                     <div
@@ -27,8 +27,8 @@
                 </a>
             </div>
 
-            <div class="pt-6 flex flex-col gap-2">
-                <h2 class="text-2xl lg:text-5xl font-bold max-w-4xl">
+            <div class="pb-6 flex flex-col gap-2">
+                <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">
                     <span class="uppercase tracking-wides">
                         <span class="outline-text">If everyone is</span>
                         moving
@@ -65,12 +65,12 @@
                             alt="" />
 
                         <div class="absolute inset-0 flex items-center justify-center">
-                            <span class="w-24 h-24 flex items-center justify-center rounded-full bg-white text-accent">
+                            <span class="size-16 flex items-center justify-center rounded-full bg-white text-accent">
                                 {{-- <svg class="w-14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor">
                                     <path d="M8 5v14l11-7z" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg> --}}
 
-                                <svg class="w-12 ml-1" fill="currentColor" viewBox="0 0 24 24" stroke-width="1"
+                                <svg class="size-8 ml-1" fill="currentColor" viewBox="0 0 24 24" stroke-width="1"
                                     stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
