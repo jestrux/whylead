@@ -1,22 +1,15 @@
+@pierdata(["model" => 'Challenge', "orderBy" => "order,asc"])
 @php
-    $challenges = pierData('Challenge', ['orderBy' => 'order,asc']);
-    $solutions = pierData('Solution');
-    $challenges = $challenges['data'];
-    $solutions = $solutions['data'];
+    $challenges = $data;
 @endphp
 
 <script>
     document.addEventListener("alpine:init", () => {
         Alpine.data("challenges", () => ({
             openChallenge(name) {
-                const challenge = Object.assign({}, this.challenges.find((c) => c.title == name));
-                challenge.solutions = challenge.solutions.map((solution) => {
-                    return this.solutions.find((s) => s._id == solution._id);
-                });
-                this.challenge = challenge;
+                this.challenge = Object.assign({}, this.challenges.find((c) => c.title == name));
             },
             challenges: {!! json_encode($challenges) !!},
-            solutions: {!! json_encode($solutions) !!},
             challenge: null,
         }));
     });
@@ -179,3 +172,4 @@
         </ul>
     </div>
 </section>
+@endpierdata()
