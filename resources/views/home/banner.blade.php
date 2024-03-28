@@ -71,8 +71,10 @@
 
 <section class="px-6 lg:px-0">
     <div class="flex flex-col items-center justify-center">
-        <p class="max-w-2xl mx-auto my-8 text-center text-lg/loose opacity-70">
-            Chosen as a Trusted Partner to Build Thriving Leaders, Teams, Cultures and Organizations.
+        <p class="max-w-2xl mx-auto my-8 text-center text-lg opacity-70">
+            Chosen as a Trusted Partner to Build Thriving Leaders,
+            <span class="hidden md:inline"><br /></span>
+            Teams, Cultures and Organizations.
         </p>
 
         <div class="px-8 space-y-6">
