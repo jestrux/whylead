@@ -1,3 +1,7 @@
+@php
+    $image = 'https://res.cloudinary.com/sfp-app/image/upload/v1711540531/vudvwz3j0vmlsqslsjio.jpg';
+@endphp
+
 <section class="py-12 lg:py-20">
     <div class="relative max-w-7xl mx-auto px-8">
         <div class="lg:grid grid-cols-12 gap-16 items-center">
@@ -5,24 +9,8 @@
                 <a href="#" class="block relative">
                     <div
                         class="relative aspect-video rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
-                        <img class="absolute w-full h-full object-cover object-top"
-                            src="https://images.unsplash.com/photo-1622675103136-e4b90c9a33d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDMzfHxsZWFkZXJzaGlwJTIwdHJhaW5pbmd8ZW58MHx8fHwxNzA4NDMxMTM0fDA&ixlib=rb-4.0.3&q=80&w=1080"
+                        <img class="absolute w-full h-full object-cover object-top" src="{{ $image }}"
                             alt="" />
-
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <span class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-accent">
-                                {{-- <svg class="w-14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor">
-                                    <path d="M8 5v14l11-7z" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg> --}}
-
-                                <svg class="w-6 ml-1" fill="currentColor" viewBox="0 0 24 24" stroke-width="1"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
-                                </svg>
-
-                            </span>
-                        </div>
                     </div>
                 </a>
             </div>
@@ -31,8 +19,7 @@
                 class="col-span-5 h-full -rotate-1 shadow-xl flex-1 hidden md:flex items-center justify-center relative">
                 <div
                     class="relative rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
-                    <img class="rotate-6 scale-125 w-full h-full object-cover object-top"
-                        src="https://res.cloudinary.com/sfp-app/image/upload/v1711540531/vudvwz3j0vmlsqslsjio.jpg"
+                    <img class="rotate-6 scale-125 w-full h-full object-cover object-top" src="{{ $image }}"
                         alt="" />
                 </div>
 
@@ -42,7 +29,7 @@
                         <div class="absolute inset-0 bg-accent"></div>
                         <div class="relative rounded-lg overflow-hidden">
                             <div
-                                class="text-base/none tracking-wide font-semibold relative h-12 px-2.5 text-white bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                                class="text-base/none tracking-wide font-semibold relative h-12 min-w-14 px-2.5 text-white text-center bg-gradient-to-br from-primary to-accent flex items-center justify-center">
                                 85%
                             </div>
                         </div>
@@ -72,7 +59,7 @@
                     organizations that are:
                 </p>
 
-                <ul role="list" class="mt-1 grid grid-cols-2 gap-3">
+                <ul role="list" class="mt-1 flex flex-col lg:grid grid-cols-2 gap-3">
                     @php
                         $checklist = [
                             [
@@ -99,7 +86,8 @@
                     @endphp
 
                     @foreach ($checklist as $item)
-                        <li class="flex items-center gap-2 p-2 border rounded-lg shadow-xs">
+                        <li
+                            class="flex items-center gap-2 p-2 bg-card border border-stroke shadow-xs rounded-lg shadow-xs">
                             <div class="bg-accent/5 size-8 rounded flex items-center justify-center">
                                 <svg class="size-5 flex-none text-primary" viewBox="0 0 24 24">
                                     <path fill="none" stroke="currentColor" stroke-linecap="round"

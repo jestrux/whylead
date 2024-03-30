@@ -1,3 +1,7 @@
+@php
+    $image = 'https://res.cloudinary.com/sfp-app/image/upload/v1711540237/sxj9meo6zbkadvvlkw15.jpg';
+@endphp
+
 <section>
     <div class="px-8 py-12 lg:pt-20 lg:pb-32 relative max-w-7xl mx-auto">
         <div class="lg:grid grid-cols-12 gap-20 items-center">
@@ -5,24 +9,8 @@
                 <a href="#" class="block relative">
                     <div
                         class="relative aspect-video rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
-                        <img class="absolute w-full h-full object-cover object-top"
-                            src="https://images.unsplash.com/photo-1622675103136-e4b90c9a33d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDMzfHxsZWFkZXJzaGlwJTIwdHJhaW5pbmd8ZW58MHx8fHwxNzA4NDMxMTM0fDA&ixlib=rb-4.0.3&q=80&w=1080"
+                        <img class="absolute w-full h-full object-cover object-top" src="{{ $image }}"
                             alt="" />
-
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <span class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-accent">
-                                {{-- <svg class="w-14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor">
-                                    <path d="M8 5v14l11-7z" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg> --}}
-
-                                <svg class="w-6 ml-1" fill="currentColor" viewBox="0 0 24 24" stroke-width="1"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
-                                </svg>
-
-                            </span>
-                        </div>
                     </div>
                 </a>
             </div>
@@ -58,13 +46,21 @@
                 <ul role="list" class="divide-y divide-black/5">
                     @php
                         $checklist = [
-                            'Grow your Revenue and Increase Your Profit ',
-                            'Reduce Turnover and Retain Your Top Talent',
+                            [
+                                'title' => 'Grow your Revenue and Increase Your Profit ',
+                                'description' =>
+                                    "You'll be able to develop a data-driven strategy for your people and culture. Ultimately shaping your culture to foster higher productivity and a culture conducive for innovation. ",
+                            ],
+                            [
+                                'title' => 'Reduce Turnover and Retain Your Top Talent',
+                                'description' =>
+                                    "Separations are costly, especially with top talent. With the data we will provide you'll be able to develop a data-driven strategy to strengthen your culture and meet the cultural needs of your people.",
+                            ],
                         ];
                     @endphp
 
                     @foreach ($checklist as $item)
-                        <li class="flex items-center gap-2 py-2">
+                        <li class="flex items-start gap-2 py-2">
                             <svg class="size-7 flex-none opacity-60" viewBox="0 0 24 24">
                                 <circle class="" cx="12" cy="12" r="8.25" stroke="currentColor"
                                     stroke-width="1" stroke-opacity="1" fill="none" />
@@ -73,16 +69,16 @@
                                     fill="currentColor"></path>
                             </svg>
 
-                            <span class="text-base opacity-70">
-                                {{ $item }}
-                            </span>
+                            <div class="pt-px">
+                                <h5 class="text-base">
+                                    {{ $item['title'] }}
+                                </h5>
+                                <p class="mt-1 text-sm/loose opacity-70">
+                                    {{ $item['description'] }}
+                                </p>
+                            </div>
                         </li>
                     @endforeach
-
-                    <li class="pt-5 pb-2 text-sm/relaxed opacity-60">
-                        Join Thrive today and be more than just a link in the organizational hierachy; be its strongest
-                        link.
-                    </li>
                 </ul>
 
                 <div class="mt-3 gap-3">
@@ -96,8 +92,7 @@
                 class="col-span-5 h-full -rotate-1 shadow-xl flex-1 hidden md:flex items-center justify-center relative">
                 <div
                     class="relative rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
-                    <img class="rotate-6 scale-125 w-full h-full object-cover"
-                        src="https://res.cloudinary.com/sfp-app/image/upload/v1711540237/sxj9meo6zbkadvvlkw15.jpg"
+                    <img class="rotate-6 scale-125 w-full h-full object-cover" src="{{ $image }}"
                         alt="" />
 
                 </div>
@@ -108,7 +103,7 @@
                         <div class="absolute inset-0 bg-accent"></div>
                         <div class="relative rounded-lg overflow-hidden">
                             <div
-                                class="text-base/none tracking-wide font-semibold relative h-12 px-2.5 text-white bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                                class="text-base/none tracking-wide font-semibold relative h-12 min-w-14 px-2.5 text-white text-center bg-gradient-to-br from-primary to-accent flex items-center justify-center">
                                 4X
                             </div>
                         </div>

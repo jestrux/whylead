@@ -7,6 +7,10 @@
 
     @include('consultancy.performance-management')
 
+    @include('consultancy.faqs')
+
+    @include('consultancy.facilitating-strategic-gatherings')
+
     @include('consultancy.testimonials')
 
     @include('consultancy.happier-workplace')

@@ -1,3 +1,7 @@
+@php
+    $image = "https://res.cloudinary.com/sfp-app/image/upload/v1711587768/zvseebs1t5tm0jsjyj0f.jpg";
+@endphp
+
 <section>
     <div class="px-8 py-12 lg:py-20 relative max-w-7xl mx-auto">
         <div class="lg:grid grid-cols-12 gap-20 items-center">
@@ -5,24 +9,8 @@
                 <a href="#" class="block relative">
                     <div
                         class="relative aspect-video rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
-                        <img class="absolute w-full h-full object-cover object-top"
-                            src="https://images.unsplash.com/photo-1622675103136-e4b90c9a33d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDMzfHxsZWFkZXJzaGlwJTIwdHJhaW5pbmd8ZW58MHx8fHwxNzA4NDMxMTM0fDA&ixlib=rb-4.0.3&q=80&w=1080"
+                        <img class="absolute w-full h-full object-cover object-top" src="{{ $image }}"
                             alt="" />
-
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <span class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-accent">
-                                {{-- <svg class="w-14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor">
-                                    <path d="M8 5v14l11-7z" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg> --}}
-
-                                <svg class="w-6 ml-1" fill="currentColor" viewBox="0 0 24 24" stroke-width="1"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
-                                </svg>
-
-                            </span>
-                        </div>
                     </div>
                 </a>
             </div>
@@ -43,7 +31,7 @@
                 </p>
 
                 <ul>
-                    <li class="flex items-center gap-2 py-2">
+                    <li class="flex items-start gap-2 py-2">
                         <svg class="size-7 flex-none opacity-60" viewBox="0 0 24 24">
                             <circle class="" cx="12" cy="12" r="8.25" stroke="currentColor"
                                 stroke-width="1" stroke-opacity="1" fill="none" />
@@ -52,13 +40,20 @@
                                 fill="currentColor"></path>
                         </svg>
 
-                        <span class="text-base opacity-70">
-                            Thriving internally must begin by answering questions like
-                        </span>
+                        <div class="pt-px">
+                            <h5 class="text-base">
+                                Thriving internally must begin by answering questions like
+                            </h5>
+                            <p class="mt-1 text-sm/loose opacity-70">
+                                How do you get individuals to do what they might not want to do yet enjoy doing it? How
+                                do you create a system that allows for self-motivation to emerge? How do you create
+                                systems that get everyone to work towards the same strategic goals?
+                            </p>
+                        </div>
                     </li>
                 </ul>
 
-                <p class="mt-3">
+                <p class="mt-2">
                     To thrive, your people have to be inspired to achieve greatness willingly, and this is where we come
                     in. We work with your organization in:
                 </p>
@@ -66,14 +61,26 @@
                 <ul role="list" class="divide-y divide-black/5">
                     @php
                         $checklist = [
-                            'Enhanced Organizational Agility and Resilience',
-                            'Improved Strategic Alignment and Execution',
-                            'Cultivation of a Culture of Innovation and High Performance',
+                            [
+                                'title' => 'The Discovery Phase',
+                                'description' =>
+                                    'We evaluate current systems and align major and minor strategies with organizational goals. Our performance management approach is role-centric, team-centric, project-centric, department-centric, culture-centric and strategy-centric.',
+                            ],
+                            [
+                                'title' => 'We execute a tailored plan in our Implementation Phase',
+                                'description' =>
+                                    'We facilitate seamless adoption through goal setting and targeted training across the organziation.',
+                            ],
+                            [
+                                'title' => 'The Evaluation and Continuous Improvement Phase',
+                                'description' =>
+                                    'To ensure ongoing success, we employ a data-driven method to refine the system. Our Performance Mangement approach is not only about historical benchmarks but also forward-looking projections, gaining insights into positive trajectories, and ensuring a dynamic and thriving organization, today and tomorrow.',
+                            ],
                         ];
                     @endphp
 
                     @foreach ($checklist as $item)
-                        <li class="flex items-center gap-2 py-2">
+                        <li class="flex items-start gap-2 py-2">
                             <svg class="size-7 flex-none opacity-60" viewBox="0 0 24 24">
                                 <circle class="" cx="12" cy="12" r="8.25" stroke="currentColor"
                                     stroke-width="1" stroke-opacity="1" fill="none" />
@@ -82,16 +89,16 @@
                                     fill="currentColor"></path>
                             </svg>
 
-                            <span class="text-base opacity-70">
-                                {{ $item }}
-                            </span>
+                            <div class="pt-px">
+                                <h5 class="text-base">
+                                    {{ $item['title'] }}
+                                </h5>
+                                <p class="mt-1 text-sm/loose opacity-70">
+                                    {{ $item['description'] }}
+                                </p>
+                            </div>
                         </li>
                     @endforeach
-
-                    <li class="pt-5 pb-2 text-sm/relaxed opacity-60">
-                        Join Thrive today and be more than just a link in the organizational hierachy; be its strongest
-                        link.
-                    </li>
                 </ul>
 
                 <div class="mt-3 gap-3">
@@ -106,7 +113,7 @@
                 <div
                     class="relative rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
                     <img class="rotate-6 scale-125 w-full h-full object-cover object-right"
-                        src="https://res.cloudinary.com/sfp-app/image/upload/v1711587768/zvseebs1t5tm0jsjyj0f.jpg"
+                    src="{{$image}}"
                         alt="" />
 
                 </div>
@@ -117,7 +124,7 @@
                         <div class="absolute inset-0 bg-accent"></div>
                         <div class="relative rounded-lg overflow-hidden">
                             <div
-                                class="text-base/none tracking-wide font-semibold relative h-12 px-2.5 text-white bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                                class="text-base/none tracking-wide font-semibold relative h-12 min-w-14 px-2.5 text-white text-center bg-gradient-to-br from-primary to-accent flex items-center justify-center">
                                 100%
                             </div>
                         </div>
