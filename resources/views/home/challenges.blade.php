@@ -147,18 +147,22 @@
                 @endphp
                 <li>
                     <button x-on:click="openChallenge(`{{ $challenge->title }}`)"
-                        class="{{ $isEven ? 'bg-accent text-white' : 'bg-card dark:bg-content/5' }} group hover:scale-105 transition flex flex-col gap-3 min-h-full w-full rounded-2xl border border-black/5  shadow px-6 py-6 text-left">
-                        <svg class="size-8" viewBox="0 0 24 24">
+                        class="{{ $isEven ? 'bg-accent text-white' : 'bg-card dark:bg-content/5' }} group hover:scale-105 transition duration-300 flex flex-col gap-3 min-h-full w-full rounded-2xl overflow-hidden border border-black/5 shadow px-6 py-6 text-left relative">
+                        <div
+                            class="absolute -inset-20 bg-current rounded-full origin-top-left scale-[0.65] opacity-0 group-hover:scale-150 {{$isEven ? 'group-hover:opacity-10' : 'group-hover:opacity-10'}} transition-transform duration-700">
+                        </div>
+
+                        <svg class="size-8 relative" viewBox="0 0 24 24">
                             <path class="text-primary" fill="none" stroke="currentColor" stroke-linecap="round"
                                 stroke-linejoin="round" d="{{ $challenge->icon }}" />
 
-                            <circle
+                            {{-- <circle
                                 class="transition-transform duration-500 opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-110 group-hover:translate-x-2 group-hover:translate-y-2"
                                 cx="7" cy="7" r="8" fill="currentColor" fill-opacity="0.06">
-                            </circle>
+                            </circle> --}}
                         </svg>
 
-                        <h3 class="font-medium">
+                        <h3 class="font-medium relative">
                             {{ $challenge->title }}
                         </h3>
 
