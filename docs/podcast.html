@@ -144,6 +144,117 @@
                 },
             };
         </script>
+
+        <!-- Pier Styles -->
+        <style>
+            @media only screen and (max-width: 680px) {
+                .pier-form-fields .grid {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+
+            .pier-toast-message {
+                background: #333;
+                color: white;
+                font-size: 0.9rem;
+                padding: 0.8rem 1rem;
+                border-radius: 4px;
+                pointer-events: none;
+
+                display: inline-flex;
+                align-items: center;
+
+                position: fixed;
+                top: 1rem;
+                left: 50%;
+                z-index: 9999;
+
+                transform: translateX(-50%);
+                transition: all 0.15s ease-in-out;
+            }
+
+            .pier-toast-message span {
+                color: greenyellow;
+            }
+
+            .pier-toast-message svg {
+                fill: currentColor;
+            }
+
+            .pier-toast-message:not(.show) {
+                transform: translateX(-50%) translateY(-80%);
+                opacity: 0;
+            }
+
+            :root {
+                --input-bg-color: rgba(0, 0, 0, 0.05);
+                --input-border-color: rgba(0, 0, 0, 0.02);
+            }
+
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --input-bg-color: rgba(255, 255, 255, 0.08);
+                    --input-border-color: rgba(255, 255, 255, 0.02);
+                }
+            }
+
+            .pier-form-field .pier-label {
+                font-size: 0.95rem;
+                opacity: 0.9;
+                margin-bottom: 0.1rem;
+            }
+
+            .pier-form-field .pier-input,
+            .pier-form-field .pier-textarea,
+            .pier-form-field .pier-select {
+                font-size: 20px;
+                width: 100%;
+            }
+
+            .pier-form-field .pier-label,
+            .pier-form-field .pier-select,
+            .pier-form-field .pier-textarea,
+            .pier-form-field .pier-input {
+                display: block;
+                width: 100%;
+            }
+
+            .pier-form-field .pier-select,
+            .pier-form-field .pier-textarea,
+            .pier-form-field .pier-input {
+                background-color: var(--input-bg-color);
+                border: 1px solid var(--input-border-color);
+                border-radius: 0.35rem;
+                font-size: 1rem;
+                line-height: 1.5rem;
+                padding: 0.5rem 0.75rem;
+                outline: none;
+            }
+
+            .pier-form-field .pier-select,
+            .pier-form-field .pier-input,
+            .pier-form-field .pier-textarea {
+                min-height: 3rem;
+                font-size: 1.1rem;
+                padding: 0.65rem 0.8rem;
+            }
+
+            .pier-form-field .pier-textarea {
+                min-height: 150px;
+            }
+
+            .pier-form-field > .mt-6 {
+                margin-top: -0.1rem !important;
+            }
+
+            @media only screen and (max-width: 680px) {
+                .pier-form-fields .grid {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        </style>
     </head>
 
     <body class="bg-canvas text-content">
@@ -648,7 +759,7 @@
                         >
                             <a
                                 href="podcast.html"
-                                class="flex items-center h-full px-1 py-4 md:py-0 md:mr-4 text-3xl md:text-sm font-bold uppercase tracking-wide border-transparent font-semibolds opacity-60 hover:opacity-70 text-center"
+                                class="text-primary flex items-center h-full px-1 py-4 md:py-0 md:mr-4 text-3xl md:text-sm font-bold uppercase tracking-wide border-transparent font-semibolds hover:opacity-70 text-center"
                             >
                                 Podcast
                             </a>
@@ -1053,8 +1164,8 @@
                         class="w-full h-fulls text-center md:w-auto md:text-left"
                     >
                         <a
-                            href="#"
-                            class="text-primary flex items-center h-full px-1 py-4 md:py-0 md:mr-4 text-3xl md:text-sm font-bold uppercase tracking-wide border-transparent font-semibolds hover:opacity-70 text-center"
+                            href="about.html"
+                            class="flex items-center h-full px-1 py-4 md:py-0 md:mr-4 text-3xl md:text-sm font-bold uppercase tracking-wide border-transparent font-semibolds opacity-60 hover:opacity-70 text-center"
                         >
                             About Us
                         </a>
@@ -1116,545 +1227,1286 @@
             }
         </script>
 
-<section class="py-12 lg:pt-16 lg:pb-0">
-    <div class="relative max-w-7xl mx-auto px-8">
-        <div class="lg:grid grid-cols-12 gap-12 items-start">
-            <div class="col-span-5 relative">
-                <h2 class="mt-3 text-2xl lg:text-4xl/[1.4] font-bold uppercase text-accent dark:text-white">
-                    <span class="font-light">About
-                    </span>
-                    Us
-                </h2>
+<main>
 
-                <p class="text-lg/loose font-light">
-                    We started with the question, Why Lead? And this question led to a simple survey that we shared with
-                    leaders across many organizations.
-                </p>
-
-                <p class="mt-5 text-lg/loose font-light">
-                    The results were shocking. Leaders were struggling. Alot of
-                    organizational success hinged on their participation, yet it felt like they were the only ones who
-                    cared. We understood the work and life of a leader, and we said, it’s time to step in and help.
-                </p>
-
-                <p class="mt-5 text-lg/loose font-light">
-                    And
-                    that’s how WhyLead was started. To partner with leaders and organizations and provide the support
-                    needed to thrive.
-                </p>
-
-                <div class="mt-8 gap-3">
-                    <a href="#programmes" class="btn w-full md:w-auto">
-                        Our programmes
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-span-7 pt-4 pb-16 sflex flex-col gap-2">
-                <div
-                    class="max-w-lg ml-auto w-full bg-accent/5 dark:bg-content/5 border border-stroke shadow-sm rotate-1 rounded-2xl items-center justify-center relative">
-                    <div
-                        class="bg-accent text-white border border-stroke dark:border-content/20 shadow-sm absolute -top-2 -left-2 rounded-md overflow-hidden">
-                        <div class="text-xs/none font-bold uppercase tracking-wide relative py-2 px-2.5 ">
-                            Who we are
-                        </div>
-                    </div>
-
-                    <div class="px-6 pt-7 pb-4 text-base/loose font-light">
-                        We’ve been called trainers, coaches, and consultants. But we call ourselves king and
-                        queenmakers, organizational paramedics, leadership miyagis, and the thrive squad.
-                        We are who you call when you want your leaders and organization to thrive.
-                    </div>
-                </div>
-
-                <div
-                    class="mt-10 max-w-lg w-full bg-content/[0.02] border border-stroke shadow-sm -rotate-1 rounded-2xl items-center justify-center relative">
-                    <div
-                        class="bg-content text-card border dark:border-content/10 absolute -top-2 -left-2 rounded-md overflow-hidden shadow-sm">
-                        <div class="text-xs/none font-bold uppercase tracking-wide relative py-2 px-2.5">
-                            Our Vision
-                        </div>
-                    </div>
-
-                    <div class="px-6 pt-8 pb-6 text-xl/loose font-light">
-                        To help organizations thrive by developing thriving leaders, teams, and cultures.
-                    </div>
-                </div>
-
-                <div
-                    class="mt-14 max-w-lg ml-auto w-full bg-primary/5 dark:bg-content/5 border border-stroke shadow-sm rotate-1 rounded-2xl items-center justify-center relative">
-                    <div
-                        class="bg-primary text-white border border-stroke absolute -top-2 -left-2 rounded-md overflow-hidden">
-                        <div class="text-xs/none font-bold uppercase tracking-wide relative py-2 px-2.5">
-                            Our Mission
-                        </div>
-                    </div>
-
-                    <div class="px-6 pt-7 pb-4 text-xl/relaxed font-light">
-                        We aspire to live in a world where Mondays are no longer blue and everyone is happy and
-                        fulfilled to go to work.
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
+    <div class="grid grid-cols-12 items-start max-w-7xl mx-auto px-8 py-8 xl:py-10">
+        <div class="col-span-4 sticky -top-16 xl:-top-24">
+            <div>
+    <div class="relative border size-32 xl:size-40 overflow-hidden rounded-xl bg-content/5 shadow-xl" href="#">
+        <img alt=""class="absolute size-full"
+            src="https://whylead.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSU5HR2dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--66cdf88630021e49faff3053a937972dbd4955d2/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/8848136-1699425854054-cbb5ac9c40e5b.jpg" />
     </div>
-</section>
 
-    <section class="py-10">
-    <div class="relative max-w-7xl mx-auto px-8">
-        <div class="flex flex-col gap-4 lg:gap-12 items-center justify-center">
-            <div class="max-w-5xl mx-auto text-center">
-                <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">
-                    <span class="uppercase">
-                        <span class="outline-text">Our</span>
-                        Values
-                    </span>
-                </h2>
+    <div class="mt-6 xl:mt-10 lg:text-left text-center">
+        <p class="text-xl font-bold "><a href="/">Why Lead?</a></p>
+        <p class="mt-3 xl:text-lg font-medium leading-8 opacity-70">
+            "Everything rises and falls on leadership," - John Maxwell
+        </p>
+    </div>
 
+    <section class="mt-6 xl:mt-10 hidden lg:block">
+        <h2 class="flex items-center font-mono text-sm font-medium leading-7 "><svg aria-hidden="true"
+                viewBox="0 0 10 10" class="h-2.5 w-2.5">
+                <path d="M0 5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5Z"
+                    class="fill-primary/60" />
+                <path d="M6 1a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V1Z" class="fill-primary/80" />
+            </svg>
+            <span class="ml-2.5">About</span>
+        </h2>
 
-            </div>
-
-            <ul role="list" class="w-full grid grid-cols-1 lg:grid-cols-3 gap-8">
-
-                                    <li
-                        class="min-h-full py-16 text-white border border-stroke shadow-sm relative w-full rounded-2xl overflow-hidden p-6 text-left">
-                        <img class="absolute inset-0 size-full rounded-2xl object-cover object-top"
-                            src="https://res.cloudinary.com/sfp-app/image/upload/v1711540972/z87huht3tyivdybtg6hv.jpg" />
-
-
-                        <div class="absolute inset-0 bg-accent/90 rounded-2xl"></div>
+        <p class="mt-2 text-sm xl:text-base/loose leading-7 opacity-70 lg:line-clamp-4">
+            My name is Ben Owden and I have weekly conversations with leaders. I hope that these conversations will
+            help you find the clarity and conviction to lead a more meaningful and impactful life. I’ve curated some
+            of the best thinker practitioners from all over the world to help you get to your leadership nirvana.
+        </p>
 
 
+    </section>
 
+    <section class="mt-6 xl:mt-10">
+        <h2 class="sr-only flex items-center font-mono text-sm font-medium leading-7  lg:not-sr-only">
+            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5">
+                <path d="M0 5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5Z"
+                    class="fill-[#5C4EB8]/60" />
+                <path d="M6 1a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V1Z" class="fill-[#5C4EB8]/80" />
+            </svg><span class="ml-2.5">Listen</span>
+        </h2>
+        <div class="h-px bg-gradient-to-r from-slate-200/0 via-slate-200 to-slate-200/0 lg:hidden"></div>
+        <ul role="list"
+            class="mt-4 flex justify-center gap-10 text-base font-medium leading-7 opacity-70 sm:gap-8 lg:flex-col lg:gap-4">
 
-                        <div class="min-h-full relative flex items-center flex-col justify-center gap-3 lg:p-2 text-center">
-
-
-                            <h3 class="text-2xl uppercase tracking-widest font-bold text-[#ff9962]">
-                                Ubuntu Kwanza
-                            </h3>
-
-                            <p class="text-base/loose opacity-80">
-                                Treating All as Ends, Never Means. working to create win-win outcomes for all earthlings.
-                            </p>
-                        </div>
-                    </li>
-                                    <li
-                        class="min-h-full py-16 text-white border border-stroke shadow-sm relative w-full rounded-2xl overflow-hidden p-6 text-left">
-                        <img class="absolute inset-0 size-full rounded-2xl object-cover object-top"
-                            src="https://res.cloudinary.com/sfp-app/image/upload/v1711540989/ykp8fjasngktaayokhab.jpg" />
-
-
-                        <div class="absolute inset-0 bg-accent/90 rounded-2xl"></div>
-
-
-
-
-                        <div class="min-h-full relative flex items-center flex-col justify-center gap-3 lg:p-2 text-center">
-
-
-                            <h3 class="text-2xl uppercase tracking-widest font-bold text-[#ff9962]">
-                                Game 6
-                            </h3>
-
-                            <p class="text-base/loose opacity-80">
-                                We do what we say we do. we are who we say we are. we seize every opportunity we say yes to. We go ALL-IN in and Give our absolute best.
-                            </p>
-                        </div>
-                    </li>
-                                    <li
-                        class="min-h-full py-16 text-white border border-stroke shadow-sm relative w-full rounded-2xl overflow-hidden p-6 text-left">
-                        <img class="absolute inset-0 size-full rounded-2xl object-cover object-top"
-                            src="https://res.cloudinary.com/sfp-app/image/upload/v1711540237/sxj9meo6zbkadvvlkw15.jpg" />
-
-
-                        <div class="absolute inset-0 bg-accent/90 rounded-2xl"></div>
-
-
-
-
-                        <div class="min-h-full relative flex items-center flex-col justify-center gap-3 lg:p-2 text-center">
-
-
-                            <h3 class="text-2xl uppercase tracking-widest font-bold text-[#ff9962]">
-                                Data-Driven
-                            </h3>
-
-                            <p class="text-base/loose opacity-80">
-                                If we have data, let’s look at data. If all we have are opinions, let’s go look for data.
-                            </p>
-                        </div>
-                    </li>
-                            </ul>
-
-            <div class="text-center">
-                <p class="text-lg opacity-70">Ready to take your organisation to the next level?</p>
-                <a href="#" class="mt-6 btn">
-                    Tell us your needs
+            <li class="flex">
+                <a class="group flex items-center" aria-label="Spotify"
+                    href="https://open.spotify.com/show/1VXv2qDPMpI0L28JjpnB82" target="_blank">
+                    <svg aria-hidden="true" viewBox="0 0 32 32"
+                        class="size-6 xl:size-8 fill-slate-400 group-hover:fill-slate-600">
+                        <path
+                            d="M15.8 3a12.8 12.8 0 1 0 0 25.6 12.8 12.8 0 0 0 0-25.6Zm5.87 18.461a.8.8 0 0 1-1.097.266c-3.006-1.837-6.787-2.252-11.244-1.234a.796.796 0 1 1-.355-1.555c4.875-1.115 9.058-.635 12.432 1.427a.8.8 0 0 1 .265 1.096Zm1.565-3.485a.999.999 0 0 1-1.371.33c-3.44-2.116-8.685-2.728-12.755-1.493a1 1 0 0 1-.58-1.91c4.65-1.41 10.428-.726 14.378 1.7a1 1 0 0 1 .33 1.375l-.002-.002Zm.137-3.629c-4.127-2.45-10.933-2.675-14.871-1.478a1.196 1.196 0 1 1-.695-2.291c4.52-1.374 12.037-1.107 16.785 1.711a1.197 1.197 0 1 1-1.221 2.06" />
+                    </svg>
+                    <span class="text-sm xl:text-base hidden sm:ml-3 sm:block">Spotify</span>
                 </a>
-            </div>
-        </div>
-    </div>
-</section>
+            </li>
 
-    <section id="programmes" class="py-10 lg:py-20 bg-content/5 dark:bg-content/[0.02]">
-    <div class="relative max-w-7xl mx-auto px-8">
-        <div class="mb-12 flex gap-12 max-w-2xl mx-auto">
-            <div class="flex-1 text-center">
-                <h2 class="text-2xl lg:text-4xl font-bold uppercase">
-                    <span class="font-light">Our </span>
-                    trainers <span class="font-light">and</span> consultants
-                </h2>
-
-                <p class="mt-2 text-lg">
-                    Here are a few sample programs we facilitate, but most of our programs are custom-built for you.
-                </p>
-            </div>
-        </div>
-
-        <ul role="list" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                            <li
-                    class="relative min-h-full w-full flex sflex-col items-start bg-card dark:bg-content/5 border border-stroke rounded-l-[100px] rounded-r-[50px] sshadow">
-                    <div
-                        class="min-h-full bg-accent dark:bg-accent/50 border border-stroke rounded-full -rotate-2 text-white pl-6 py-6 flex-shrink-0 w-48 flex flex-col gap-6 relative z-10">
-                        <div class="h-40 w-40 flex-shrink-0 relative rounded-full overflow-hidden">
-                            <img class="size-full object-cover object-top rounded-full" src="https://www.whyleadothers.com/wp-content/uploads/2023/01/Ben-Owden-scaled-e1675001152584-400x600.jpg"
-                                alt="" />
-                        </div>
-
-                        <div class="flex-1 pr-4">
-                            <h3 class="text-xl/tight font-semibold">
-                                Ben Owden
-                            </h3>
-
-                            <p class="mt-2 text-sm/relaxed text-[#fa9158]">
-
-                                Leadership trainer and principal consultant
-                            </p>
-
-                            <p class="mt-3 text-xs opacity-90">
-                                Trinity of Personal Values
-                            </p>
-
-                            <ul role="list" class="mt-1">
-                                                                    <li class="flex items-center gap-1 py-1">
-                                        <svg class="size-5 flex-none" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <circle cx="12" cy="12" r="8.25" />
-
-                                            <path class=""
-                                                d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"
-                                                fill="currentColor" stroke="none" />
-                                        </svg>
-                                        <p class="text-xs font-semibold">
-                                            Truth
-                                        </p>
-                                    </li>
-                                                                    <li class="flex items-center gap-1 py-1">
-                                        <svg class="size-5 flex-none" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <circle cx="12" cy="12" r="8.25" />
-
-                                            <path class=""
-                                                d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"
-                                                fill="currentColor" stroke="none" />
-                                        </svg>
-                                        <p class="text-xs font-semibold">
-                                            Family
-                                        </p>
-                                    </li>
-                                                                    <li class="flex items-center gap-1 py-1">
-                                        <svg class="size-5 flex-none" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <circle cx="12" cy="12" r="8.25" />
-
-                                            <path class=""
-                                                d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"
-                                                fill="currentColor" stroke="none" />
-                                        </svg>
-                                        <p class="text-xs font-semibold">
-                                            Congruence
-                                        </p>
-                                    </li>
-                                                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="flex-1 min-h-full p-6 relative">
-
-                        <p class="text-xs/loose xl:text-sm/loose relative z-10 opacity-60 dark:opacity-80">
-                            Ben Owden develops leaders who lead thriving teams and organizations. He has a deep understanding of what makes organizational systems functional. And what makes people belong, grow, contribute, and challenge the status quo. He has trained and coached leaders from renowned organizations like Malala Fund, KNAUF, and CRDB Bank.<br/><br/>Ben's focus is on empowering leaders to have whole-person alignment so they can thrive, both in their roles and their lives.<br/><br/>Ben is the author of a personal development book, <a class='text-primary underline' href='https://www.amazon.com/Process-Where-Prepares-Your-Destiny-ebook/dp/B086Z5SDL6/ref=sr_1_1?crid=2NHCPWHGRF986&keywords=ben+owden&qid=1706865914&sprefix=ben+owd%2Caps%2C466&sr=8-1' target='_blank'>In The Process.</a>
-                        </p>
-                    </div>
-                </li>
-                            <li
-                    class="relative min-h-full w-full flex sflex-col items-start bg-card dark:bg-content/5 border border-stroke rounded-l-[100px] rounded-r-[50px] sshadow">
-                    <div
-                        class="min-h-full bg-accent dark:bg-accent/50 border border-stroke rounded-full -rotate-2 text-white pl-6 py-6 flex-shrink-0 w-48 flex flex-col gap-6 relative z-10">
-                        <div class="h-40 w-40 flex-shrink-0 relative rounded-full overflow-hidden">
-                            <img class="size-full object-cover object-top rounded-full" src="https://www.whyleadothers.com/wp-content/uploads/2023/01/Jocelyne-Msigwa-scaled-e1675017746383-400x600.jpg"
-                                alt="" />
-                        </div>
-
-                        <div class="flex-1 pr-4">
-                            <h3 class="text-xl/tight font-semibold">
-                                Jocelyne Msigwa
-                            </h3>
-
-                            <p class="mt-2 text-sm/relaxed text-[#fa9158]">
-
-                                Leadership trainer
-                            </p>
-
-                            <p class="mt-3 text-xs opacity-90">
-                                Trinity of Personal Values
-                            </p>
-
-                            <ul role="list" class="mt-1">
-                                                                    <li class="flex items-center gap-1 py-1">
-                                        <svg class="size-5 flex-none" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <circle cx="12" cy="12" r="8.25" />
-
-                                            <path class=""
-                                                d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"
-                                                fill="currentColor" stroke="none" />
-                                        </svg>
-                                        <p class="text-xs font-semibold">
-                                            Faith
-                                        </p>
-                                    </li>
-                                                                    <li class="flex items-center gap-1 py-1">
-                                        <svg class="size-5 flex-none" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <circle cx="12" cy="12" r="8.25" />
-
-                                            <path class=""
-                                                d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"
-                                                fill="currentColor" stroke="none" />
-                                        </svg>
-                                        <p class="text-xs font-semibold">
-                                            Family
-                                        </p>
-                                    </li>
-                                                                    <li class="flex items-center gap-1 py-1">
-                                        <svg class="size-5 flex-none" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <circle cx="12" cy="12" r="8.25" />
-
-                                            <path class=""
-                                                d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"
-                                                fill="currentColor" stroke="none" />
-                                        </svg>
-                                        <p class="text-xs font-semibold">
-                                            Growth
-                                        </p>
-                                    </li>
-                                                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="flex-1 min-h-full p-6 relative">
-
-                        <p class="text-xs/loose xl:text-sm/loose relative z-10 opacity-60 dark:opacity-80">
-                            Jocelyne Msigwa is a leadership development coach and trainer. She is committed to empowering the next generation of competent and purpose-driven leaders.<br/><br/>She is a highly accomplished and experienced HR Executive with a proven track record of translating business objectives into effective human resource strategies that drive performance, profitability, and growth while enhancing employee experience and engagement.<br/><br/>She brings her unique blend of strategic thinking, creativity, and innovation to every project, and consistently delivers results that exceed expectations.
-                        </p>
-                    </div>
-                </li>
-                    </ul>
-    </div>
-</section>
-
-    <section class="py-12 lg:py-20">
-    <div class="relative max-w-7xl mx-auto px-8">
-        <div class="flex flex-col gap-4 lg:gap-12 items-center justify-center">
-            <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-2xl lg:text-4xl font-bold">
-                    <span class="uppercase">
-                        <span class="outline-text">What we</span>
-                        offer
-                    </span>
-                </h2>
-
-                <p class="mt-2 text-xl/loose font-light">
-                    With WhyLead, training transcends traditional learning approaches, enabling individuals to thrive in
-                    the dynamic landscapes of today.
-                </p>
-            </div>
-
-            <ul role="list" class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-                                    <li
-                        class="bg-card dark:bg-content/5 border border-stroke relative min-h-full w-full p-6 rounded-2xl overflow-hidden">
-
-
-
-
-                        <div class="-m-4 h-32 relative rounded-t-2xl rounded-b overflow-hidden">
-                            <img class="size-full object-cover rounded-t-2xl rounded-b" src="https://images.unsplash.com/photo-1573496774426-fe3db3dd1731?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxNjE2NXwwfDF8c2VhcmNofDQ2fHxjb3Jwb3JhdGUlMjB0ZWFtfGVufDB8fHx8MTcxMjU3MzQxOXww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"
-                                alt="" />
-
-                            <div
-                                class="bg-black/50 dark:bg-black/80 text-white absolute inset-0 flex flex-col items-center justify-center gap-3">
-                                <svg class="size-8 drop-shadow text-[#fa9158]" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
-                                </svg>
-
-                                <h3 class="text-xl lg:text-2xl font-semibold uppercase tracking-widest">
-                                    Belong
-                                </h3>
-                            </div>
-                        </div>
-
-
-                        <p class="mt-8 text-sm/loose opacity-70">
-                            Experience the power of connection as part of the global WhyLead family, where shared values and a passion for humanity unite us all. Embrace opportunities to cultivate authentic relationships, fostering a global network that transcends borders, both within and beyond the WhyLead family.
-                        </p>
-                    </li>
-                                    <li
-                        class="bg-card dark:bg-content/5 border border-stroke relative min-h-full w-full p-6 rounded-2xl overflow-hidden">
-
-
-
-
-                        <div class="-m-4 h-32 relative rounded-t-2xl rounded-b overflow-hidden">
-                            <img class="size-full object-cover rounded-t-2xl rounded-b" src="https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxNjE2NXwwfDF8c2VhcmNofDEyfHxjb3Jwb3JhdGUlMjB0ZWFtfGVufDB8fHx8MTcxMjU3MzM1M3ww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"
-                                alt="" />
-
-                            <div
-                                class="bg-black/50 dark:bg-black/80 text-white absolute inset-0 flex flex-col items-center justify-center gap-3">
-                                <svg class="size-8 drop-shadow text-[#fa9158]" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
-                                </svg>
-
-                                <h3 class="text-xl lg:text-2xl font-semibold uppercase tracking-widest">
-                                    Grow
-                                </h3>
-                            </div>
-                        </div>
-
-
-                        <p class="mt-8 text-sm/loose opacity-70">
-                            Immerse yourself in a wealth of resources and continuous training that propels your professional journey.  And experience the transformative beauty of evolving in your skill and character, emerging as your most authentic and accomplished self.
-                        </p>
-                    </li>
-                                    <li
-                        class="bg-card dark:bg-content/5 border border-stroke relative min-h-full w-full p-6 rounded-2xl overflow-hidden">
-
-
-
-
-                        <div class="-m-4 h-32 relative rounded-t-2xl rounded-b overflow-hidden">
-                            <img class="size-full object-cover rounded-t-2xl rounded-b" src="https://images.unsplash.com/photo-1604246562628-284cb1768678?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxNjE2NXwwfDF8c2VhcmNofDI3fHx0ZWFtJTIwYnVpbGRpbmd8ZW58MHx8fHwxNzEyNTczMTE0fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080"
-                                alt="" />
-
-                            <div
-                                class="bg-black/50 dark:bg-black/80 text-white absolute inset-0 flex flex-col items-center justify-center gap-3">
-                                <svg class="size-8 drop-shadow text-[#fa9158]" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
-                                </svg>
-
-                                <h3 class="text-xl lg:text-2xl font-semibold uppercase tracking-widest">
-                                    Live
-                                </h3>
-                            </div>
-                        </div>
-
-
-                        <p class="mt-8 text-sm/loose opacity-70">
-                            Relish the freedom of a flexible work environment that harmonizes with your life. Embrace ample time to rejuvenate and reconnect with loved ones, cherishing moments of tranquility and vitality.
-                        </p>
-                    </li>
-                            </ul>
-
-            <div class="text-center">
-
-                <p class="text-xl opacity-70">Seen enough to convince you?</p>
-                <a href="#" class="mt-6 btn">
-                    Reach out to us
+            <li class="flex">
+                <a class="group flex items-center" aria-label="Apple Podcast"
+                    href="https://podcasts.apple.com/us/podcast/why-lead/id1531331535" target="_blank">
+                    <svg aria-hidden="true" viewBox="0 0 32 32"
+                        class="size-6 xl:size-8 fill-slate-400 group-hover:fill-slate-600">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M27.528 24.8c-.232.592-.768 1.424-1.536 2.016-.44.336-.968.664-1.688.88-.768.232-1.72.304-2.904.304H10.6c-1.184 0-2.128-.08-2.904-.304a4.99 4.99 0 0 1-1.688-.88c-.76-.584-1.304-1.424-1.536-2.016C4.008 23.608 4 22.256 4 21.4V10.6c0-.856.008-2.208.472-3.4.232-.592.768-1.424 1.536-2.016.44-.336.968-.664 1.688-.88C8.472 4.08 9.416 4 10.6 4h10.8c1.184 0 2.128.08 2.904.304a4.99 4.99 0 0 1 1.688.88c.76.584 1.304 1.424 1.536 2.016C28 8.392 28 9.752 28 10.6v10.8c0 .856-.008 2.208-.472 3.4Zm-9.471-6.312a1.069 1.069 0 0 0-.32-.688c-.36-.376-.992-.624-1.736-.624-.745 0-1.377.24-1.737.624-.183.2-.287.4-.32.688-.063.558-.024 1.036.04 1.807v.009c.065.736.184 1.72.336 2.712.112.712.2 1.096.28 1.368.136.448.625.832 1.4.832.776 0 1.273-.392 1.4-.832.08-.272.169-.656.28-1.368.152-1 .273-1.976.337-2.712.072-.776.104-1.256.04-1.816ZM16 16.375c1.088 0 1.968-.88 1.968-1.967 0-1.08-.88-1.968-1.968-1.968s-1.968.88-1.968 1.968.88 1.967 1.968 1.967Zm-.024-9.719c-4.592.016-8.352 3.744-8.416 8.336-.048 3.72 2.328 6.904 5.648 8.072.08.032.16-.04.152-.12a35.046 35.046 0 0 0-.041-.288c-.029-.192-.057-.384-.079-.576a.317.317 0 0 0-.168-.232 7.365 7.365 0 0 1-4.424-6.824c.04-4 3.304-7.256 7.296-7.288 4.088-.032 7.424 3.28 7.424 7.36 0 3.016-1.824 5.608-4.424 6.752a.272.272 0 0 0-.168.232l-.12.864c-.016.088.072.152.152.12a8.448 8.448 0 0 0 5.648-7.968c-.016-4.656-3.816-8.448-8.48-8.44Zm-5.624 8.376c.04-2.992 2.44-5.464 5.432-5.576 3.216-.128 5.88 2.456 5.872 5.64a5.661 5.661 0 0 1-2.472 4.672c-.08.056-.184-.008-.176-.096.016-.344.024-.648.008-.96 0-.104.04-.2.112-.272a4.584 4.584 0 0 0 1.448-3.336 4.574 4.574 0 0 0-4.752-4.568 4.585 4.585 0 0 0-4.392 4.448 4.574 4.574 0 0 0 1.448 3.456c.08.072.12.168.112.272-.016.32-.016.624.008.968 0 .088-.104.144-.176.096a5.65 5.65 0 0 1-2.472-4.744Z" />
+                    </svg>
+                    <span class="text-sm xl:text-base hidden sm:ml-3 sm:block">Apple Podcast</span>
                 </a>
-            </div>
+            </li>
+
+            <li class="flex">
+                <a class="group flex items-center" aria-label="Overcast" href="https://overcast.fm/itunes1531331535"
+                    target="_blank">
+                    <svg aria-hidden="true" viewBox="0 0 32 32"
+                        class="size-6 xl:size-8 fill-slate-400 group-hover:fill-slate-600">
+                        <path
+                            d="M16 28.8A12.77 12.77 0 0 1 3.2 16 12.77 12.77 0 0 1 16 3.2 12.77 12.77 0 0 1 28.8 16 12.77 12.77 0 0 1 16 28.8Zm0-5.067.96-.96-.96-3.68-.96 3.68.96.96Zm-1.226-.054-.48 1.814 1.12-1.12-.64-.694Zm2.453 0-.64.64 1.12 1.12-.48-1.76Zm.907 3.307L16 24.853l-2.133 2.133c.693.107 1.387.213 2.133.213.747 0 1.44-.053 2.134-.213ZM16 4.799C9.814 4.8 4.8 9.813 4.8 16c0 4.907 3.147 9.067 7.52 10.56l2.4-8.906c-.533-.374-.853-1.014-.853-1.707A2.14 2.14 0 0 1 16 13.813a2.14 2.14 0 0 1 2.134 2.133c0 .693-.32 1.28-.854 1.707l2.4 8.906A11.145 11.145 0 0 0 27.2 16c0-6.186-5.013-11.2-11.2-11.2Zm7.307 16.747c-.267.32-.747.427-1.12.16-.373-.267-.427-.747-.16-1.067 0 0 1.44-1.92 1.44-4.64 0-2.72-1.44-4.64-1.44-4.64-.267-.32-.213-.8.16-1.066.373-.267.853-.16 1.12.16.107.106 1.76 2.293 1.76 5.546 0 3.254-1.653 5.44-1.76 5.547Zm-3.893-2.08c-.32-.32-.267-.907.053-1.227 0 0 .8-.853.8-2.24 0-1.386-.8-2.186-.8-2.24-.32-.32-.32-.853-.053-1.226.32-.374.8-.374 1.12-.054.053.054 1.333 1.387 1.333 3.52 0 2.134-1.28 3.467-1.333 3.52-.32.32-.8.267-1.12-.053Zm-6.827 0c-.32.32-.8.373-1.12.053-.053-.106-1.333-1.386-1.333-3.52 0-2.133 1.28-3.413 1.333-3.52.32-.32.853-.32 1.12.054.32.32.267.906-.053 1.226 0 .054-.8.854-.8 2.24 0 1.387.8 2.24.8 2.24.32.32.373.854.053 1.227Zm-2.773 2.24c-.374.267-.854.16-1.12-.16-.107-.107-1.76-2.293-1.76-5.547 0-3.253 1.653-5.44 1.76-5.546.266-.32.746-.427 1.12-.16.373.266.426.746.16 1.066 0 0-1.44 1.92-1.44 4.64 0 2.72 1.44 4.64 1.44 4.64.266.32.16.8-.16 1.067Z" />
+                    </svg>
+                    <span class="text-sm xl:text-base hidden sm:ml-3 sm:block">Overcast</span>
+                </a>
+            </li>
+
+            <li class="flex"><a class="group flex items-center" aria-label="RSS Feed"
+                    href="https://feeds.buzzsprout.com/2275900.rss" target="_blank">
+                    <svg aria-hidden="true" viewBox="0 0 32 32"
+                        class="size-6 xl:size-8 fill-slate-400 group-hover:fill-slate-600">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8.5 4h15A4.5 4.5 0 0 1 28 8.5v15a4.5 4.5 0 0 1-4.5 4.5h-15A4.5 4.5 0 0 1 4 23.5v-15A4.5 4.5 0 0 1 8.5 4ZM13 22a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-6-6a9 9 0 0 1 9 9h3A12 12 0 0 0 7 13v3Zm5.74-4.858A15 15 0 0 0 7 10V7a18 18 0 0 1 18 18h-3a15 15 0 0 0-9.26-13.858Z" />
+                    </svg>
+                    <span class="text-sm xl:text-base hidden sm:ml-3 sm:block">RSS Feed</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+</div>
         </div>
-    </div>
-</section>
 
-    <section
-    class="py-12 lg:py-20 border-t border-stroke bg-gradient-to-br from-accent via-accent/90 to-accent/95 dark:from-content/5 dark:to-content/5 dark:via-content/5 text-white">
-    <div class="relative max-w-7xl mx-auto px-8">
-        <div class="lg:grid grid-cols-12 gap-12 items-start">
-            <div class="pb-12 col-span-6 relative min-h-full flex flex-col">
-                <h2 class="mt-3 text-2xl lg:text-4xl/tight font-bold uppercase text-white">
-                    Who <span class="font-light">We Look </span>
-                    For
-                </h2>
+        <div class="col-span-8" x-data="{
+            page: 0,
+            async fetchEpisodes() {
+                var res = await fetch('https://whylead.buzzsprout.com/2275900.js?page=' + this.page, {
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                }).then(res => res.text());
 
-                <p class="mt-4 text-xl/loose font-light">
-                    Those who thrive here are the ones committed to building a career, not just cashing a paycheck.
-                    We're not just offering a job; we're inviting you to embark on a fulfilling journey.
-                </p>
+                const div = document.createElement(`div`);
+                div.innerHTML = res;
 
-                <div class="mt-4">
-                    <a href="#" class="mt-4 btn w-full md:w-auto">
-                        Come Join our team
-                    </a>
-                </div>
-            </div>
+                const parent = '.episode-list__row';
+                const childrenMatchers = 'image::img::src|title::.episode-list--title span|date::.episode-list--title small|link::.episode-list__row a:first-child::href';
 
-            <div class="col-span-6 pt-6 flex flex-col gap-2">
+                let data = Array.from(div.querySelectorAll(parent)).reduce((agg, node) => {
+                    const row = {};
+                    const children = childrenMatchers.split(`|`);
+                    children.forEach(child => {
+                        const [key, matcher, attribute = `innerText`] = child.split(`::`);
+                        const childNode = node.querySelector(matcher);
+                        row[key.trim()] = childNode[attribute] || getComputedStyle(childNode)[attribute];
+                    });
+
+                    return [...agg, row];
+                }, []);
+
+                data = data.map((row) => {
+                    const [number, fullTitle] = row.title.split(' - ');
+                    row.number = number;
+
+                    const [title, featuring] = fullTitle.split(' ft ');
+                    row.title = title;
+                    row.featuring = featuring;
+
+                    row.link = row.link.replace(new URL(location.href).host, '').replace('https://', '').replace('http://');
+                    row.link = 'https://www.buzzsprout.com' + row.link;
+
+                    return row;
+                });
+
+                console.log('Podcast episodes: ', data);
+
+                this.page += 1;
+            },
+            async init() {
 
 
-                <div class="flex-1 flex flex-col gap-12">
-                                            <div class="text-xl flex items-start gap-4">
-                            <div class="rounded-lg bg-gradient-to-br from-accent via-accent/90 to-accent/95">
-                                <div
-                                    class="bg-gradient-to-br from-primary to-primary/20 text-white size-10 flex items-center justify-center rounded-lg">
-                                    <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061A1.125 1.125 0 0 1 3 16.811V8.69ZM12.75 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061a1.125 1.125 0 0 1-1.683-.977V8.69Z" />
-                                    </svg>
+            }
+        }">
+            <div class="max-w-3xl mx-auto px-12 pt-4">
+                <h3 class="text-3xl font-bold">Podcast Episodes</h3>
+
+                <div class="divide-y divide-stroke">
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRzNocUFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--42267deda5e0d8ff1485f92d5c944ff82ed74e1c/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/Podcast%20Thumbnail.jpg" />
+                                </div>
+
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14709388-0070-master-any-skill-the-ultimate-guide-to-learning-how-to-learn-ft-barbara-oakley?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0070 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                April 02, 2024
+                                            </time>
+                                        </a>
+                                    </h2>
+
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Barbara Oakley
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        Master Any Skill: The Ultimate Guide to Learning How to Learn
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14709388-0070-master-any-skill-the-ultimate-guide-to-learning-how-to-learn-ft-barbara-oakley?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTVFTbkFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--4fd7f760a8fc84507100f6ca76f68377c371879b/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/haesun%20Podcast%20Thumbnail.jpg" />
+                                </div>
 
-                            <div class="flex-1 -mt-px">
-                                <h3 class="text-lg font-semibold">
-                                    Those who join us seek a meaningful career, not simply a job.
-                                </h3>
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14567820-0069-how-to-have-conversations-that-heal-learning-the-alphabet-for-personal-transformation-ft-haesun-moon?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0069 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                March 26, 2024
+                                            </time>
+                                        </a>
+                                    </h2>
 
-                                <p class="text-sm/loose opacity-70">
-                                    Here, your big ideas find a home, equipped with the tools, technology, and training to thrive. Your new role is just the beginning, with boundless opportunities for growth and advancement. We foster a culture of perpetual learning, and if you share our passion for growth, you&#039;ll find your place here.
-                                </p>
-                            </div>
-                        </div>
-                                            <div class="text-xl flex items-start gap-4">
-                            <div class="rounded-lg bg-gradient-to-br from-accent via-accent/90 to-accent/95">
-                                <div
-                                    class="bg-gradient-to-br from-primary to-primary/20 text-white size-10 flex items-center justify-center rounded-lg">
-                                    <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
-                                    </svg>
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Haesun Moon
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        How to Have Conversations that Heal &amp; Learning the Alphabet for Personal Transformation
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14567820-0069-how-to-have-conversations-that-heal-learning-the-alphabet-for-personal-transformation-ft-haesun-moon?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSmNTbkFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f61b3aeb413c2b3477e35c7a841aeb7b2f586203/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/Morra%20Podcast%20Thumbnail.jpg" />
+                                </div>
 
-                            <div class="flex-1 -mt-px">
-                                <h3 class="text-lg font-semibold">
-                                    Are you passionate about making a difference?
-                                </h3>
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14614407-0068-win-while-anxious-transform-your-inner-critic-into-a-valuable-coach-ft-morra-aarons-melle?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0068 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                March 12, 2024
+                                            </time>
+                                        </a>
+                                    </h2>
 
-                                <p class="text-sm/loose opacity-70">
-                                    At WhyLead, it&#039;s more than just business—it&#039;s about our impact and how we achieve it. We actively support initiatives that enhance our work, enrich our lives, and contribute to our communities.
-                                </p>
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Morra Aarons Melle
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        Win While Anxious &amp; Transform Your Inner Critic into a Valuable Coach
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14614407-0068-win-while-anxious-transform-your-inner-critic-into-a-valuable-coach-ft-morra-aarons-melle?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSzY3bVFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--cbfc665a50db5f09c99f39a1da4ca6eff3df36ce/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/Podcast%20Thumbnail.jpg" />
+                                </div>
+
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14416142-0067-winning-the-stress-war-embracing-calmness-and-overcoming-procrastination-ft-paul-loomans?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0067 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                February 01, 2024
+                                            </time>
+                                        </a>
+                                    </h2>
+
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Paul Loomans
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        Winning The Stress War, Embracing Calmness and Overcoming Procrastination
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14416142-0067-winning-the-stress-war-embracing-calmness-and-overcoming-procrastination-ft-paul-loomans?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTG03bVFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--afb7d61a27e3d4ab6301d4cc0a49f5b0d644f805/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/Oliver%20Podcast%20Thumbnail.jpg" />
+                                </div>
+
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14329013-0066-the-dark-side-of-busyness-how-our-obsession-is-robbing-us-of-true-meaning-ft-oliver-burkeman?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0066 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                January 18, 2024
+                                            </time>
+                                        </a>
+                                    </h2>
+
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Oliver Burkeman
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        The Dark Side of Busyness: How Our Obsession Is Robbing Us of True Meaning
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14329013-0066-the-dark-side-of-busyness-how-our-obsession-is-robbing-us-of-true-meaning-ft-oliver-burkeman?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTCs3bVFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--88bb2db3cb13a797530ea5f4970825c2fcafcef0/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/David%20Allen%20Podcast%20Thumbnail.jpg" />
+                                </div>
+
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14233296-0065-transform-your-life-now-unlocking-superhuman-productivity-with-david-allen?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0065 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                January 10, 2024
+                                            </time>
+                                        </a>
+                                    </h2>
+
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        Transform Your Life NOW: Unlocking Superhuman Productivity with David Allen
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14233296-0065-transform-your-life-now-unlocking-superhuman-productivity-with-david-allen?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSU5HR2dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--66cdf88630021e49faff3053a937972dbd4955d2/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/8848136-1699425854054-cbb5ac9c40e5b.jpg" />
+                                </div>
+
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14197398-0064-cultivating-your-soft-life-saying-no-avoiding-being-average-and-grow-old-and-rich-ft-sam-ndandala-anna-mwasha-and-chris-rwechungura?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0064 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                December 25, 2023
+                                            </time>
+                                        </a>
+                                    </h2>
+
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Sam Ndandala, Anna Mwasha and Chris Rwechungura
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        Cultivating Your Soft Life, Saying No, Avoiding Being Average and Grow Old and Rich
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14197398-0064-cultivating-your-soft-life-saying-no-avoiding-being-average-and-grow-old-and-rich-ft-sam-ndandala-anna-mwasha-and-chris-rwechungura?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTXE3bVFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--a812218c263ebb120157b71e4dbe2f1d1b4e1b2e/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/Janet%20Harvey%20Podcast%20Thumbnail.jpg" />
+                                </div>
+
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14176845-0063-invite-change-and-embrace-judgment-as-a-catalyst-for-growth-ft-janet-harvey?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0063 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                December 20, 2023
+                                            </time>
+                                        </a>
+                                    </h2>
+
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Janet Harvey
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        Invite Change and Embrace Judgment as a Catalyst for Growth
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14176845-0063-invite-change-and-embrace-judgment-as-a-catalyst-for-growth-ft-janet-harvey?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTSs3bVFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--763bffcad64f97522798c6c628df3a9570d6b43c/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/Brian%20Podcast%20Thumbnail.jpg" />
+                                </div>
+
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14139347-0062-how-to-lead-successfully-in-the-digital-age-ft-brian-spisak?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0062 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                December 13, 2023
+                                            </time>
+                                        </a>
+                                    </h2>
+
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Brian Spisak
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        How to Lead Successfully in the Digital Age
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14139347-0062-how-to-lead-successfully-in-the-digital-age-ft-brian-spisak?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTmk3bVFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b89fa65619e37e2057ea7e8953612b8468fb8012/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/Alexsys%20Podcast%20Thumbnail.jpg" />
+                                </div>
+
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14097424-0061-how-to-become-a-more-integrated-leader-and-lead-with-grace-ft-alexsys-thompson?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0061 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                December 06, 2023
+                                            </time>
+                                        </a>
+                                    </h2>
+
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Alexsys Thompson
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        How to Become a More Integrated Leader and Lead with Grace
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14097424-0061-how-to-become-a-more-integrated-leader-and-lead-with-grace-ft-alexsys-thompson?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCT0c3bVFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--ffc41fe8412bcf4db775c4a87204099d3a8d6ae9/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/Lucy%20Podcast%20Thumbnail.jpg" />
+                                </div>
+
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14091298-0060-building-the-africa-we-want-ft-dr-lucy-surhyel-newman-hon-prof-kitila-mkumbo?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0060 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                December 05, 2023
+                                            </time>
+                                        </a>
+                                    </h2>
+
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Dr. Lucy Surhyel Newman &amp; Hon. Prof. Kitila Mkumbo
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        Building the Africa We Want
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14091298-0060-building-the-africa-we-want-ft-dr-lucy-surhyel-newman-hon-prof-kitila-mkumbo?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCT2E3bVFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6df909286660246f4cd21e51e6c702029a3d484b/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/Matthias%20Podcast%20Thumbnail.jpg" />
+                                </div>
+
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14053623-0059-weird-irrational-and-wonderful-ways-humans-navigate-the-workplace-ft-matthias-sutter?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0059 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                November 29, 2023
+                                            </time>
+                                        </a>
+                                    </h2>
+
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Matthias Sutter
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        Weird, Irrational, and Wonderful Ways Humans Navigate the Workplace
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14053623-0059-weird-irrational-and-wonderful-ways-humans-navigate-the-workplace-ft-matthias-sutter?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCT3U3bVFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bedb681e21eec241b5d32a09013a313ccd4f959e/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/Jeremie%20Podcast%20Thumbnail.jpg" />
+                                </div>
+
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14010329-0058-five-keys-for-unshakable-peace-and-a-formula-for-successful-conversations-ft-jeremie-kubiceck?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0058 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                November 22, 2023
+                                            </time>
+                                        </a>
+                                    </h2>
+
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Jeremie Kubiceck
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        Five Keys for Unshakable Peace and A formula for Successful Conversations
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/14010329-0058-five-keys-for-unshakable-peace-and-a-formula-for-successful-conversations-ft-jeremie-kubiceck?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUFM3bVFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--d38176afa2b7e42ab0779ac568971dcf65f56d06/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/Christine%20Podcast%20Thumbnail.jpg" />
+                                </div>
+
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13979003-0057-choosing-excellence-every-time-ft-christine-musisi?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0057 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                November 15, 2023
+                                            </time>
+                                        </a>
+                                    </h2>
+
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Christine Musisi
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        Choosing Excellence Every Time
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13979003-0057-choosing-excellence-every-time-ft-christine-musisi?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSVJHR2dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3d8b3f4ba61c4f1348759e28c33d91b0a5f90621/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/8848136-1599487609594-9e03ddeb7f95e.jpg" />
+                                </div>
+
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13959482-0056-the-five-ingredients-of-lasting-happiness-ft-tal-ben-shahar?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0056 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                March 29, 2023
+                                            </time>
+                                        </a>
+                                    </h2>
+
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Tal Ben-Shahar
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        The Five Ingredients of Lasting Happiness
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13959482-0056-the-five-ingredients-of-lasting-happiness-ft-tal-ben-shahar?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSWRHR2dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f4709ffac079cbc4fac911dbf269716ecfd839c4/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/8848136-1599487609594-9e03ddeb7f95e.jpg" />
+                                </div>
+
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13959483-0055-the-hero-s-journey-how-leaders-can-guide-their-teams-to-success-ft-dr-j-j-peterson?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0055 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                March 21, 2023
+                                            </time>
+                                        </a>
+                                    </h2>
+
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Dr. J.J. Peterson
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        The Hero&#039;s Journey: How Leaders Can Guide Their Teams to Success
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13959483-0055-the-hero-s-journey-how-leaders-can-guide-their-teams-to-success-ft-dr-j-j-peterson?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTkMvSFFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--abb60bfa0811a2a2f1bce759ed0bf23a4c0a44ab/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/8848136-1599487609594-9e03ddeb7f95e.jpg" />
+                                </div>
+
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13979004-0054-nurturing-curiosity-the-impact-of-learning-on-leadership-ft-amb-ombeni-sefue?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0054 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                March 07, 2023
+                                            </time>
+                                        </a>
+                                    </h2>
+
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Amb. Ombeni Sefue
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        Nurturing Curiosity &amp; The Impact of Learning on Leadership
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13979004-0054-nurturing-curiosity-the-impact-of-learning-on-leadership-ft-amb-ombeni-sefue?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTksvSFFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--7a3a5780df344eb5defbdb6dce149866d809f894/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/8848136-1599487609594-9e03ddeb7f95e.jpg" />
+                                </div>
+
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13979005-0053-leading-from-the-backseat-ft-ngasuma-kanyeka?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0053 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                January 30, 2023
+                                            </time>
+                                        </a>
+                                    </h2>
+
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Ngasuma Kanyeka
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        Leading From the Backseat
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13979005-0053-leading-from-the-backseat-ft-ngasuma-kanyeka?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTk8vSFFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--2f51d52e0e178b550a9c5a368837d3cad94a44d3/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/8848136-1599487609594-9e03ddeb7f95e.jpg" />
+                                </div>
+
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13979006-0052-building-organic-clusters-sustainable-innovation-ft-dr-nkundwe-mwasaga?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0052 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                January 18, 2023
+                                            </time>
+                                        </a>
+                                    </h2>
+
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Dr. Nkundwe Mwasaga
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        Building Organic Clusters &amp; Sustainable Innovation
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13979006-0052-building-organic-clusters-sustainable-innovation-ft-dr-nkundwe-mwasaga?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTlMvSFFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b4162341f31e23eccbe36bcbfbbe914345d52916/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/8848136-1599487609594-9e03ddeb7f95e.jpg" />
+                                </div>
+
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13979007-0051-the-power-of-losing-control-the-principles-of-authentic-power-ft-joe-caruso?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0051 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                January 12, 2023
+                                            </time>
+                                        </a>
+                                    </h2>
+
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Joe Caruso
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        The Power of Losing Control &amp; The Principles of Authentic Power
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13979007-0051-the-power-of-losing-control-the-principles-of-authentic-power-ft-joe-caruso?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTlcvSFFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--0c94626fe6533a326e117f0e45148c399561f679/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/8848136-1599487609594-9e03ddeb7f95e.jpg" />
+                                </div>
+
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13979008-0050-mimetic-desire-outcome-independence-virtue-signalling-how-to-be-your-best-self-ft-samwel-ndandala-princely-glorious?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0050 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                January 02, 2023
+                                            </time>
+                                        </a>
+                                    </h2>
+
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Samwel Ndandala &amp; Princely Glorious
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        Mimetic Desire, Outcome Independence, Virtue Signalling &amp; How to Be Your Best Self
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13979008-0050-mimetic-desire-outcome-independence-virtue-signalling-how-to-be-your-best-self-ft-samwel-ndandala-princely-glorious?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTmEvSFFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--dc798c83cade04eb8478eee469e804512be227f4/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/8848136-1599487609594-9e03ddeb7f95e.jpg" />
+                                </div>
+
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13979009-0049-delegating-your-way-out-of-a-job-ft-kwasi-frimpong?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0049 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                October 19, 2022
+                                            </time>
+                                        </a>
+                                    </h2>
+
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Kwasi Frimpong
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        Delegating Your Way Out Of a Job
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13979009-0049-delegating-your-way-out-of-a-job-ft-kwasi-frimpong?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTmUvSFFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--d5c8526e2857b0fa47bceb734e4c5a35f6f6b64d/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/8848136-1599487609594-9e03ddeb7f95e.jpg" />
+                                </div>
+
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13979010-0048-toxic-positivity-overcoming-learned-helplessness-how-to-become-happier-ft-amaechi-nduka-agwu?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0048 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                October 11, 2022
+                                            </time>
+                                        </a>
+                                    </h2>
+
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Amaechi Nduka-Agwu
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        Toxic Positivity, Overcoming Learned Helplessness &amp; How to Become Happier
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13979010-0048-toxic-positivity-overcoming-learned-helplessness-how-to-become-happier-ft-amaechi-nduka-agwu?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTm0vSFFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1271f765349b5d48de349a03d60269edf312d2cc/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/8848136-1599487609594-9e03ddeb7f95e.jpg" />
+                                </div>
+
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13979011-0047-build-a-team-of-equals-who-all-lead-follow-to-drive-creativity-and-innovation-ft-jeff-spahn?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0047 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                September 21, 2022
+                                            </time>
+                                        </a>
+                                    </h2>
+
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Jeff Spahn
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        Build a Team of Equals Who All Lead &amp; Follow to Drive Creativity and Innovation
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13979011-0047-build-a-team-of-equals-who-all-lead-follow-to-drive-creativity-and-innovation-ft-jeff-spahn?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                                            <article aria-labelledby="episode-5-title" class="py-6">
+                            <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
+                                <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
+                                    href="#">
+                                    <img alt=""class="absolute size-full" src="https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTnEvSFFZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--8e24fa494eb8b660317dfcd87a1f852eeeca5391/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/8848136-1599487609594-9e03ddeb7f95e.jpg" />
+                                </div>
+
+                                <div class="flex-1 flex flex-col items-start">
+                                    <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13979012-0046-restore-your-common-sense-in-an-age-of-experts-and-artificial-intelligence-ft-vikram-mansharamani?t=0" target="_blank" class="hover:opacity-80">
+                                            Episode 0046 <span class="opacity-50">&mdash;</span>
+                                            <time datetime="2022-02-24T00:00:00.000Z"
+                                                class="font-mono text-sm leading-7 opacity-50">
+                                                September 06, 2022
+                                            </time>
+                                        </a>
+                                    </h2>
+
+                                                                            <p datetime="2022-02-24T00:00:00.000Z" class="font-mono text-sm leading-7 opacity-50">
+                                            Ft. Vikram Mansharamani
+                                        </p>
+
+                                    <p class="mt-1 text-lg leading-7 opacity-80">
+                                        Restore Your Common Sense in an Age of Experts and Artificial Intelligence
+
+                                    </p>
+                                    <div class="mt-4 flex items-center gap-4">
+                                        <a href="https://www.buzzsprout.comundefined/2275900/13979012-0046-restore-your-common-sense-in-an-age-of-experts-and-artificial-intelligence-ft-vikram-mansharamani?t=0" target="_blank"
+                                            aria-label="Play episode 5: Bill Lumbergh"
+                                            class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                            <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                                <path
+                                                    d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                            </svg>
+                                            <span aria-hidden="true">Listen</span>
+                                        </a>
+                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                            aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                            Share
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
                                     </div>
             </div>
         </div>
     </div>
-</section>
+    </main>
 
         <footer class="border-t border-stroke">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -2155,7 +3007,6 @@
                                 />
                             </svg>
                         </a> -->
-
                         <a class="group"
                             href="https://www.google.com/search?sca_esv=1f1d6c955383dad7&sca_upv=1&rlz=1CDGOYI_enTZ849TZ849&hl=en-GB&q=WhyLead%20Consultancy&ludocid=18404384182725025592&ibp=gwp%3B0%2C7&lsig=AB86z5WH4vgtH1Qq8AyuX04-pf1T&kgs=558f135cdfa72fd2&shndl=-1&source=sh%2Fx%2Floc%2Fact%2Fm4%2F3"
                             target="_blank">

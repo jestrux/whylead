@@ -155,6 +155,7 @@
 
     @include('layout.footer')
 
+    <!-- Page scripts -->
     @yield('scripts')
 </body>
 

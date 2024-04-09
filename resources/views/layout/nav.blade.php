@@ -92,7 +92,7 @@
             <ul class="w-full relative z-50 md:flex flex-col justify-center items-center h-full md:flex-row md:gap-x-8">
                 {{-- <x-menu-item exact url="/">Home</x-menu-item> --}}
                 <x-menu-item url="{{ url('/consultancy') }}">Consultancy</x-menu-item>
-                <x-menu-item url="{{ url('#') }}">Podcast</x-menu-item>
+                <x-menu-item url="{{ url('/podcast') }}">Podcast</x-menu-item>
                 {{-- <x-menu-item url="{{ url('#') }}">About Us</x-menu-item> --}}
                 <x-menu-item class="md:hidden" url="{{ url('/contacts') }}">Contact Us</x-menu-item>
             </ul>
