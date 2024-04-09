@@ -15,8 +15,8 @@
     },
     "repositories": [
         {
-            "type": "git",
-            "url": "https://github.com/jestrux/pier-package.git"
+            "type": "path",
+            "url": "../pier-package"
         }
     ],
     "require-dev": {

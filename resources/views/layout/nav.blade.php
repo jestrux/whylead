@@ -94,7 +94,7 @@
                 <x-menu-item url="{{ url('/consultancy') }}">Consultancy</x-menu-item>
                 <x-menu-item url="{{ url('#') }}">Podcast</x-menu-item>
                 {{-- <x-menu-item url="{{ url('#') }}">About Us</x-menu-item> --}}
-                <x-menu-item class="md:hidden" url="{{ url('/contact-us') }}">Contact Us</x-menu-item>
+                <x-menu-item class="md:hidden" url="{{ url('/contacts') }}">Contact Us</x-menu-item>
             </ul>
         </nav>
 
@@ -111,7 +111,7 @@
             <x-menu-item url="{{ url('/about') }}">About Us</x-menu-item>
 
             <div class="relative">
-                <a href="#" class="btn btn-xs">
+                <a href="{{ url('/contacts') }}" class="btn btn-xs">
                     <span class="capitalize my-1 mx-2">
                         Start thriving
                     </span>

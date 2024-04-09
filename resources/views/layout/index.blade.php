@@ -149,7 +149,9 @@
 <body class="bg-canvas text-content">
     @include('layout.nav')
 
-    @yield('content')
+    <main>
+        @yield('content')
+    </main>
 
     @include('layout.footer')
 

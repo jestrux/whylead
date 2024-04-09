@@ -3,13 +3,17 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "pier:lean": "(composer update jestrux/pier)",
+        "prepier:watch": "(php artisan serve)",
+        "pier:watch": "watch 'npm run pier:lean' ../pier-package/"
     },
     "devDependencies": {
         "@tailwindcss/vite": "^4.0.0-alpha.10",
         "axios": "^1.6.4",
         "laravel-vite-plugin": "^1.0",
+        "tailwindcss": "^4.0.0-alpha.10",
         "vite": "^5.0",
-        "tailwindcss": "^4.0.0-alpha.10"
+        "watch": "^1.0.2"
     }
 }
