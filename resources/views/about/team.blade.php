@@ -1,22 +1,31 @@
 @php
     $steps = [
         [
-            'image' =>
-                'https://www.whyleadothers.com/wp-content/uploads/2023/01/Ben-Owden-scaled-e1675001152584-400x600.jpg',
+            'image' => 'https://res.cloudinary.com/sfp-app/image/upload/v1714328053/unecnrhualt3imbxvjzj.jpg',
             'name' => 'Ben Owden',
             'position' => 'Leadership trainer and principal consultant',
+            // 'position' => 'Principal consultant',
             'description' =>
                 "Ben Owden develops leaders who lead thriving teams and organizations. He has a deep understanding of what makes organizational systems functional. And what makes people belong, grow, contribute, and challenge the status quo. He has trained and coached leaders from renowned organizations like Malala Fund, KNAUF, and CRDB Bank.\\nBen's focus is on empowering leaders to have whole-person alignment so they can thrive, both in their roles and their lives.\\nBen is the author of a personal development book, <a class='text-primary underline' href='https://www.amazon.com/Process-Where-Prepares-Your-Destiny-ebook/dp/B086Z5SDL6/ref=sr_1_1?crid=2NHCPWHGRF986&keywords=ben+owden&qid=1706865914&sprefix=ben+owd%2Caps%2C466&sr=8-1' target='_blank'>In The Process.</a>",
             'checklist' => ['Truth', 'Family', 'Congruence'],
         ],
         [
-            'image' =>
-                'https://www.whyleadothers.com/wp-content/uploads/2023/01/Jocelyne-Msigwa-scaled-e1675017746383-400x600.jpg',
+            'image' => 'https://res.cloudinary.com/sfp-app/image/upload/v1714328049/khexunzxlugnhkpy67kk.jpg',
             'name' => 'Jocelyne Msigwa',
             'position' => 'Leadership trainer',
             'description' =>
                 "Jocelyne Msigwa is a leadership development coach and trainer. She is committed to empowering the next generation of competent and purpose-driven leaders.\\nShe is a highly accomplished and experienced HR Executive with a proven track record of translating business objectives into effective human resource strategies that drive performance, profitability, and growth while enhancing employee experience and engagement.\\nShe brings her unique blend of strategic thinking, creativity, and innovation to every project, and consistently delivers results that exceed expectations.",
             'checklist' => ['Faith', 'Family', 'Growth'],
+        ],
+        [
+            'image' => 'https://res.cloudinary.com/sfp-app/image/upload/v1714328048/bhjfh11jsuvxi0zuz8cq.jpg',
+            'name' => 'Goodhope Heaven',
+            'position' => 'Team Building Facilitator',
+            'description' =>
+                "A dedicated Sales Trainer, Team-building Consultant, and Business Strategist with a track record of helping Sales Teams, Businesses, and Entrepreneurs grow their SALES through Training and Consultation.\\nHe is mostly known for starting the movement “MIMIKWANZA” Swahili for “ME FIRST” which is a front-footed ideology that champions the ethos, “I will focus on investing and improving myself so I can bring my best self in all my engagements, work and personal.”\\nGoodhope's experience in Bottomline Marketing has taught him how to organize large groups into fun, memorable, and meaningful experiences. He has served many brands and groups of people in the capacity of experiential events, training workshops, and business strategies.",
+            // 'description' =>
+            //     "A dedicated Sales Trainer, Team-building Consultant, and Business Strategist with a track record of helping Sales Teams, Businesses, and Entrepreneurs grow their SALES through Training and Consultation.\\nHe is mostly known for starting the movement “MIMIKWANZA” Swahili for “ME FIRST” which is a front-footed ideology that champions the ethos, “I will focus on investing and improving myself so I can bring my best self in all my engagements.”\\nGoodhope's experience in Bottomline Marketing has taught him how to organize large groups into fun, memorable, and meaningful experiences.",
+            'checklist' => ['Loving Kindness', 'Family', 'Congruence'],
         ],
     ];
 @endphp

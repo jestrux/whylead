@@ -5,7 +5,9 @@
 
     @include('about.our-values')
 
-    @include('about.team')
+    {{-- @include('about.team-alt') --}}
+
+    @include('about.team-alt-scale')
 
     @include('about.what-we-offer')
 
