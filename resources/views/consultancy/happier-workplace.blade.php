@@ -15,7 +15,7 @@
                 </a>
             </div>
 
-            <div class="col-span-7 pt-6 pb-16 flex flex-col gap-2">
+            <div class="col-span-6 pt-6 pb-16 flex flex-col gap-2">
                 <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">
                     <span class="uppercase">
                         Happier
@@ -39,8 +39,8 @@
                     gaps.
                 </p>
 
-                <p class="mt-3">
-                    Insights Generated Will Help Your Organization
+                <p class="mt-3 text-base/relaxed opacity-70">
+                    Insights generated will help your organization to:
                 </p>
 
                 @php
@@ -68,7 +68,7 @@
             </div>
 
             <div
-                class="col-span-5 h-full -rotate-1 shadow-xl flex-1 hidden md:flex items-center justify-center relative">
+                class="col-span-6 h-full -rotate-1 shadow-xl flex-1 hidden md:flex items-center justify-center relative">
                 <div
                     class="relative rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
                     <img class="rotate-6 scale-125 absolute size-full object-cover" src="{{ $image }}"

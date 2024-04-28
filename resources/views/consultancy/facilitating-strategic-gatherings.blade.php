@@ -16,7 +16,7 @@
             </div>
 
             <div
-                class="col-span-5 h-full -rotate-1 shadow-xl flex-1 hidden md:flex items-center justify-center relative">
+                class="col-span-6 h-full -rotate-1 shadow-xl flex-1 hidden md:flex items-center justify-center relative">
                 <div class="relative rounded-xl srounded-t-full overflow-hidden w-full h-full bg-neutral-300">
                     <img class="rotate-6 scale-125 absolute w-full h-full object-cover object-top"
                         src="{{ $image }}" alt="" />
@@ -40,12 +40,12 @@
                 </div>
             </div>
 
-            <div class="col-span-7 pt-8 pb-16 flex flex-col gap-2">
+            <div class="col-span-6 pt-8 pb-16 flex flex-col gap-2">
                 <h2 class="mt-3 text-2xl lg:text-3xl font-bold uppercase">
                     Facilitating Strategic gatherings
                 </h2>
 
-                <p class="text-sm/loose opacity-70">
+                <p class="text-base/loose opacity-70">
                     We thrive at shaping purposeful discussions for strategic planning, problem-solving, and alignment
                     conversations. We understand the pivotal role of strategic meetings in shaping organizational
                     direction and alignment. We don’t give answers, we help you get to them through our facilitation
