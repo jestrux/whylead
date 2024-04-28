@@ -78,7 +78,7 @@
         </p>
 
         <div class="px-8 space-y-6">
-            <div class="flex gap-6 lg:gap-8 items-center justify-between">
+            <div class="grid grid-cols-3 lg:flex gap-6 lg:gap-8 items-center justify-between">
                 <img class="grayscale h-6"
                     src="https://malala.org/packs/static/images/malala-primary-logo-large-0a880532137530e3eed5.svg" />
 
@@ -100,7 +100,7 @@
                     src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/RTI_International_%28logo%29.svg/1200px-RTI_International_%28logo%29.svg.png" />
             </div>
 
-            <div class="flex gap-6 lg:gap-8 items-center justify-between">
+            <div class="grid grid-cols-3 lg:flex gap-6 lg:gap-8 items-center justify-between">
                 <img class="grayscale h-12" src="https://www.una.or.tz/wp-content/uploads/2020/09/UNA-Tanzania.png" />
 
                 <img class="grayscale h-8" src="https://knauf.co.tz/wp-content/uploads/2021/01/Blue-logo.svg" />
