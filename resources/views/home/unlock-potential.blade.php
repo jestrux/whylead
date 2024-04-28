@@ -33,7 +33,7 @@
                             'image' =>
                                 'https://res.cloudinary.com/sfp-app/image/upload/v1711540989/ykp8fjasngktaayokhab.jpg',
                             // 'title' => 'We Co-Create a Custom-made Solution just for you',
-                            'title' => 'We Co-Create a Solution',
+                            'title' => 'We Co-create a Solution',
                         ],
                         [
                             // 'image' =>

@@ -119,8 +119,7 @@
 
                 <small
                     class="block absolute inset-x-0 text-[11px] font-semibold -bottom-5 mb-1 left-0 opacity-50 text-center">
-                    Connect With Us Now
-                    {{-- call: +255 746 750 750 --}}
+                    Click to Contact Us
                 </small>
             </div>
 

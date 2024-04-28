@@ -36,11 +36,11 @@
                     </span>
                 </h2>
 
-                <p class="text-lg lg:text-lg font-semibold">
-                    Thriving Middle Managers Lead to a Thriving Organization
+                <p class="mt-2 text-lg/relaxed uppercase">
+                    A 12-week leadership program for Middle Managers
                 </p>
 
-                <p class="text-base/loose opacity-70">
+                <p class="mt-2 text-base/loose opacity-70">
                     This is a transformative 12-week program tailored for middle managers, focusing on empowering them
                     as essential agents of growth, alignment, culture, and change within their organizations. It tackles
                     the unique challenges middle managers face, from navigating the demands of both senior leadership

@@ -69,15 +69,17 @@
     </section>
 </div>
 
-<section class="px-6 lg:px-0">
+<section class="px-6 py-8">
     <div class="flex flex-col items-center justify-center">
-        <div class="max-w-2xl mx-auto my-8 text-center">
-            <h5
-                class="mb-3 flex-shrink-0 text-base/none text-primary hidden lg:inline-flex items-center font-bold uppercase">
-                Trusted Globally
-            </h5>
+        <div class="max-w-2xl mx-auto my-10 text-center">
+            <h2 class="text-2xl lg:text-4xl font-bold">
+                <span class="uppercase tracking-wide">
+                    <span class="outline-text">Trusted </span>
+                    Globally
+                </span>
+            </h2>
 
-            <p class="text-lg opacity-70">
+            <p class="mt-1 text-lg/loose opacity-70">
                 Chosen as a Trusted Partner to Build Thriving Leaders,
                 <span class="hidden md:inline"><br /></span>
                 Teams, Cultures and Organizations.

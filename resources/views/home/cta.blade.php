@@ -19,14 +19,10 @@
         </div>
 
         <div class="mb-4 w-full flex flex-col md:flex-row items-center justify-center gap-3">
-            <a href="#" class="btn btn-outline w-full md:w-auto">
+            <a href="{{ url('/contacts') }}" class="btn">
                 <span class="mx-5">
                     Talk to Us
                 </span>
-            </a>
-
-            <a href="#" class="btn w-full md:w-auto">
-                <div class="mx-1">Sign up for Thrive</div>
             </a>
         </div>
     </div>
