@@ -3,17 +3,20 @@
 @section('content')
     @include('consultancy.thriving-teams')
 
-    @include('consultancy.working-with-whylead')
 
     @include('consultancy.performance-management')
 
-    @include('consultancy.faqs')
-
     @include('consultancy.facilitating-strategic-gatherings')
+
+    @include('consultancy.happier-workplace')
 
     @include('consultancy.testimonials')
 
-    @include('consultancy.happier-workplace')
+    @include('home.unlock-potential')
+
+    @include('home.working-with-whylead')
+
+    @include('home.faqs')
 
     @include('home.cta')
 @endsection

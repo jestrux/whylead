@@ -23,20 +23,8 @@
                 </div>
 
                 <div class="absolute -top-6 -bottom-6 -left-6 rotate-2s">
-                    <div
-                        class="sticky top-24 self-start border border-white/10 p-1.5 pr-6 rounded-lg overflow-hidden text-white inline-flex items-center gap-2">
-                        <div class="absolute inset-0 bg-accent"></div>
-                        <div class="relative rounded-lg overflow-hidden">
-                            <div
-                                class="text-base/none tracking-wide font-semibold relative h-12 min-w-14 px-2.5 text-white text-center bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                                85%
-                            </div>
-                        </div>
-
-                        <div class="relative text-sm/snug">Of clients said our retreats <br /> addressed
-                            their
-                            paint points</div>
-                    </div>
+                    <x-stat-card stat="84%"
+                        description=" of clients say they identified new possibilities for action & improvement as a result of our team retreat facilitation" />
                 </div>
             </div>
 
@@ -54,7 +42,10 @@
                 </p>
 
                 <p class="mt-1 text-base/relaxed opacity-70">
-                    When teams <span class="font-bold">&#8482; communicate openly, collaborate happily, and challenge
+                    When teams <span class="font-bold"><span
+                            class="inline-block scale-150 translate-y-0.5 ml-px">&#8482;</span> communicate
+                        openly,
+                        collaborate happily, and challenge
                         willingly</span> they create
                     organizations that are:
                 </p>

@@ -3,7 +3,7 @@
 @endphp
 
 <section>
-    <div class="px-8 py-12 lg:pt-20 lg:pb-32 relative max-w-7xl mx-auto">
+    <div class="px-8 py-12 lg:py-20 relative max-w-7xl mx-auto">
         <div class="lg:grid grid-cols-12 gap-20 items-center">
             <div class="md:hidden">
                 <a href="#" class="block relative">
@@ -78,20 +78,7 @@
                 </div>
 
                 <div class="absolute -top-6 -bottom-6 -left-6 rotate-1">
-                    <div
-                        class="sticky top-24 self-start border border-white/10 p-1.5 pr-6 rounded-lg overflow-hidden text-white inline-flex items-center gap-2">
-                        <div class="absolute inset-0 bg-accent"></div>
-                        <div class="relative rounded-lg overflow-hidden">
-                            <div
-                                class="text-base/none tracking-wide font-semibold relative h-12 min-w-14 px-2.5 text-white text-center bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                                4X
-                            </div>
-                        </div>
-
-                        <div class="relative text-sm/snug">
-                            Of clients said they managed <br /> a 4x increase in revenue.
-                        </div>
-                    </div>
+                    <x-stat-card stat="4X" description="Strong cultures may lead to a 4x increase in revenue." />
                 </div>
             </div>
         </div>

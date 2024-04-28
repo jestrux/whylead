@@ -109,20 +109,8 @@
                 </div>
 
                 <div class="absolute -top-6 -bottom-6 -left-6 rotate-1">
-                    <div
-                        class="sticky top-24 self-start border border-white/10 p-1.5 pr-6 rounded-lg overflow-hidden text-white inline-flex items-center gap-2">
-                        <div class="absolute inset-0 bg-accent"></div>
-                        <div class="relative rounded-lg overflow-hidden">
-                            <div
-                                class="text-base/none tracking-wide font-semibold relative h-12 min-w-14 px-2.5 text-white text-center bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                                100%
-                            </div>
-                        </div>
-
-                        <div class="relative text-sm/snug">
-                            Of clients said their challenges <br /> turn into opportunities for growth
-                        </div>
-                    </div>
+                    <x-stat-card stat="81%"
+                        description="of HR leaders planned to make changes to their ineffective performance management systems." />
                 </div>
             </div>
         </div>
