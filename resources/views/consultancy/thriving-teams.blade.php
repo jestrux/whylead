@@ -33,7 +33,11 @@
                     Thriving teams
                 </h2>
 
-                <p class="text-base/loose opacity-70">
+                <p class="mt-2 text-lg/relaxed uppercase">
+                    We Help Teams Unleashing Collective Potential for Peak Performance
+                </p>
+
+                <p class="mt-2 text-base/loose opacity-70">
                     Healthy Teams Communicate (openly), Collaborate (happily), and Challenge (willingly). Healthy Teams
                     are Thriving Teams. We work with your teams to get you to a healthier place through our SPR model.
                     We facilitate offsite retreats but we also work on a retainer basis with teams that require a
@@ -41,13 +45,12 @@
                     and culture as the foundation to develop thriving teams for your organizations.
                 </p>
 
-                <p class="mt-1 text-base/relaxed opacity-70">
-                    When teams <span class="font-bold"><span
-                            class="inline-block scale-150 translate-y-0.5 ml-px">&#8482;</span> communicate
-                        openly,
-                        collaborate happily, and challenge
-                        willingly</span> they create
-                    organizations that are:
+                <p class="mt-3 text-base/relaxed opacity-70">
+                    When teams <span class="font-bold">
+                        <span class="inline-block scale-150 translate-y-0.5 ml-px">&#8482;</span>
+                        communicate openly, collaborate happily, and challenge willingly
+                    </span>
+                    they create organizations that are:
                 </p>
 
                 @php

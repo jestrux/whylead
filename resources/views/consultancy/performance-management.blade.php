@@ -23,7 +23,11 @@
                     </span>
                 </h2>
 
-                <p class="text-base/loose opacity-70">
+                <p class="mt-2 text-lg/relaxed uppercase">
+                    Driving Success Through by Optimizing Performance Through Insightful Metrics
+                </p>
+
+                <p class="mt-2 text-base/loose opacity-70">
                     Thrive in the marketplace by measuring what truly counts. Winning in the marketplace begins by
                     winning internally. Designing and harnessing the right metrics to thrive requires a holistic and
                     scientific understanding of what makes people aspirational, motivated, committed to results, and

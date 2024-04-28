@@ -26,7 +26,11 @@
                     </span>
                 </h2>
 
-                <p class="text-base/loose opacity-70">
+                <p class="mt-2 text-lg/relaxed uppercase">
+                    Elevating Engagement and Performance for Sustainable Business Excellence
+                </p>
+
+                <p class="mt-2 text-base/loose opacity-70">
                     Thriving Organizations have workplace cultures where people are Happier to go to work. They live in
                     a world where Mondays are as exciting as Fridays. Their people operate with a deep sense of
                     satisfaction and commitment to the organization.

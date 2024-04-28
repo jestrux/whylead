@@ -33,7 +33,11 @@
                     <span class="outline-text">Facilitating</span> Strategic gatherings
                 </h2>
 
-                <p class="text-base/loose opacity-70">
+                <p class="mt-2 text-lg/relaxed uppercase">
+                    We Enhance Decision-Making and Drive Alignment
+                </p>
+
+                <p class="mt-2 text-base/loose opacity-70">
                     We thrive at shaping purposeful discussions for strategic planning, problem-solving, and alignment
                     conversations. We understand the pivotal role of strategic meetings in shaping organizational
                     direction and alignment. We don’t give answers, we help you get to them through our facilitation
