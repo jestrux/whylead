@@ -9,13 +9,15 @@
 
     @include('home.banner')
 
-    @include('home.leaders')
 
     <div class="relative">
-        <div class="absolute inset-0 bg-gradient-to-t from-primary/10 dark:from-content/5 via-primary/10 dark:via-content/5 to-transparent"></div>
+        <div
+            class="absolute inset-0 bg-gradient-to-t from-primary/10 dark:from-content/5 via-primary/10 dark:via-content/5 to-transparent">
+        </div>
 
         <div class="relative">
             @include('home.challenges')
+            @include('home.leaders')
             @include('home.thriving-in-the-middle')
         </div>
     </div>

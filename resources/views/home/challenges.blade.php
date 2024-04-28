@@ -15,7 +15,7 @@
     });
 </script>
 
-<section x-data="challenges" class="pt-20 sm:pt-24">
+<section x-data="challenges" class="py-20 sm:py-24">
     <template x-if="challenge">
         <div class="fixed inset-0 z-50 bg-black/50 flex items-center justify-between">
             <div class="w-full max-w-5xl mx-auto relative">
