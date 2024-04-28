@@ -43,43 +43,22 @@
                     Insights Generated Will Help Your Organization
                 </p>
 
-                <ul role="list" class="divide-y divide-black/5">
-                    @php
-                        $checklist = [
-                            [
-                                'title' => 'Grow your Revenue and Increase Your Profit ',
-                                'description' =>
-                                    "You'll be able to develop a data-driven strategy for your people and culture. Ultimately shaping your culture to foster higher productivity and a culture conducive for innovation. ",
-                            ],
-                            [
-                                'title' => 'Reduce Turnover and Retain Your Top Talent',
-                                'description' =>
-                                    "Separations are costly, especially with top talent. With the data we will provide you'll be able to develop a data-driven strategy to strengthen your culture and meet the cultural needs of your people.",
-                            ],
-                        ];
-                    @endphp
+                @php
+                    $data = [
+                        [
+                            'question' => 'Grow your Revenue and Increase Your Profit ',
+                            'answer' =>
+                                "You'll be able to develop a data-driven strategy for your people and culture. Ultimately shaping your culture to foster higher productivity and a culture conducive for innovation. ",
+                        ],
+                        [
+                            'question' => 'Reduce Turnover and Retain Your Top Talent',
+                            'answer' =>
+                                "Separations are costly, especially with top talent. With the data we will provide you'll be able to develop a data-driven strategy to strengthen your culture and meet the cultural needs of your people.",
+                        ],
+                    ];
+                @endphp
 
-                    @foreach ($checklist as $item)
-                        <li class="flex items-start gap-2 py-2">
-                            <svg class="size-7 flex-none opacity-60" viewBox="0 0 24 24">
-                                <circle class="" cx="12" cy="12" r="8.25" stroke="currentColor"
-                                    stroke-width="1" stroke-opacity="1" fill="none" />
-                                <path
-                                    d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"
-                                    fill="currentColor"></path>
-                            </svg>
-
-                            <div class="pt-px">
-                                <h5 class="text-base">
-                                    {{ $item['title'] }}
-                                </h5>
-                                <p class="mt-1 text-sm/loose opacity-70">
-                                    {{ $item['description'] }}
-                                </p>
-                            </div>
-                        </li>
-                    @endforeach
-                </ul>
+                <x-faqs :data="$data" />
 
                 <div class="mt-3 gap-3">
                     <a href="#" class="btn w-full md:w-auto">
@@ -92,7 +71,7 @@
                 class="col-span-5 h-full -rotate-1 shadow-xl flex-1 hidden md:flex items-center justify-center relative">
                 <div
                     class="relative rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
-                    <img class="rotate-6 scale-125 w-full h-full object-cover" src="{{ $image }}"
+                    <img class="rotate-6 scale-125 absolute size-full object-cover" src="{{ $image }}"
                         alt="" />
 
                 </div>

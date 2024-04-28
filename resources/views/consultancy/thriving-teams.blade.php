@@ -9,8 +9,7 @@
                 <a href="#" class="block relative">
                     <div
                         class="relative aspect-video rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
-                        <img class="absolute w-full h-full object-cover object-top" src="{{ $image }}"
-                            alt="" />
+                        <img class="absolute size-full object-cover object-top" src="{{ $image }}" alt="" />
                     </div>
                 </a>
             </div>
