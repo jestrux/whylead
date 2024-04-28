@@ -2,9 +2,8 @@
     $choices = [
         [
             'color' => '#c3bbff',
-            'title' => "When they aren't",
-            'description' =>
-                "All of your receipts organized into one place, as long as you don't mind typing in the data by hand. All of your receipts organized into one place, as long as.",
+            'title' => "When they don't",
+            'description' => 'Here are signs your leaders are hindering your organizational success.',
             'indicators' => [
                 [
                     'icon' =>
@@ -31,9 +30,8 @@
         ],
         [
             'color' => '#ff9c66',
-            'title' => 'When they are',
-            'description' =>
-                "All of your receipts organized into one place, as long as you don't mind typing in the data by hand. All of your receipts organized into one place, as long as.",
+            'title' => 'When they do',
+            'description' => 'Here are indicators that your leaders are driving organizational success.',
             'indicators' => [
                 [
                     'icon' => 'm3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z',
@@ -66,9 +64,11 @@
         <div class="sp-16 lg:grid grid-cols-2" x-data="{ effectiveLeaders: true }">
             <div class="p-8 lg:px-0 lg:pt-12 lg:pl-16">
                 <div class="lg:pr-14">
-                    <h2 class="text-2xl/[1.3] font-semibold uppercase tracking-wide mb-2 md:mb-4">
-                        Are your leaders steering you
-                        towards success?
+                    <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">
+                        <span class="uppercase">
+                            <span class="outline-text">Leadership Audit: </span>
+                            Are Your Leaders Driving The Organization Forward?
+                        </span>
                     </h2>
                 </div>
 
@@ -153,9 +153,9 @@
             </a>
         </div>
 
-        <div class="hidden lg:flex justify-center absolute -bottom-16 inset-x-0">
+        <div class="hidden lg:flex justify-center absolute -bottom-24 inset-x-0">
             <a href="#"
-                class="group flex flex-col items-center justify-center text-center gap-3 size-36 bg-canvas text-content/80 rounded-full">
+                class="group flex flex-col items-center justify-center text-center gap-3 size-36 bg-[#FEF1EA] dark:bg-[#242424] text-content/80 rounded-full">
                 <div class="text-xs/relaxed font-bold uppercase">
                     Develop<br /> thriving leaders
                 </div>
