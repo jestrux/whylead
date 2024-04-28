@@ -28,7 +28,7 @@
         alt="" /> --}}
     <div class="absolute inset-0 bg-black/95 opacity-90"></div>
 
-    <div class="py-8 relative max-w-[1400px] mx-auto">
+    <div class="py-12 relative max-w-[1400px] mx-auto">
         <div class="flex flex-col gap-4 lg:gap-8 items-center justify-center">
             <div class="max-w-4xl mx-auto text-center">
                 <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">

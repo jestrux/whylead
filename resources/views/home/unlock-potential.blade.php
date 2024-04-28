@@ -1,16 +1,15 @@
-<section class="py-10 lg:py-24">
+<section class="py-10 lg:py-14">
     <div class="relative max-w-7xl mx-auto px-8">
-        <div class="flex flex-col gap-4 lg:gap-12 items-center justify-center">
+        <div class="flex flex-col gap-4 lg:gap-10 items-center justify-center">
             <div class="max-w-5xl mx-auto text-center">
                 <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">
                     <span class="uppercase">
-                        <span class="outline-text">Unlock your</span>
-                        thriving
+                        <span class="outline-text">We help you</span>
+                        unlock your thriving
                         <span class="hidden md:inline"><br /></span>
-                        organization
-                        <span class="outline-text">in </span>
-                        3
-                        <span class="outline-text"> steps</span>
+                        organization in 3
+                        <span class="outline-text"> easy</span>
+                        steps
                     </span>
                 </h2>
 
@@ -49,7 +48,7 @@
 
                 @foreach ($steps as $step)
                     <li
-                        class="text-white border border-stroke shadow-sm relative min-h-full w-full rounded-2xl overflow-hidden p-6 text-left">
+                        class="text-white border border-stroke shadow-sm relative min-h-full w-full rounded-2xl overflow-hidden p-4 text-left">
                         <img class="absolute inset-0 size-full rounded-2xl object-cover object-top"
                             src="{{ $step['image'] }}" />
 
@@ -67,7 +66,7 @@
                                 <span class="mt-px">Step 0{{ $loop->iteration }}</span>
                             </small>
 
-                            <div class="flex-1 min-h-40"></div>
+                            <div class="flex-1 min-h-12"></div>
 
                             <h3 class="text-3xl">
                                 {{ $step['title'] }}
@@ -86,7 +85,7 @@
 
             <div class="text-center">
                 <p class="text-lg opacity-70">Ready to take your organisation to the next level?</p>
-                <a href="#" class="mt-6 btn">
+                <a href="#" class="mt-3 btn">
                     Tell us your needs
                 </a>
             </div>

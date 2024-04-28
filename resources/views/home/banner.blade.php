@@ -71,11 +71,18 @@
 
 <section class="px-6 lg:px-0">
     <div class="flex flex-col items-center justify-center">
-        <p class="max-w-2xl mx-auto my-8 text-center text-lg opacity-70">
-            Chosen as a Trusted Partner to Build Thriving Leaders,
-            <span class="hidden md:inline"><br /></span>
-            Teams, Cultures and Organizations.
-        </p>
+        <div class="max-w-2xl mx-auto my-8 text-center">
+            <h5
+                class="mb-3 flex-shrink-0 text-base/none text-primary hidden lg:inline-flex items-center font-bold uppercase">
+                Trusted Globally
+            </h5>
+
+            <p class="text-lg opacity-70">
+                Chosen as a Trusted Partner to Build Thriving Leaders,
+                <span class="hidden md:inline"><br /></span>
+                Teams, Cultures and Organizations.
+            </p>
+        </div>
 
         <div class="px-8 space-y-6">
             <div class="grid grid-cols-3 lg:flex gap-6 lg:gap-8 items-center justify-between">
@@ -110,11 +117,6 @@
 
 
                 <img class="grayscale h-8" src="https://www.guidestar.org/ViewEdoc.aspx?eDocId=9408228&approved=True" />
-
-                <span
-                    class="flex-shrink-0 text-base/none text-primary hidden lg:inline-flex items-center font-bold uppercase italic">
-                    Trusted Globally
-                </span>
 
                 <img class="grayscale h-14" src="https://www.ihi.or.tz/static/images/ihilogo.png" />
 

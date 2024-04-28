@@ -15,7 +15,7 @@
     });
 </script>
 
-<section x-data="challenges" class="py-20 sm:py-24">
+<section x-data="challenges" class="py-20">
     <template x-if="challenge">
         <div class="fixed inset-0 z-50 bg-black/50 flex items-center justify-between">
             <div class="w-full max-w-5xl mx-auto relative">
@@ -76,17 +76,17 @@
                                                     </template>
                                                 </ul>
 
-                                                <button
+                                                <a href="{{ url('/contacts') }}"
                                                     class="self-end mt-auto mb-2 -mr-3 btn btn-outline btn-xs capitalize !text-content/80 border-none"
                                                     x-on:click="challenge = null">
-                                                    Get started
+                                                    Get in touch
 
                                                     <svg class="-mr-1 size-3.5" fill="none" viewBox="0 0 24 24"
                                                         stroke-width="2" stroke="currentColor">
                                                         <path stroke-linecap="round" stroke-linejoin="round"
                                                             d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                                                     </svg>
-                                                </button>
+                                                </a>
                                             </div>
                                         </li>
                                     </template>
@@ -149,7 +149,7 @@
                     <button x-on:click="openChallenge(`{{ $challenge->title }}`)"
                         class="{{ $isEven ? 'bg-accent text-white' : 'bg-card dark:bg-content/5' }} group hover:scale-105 transition duration-300 flex flex-col gap-3 min-h-full w-full rounded-2xl overflow-hidden border border-black/5 shadow px-6 py-6 text-left relative">
                         <div
-                            class="absolute -inset-20 bg-current rounded-full origin-top-left scale-[0.65] opacity-0 group-hover:scale-150 {{$isEven ? 'group-hover:opacity-10' : 'group-hover:opacity-10'}} transition-transform duration-700">
+                            class="absolute -inset-20 bg-current rounded-full origin-top-left scale-[0.65] opacity-0 group-hover:scale-150 {{ $isEven ? 'group-hover:opacity-10' : 'group-hover:opacity-10' }} transition-transform duration-700">
                         </div>
 
                         <svg class="size-8 relative" viewBox="0 0 24 24">

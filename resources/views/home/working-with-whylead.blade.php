@@ -1,6 +1,6 @@
-<section class="py-10 lg:py-20">
+<section class="py-10 lg:py-14">
     <div class="relative max-w-7xl mx-auto px-8">
-        <div class="flex flex-col gap-4 lg:gap-12 items-center justify-center">
+        <div class="flex flex-col gap-4 lg:gap-8 items-center justify-center">
             <div class="max-w-5xl mx-auto text-center">
                 <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">
                     <span class="uppercase">
@@ -44,8 +44,9 @@
 
                 @foreach ($steps as $step)
                     <li
-                        class="bg-gradient-to-br from-accent via-accent/90 to-accent/95 text-white relative min-h-full w-full p-10 shadow rounded-3xl overflow-hidden">
-                        <div class="absolute opacity-5 dark:opacity-[0.03] {{ $loop->index == 0 ? 'right-[23%]' : '-left-[25%]' }}">
+                        class="bg-gradient-to-br from-accent via-accent/90 to-accent/95 text-white relative min-h-full w-full px-8 py-6 shadow rounded-3xl overflow-hidden">
+                        <div
+                            class="absolute opacity-5 dark:opacity-[0.03] {{ $loop->index == 0 ? 'right-[23%]' : '-left-[25%]' }}">
                             @include('common.icon')
                         </div>
 
@@ -57,17 +58,17 @@
 
 
                         <span
-                            class="relative size-14 text-white bg-gradient-to-br from-primary to-primary/20 sdark:from-accent sdark:to-content/10 rounded-xl flex items-center justify-center">
-                            <svg class="size-8 drop-shadow" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            class="relative size-10 text-white bg-gradient-to-br from-primary to-primary/20 sdark:from-accent sdark:to-content/10 rounded-xl flex items-center justify-center">
+                            <svg class="size-6 drop-shadow" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="{{ $step['icon'] }}" />
                             </svg>
                         </span>
 
-                        <div class="flex-1 min-h-16"></div>
+                        {{-- <div class="flex-1 min-h-8"></div> --}}
 
-                        <div class="relative">
-                            <h3 class="text-2xl font-semibold">
+                        <div class="mt-6 relative">
+                            <h3 class="text-xl font-semibold">
                                 {{ $step['title'] }}
                             </h3>
 
@@ -81,7 +82,7 @@
 
             <div class="text-center">
                 <p class="text-xl opacity-70">Ready to take your organisation to the next level?</p>
-                <a href="#" class="mt-6 btn">
+                <a href="#" class="mt-3 btn">
                     Hire WhyLead today
                 </a>
             </div>
