@@ -157,6 +157,12 @@
 
     <!-- Page scripts -->
     @yield('scripts')
+
+    <script>
+        @unless (isset($isHomePage))
+            localStorage.initialPopupShown = true;
+        @endunless
+    </script>
 </body>
 
 </html>

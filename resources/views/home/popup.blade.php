@@ -2,12 +2,16 @@
 <script>
     document.addEventListener('alpine:init', () => {
         Alpine.data("coursePopup", () => ({
-            showPrompt: true,
-            // showPrompt: !localStorage.initialPopupShown,
+            showPrompt: localStorage.initialPopupShown != 'true',
             courses: {!! json_encode($data) !!},
             course: null,
             init() {
-                localStorage.initialPopupShown = true;
+                if (localStorage.initialPopupShown == 'true') {
+                    setTimeout(() => {
+                        localStorage.initialPopupShown = false;
+                    }, 500);
+                }
+
                 this.courses = this.courses.map(function(course) {
                     course.faqs = course.faqs.sort(function(a, b) {
                         return a.order - b.order;
