@@ -27,7 +27,7 @@
                 </a>
             </div>
 
-            <div class="pt-6 space-y-2 lg:space-y-2">
+            <div class="pt-6 lg:pt-12 lg:pb-12 flex flex-col gap-2">
                 <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">
                     <span class="uppercase tracking-wide">
                         Thrive
@@ -41,50 +41,61 @@
                 </p>
 
                 <p class="text-base/loose opacity-70">
-                    This is a transformative 10-week program tailored for middle managers, focusing on empowering them
+                    This is a transformative 12-week program tailored for middle managers, focusing on empowering them
                     as essential agents of growth, alignment, culture, and change within their organizations. It tackles
                     the unique challenges middle managers face, from navigating the demands of both senior leadership
                     and direct reports to driving strategic goals amid disruptions.
                 </p>
 
-                <p>
+                <p class="text-base/relaxed opacity-70">
                     Key Outcomes for participating organizations include:
                 </p>
 
-                <ul role="list" class="-my-2 divide-y divide-black/5">
-                    @php
-                        $checklist = [
-                            'Enhanced Organizational Agility and Resilience',
-                            'Improved Strategic Alignment and Execution',
-                            'Cultivation of a Culture of Innovation and High Performance',
-                        ];
-                    @endphp
+                @php
+                    $checklist = [
+                        [
+                            'icon' =>
+                                'M9 9V4.5M9 9H4.5M9 9 3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5 5.25 5.25',
+                            'title' => 'Strategic Alignment',
+                        ],
+                        [
+                            'icon' =>
+                                'M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605',
+                            'title' => 'High Performance',
+                        ],
+                        [
+                            'icon' =>
+                                'M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18',
+                            'title' => 'Innovation Culture',
+                        ],
+                        [
+                            'icon' =>
+                                'M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z',
+                            'title' => 'Agility & Resilience',
+                        ],
+                    ];
+                @endphp
 
+                <ul role="list" class="mt-1 flex flex-col lg:grid grid-cols-2 gap-3">
                     @foreach ($checklist as $item)
-                        <li class="flex items-center gap-2 py-2">
-                            <svg class="size-7 flex-none opacity-60" viewBox="0 0 24 24">
-                                <circle class="" cx="12" cy="12" r="8.25" stroke="currentColor"
-                                    stroke-width="1" stroke-opacity="1" fill="none" />
-                                <path
-                                    d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"
-                                    fill="currentColor"></path>
-                            </svg>
+                        <li class="flex items-center gap-2">
+                            <div class="bg-content/5 size-10 rounded flex items-center justify-center">
+                                <svg class="size-5 flex-none text-primary" viewBox="0 0 24 24">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="1.6" d="{{ $item['icon'] }}" />
+                                </svg>
+                            </div>
 
                             <span class="text-base opacity-70">
-                                {{ $item }}
+                                {{ $item['title'] }}
                             </span>
                         </li>
                     @endforeach
-
-                    <li class="pt-5 pb-2 text-sm/relaxed opacity-60">
-                        Join Thrive today and be more than just a link in the organizational hierachy; be its strongest
-                        link.
-                    </li>
                 </ul>
 
-                <div class="sflex flex-col md:flex-row items-center gap-3">
+                <div class="mt-5">
                     <a href="#" class="btn w-full md:w-auto">
-                        Sign up now
+                        Enroll to next cohort now
                     </a>
                 </div>
             </div>
