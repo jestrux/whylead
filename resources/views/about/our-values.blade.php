@@ -1,6 +1,6 @@
-<section class="py-10">
+<section class="py-10 lg:pt-8 lg:pb-16">
     <div class="relative max-w-7xl mx-auto px-8">
-        <div class="flex flex-col gap-4 lg:gap-12 items-center justify-center">
+        <div class="flex flex-col gap-4 lg:gap-8 items-center justify-center">
             <div class="max-w-5xl mx-auto text-center">
                 <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">
                     <span class="uppercase">
@@ -14,29 +14,24 @@
                 </p> --}}
             </div>
 
-            <ul role="list" class="w-full grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <ul role="list" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 @php
                     $steps = [
                         [
-                            // 'image' =>
-                            'image' =>
-                                'https://res.cloudinary.com/sfp-app/image/upload/v1711540972/z87huht3tyivdybtg6hv.jpg',
+                            'icon' => 'm3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z',
                             'title' => 'Ubuntu Kwanza',
                             'description' =>
                                 'Treating All as Ends, Never Means. working to create win-win outcomes for all earthlings.',
                         ],
                         [
-                            'image' =>
-                                'https://res.cloudinary.com/sfp-app/image/upload/v1711540989/ykp8fjasngktaayokhab.jpg',
+                            'icon' =>
+                                'M3 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061A1.125 1.125 0 0 1 3 16.811V8.69ZM12.75 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061a1.125 1.125 0 0 1-1.683-.977V8.69Z',
                             'title' => 'Game 6',
                             'description' =>
                                 'We do what we say we do. we are who we say we are. we seize every opportunity we say yes to. We go ALL-IN in and Give our absolute best. ',
                         ],
                         [
-                            // 'image' =>
-                            //     'https://img.freepik.com/free-photo/happy-business-team-celebrating-success_1262-21070.jpg?t=st=1711452063~exp=1711455663~hmac=3166141d46a0c03ee0c29daaa920a4324a697d6cf2d8565b7d4752fae52f2c99&w=900',
-                            'image' =>
-                                'https://res.cloudinary.com/sfp-app/image/upload/v1711540237/sxj9meo6zbkadvvlkw15.jpg',
+                            'icon' => 'M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z',
                             'title' => 'Data-Driven',
                             'description' =>
                                 'If we have data, let’s look at data. If all we have are opinions, let’s go look for data.',
@@ -46,29 +41,35 @@
 
                 @foreach ($steps as $step)
                     <li
-                        class="min-h-full py-16 text-white border border-stroke shadow-sm relative w-full rounded-2xl overflow-hidden p-6 text-left">
-                        <img class="absolute inset-0 size-full rounded-2xl object-cover object-top"
-                            src="{{ $step['image'] }}" />
+                        class="bg-gradient-to-br from-accent via-accent/90 to-accent/95 text-white relative min-h-full w-full px-8 py-6 shadow rounded-3xl overflow-hidden">
+                        <div
+                            class="absolute opacity-5 dark:opacity-[0.03] {{ $loop->index == 0 ? 'right-[23%]' : '-left-[25%]' }}">
+                            @include('common.icon')
+                        </div>
 
-                        {{-- @if ($loop->index < 2) --}}
-                        <div class="absolute inset-0 bg-accent/90 rounded-2xl"></div>
-                        {{-- @endif --}}
+                        @if ($loop->index == 1)
+                            <div class="absolute opacity-5 dark:opacity-[0.03] right-[23%]">
+                                @include('common.icon')
+                            </div>
+                        @endif
 
-                        {{-- <small class="text-5xl absolute -top-8 s-left-4 text-black/5 font-bold bg-white pb-4 pr-4">
-                            Step {{ $loop->iteration }}
-                        </small> --}}
 
-                        <div class="min-h-full relative flex items-center flex-col justify-center gap-3 lg:p-2 text-center">
-                            {{-- <small
-                                class="inline-flex text-xs/none py-2 px-3 rounded-full border border-white bg-white/10 uppercase tracking-widest">
-                                <span class="mt-px">{{ $step['title'] }}</span>
-                            </small> --}}
+                        <span
+                            class="relative size-10 text-white bg-gradient-to-br from-primary to-primary/20 sdark:from-accent sdark:to-content/10 rounded-xl flex items-center justify-center">
+                            <svg class="size-6 drop-shadow" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="{{ $step['icon'] }}" />
+                            </svg>
+                        </span>
 
-                            <h3 class="text-2xl uppercase tracking-widest font-bold text-[#ff9962]">
+                        {{-- <div class="flex-1 min-h-8"></div> --}}
+
+                        <div class="mt-6 relative">
+                            <h3 class="text-xl font-semibold">
                                 {{ $step['title'] }}
                             </h3>
 
-                            <p class="text-base/loose opacity-80">
+                            <p class="mt-2 text-sm/loose opacity-70">
                                 {{ $step['description'] }}
                             </p>
                         </div>
