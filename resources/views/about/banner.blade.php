@@ -54,7 +54,7 @@
                     <div
                         class="bg-content text-card border dark:border-content/10 absolute -top-2 -left-2 rounded-md overflow-hidden shadow-sm">
                         <div class="text-xs/none font-bold uppercase tracking-wide relative py-2 px-2.5">
-                            Our Vision
+                            Our What
                         </div>
                     </div>
 
@@ -68,7 +68,7 @@
                     <div
                         class="bg-primary text-white border border-stroke absolute -top-2 -left-2 rounded-md overflow-hidden">
                         <div class="text-xs/none font-bold uppercase tracking-wide relative py-2 px-2.5">
-                            Our Mission
+                            Our Why
                         </div>
                     </div>
 
