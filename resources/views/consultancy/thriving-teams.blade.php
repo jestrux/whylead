@@ -2,7 +2,7 @@
     $image = 'https://res.cloudinary.com/sfp-app/image/upload/v1711540531/vudvwz3j0vmlsqslsjio.jpg';
 @endphp
 
-<section class="py-12 lg:py-20">
+<section id="thrivingTeams" class="py-12 lg:py-20">
     <div class="relative max-w-7xl mx-auto px-8">
         <div class="lg:grid grid-cols-12 gap-16 items-center">
             <div class="md:hidden">

@@ -1,8 +1,9 @@
 @extends('layout.index')
 
 @section('content')
-    @include('consultancy.thriving-teams')
+    @include('consultancy.banner')
 
+    @include('consultancy.thriving-teams')
 
     @include('consultancy.performance-management')
 
