@@ -42,7 +42,7 @@
 
             <div class="col-span-6 pt-8 pb-16 flex flex-col gap-2">
                 <h2 class="mt-3 text-2xl lg:text-3xl font-bold uppercase">
-                    Facilitating Strategic gatherings
+                    <span class="outline-text">Facilitating</span> Strategic gatherings
                 </h2>
 
                 <p class="text-base/loose opacity-70">

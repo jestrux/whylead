@@ -54,7 +54,8 @@
                 </p>
 
                 <p class="mt-1 text-base/relaxed opacity-70">
-                    When teams communicate openly, collaborate happily, and challenge willingly they create
+                    When teams <span class="font-bold">&#8482; communicate openly, collaborate happily, and challenge
+                        willingly</span> they create
                     organizations that are:
                 </p>
 

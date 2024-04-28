@@ -18,29 +18,30 @@
             <div class="col-span-6 pt-6 pb-16 flex flex-col gap-2">
                 <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">
                     <span class="uppercase">
-                        Happier
-                        <span class="outline-text">workplace</span>
+                        <span class="outline-text">
+                            Build a
+                        </span>
+
+                        happier workplace
                     </span>
                 </h2>
 
                 <p class="text-base/loose opacity-70">
                     Thriving Organizations have workplace cultures where people are Happier to go to work. They live in
-                    a
-                    world where Mondays are as exciting as Fridays. Their people operate with a deep sense of
-                    satisfaction and commitment to the organization. At WhyLead, we understand what creates a happier
-                    workplace and we have developed an Index to assess your workplace culture. Giving you empirical data
-                    to help you make data-driven decisions.
+                    a world where Mondays are as exciting as Fridays. Their people operate with a deep sense of
+                    satisfaction and commitment to the organization.
                 </p>
+
                 <p class="mt-2 text-base/loose opacity-70">
-                    Here at WhyLead, we are committed to working with your organization to get your culture to this
-                    place where your turnover is low, your engagement is high, people are united and collaborating, and
-                    they are contributing at a high level. The journey to a happier workplace begins with our index, but
-                    it doesn’t end there. We work with you to co-create solutions to address the identified cultural
-                    gaps.
+                    At WhyLead, we are committed to working with your organization to get your culture to this place
+                    where your turnover is low, your engagement is high, people are united and collaborating, and they
+                    are contributing at a high level. The journey to a happier workplace begins with our Happier
+                    Workplace Index, but it doesn’t end there. We work with you to co-create solutions to address the
+                    identified cultural gaps.
                 </p>
 
                 <p class="mt-3 text-base/relaxed opacity-70">
-                    Insights generated will help your organization to:
+                    A happier workplace leads to:
                 </p>
 
                 @php

@@ -30,7 +30,7 @@
                     ultimately, what makes people grow.
                 </p>
 
-                <div class="my-4">
+                {{-- <div class="my-4">
                     <p class="text-base/relaxed opacity-70">
                         Thriving internally must begin by answering questions like:
                     </p>
@@ -40,7 +40,7 @@
                         do you create a system that allows for self-motivation to emerge? How do you create
                         systems that get everyone to work towards the same strategic goals?
                     </div>
-                </div>
+                </div> --}}
 
                 <p class="mt-2 text-base/relaxed opacity-70">
                     To thrive, your people have to be inspired to achieve greatness willingly, and this is where we come
