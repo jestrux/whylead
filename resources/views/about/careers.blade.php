@@ -18,7 +18,7 @@
     ];
 @endphp
 
-<section
+<section id="careers"
     class="py-12 lg:py-20 border-t border-stroke bg-gradient-to-br from-accent via-accent/90 to-accent/95 dark:from-content/5 dark:to-content/5 dark:via-content/5 text-white">
     <div class="relative max-w-7xl mx-auto px-8">
         <div class="lg:grid grid-cols-12 gap-12 items-start">

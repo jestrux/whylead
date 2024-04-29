@@ -57,9 +57,9 @@
     });
 </script>
 
-<section id="programmes" x-data="testimonials" class="py-10 lg:py-20 bg-content/5 dark:bg-content/[0.02]">
+<section id="programmes" x-data="testimonials" class="py-10 lg:pt-14 lg:pb-16 bg-content/5 dark:bg-content/[0.02]">
     <div class="relative px-6 max-w-7xl mx-auto overflow-visible">
-        <div class="mb-10 flex gap-12 max-w-2xl mx-auto">
+        <div class="mb-2 flex gap-12 max-w-2xl mx-auto">
             <div class="flex-1 text-center">
                 <h2 class="text-2xl lg:text-4xl font-bold uppercase">
                     <span class="font-light">Our </span>
@@ -69,6 +69,26 @@
                     Here are a few sample programs we facilitate, but most of our programs are custom-built for you.
                 </p> --}}
             </div>
+        </div>
+
+        <div class="mb-2 flex items-center justify-center gap-16">
+            <button x-on:click="previousStep()"
+                class="size-10 rounded-full flex items-center justify-center hover:bg-content/5"
+                x-bind:class="!canGoBack && 'pointer-events-none opacity-20'">
+
+                <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+                </svg>
+            </button>
+
+            <button x-on:click="nextStep()"
+                class="size-10 rounded-full flex items-center justify-center hover:bg-content/5"
+                x-bind:class="!canGoForward && 'pointer-events-none opacity-20'">
+
+                <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+            </button>
         </div>
 
         <div class="flex flex-wraps gap-8 transition-transform duration-500"
@@ -126,7 +146,7 @@
                     </div>
 
                     <div class="flex-1 min-h-full relative duration-300 overflow-hidden origin-left">
-                        <div class="p-6 pt-10" x-show="selected" x-transition:enter.duration.500ms>
+                        <div class="p-6 py-10" x-show="selected" x-transition:enter.duration.500ms>
                             <h3 class="text-xl/tight font-semibold">
                                 {{ $step['name'] }}
                             </h3>
@@ -154,28 +174,77 @@
                 </div>
             @endforeach
 
+            <div
+                class="min-h-full w-56 bg-content/5 border border-stroke rounded-[60px] overflow-hidden p-6 flex-shrink-0 flex flex-col gap-6 relative -rotate-2">
+                <div class="flex-1 pr-4">
+                    <div
+                        class="mb-6 size-36 flex-shrink-0 relative rounded-full overflow-hidden bg-content/5 flex items-center justify-center">
+                        <svg class="size-20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                        </svg>
+                    </div>
+
+                    <h3 class="text-xl/tight font-semibold">
+                        We're hiring
+                    </h3>
+
+                    <p class="mt-2 text-sm/relaxed text-primary">
+                        This could be you
+                    </p>
+
+                    <p class="mt-3 text-xs opacity-90">
+                        What we're looking for
+                    </p>
+
+                    <ul role="list" class="mt-1">
+                        <li class="flex items-center gap-1 py-1">
+                            <svg class="size-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="8.25"></circle>
+
+                                <path class=""
+                                    d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"
+                                    fill="currentColor" stroke="none"></path>
+                            </svg>
+                            <p class="text-xs font-semibold">
+                                Team player
+                            </p>
+                        </li>
+                        <li class="flex items-center gap-1 py-1">
+                            <svg class="size-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="8.25"></circle>
+
+                                <path class=""
+                                    d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"
+                                    fill="currentColor" stroke="none"></path>
+                            </svg>
+                            <p class="text-xs font-semibold">
+                                Difference maker
+                            </p>
+                        </li>
+                        <li class="flex items-center gap-1 py-1">
+                            <svg class="size-5 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="8.25"></circle>
+
+                                <path class=""
+                                    d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"
+                                    fill="currentColor" stroke="none"></path>
+                            </svg>
+                            <p class="text-xs font-semibold">
+                                Self motivated
+                            </p>
+                        </li>
+                    </ul>
+
+                    <a href="#careers" class="mt-4 btn btn-sm">
+                        <span class="capitalize smy-1 mx-1">
+                            Learn more
+                        </span>
+                    </a>
+                </div>
+            </div>
+
             <div class="w-32">&nbsp;</div>
         </div>
-
-        <div class="mt-6 -mb-8 flex items-center justify-center gap-16">
-            <button x-on:click="previousStep()"
-                class="size-10 rounded-full flex items-center justify-center hover:bg-content/5"
-                x-bind:class="!canGoBack && 'pointer-events-none opacity-20'">
-
-                <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
-                </svg>
-            </button>
-
-            <button x-on:click="nextStep()"
-                class="size-10 rounded-full flex items-center justify-center hover:bg-content/5"
-                x-bind:class="!canGoForward && 'pointer-events-none opacity-20'">
-
-                <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                </svg>
-            </button>
-        </div>
-
     </div>
 </section>
