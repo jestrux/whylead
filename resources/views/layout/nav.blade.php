@@ -107,7 +107,7 @@
             </a>
         </div>
 
-        <ul class="hidden md:flex items-center gap-5">
+        <ul class="hidden md:flex items-center gap-5 pb-2">
             <x-menu-item url="{{ url('/about') }}">About Us</x-menu-item>
 
             <div class="relative">
