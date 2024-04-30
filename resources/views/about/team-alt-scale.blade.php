@@ -3,7 +3,7 @@
         [
             'image' => 'https://res.cloudinary.com/sfp-app/image/upload/v1714328053/unecnrhualt3imbxvjzj.jpg',
             'name' => 'Ben Owden',
-            'position' => 'Leadership trainer and principal consultant',
+            'position' => 'Principal Consultant & Leadership Trainer',
             // 'position' => 'Principal consultant',
             'description' =>
                 "Ben Owden develops leaders who lead thriving teams and organizations. He has a deep understanding of what makes organizational systems functional. And what makes people belong, grow, contribute, and challenge the status quo. He has trained and coached leaders from renowned organizations like Malala Fund, KNAUF, and CRDB Bank.\\n\\nBen's focus is on empowering leaders to have whole-person alignment so they can thrive, both in their roles and their lives.\\n\\nBen is the author of a personal development book, <a class='text-primary underline' href='https://www.amazon.com/Process-Where-Prepares-Your-Destiny-ebook/dp/B086Z5SDL6/ref=sr_1_1?crid=2NHCPWHGRF986&keywords=ben+owden&qid=1706865914&sprefix=ben+owd%2Caps%2C466&sr=8-1' target='_blank'>In The Process.</a>",
@@ -12,7 +12,7 @@
         [
             'image' => 'https://res.cloudinary.com/sfp-app/image/upload/v1714328049/khexunzxlugnhkpy67kk.jpg',
             'name' => 'Jocelyne Msigwa',
-            'position' => 'Leadership trainer',
+            'position' => 'Product Manager @Thrive',
             'description' =>
                 "Jocelyne Msigwa is a leadership development coach and trainer. She is committed to empowering the next generation of competent and purpose-driven leaders.\\n\\nShe is a highly accomplished and experienced HR Executive with a proven track record of translating business objectives into effective human resource strategies that drive performance, profitability, and growth while enhancing employee experience and engagement.\\n\\nShe brings her unique blend of strategic thinking, creativity, and innovation to every project, and consistently delivers results that exceed expectations.",
             'checklist' => ['Faith', 'Family', 'Growth'],
