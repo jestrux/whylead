@@ -1,6 +1,9 @@
 @props(['data' => []])
 
-<div x-data="{ expanded: -1 }" class="flex-1 w-full border-b divide-y border-stroke divide-stroke">
+<div x-data="{ expanded: -1 }"
+    {{ $attributes->merge([
+        'class' => 'flex-1 w-full border-b divide-y border-stroke divide-stroke',
+    ]) }}>
     @foreach ($data as $e)
         @php
             $i = $loop->index;

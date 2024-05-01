@@ -81,7 +81,9 @@
             </ul>
 
             <div class="text-center">
-                <p class="text-xl opacity-70">Ready to take your organisation to the next level?</p>
+                <p class="text-xl opacity-70">
+                    We are on a mission to help organizations thrive
+                </p>
                 <a href="#" class="mt-3 btn">
                     Hire WhyLead today
                 </a>

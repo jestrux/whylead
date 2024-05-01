@@ -1,13 +1,13 @@
 <section id="programmes" class="py-10 lg:py-20 bg-content/5">
     <div class="relative max-w-7xl mx-auto px-8">
-        <div class="mb-12 flex gap-12">
+        <div class="mb-12 flex gap-12 mx-w-3xl mx-auto">
             <div class="flex-1 text-center">
                 <h2 class="text-2xl lg:text-4xl font-bold uppercase">
                     <span class="font-light">Training </span> programmes
                 </h2>
 
                 <p class="mt-2 text-lg">
-                    Here are a few sample programs we facilitate, but most of our programs are custom-built for you.
+                    Discover how WhyLead's tailored programs can transform your organization.
                 </p>
             </div>
         </div>
@@ -91,7 +91,8 @@
             @endphp
 
             @foreach ($steps as $step)
-                <li class="relative min-h-full w-full flex flex-col px-4 pt-2 pb-4 bg-card dark:bg-content/5 border border-stroke rounded-xl shadow">
+                <li
+                    class="relative min-h-full w-full flex flex-col px-4 pt-2 pb-4 bg-card dark:bg-content/5 border border-stroke rounded-xl shadow">
                     <div class="-mx-2 h-56 relative rounded-lg overflow-hidden">
                         <img class="size-full object-cover rounded-lg" src="{{ $step['image'] }}" alt="" />
                     </div>

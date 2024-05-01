@@ -116,6 +116,10 @@
                 font-weight: 500;
             }
 
+            img {
+                object-fit: cover;
+            }
+
             @media (min-width: 1024px) {
                 .lg\:text-4xl {
                     /* font-size: 2.25rem; */

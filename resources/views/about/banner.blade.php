@@ -2,32 +2,41 @@
     <div class="relative max-w-7xl mx-auto px-8">
         <div class="lg:grid grid-cols-12 gap-12 items-start">
             <div class="col-span-5 relative">
-                <h2 class="mt-3 text-2xl lg:text-4xl/[1.4] font-bold uppercase text-accent dark:text-white">
-                    <span class="font-light">About
-                    </span>
-                    Us
+                <h2 class="text-2xl lg:text-4xl/[1.4] font-bold uppercase">
+                    <span class="font-light">Our</span>
+                    Story
                 </h2>
 
-                <p class="text-lg/loose font-light">
+                {{-- <p class="text-lg/relaxed uppercase">
+                    This is Thrive Squad's story. Legend has it, they've been developing leaders, helping
+                    organizations thrive, and turning Mondays into Fundays.
+                </p> --}}
+
+                <p class="mt-0.5 text-xl/relaxed uppercase font-medium">
+                    Developing leaders, helping
+                    organizations thrive, and turning Mondays into Fundays.
+                </p>
+
+                <p class="mt-2 text-base/loose opacity-70">
                     We started with the question, Why Lead? And this question led to a simple survey that we shared with
                     leaders across many organizations.
                 </p>
 
-                <p class="mt-5 text-lg/loose font-light">
+                <p class="mt-2 text-base/loose opacity-70">
                     The results were shocking. Leaders were struggling. Alot of
                     organizational success hinged on their participation, yet it felt like they were the only ones who
                     cared. We understood the work and life of a leader, and we said, it’s time to step in and help.
                 </p>
 
-                <p class="mt-5 text-lg/loose font-light">
+                <p class="mt-2 text-base/loose opacity-70">
                     And
                     that’s how WhyLead was started. To partner with leaders and organizations and provide the support
                     needed to thrive.
                 </p>
 
-                <div class="mt-8 gap-3">
-                    <a href="#programmes" class="btn w-full md:w-auto">
-                        Our programmes
+                <div class="mt-4 gap-3">
+                    <a href="#ourValues" class="btn w-full md:w-auto">
+                        Our values
                     </a>
                 </div>
             </div>
