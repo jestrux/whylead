@@ -57,7 +57,8 @@
     });
 </script>
 
-<section id="programmes" x-data="testimonials" class="py-10 lg:pb-16 bg-content/5 dark:bg-content/[0.02]">
+<section id="team" x-intersect.threshold.75="activeSection = 'team'" x-data="testimonials"
+    class="py-10 lg:pb-16 bg-content/5 dark:bg-content/[0.02]">
     <div class="relative px-6 max-w-7xl mx-auto overflow-visible">
         <div class="mb-2 flex gap-12 max-w-2xl mx-auto">
             <div class="flex-1 text-center">

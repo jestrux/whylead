@@ -58,7 +58,7 @@
     $image = 'https://res.cloudinary.com/sfp-app/image/upload/v1711540531/vudvwz3j0vmlsqslsjio.jpg';
 @endphp
 
-<section id="careers" class="py-12">
+<section id="careers" x-intersect.threshold.5="activeSection = 'careers'" class="py-12">
     <div class="px-8 relative max-w-7xl mx-auto">
         <div class="mb-20 flex flex-col gap-4 lg:gap-12 items-center justify-center">
             <div class="max-w-3xl mx-auto text-center">

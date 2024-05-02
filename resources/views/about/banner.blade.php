@@ -1,4 +1,4 @@
-<section class="py-12 lg:pt-16 lg:pb-0">
+<section id="aboutUs" x-intersect.threshold.65="activeSection = 'aboutUs'" class="py-12 lg:pt-16 lg:pb-0">
     <div class="relative max-w-7xl mx-auto px-8">
         <div class="lg:grid grid-cols-12 gap-12 items-start">
             <div class="col-span-5 relative">

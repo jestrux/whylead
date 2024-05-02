@@ -1,4 +1,4 @@
-<section id="ourValues" class="py-10 lg:pt-8 lg:pb-16">
+<section id="ourValues" x-intersect.threshold.80="activeSection = 'ourValues'" class="py-10 lg:pt-8 lg:pb-16">
     <div class="relative max-w-7xl mx-auto px-8">
         <div class="flex flex-col gap-4 lg:gap-8 items-center justify-center">
             <div class="max-w-2xl mx-auto text-center">
