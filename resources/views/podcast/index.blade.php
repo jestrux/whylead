@@ -12,12 +12,24 @@
         </div>
 
         <div class="col-span-8">
-            <div class="max-w-3xl mx-auto px-12 pt-4">
+            <div class="max-w-3xl mx-auto px-12 pt-4" x-data="{ listen: null, filter: 'All', toggleFilter(newFilter) { this.filter = this.filter == newFilter ? null : newFilter; }, get popular() { return this.filter == 'Popular' }, get latest() { return this.filter == 'Latest' } }">
                 <h3 class="text-3xl font-bold">Podcast Episodes</h3>
+
+                <div class="sticky top-16 z-10 h-16 bg-canvas flex items-center gap-3">
+                    @foreach (['All', 'Latest', 'Popular'] as $item)
+                        <button
+                            class="inline-flex text-xs/none font-bold py-2 px-3.5 rounded-full border border-stroke uppercase tracking-widest"
+                            x-bind:class="filter == '{{ $item }}' && 'bg-content/10'"
+                            x-on:click="filter = '{{ $item }}'">
+                            {{ $item }}
+                        </button>
+                    @endforeach
+                </div>
 
                 <div class="divide-y divide-stroke">
                     @foreach ($data as $episode)
-                        <article aria-labelledby="episode-5-title" class="py-6">
+                        <article x-data="{ total_plays: {{ $episode->total_plays }}, index: {{ $loop->index }} }" x-show="(!popular || total_plays > 200) && (!latest || index < 4)"
+                            x-transition class="py-6">
                             <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
                                 <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
                                     href="#">
@@ -48,15 +60,15 @@
                                         think. --}}
                                     </p>
                                     <div class="mt-4 flex items-center gap-4">
-                                        <a href="{{ $episode->link }}" target="_blank"
-                                            aria-label="Play episode 5: Bill Lumbergh"
+                                        <button
+                                            x-on:click="listen = listen == {{ $episode->_id }} ? null : {{ $episode->_id }}"
                                             class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
                                             <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
                                                 <path
                                                     d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
                                             </svg>
                                             <span aria-hidden="true">Listen</span>
-                                        </a>
+                                        </button>
                                         <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
                                         @php
                                             $actions = [
@@ -92,7 +104,25 @@
                                             </span>
                                         </x-dropdown-menu>
                                     </div>
+                                    {{-- <div id='buzzsprout-small-player'></div>
+                                    <script type='text/javascript' charset='utf-8'
+                                        src='{{$episode->link}}.js?container_id=buzzsprout-small-player&player=small'></script> --}}
                                 </div>
+                            </div>
+
+                            <div class="transition-all duration-200 relative"
+                                x-bind:style="height: listen == {{ $episode->_id }} ? '200px' : 0">
+
+                                <div x-cloak x-show="listen == {{ $episode->_id }}"
+                                    class="pointer-events-none absolute inset-0 rounded-lg bg-content/5">
+                                </div>
+
+                                <template x-if="listen == {{ $episode->_id }}">
+                                    <div class="relative mt-3 w-full">
+                                        <iframe class="mt-3" width="100%" height="200px"
+                                            src="{{ $episode->link }}?iframe=true" frameborder="0"></iframe>
+                                    </div>
+                                </template>
                             </div>
                         </article>
                     @endforeach
@@ -104,8 +134,5 @@
 @endsection
 
 @section('scripts')
-    {{-- <script defer src="https://unpkg.com/@alpinejs/ui@3.13.3-beta.4/dist/cdn.min.js"></script> --}}
-    {{-- <script defer src="https://unpkg.com/@alpinejs/focus@3.13.3/dist/cdn.min.js"></script> --}}
-
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 @endsection
