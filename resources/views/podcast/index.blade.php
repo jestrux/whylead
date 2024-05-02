@@ -12,15 +12,25 @@
         </div>
 
         <div class="col-span-8">
-            <div class="max-w-3xl mx-auto px-12 pt-4" x-data="{ listen: null, filter: 'All', toggleFilter(newFilter) { this.filter = this.filter == newFilter ? null : newFilter; }, get popular() { return this.filter == 'Popular' }, get latest() { return this.filter == 'Latest' } }">
+            <div class="max-w-3xl mx-auto px-12 pt-4" x-data="{
+                listen: null,
+                filter: 'All',
+                setFilter(newFilter) {
+                    this.filter = newFilter;
+                    window.scrollTo({ top: 0 });
+                },
+                get popular() { return this.filter == 'Popular' },
+                get latest() { return this.filter == 'Latest' }
+            }">
                 <h3 class="text-3xl font-bold">Podcast Episodes</h3>
 
-                <div class="sticky top-16 z-10 h-16 bg-canvas flex items-center gap-3">
+                <div class="-mb-5 sticky top-16 z-10 h-16 bg-canvas flex items-center gap-3">
                     @foreach (['All', 'Latest', 'Popular'] as $item)
                         <button
-                            class="inline-flex text-xs/none font-bold py-2 px-3.5 rounded-full border border-stroke uppercase tracking-widest"
-                            x-bind:class="filter == '{{ $item }}' && 'bg-content/10'"
-                            x-on:click="filter = '{{ $item }}'">
+                            class="inline-flex text-xs/none font-bold py-2 px-3.5 rounded-full border uppercase tracking-widest"
+                            x-bind:class="filter == '{{ $item }}' ? 'bg-primary text-white border-primary' :
+                                'text-content/70 bg-canvas border-stroke'"
+                            x-on:click="setFilter('{{ $item }}')">
                             {{ $item }}
                         </button>
                     @endforeach
