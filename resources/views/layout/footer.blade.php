@@ -25,28 +25,24 @@
                         href="/#"><span class="relative z-10">FAQs</span>
                     </a>
                     <a class="hidden lg:block relative -mx-3 -my-2 rounded-lg px-3 py-2 text-sm opacity-70 hover:opacity-100 transition-opacity delay-150 hover:delay-0"
-                        href="{{ url('/thrive-in-the-middle') }}"><span class="relative z-10">Thriving in the Middle Managers</span>
+                        href="{{ url('/thrive-in-the-middle') }}"><span class="relative z-10">Thriving in the Middle
+                            Managers</span>
                     </a>
                 </nav>
             </div>
-            <a href="https://whylead.buzzsprout.com/2275900/14416142-0067-winning-the-stress-war-embracing-calmness-and-overcoming-procrastination-ft-paul-loomans"
-                target="_blank"
-                class="group relative -mx-4 flex items-center self-stretch p-4 transition-colors bg-content/5 hover:bg-content/10 text-content sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto lg:p-6">
-                <div class="relative flex h-28 w-28 flex-none items-center justify-center">
-                    {{-- <svg viewBox="0 0 96 96" fill="none" aria-hidden="true"
-                        class="absolute inset-0 h-full w-full stroke-gray-300 transition-colors group-hover:stroke-cyan-500">
-                        <path
-                            d="M1 17V9a8 8 0 0 1 8-8h8M95 17V9a8 8 0 0 0-8-8h-8M1 79v8a8 8 0 0 0 8 8h8M95 79v8a8 8 0 0 1-8 8h-8"
-                            stroke-width="2" stroke-linecap="round"></path>
-                    </svg> --}}
 
-                    {{-- <img class="w-28" alt="" loading="lazy" decoding="async" data-nimg="1"
-                    style="color:transparent" src="{{ asset('img/podcast-qr.png') }}"> --}}
+            @pierdata(["model" => "Podcast", "first" => true])
+            @php
+                $episode = $data;
+            @endphp
 
-                    <img alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg"
-                        src="https://whylead.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSU5HR2dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--66cdf88630021e49faff3053a937972dbd4955d2/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/8848136-1699425854054-cbb5ac9c40e5b.jpg" />
+            <a href="{{ $episode->link }}" target="_blank"
+                class="group relative -mx-4 flex items-center self-stretch p-4 transition-colors bg-content/5 hover:bg-content/10 text-content sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto">
+                <div class="relative flex size-28 flex-none items-center justify-center">
+                    <img class="absolute inset-0 size-full object-cover rounded-lg" src="{{ $episode->image }}"
+                        alt="{{ $episode->title }} poster" />
                 </div>
-                <div class="ml-5 lg:w-64">
+                <div class="ml-3 lg:w-64">
                     <p class="text-base font-semibold inline-flex items-center gap-1">
                         <span class="absolute inset-0 sm:rounded-2xl"></span>
                         Our latest podcast episode
@@ -58,12 +54,31 @@
                         </svg>
                     </p>
 
-                    <div class="mt-1.5 text-sm/relaxed opacity-70 group-hover:opacity-80">
-                        0067 - Winning The Stress War, Embracing
-                        Calmness and Overcoming Procrastination ft Paul Loomans
+                    <div class="mt-1 text-sm/relaxed opacity-70 group-hover:opacity-80 line-clamp-3">
+                        00{{ $episode->number }} -
+                        {{ $episode->title }} ft Paul {{ $episode->featuring }}
                     </div>
+
+                    {{-- <object class="w-full">
+                        <div class="mt-1 flex items-center gap-4">
+                            <a href="{{ $episode->link }}" target="_blank" aria-label="Play episode 5: Bill Lumbergh"
+                                class="flex items-center gap-x-3 text-sm font-bold leading-6 text-primary hover:opacity-90 active:opacity-80">
+                                <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5 fill-current">
+                                    <path
+                                        d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
+                                </svg>
+                                <span aria-hidden="true">Listen</span>
+                            </a>
+                            <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                            <a class="flex items-center text-sm font-bold leading-6 text-[#5C4EB8] dark:text-content/60 hover:opacity-80 active:opacity-90"
+                                aria-label="Show notes for episode 5: Bill Lumbergh" href="/5">
+                                Share
+                            </a>
+                        </div>
+                    </object> --}}
                 </div>
             </a>
+            @endpierdata()
         </div>
         {{-- <div
             class="flex flex-col items-center border-t border-gray-200 pb-12 pt-8 md:flex-row-reverse md:justify-between md:pt-6">

@@ -1,7 +1,7 @@
 <div>
     <div class="relative border size-32 xl:size-40 overflow-hidden rounded-xl bg-content/5 shadow-xl" href="#">
         <img alt=""class="absolute size-full"
-            src="https://whylead.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCSU5HR2dZPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--66cdf88630021e49faff3053a937972dbd4955d2/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2QzNKbGMybDZaVWtpRFRZd01IZzJNREJlQmpzR1ZEb01aM0poZG1sMGVVa2lDMk5sYm5SbGNnWTdCbFE2QzJWNGRHVnVkRWtpRERZd01IZzJNREFHT3daVU9neHhkV0ZzYVhSNWFWVTZEMk52Ykc5eWMzQmhZMlZKSWdselVrZENCanNHVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--8a9b4b1bc245a46b538f72d4d9b2ab0a7fbe8ac1/8848136-1699425854054-cbb5ac9c40e5b.jpg" />
+            src="https://storage.buzzsprout.com/vbfue1s8u9mtbxjkkwbuhprhreez" />
     </div>
 
     <div class="mt-6 xl:mt-10 lg:text-left text-center">
