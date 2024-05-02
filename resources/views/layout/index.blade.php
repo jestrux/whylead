@@ -9,7 +9,7 @@
     <meta name="description" content="@yield('description')" />
 
     <title>@yield('title')</title>
-    <link href="{{ asset('img/icon.png') }}" rel="shortcut icon" type="image/png" />
+    <link href="{{ asset('icon.png') }}" rel="shortcut icon" type="image/png" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
