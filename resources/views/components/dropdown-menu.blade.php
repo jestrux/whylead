@@ -1,5 +1,5 @@
 @props(['actions' => []])
-<div x-data="{
+<div x-cloak x-data="{
     open: false,
 }" @keydown.escape="open = false" @mousedown.outside="open = false" class="relative">
     <button class="focus:outline-none" :id="$id('alpine-menu-button')" @click="open = true">
