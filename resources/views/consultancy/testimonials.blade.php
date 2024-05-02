@@ -61,9 +61,9 @@
                 Testimonials
             </h2>
 
-            {{-- <p class="text-lg opacity-70">
-                See what our customers have to say about our services.
-            </p> --}}
+            <p class="text-lg opacity-70">
+                We asked our clients about their WhyLead experience, here's what they had to say.
+            </p>
         </div>
 
         <div class="mt-10 flex gap-8 transition-transform duration-500"

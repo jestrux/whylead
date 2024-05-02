@@ -8,3 +8,4 @@ Route::view('/training', 'training.index');
 Route::view('/about', 'about.index');
 Route::view('/contacts', 'contacts');
 Route::view('/podcast', 'podcast.index');
+Route::view('/thrive-in-the-middle', 'thrive-in-the-middle.index');

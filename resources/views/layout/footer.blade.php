@@ -25,7 +25,7 @@
                         href="/#"><span class="relative z-10">FAQs</span>
                     </a>
                     <a class="hidden lg:block relative -mx-3 -my-2 rounded-lg px-3 py-2 text-sm opacity-70 hover:opacity-100 transition-opacity delay-150 hover:delay-0"
-                        href="/#"><span class="relative z-10">Thriving in the Middle Managers</span>
+                        href="{{ url('/thrive-in-the-middle') }}"><span class="relative z-10">Thriving in the Middle Managers</span>
                     </a>
                 </nav>
             </div>
