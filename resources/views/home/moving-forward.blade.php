@@ -55,7 +55,7 @@
                 </div>
             </div>
 
-            <div class="col-span-6 bg-red-50">
+            <div class="col-span-6">
                 <a href="#"
                     class="hidden md:block min-h-full -rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-xl relative rounded-xl overflow-hidden size-full bg-neutral-300">
                     <img class="rotate-6 scale-125 size-full object-cover object-top"
