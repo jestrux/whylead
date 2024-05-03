@@ -20,7 +20,7 @@
 
     @vite('resources/css/app.css')
 
-    @if (env('APP_ENV') == 'local')
+    {{-- @if (env('APP_ENV') == 'local') --}}
         <script src="https://cdn.tailwindcss.com"></script>
 
         <style type="text/tailwindcss">
@@ -35,6 +35,15 @@
                 --canvas-color: 255 255 255;
                 --card-color: 255 255 255;
                 --content-color: 0 0 0;
+            }
+
+            body.reading-mode {
+                --accent-color: 36 27 99;
+                --stroke-color: 53 53 53;
+                --border-color: rgba(255, 255, 255, 0.16);
+                --canvas-color: 24 24 24;
+                --card-color: 37 37 37;
+                --content-color: 255 255 255;
             }
 
             @media (prefers-color-scheme: dark) {
@@ -58,7 +67,7 @@
                 }
 
                 .btn {
-                    @apply transition-all duration-150 inline-flex uppercase tracking-wide text-white items-center justify-center border bg-primary hover:bg-primary-dark border-primary;
+                    @apply transition-all duration-150 inline-flex uppercase tracking-wide text-white items-center justify-center border bg-[#F16B21] hover:bg-[#d55612] border-[#F16B21];
                 }
 
                 .btn:not(.btn-sm):not(.btn-xs) {
@@ -78,7 +87,8 @@
                 }
 
                 strong {
-                    @apply text-primary font-semibold;
+                    color: rgb(var(--primary-color) / 0.01);
+                    @apply font-semibold;
                 }
 
                 body {
@@ -147,7 +157,7 @@
                 },
             };
         </script>
-    @endif
+    {{-- @endif --}}
 </head>
 
 <body class="bg-canvas text-content">

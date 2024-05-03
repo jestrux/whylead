@@ -126,6 +126,7 @@
             {{-- <a href="#" class="btn text-sm font-bold py-2 px-4">
                 Get a quote
             </a> --}}
+            <x-reading-mode-toggle />
         </ul>
     </div>
 </section>
