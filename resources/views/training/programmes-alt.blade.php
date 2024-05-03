@@ -12,7 +12,7 @@
             </div>
         </div>
 
-        <ul role="list" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <ul role="list" class="scrollable-sections flex flex-col gap-8">
             @php
                 $steps = [
                     [
@@ -90,8 +90,107 @@
                 ];
             @endphp
 
-            @foreach ($steps as $step)
-                <li
+            @foreach ($steps as $programme)
+                <section class="py-12 scrollable-section">
+                    <div class="px-8 relative max-w-7xl mx-auto">
+                        <div class="lg:grid grid-cols-2 gap-16 items-center">
+                            @php
+                                $image = $programme['image'];
+                            @endphp
+
+                            <div class="md:hidden">
+                                <a href="#" class="block relative">
+                                    <div
+                                        class="relative aspect-video rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
+                                        <img class="absolute w-full h-full object-cover object-top"
+                                            src="{{ $image }}" alt="" />
+
+                                        <div class="absolute inset-0 flex items-center justify-center">
+                                            <span
+                                                class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-accent">
+                                                {{-- <svg class="w-14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor">
+                                                <path d="M8 5v14l11-7z" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg> --}}
+
+                                                <svg class="w-6 ml-1" fill="currentColor" viewBox="0 0 24 24"
+                                                    stroke-width="1" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                                                </svg>
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                {{-- <h2 class="mt-3 text-2xl lg:text-4xl/tight font-bold uppercase">
+                                    {{ $programme['title'] }}
+                                </h2> --}}
+                                <h3 class="mt-2 text-3xl uppercase font-bold">
+                                    {{ $programme['title'] }}
+                                </h3>
+
+                                <p class="text-lg/loose">
+                                    {{ $programme['description'] }}
+                                </p>
+
+                                {{-- <p class="mt-1 text-sm/loose opacity-70">
+                                </p> --}}
+
+                                <p class="mt-2 text-base/relaxed opacity-70">
+                                    Key Outcomes include:
+                                </p>
+
+                                @php
+                                    $checklist = collect($programme['checklist'])->map(
+                                        fn($title) => [
+                                            'icon' =>
+                                                'M3 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061A1.125 1.125 0 0 1 3 16.811V8.69ZM12.75 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061a1.125 1.125 0 0 1-1.683-.977V8.69Z',
+                                            'title' => $title,
+                                        ],
+                                    );
+                                @endphp
+
+                                <ul role="list" class="flex flex-col divide-y divide-stroke">
+                                    @foreach ($checklist as $item)
+                                        <li class="flex items-center gap-2 py-2">
+                                            <div
+                                                class="bg-content/5 dark:bg-content/10 border border-stroke size-7 rounded flex items-center justify-center">
+                                                <svg class="size-4 flex-none" viewBox="0 0 24 24">
+                                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="1.6"
+                                                        d="{{ $item['icon'] }}" />
+                                                </svg>
+                                            </div>
+
+                                            <span class="text-base">
+                                                {{ $item['title'] }}
+                                            </span>
+                                        </li>
+                                    @endforeach
+                                </ul>
+
+                                <div class="mt-5">
+                                    <a href="{{ url('/contacts') }}" class="btn w-full md:w-auto">
+                                        Transform your team
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div
+                                class="-rotate-1 shadow-xl flex-1 hidden md:flex items-center justify-center aspect-[2/1.8] relative">
+                                <div class="relative rounded-xl overflow-hidden size-full bg-content/5">
+                                    <img class="rotate-6 scale-125 size-full" src="{{ $image }}"
+                                        alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {{-- <li
                     class="relative min-h-full w-full flex flex-col px-4 pt-2 pb-4 bg-card dark:bg-content/5 border border-stroke rounded-xl shadow">
                     <div class="-mx-2 h-56 relative rounded-lg overflow-hidden">
                         <img class="size-full object-cover rounded-lg" src="{{ $step['image'] }}" alt="" />
@@ -112,14 +211,6 @@
                     <ul role="list" class="mb-3 text-sm">
                         @foreach ($step['checklist'] as $item)
                             <li class="flex items-start gap-1 py-1">
-                                {{-- <svg class="size-6 flex-none text-[#FFDB21] dark:text-content/50" fill="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <circle cx="12" cy="12" r="8.25" />
-
-                                    <path class="text-black dark:text-white scale-[0.47] translate-x-[6px] translate-y-[7px]"
-                                        fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                        stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                </svg> --}}
                                 <svg class="size-6 flex-none text-accent dark:text-content/50" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24">
                                     <circle cx="12" cy="12" r="8.25" />
@@ -138,27 +229,250 @@
                     <button class="mt-auto btn btn-sm w-full">
                         Transform your team
                     </button>
-
-                    {{-- <div class="mt-auto flex items-center gap-2">
-                        <button class="mt-auto btn btn-sm btn-outline w-full">
-                            Learn more
-
-                            <svg class="-mr-1 size-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                            </svg>
-                        </button>
-                        <button class="mt-auto btn btn-sm w-full">
-                            Get started
-
-                            <svg class="-mr-1 size-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                            </svg>
-                        </button>
-                    </div> --}}
-                </li>
+                </li> --}}
             @endforeach
         </ul>
     </div>
 </section>
+
+<script>
+    (function activateScrollableSections() {
+        var threshold = 0.5;
+        var scrollSectionStyles = document.createElement("style");
+        scrollSectionStyles.innerHTML = /*css*/ `
+                .scrollable-sections {
+                    position: relative !important;
+                }
+
+                .scroll-section-slides {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: sticky;
+                    top: 96px;
+                    height: calc(95vh - 96px);
+                    width: 100%;
+                    gap: 1.5rem;
+                }
+
+                .scroll-section-slides-wrapper {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    margin: 0 auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .scrollable-section {
+                    position: sticky !important;
+                    top: 0 !important;
+                    min-height: calc(95vh - 96px) !important;
+                    display: flex !important;
+                    align-items: center !important;
+                    transition: all 0.35s ease-out;
+                    opacity: 0;
+                }
+
+                .scroll-section-slides .scrollable-section {
+                    position: absolute !important;
+                    top: 0;
+                    left: 3rem;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .scroll-section-slides .scrollable-section.visible {
+                    opacity: 1;
+                }
+
+                .scroll-section-indicator {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    width: 12px;
+                    // background: red;
+                    // left: 2.8rem;
+                    // margin-left: -2rem;
+                    z-index: 10;
+                }
+
+                .no-scroll-indicators .scroll-section-indicator-wrapper {
+                    opacity: 0 !important;
+                }
+
+                .scroll-section-indicator-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: sticky;
+                    top: 120px;
+                    height: 100%;
+                    max-height: calc(100vh - 160px);
+                    margin: auto;
+                    width: 4px;
+                    gap: 1.5rem;
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                }
+
+                .scroll-section-progress-wrapper {
+                    flex :1;
+                    position: relative;
+                    width: 4px;
+                    border-radius: 50px;
+                    overflow: hidden;
+                }
+
+                .scroll-section-progress-wrapper:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background: currentColor;
+                    opacity: 0.3;
+                }
+
+                .scroll-section-progress{
+                    background: currentColor;
+                    transition: all 0.35s ease-out;
+                }
+            `;
+        document.querySelector("head").appendChild(scrollSectionStyles);
+
+        function getScrollSectionIndicator() {
+            const scrollSectionIndicator = document.createElement("div");
+            scrollSectionIndicator.className = "scroll-section-indicator";
+            scrollSectionIndicator.innerHTML = `
+                    <div class="scroll-section-indicator-wrapper">
+                        <span class="scroll-section-current-page">01</span>
+
+                        <div class="scroll-section-progress-wrapper">
+                            <div class="scroll-section-progress" style="height: 20%"></div>
+                        </div>
+
+                        <span class="scroll-section-total-pages">01</span>
+                    </div>
+                `;
+
+            return scrollSectionIndicator;
+        }
+
+        function getScrollSectionSlides() {
+            const scrollSectionSlides = document.createElement("div");
+            scrollSectionSlides.className = "scroll-section-slides";
+            scrollSectionSlides.innerHTML = `
+                    <div class="scroll-section-slides-wrapper">
+
+                    </div>
+                `;
+
+            return scrollSectionSlides;
+        }
+
+        function scrollSectionObserver({
+            currentPage,
+            progress,
+            section,
+            index,
+            sections,
+            parent,
+            totalPages,
+            slideSections,
+        }) {
+            new IntersectionObserver(
+                ([e]) => {
+                    var isAbove = e.boundingClientRect.top < 0;
+                    var isLastPage = index == totalPages - 1;
+
+                    var sectionIsVisible = e.intersectionRatio > threshold;
+                    var page = sectionIsVisible ? index + 1 : index;
+
+                    if (isAbove) {
+                        if (!isLastPage) return;
+
+                        page = totalPages;
+                    }
+
+                    currentPage.textContent = page.toString().padStart(2, "0");
+                    var scrollPercent = (page / totalPages) * 100 + "%";
+                    progress.style.height = scrollPercent;
+
+                    sections[index - 1].classList.toggle(
+                        "visible",
+                        !sectionIsVisible
+                    );
+                    section.classList.toggle(
+                        "visible",
+                        sectionIsVisible || (isLastPage && isAbove)
+                    );
+
+                    slideSections.forEach(function(section, index) {
+                        section.classList.toggle("visible", index == page - 1);
+                    });
+                }, {
+                    threshold: [threshold],
+                }
+            ).observe(section);
+        }
+
+        document.querySelectorAll(".scrollable-sections").forEach(function(node) {
+            var sectionSlides = getScrollSectionSlides();
+            var slidesWrapper = sectionSlides.querySelector(
+                ".scroll-section-slides-wrapper"
+            );
+            var slideSections = [];
+
+            var indicator = getScrollSectionIndicator();
+            var currentPage = indicator.querySelector(
+                ".scroll-section-current-page"
+            );
+            var progress = indicator.querySelector(".scroll-section-progress");
+            var pageCount = indicator.querySelector(".scroll-section-total-pages");
+            var sections = node.querySelectorAll(".scrollable-section");
+
+            node.prepend(sectionSlides);
+            node.appendChild(indicator);
+
+            pageCount.textContent = sections.length.toString().padStart(2, "0");
+
+            sections.forEach(function(section, index) {
+                let new_section = section.cloneNode(true);
+                slideSections.push(new_section);
+                slidesWrapper.appendChild(new_section);
+
+                var sectionWidth = section.getBoundingClientRect().width;
+
+                if (index == 0)
+                    slidesWrapper.style.maxWidth =
+                    section.getBoundingClientRect().width;
+                else if (sectionWidth > slidesWrapper.style.maxWidth) {
+                    slidesWrapper.style.maxWidth =
+                        section.getBoundingClientRect().width;
+                }
+
+                if (index > 0) {
+                    scrollSectionObserver({
+                        currentPage,
+                        pageCount,
+                        progress,
+                        section,
+                        index,
+                        sections,
+                        parent: node,
+                        totalPages: sections.length,
+                        slideSections,
+                    });
+                }
+            });
+
+            setTimeout(() => {
+                currentPage.textContent = "01";
+                progress.style.height = (1 / sections.length) * 100 + "%";
+            }, 50);
+        });
+    })();
+</script>
