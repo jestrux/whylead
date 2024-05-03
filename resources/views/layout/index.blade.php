@@ -37,7 +37,7 @@
                 --content-color: 0 0 0;
             }
 
-            body.reading-mode {
+            body.dark {
                 --accent-color: 36 27 99;
                 --stroke-color: 53 53 53;
                 --border-color: rgba(255, 255, 255, 0.16);
@@ -141,6 +141,7 @@
 
         <script>
             window.tailwind.config = {
+                darkMode: 'selector',
                 theme: {
                     extend: {
                         colors: {

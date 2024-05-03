@@ -5,8 +5,17 @@
         height: 36px;
         width: 36px;
         /* padding: 1px; */
-        border: 1px solid rgb(var(--content-color) / 0.2);
         overflow: visible;
+        position: relative;
+    }
+
+    #readingModeToggle::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: currentColor;
+        border: 2px solid currentColor;
+        opacity: 0.1;
         border-radius: 50%;
     }
 
@@ -17,18 +26,18 @@
         transition: all 0.35s ease-out;
     }
 
-    body:not(.reading-mode) #readingModeToggle #thumb svg:last-child,
-    body.reading-mode #readingModeToggle #thumb svg:first-child {
+    body:not(.dark) #readingModeToggle #thumb svg:last-child,
+    body.dark #readingModeToggle #thumb svg:first-child {
         display: none;
     }
 
-    body.reading-mode #readingModeToggle {
+    body.dark #readingModeToggle {
         background: #1a2c43;
         justify-content: flex-end;
         color: #99a6b5;
     }
 
-    body.reading-mode #readingModeToggle #thumb {
+    body.dark #readingModeToggle #thumb {
         /* background: #ffffff;
         border-color: #ffffff;
         transform: rotate(360deg); */
@@ -36,7 +45,7 @@
         background: #ffffff;
         border-color: #ffffff;
         rotate: 360deg;
-        scale: 1.1;
+        scale: 1;
         /* rotate: (360deg); */
         /* border: 1px solid currentColor; */
         /* border: 1px solid currentColor; */
@@ -45,7 +54,7 @@
 
 
     @media (min-width: 641px) {
-        body.reading-mode #readingModeToggle #thumb svg {
+        body.dark #readingModeToggle #thumb svg {
             fill: #010e1c;
             stroke: #010e1c;
         }
@@ -59,7 +68,7 @@
             padding: 0;
         }
 
-        body.reading-mode #readingModeToggle {
+        body.dark #readingModeToggle {
             background: #195799;
             color: #1059a7;
             border-color: #81a2c6;
@@ -70,7 +79,7 @@
             height: 28px;
         }
 
-        body.reading-mode #readingModeToggle #thumb {
+        body.dark #readingModeToggle #thumb {
             background: #010e1c;
             border-color: #010e1c;
         }
@@ -80,7 +89,7 @@
 <button id="readingModeToggle" class="rounded-full overflow-hidden relative flex items-center focus:outline-none"
     onclick="toggleReadingMode()">
     <span id="thumb" class="flex items-center justify-center rounded-full">
-        <svg classs="block md:hidden" width="14" viewBox="0 0 24 24" fill="orange" stroke="orange" stroke-width="2"
+        <svg classs="block md:hidden" width="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -100,10 +109,29 @@
 </button>
 
 <script>
+    if (window.localStorage.getItem('dark-mode') == null) {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.body.classList.add("dark");
+        }
+    } else if (window.localStorage.getItem('dark-mode'))
+        document.body.classList.add("dark");
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+        if (window.localStorage.getItem('dark-mode') == null)
+            document.body.classList.toggle("dark", event.matches);
+    });
+
     function toggleReadingMode() {
-        let readingMode = window.localStorage.getItem('reading-mode');
-        const newReadingMode = readingMode == null || readingMode == "false" ? true : false;
-        window.localStorage.setItem('reading-mode', newReadingMode);
-        document.body.classList.toggle('reading-mode');
+        let readingMode = window.localStorage.getItem('dark-mode');
+        const newValue = readingMode && readingMode != null ? null : true;
+
+        if (!newValue) {
+            window.localStorage.removeItem('dark-mode');
+            document.body.classList.toggle('dark', window.matchMedia && window.matchMedia(
+                '(prefers-color-scheme: dark)').matches);
+        } else {
+            window.localStorage.setItem('dark-mode', true);
+            document.body.classList.add('dark');
+        }
     }
 </script>

@@ -40,9 +40,9 @@
 
             <ul role="list" class="grid grid-cols-1 lg:grid-cols-4 gap-2 relative">
                 <div class="absolute top-0 h-20 bg-red-50s -inset-x-2 flex items-center">
-                    <div class="flex-shrink-0 size-3 rounded-full border-2 border-accent sbg-accent"></div>
+                    <div class="flex-shrink-0 size-3 rounded-full border-2 border-accent dark:border-content/20"></div>
                     <div class="flex-1 border-t-2 border-dashed border-stroke"></div>
-                    <div class="flex-shrink-0 size-3 rounded-full border-2 border-accent sbg-accent"></div>
+                    <div class="flex-shrink-0 size-3 rounded-full border-2 border-accent dark:border-content/20"></div>
                 </div>
 
                 @foreach ($steps as $step)

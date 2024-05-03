@@ -69,7 +69,7 @@
     </section>
 </div>
 
-<section class="px-6 py-8">
+<section class="px-6">
     <div class="flex flex-col items-center justify-center">
         <div class="max-w-2xl mx-auto my-10 text-center">
             <h2 class="text-2xl lg:text-4xl font-bold">
