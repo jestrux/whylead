@@ -5,8 +5,8 @@
 @section('description', 'Contact informations for WhyLead')
 
 @section('content')
-    <div class="max-w-6xl mx-auto flex flex-col md:grid grid-cols-12 px-6 py-8 md:py-16 gap-12">
-        <div class="col-span-5 md:border-r border-stroke md:pr-12">
+    <div class="max-w-7xl mx-auto flex flex-col lg:grid grid-cols-12 px-6 py-8 md:py-16 gap-12">
+        <div class="col-span-5 lg:border-r border-stroke lg:pr-12">
             <h2 class="text-2xl font-bold leading-tight mb-6">
                 Reach out to us
             </h2>
@@ -48,8 +48,9 @@
                     </div>
 
                     <div class="-mt-1.5 ml-1 pl-4 py-0.5 leading-loose">
-                        429 Mahando Street,<span class="hidden md:inline"><br /></span>
-                        Masaki, Dar es Salaam<span class="hidden md:inline"><br /></span>
+                        1st Floor,<span class="hidden md:inline"><br /></span>
+                        A-Wing PLOT 172,<span class="hidden md:inline"><br /></span>
+                        Mikocheni, Dar es Salaam<span class="hidden md:inline"><br /></span>
                         Tanzania
                     </div>
                 </div>
@@ -120,13 +121,71 @@
                 Send us a message
             </h2>
 
-            <x-pier::new-form model="Contact Us Form" on-save="sendEmail"
+            @php
+                $fields = [
+                    pierField(['label' => 'First Name', 'name' => 'first_name', 'width' => 'half']),
+                    pierField(['label' => 'Last Name', 'name' => 'last_name', 'width' => 'half']),
+                    pierField([
+                        'label' => 'Work Email',
+                        'name' => 'email',
+                        'type' => 'email',
+                        'required' => true,
+                        'width' => 'half',
+                    ]),
+                    pierField(['label' => 'Phone Number', 'name' => 'phone', 'width' => 'half']),
+                    pierField([
+                        'label' => 'Interested In',
+                        'name' => 'interest',
+                        'required' => true,
+                        'width' => 'half',
+                        'type' => 'select',
+                        'meta' => [
+                            'choices' => [
+                                'Training',
+                                'Thrive in the Middle',
+                                'Perfomance Management',
+                                'Facilitation for Strategic Gatherings',
+                                'Team Building',
+                                'Keynote Speaking',
+                                'Consulting on Workplace Culture',
+                            ],
+                        ],
+                    ]),
+                    pierField(['label' => 'Company', 'name' => 'company', 'required' => true, 'width' => 'half']),
+                    pierField([
+                        'label' => 'Company Size ( Number of Employees )',
+                        'name' => 'company_size',
+                        'width' => 'half',
+                        'type' => 'select',
+                        'meta' => [
+                            'choices' => ['10-40', '40-70', '70-120', '120-250', '250-500', 'Over 500'],
+                        ],
+                    ]),
+                    pierField(['label' => 'Country', 'name' => 'country', 'width' => 'half']),
+                    pierField(['label' => 'Expected Outcomes/Objectives', 'name' => 'objective', 'width' => 'half']),
+                ];
+            @endphp
+
+            <x-pier::new-form :fields="$fields" on-save="sendEmail"
                 success-message="We've received your message, we'll get back to you." />
         </div>
     </div>
 
     <script>
         function sendEmail(data, el) {
+            const formData = [
+                `Name: ${[data.first_name, data.last_name].join(' ')}`,
+                `Email: ${data.email}`,
+                `Phone Number: ${data.phone}`,
+                `Company: ${data.company}`,
+                `Company Size: ${data.company_size}`,
+                `Country: ${data.company_size}`,
+                `Interested In: ${data.interest}`,
+                `Objective: ${data.objective}`,
+            ].join('\n');
+
+            // return console.log("Email: ", formData);
+
             const message = [
                 `From: ${data.name} <${data.email}>`,
                 `Sent On: ${new Intl.DateTimeFormat('en-UK',{
@@ -137,7 +196,7 @@
                         minute: "numeric",
                         hour12: true,
                     }).format(new Date())}\n`,
-                data.message
+                formData
             ].join("\n")
 
             return fetch("https://us-central1-letterplace-c103c.cloudfunctions.net/api/mailer", {
@@ -146,8 +205,8 @@
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    // "to": "wakyj07@gmail.com",
-                    "to": "yoda@whyleadothers.com",
+                    "to": "wakyj07@gmail.com",
+                    // "to": "yoda@whyleadothers.com",
                     "message": {
                         subject: "WhyLead Website Contact Form",
                         text: message
