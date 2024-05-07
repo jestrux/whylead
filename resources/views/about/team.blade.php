@@ -101,7 +101,9 @@
                         'w-auto border-transparent'">
 
                     <div class="overflow-hidden -ml-2 min-h-[500px] w-56 h-full border border-stroke rounded-[60px] text-white p-6 flex-shrink-0 flex flex-col gap-6 relative z-10"
-                        x-bind:class="selected ? '-rotate-1' : '-rotate-2 bg-accent dark:bg-card'">
+                        x-bind:class="selected ? '-rotate-1' :
+                            '-rotate-2 bg-accent dark:bg-card hover:scale-105 hover:transition-transform hover:duration-300 cursor-pointer'"
+                        x-on:click="goToStep({{ $loop->index }})">
 
                         <img x-show="selected" x-transition:enter.duration.500ms
                             class="absolute inset-0 size-full object-cover object-top rounded-[60px]"
