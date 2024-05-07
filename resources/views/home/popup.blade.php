@@ -5,6 +5,11 @@
             showPrompt: localStorage.initialPopupShown != 'true',
             courses: {!! json_encode($data) !!},
             course: null,
+            updateScroll() {
+                const newValue = this.showPrompt;
+                document.documentElement.classList.toggle("overflow-hidden", newValue);
+                document.body.classList.toggle("overflow-hidden", newValue);
+            },
             init() {
                 if (localStorage.initialPopupShown == 'true') {
                     setTimeout(() => {
@@ -17,7 +22,9 @@
                         return a.order - b.order;
                     });
                     return course;
-                })
+                });
+
+                this.updateScroll();
             }
         }));
     });
@@ -27,7 +34,7 @@
 <div x-cloak x-show="showPrompt" class="hidden fixed inset-0 z-50 bg-black/70 lg:flex items-center justify-between"
     x-data="coursePopup">
     <div class="w-full max-w-4xl mx-auto relative">
-        <button x-on:click="showPrompt = false"
+        <button x-on:click="showPrompt = false; updateScroll()"
             class="absolute p-1 rounded -right-3 -top-3 z-50 bg-content text-canvas border border-white/30">
             <svg class="size-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>

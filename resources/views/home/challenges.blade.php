@@ -6,11 +6,22 @@
 <script>
     document.addEventListener("alpine:init", () => {
         Alpine.data("challenges", () => ({
-            openChallenge(name) {
-                this.challenge = Object.assign({}, this.challenges.find((c) => c.title == name));
+            setChallenge(name) {
+                if (!name)
+                    this.challenge = null;
+                else
+                    this.challenge = Object.assign({}, this.challenges.find((c) => c.title ==
+                        name));
+
+                this.updateScroll();
             },
             challenges: {!! json_encode($challenges) !!},
             challenge: null,
+            updateScroll() {
+                const newValue = this.challenge;
+                document.documentElement.classList.toggle("overflow-hidden", newValue);
+                document.body.classList.toggle("overflow-hidden", newValue);
+            },
         }));
     });
 </script>
@@ -19,7 +30,7 @@
     <template x-if="challenge">
         <div class="fixed inset-0 z-50 bg-black/50 flex items-center justify-between">
             <div class="w-full max-w-5xl mx-auto relative">
-                <button x-on:click="challenge = null"
+                <button x-on:click="setChallenge()"
                     class="absolute p-1 rounded right-3 lg:-right-3 -top-4 lg:-top-3 z-50 bg-content text-canvas">
                     <svg class="size-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
@@ -78,7 +89,7 @@
 
                                                 <a x-bind:href="'{{ url('/contacts') }}?interest=' + solution.title"
                                                     class="self-end mt-auto mb-2 -mr-3 btn btn-outline btn-xs capitalize !text-content/80 border-none"
-                                                    x-on:click="challenge = null">
+                                                    x-on:click="setChallenge()">
                                                     Get in touch
 
                                                     <svg class="-mr-1 size-3.5" fill="none" viewBox="0 0 24 24"
@@ -146,7 +157,7 @@
                     $isEven = $i > 0 && $i % 2 == 0;
                 @endphp
                 <li>
-                    <button x-on:click="openChallenge(`{{ $challenge->title }}`)"
+                    <button x-on:click="setChallenge(`{{ $challenge->title }}`)"
                         class="{{ $isEven ? 'bg-accent text-white' : 'bg-card dark:bg-content/5' }} group hover:scale-105 transition duration-300 flex flex-col gap-3 min-h-full w-full rounded-2xl overflow-hidden border border-black/5 shadow px-6 py-6 text-left relative">
                         <div
                             class="absolute -inset-20 bg-current rounded-full origin-top-left scale-[0.65] opacity-0 group-hover:scale-150 {{ $isEven ? 'group-hover:opacity-10' : 'group-hover:opacity-10' }} transition-transform duration-700">
