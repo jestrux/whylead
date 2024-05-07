@@ -1,5 +1,5 @@
 @php
-    $image = 'https://res.cloudinary.com/sfp-app/image/upload/v1711540531/vudvwz3j0vmlsqslsjio.jpg';
+    $image = $getImage('Thriving Teams Image');
 @endphp
 
 <section id="thrivingTeams" class="py-12 lg:py-20">
@@ -9,7 +9,8 @@
                 <a href="#" class="block relative">
                     <div
                         class="relative aspect-video rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
-                        <img class="absolute size-full object-cover object-top" src="{{ $image }}" alt="" />
+                        <img class="absolute size-full object-cover object-top" src="{{ $image }}"
+                            alt="" />
                     </div>
                 </a>
             </div>

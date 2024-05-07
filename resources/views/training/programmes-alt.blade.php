@@ -16,8 +16,9 @@
             @php
                 $steps = [
                     [
-                        'image' =>
-                            'https://images.unsplash.com/photo-1573164713712-03790a178651?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDE0fHxibGFjayUyMGxlYWRlcnNoaXB8ZW58MHx8fHwxNzEyNTU5MTk2fDA&ixlib=rb-4.0.3&q=80&w=1080',
+                        // 'image' =>
+                        //     'https://images.unsplash.com/photo-1573164713712-03790a178651?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDE0fHxibGFjayUyMGxlYWRlcnNoaXB8ZW58MHx8fHwxNzEyNTU5MTk2fDA&ixlib=rb-4.0.3&q=80&w=1080',
+                        'image' => asset('img/uploads/programmes-get-the-right-things-done.jpg'),
                         'title' => 'Get the right things done',
                         'description' =>
                             'Designed to help leaders and organizations get the right things done in executing their strategy. This is done by utilizing goal management systems, attention, focus, and time management techniques. ',
@@ -28,8 +29,9 @@
                         ],
                     ],
                     [
-                        'image' =>
-                            'https://images.unsplash.com/photo-1527525443983-6e60c75fff46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDR8fGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzEyNTYwMzgxfDA&ixlib=rb-4.0.3&q=80&w=1080',
+                        // 'image' =>
+                        //     'https://images.unsplash.com/photo-1527525443983-6e60c75fff46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDR8fGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzEyNTYwMzgxfDA&ixlib=rb-4.0.3&q=80&w=1080',
+                        'image' => asset('img/uploads/programmes-eq-for-effective-collaboration.jpg'),
                         'title' => 'EQ for effective collaboration',
                         'description' =>
                             'Designed to enhance the emotional intelligence of leaders. By embracing EQ principles, leaders cultivate a harmonious, inclusive, and high-performing work environment. ',
@@ -40,8 +42,9 @@
                         ],
                     ],
                     [
-                        'image' =>
-                            'https://images.unsplash.com/photo-1556740758-90de374c12ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDEyfHxjdXN0b21lciUyMGNhcmV8ZW58MHx8fHwxNzEyNTYwNDEwfDA&ixlib=rb-4.0.3&q=80&w=1080',
+                        // 'image' =>
+                        //     'https://images.unsplash.com/photo-1556740758-90de374c12ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDEyfHxjdXN0b21lciUyMGNhcmV8ZW58MHx8fHwxNzEyNTYwNDEwfDA&ixlib=rb-4.0.3&q=80&w=1080',
+                        'image' => asset('img/uploads/programmes-customer-centric.jpg'),
                         'title' => 'Customer centric culture',
                         'description' =>
                             'Designed to help people develop a customer care mindset that will empower them to serve clients of all kinds relentlessly. Being able to build meaningful and long-term relationships with clients and develop strategies to bridge the expectation gap.  ',
@@ -52,8 +55,9 @@
                         ],
                     ],
                     [
-                        'image' =>
-                            'https://images.unsplash.com/photo-1611329857570-f02f340e7378?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDR8fHByb2JsZW0lMjBzb2x2aW5nfGVufDB8fHx8MTcxMjU2MDYwM3ww&ixlib=rb-4.0.3&q=80&w=1080',
+                        // 'image' =>
+                        //     'https://images.unsplash.com/photo-1611329857570-f02f340e7378?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDR8fHByb2JsZW0lMjBzb2x2aW5nfGVufDB8fHx8MTcxMjU2MDYwM3ww&ixlib=rb-4.0.3&q=80&w=1080',
+                        'image' => asset('img/uploads/programmes-complex-problem-solving.jpg'),
                         'title' => 'Complex problem solving',
                         'description' =>
                             'Leaders will delve into crafting impactful questions, avoiding biases, and embracing complexity. Techniques and tools will be explored. Constructive Controversy skills and implementing Black-Box-FMEA Thinking will equip leaders to navigate challenges adeptly, fostering a culture of continual learning and improvement.',
@@ -64,8 +68,9 @@
                         ],
                     ],
                     [
-                        'image' =>
-                            'https://images.unsplash.com/photo-1573497491208-6b1acb260507?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDEyfHxtZWV0aW5nfGVufDB8fHx8MTcxMjU2MDczNnww&ixlib=rb-4.0.3&q=80&w=1080',
+                        // 'image' =>
+                        //     'https://images.unsplash.com/photo-1573497491208-6b1acb260507?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDEyfHxtZWV0aW5nfGVufDB8fHx8MTcxMjU2MDczNnww&ixlib=rb-4.0.3&q=80&w=1080',
+                        'image' => asset('img/uploads/programmes-feedback.jpg'),
                         'title' => 'Giving And Receiving Feedback Effectively',
                         'description' =>
                             'Designed to empower leaders to give and receive feedback effectively. Hold their colleagues accountable while still showing them care and support. They will learn strategies for initiating, having, and following up on difficult conversations.',
@@ -76,8 +81,9 @@
                         ],
                     ],
                     [
-                        'image' =>
-                            'https://images.unsplash.com/photo-1515169067868-5387ec356754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDd8fHRlYW0lMjBidWlsZGluZ3xlbnwwfHx8fDE3MTI1NjA4NDZ8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                        // 'image' =>
+                        //     'https://images.unsplash.com/photo-1515169067868-5387ec356754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDd8fHRlYW0lMjBidWlsZGluZ3xlbnwwfHx8fDE3MTI1NjA4NDZ8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                        'image' => asset('img/uploads/programmes-empowering-high-performing-teams.jpg'),
                         'title' => 'Empowering high performing teams',
                         'description' =>
                             'Designed to equip leaders with the essential mindset and skills necessary to cultivate self-motivation in the face of challenges and pressure. Upon completion, leaders will possess the mindset, strategies, and action plans to consistently harness self-motivation.',

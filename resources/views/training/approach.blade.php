@@ -31,7 +31,7 @@
         ],
     ];
 
-    $image = 'https://res.cloudinary.com/sfp-app/image/upload/v1711540531/vudvwz3j0vmlsqslsjio.jpg';
+    $image = $getImage('Our Learning Approach Image');
 @endphp
 
 <section id="careers" class="pt-12">

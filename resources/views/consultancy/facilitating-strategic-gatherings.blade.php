@@ -1,5 +1,5 @@
 @php
-    $image = 'https://res.cloudinary.com/sfp-app/image/upload/v1711771765/ps6d058xjyswkzhn9vsc.jpg';
+    $image = $getImage('Facilitating Strategic Gatherings Image');
 @endphp
 
 <section class="py-12 lg:py-20">

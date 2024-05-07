@@ -1,6 +1,13 @@
+@php
+    $isHomePage = true;
+@endphp
+
 @extends('layout.index')
 
 @section('content')
+    <div class="absolute inset-0 h-[400px] bg-accent">
+    </div>
+
     @include('thrive-in-the-middle.banner')
 
     @include('thrive-in-the-middle.about-programme')

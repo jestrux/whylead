@@ -1,5 +1,5 @@
 @php
-    $image = 'https://res.cloudinary.com/sfp-app/image/upload/v1711540237/sxj9meo6zbkadvvlkw15.jpg';
+    $image = $getImage('Happier Workplace Image');
 @endphp
 
 <section>
@@ -76,7 +76,7 @@
                 class="col-span-6 h-full -rotate-1 shadow-xl flex-1 hidden md:flex items-center justify-center relative">
                 <div
                     class="relative rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
-                    <img class="rotate-6 scale-125 absolute size-full object-cover" src="{{ $image }}"
+                    <img class="rotate-6 scale-125 absolute size-full" src="{{ $image }}"
                         alt="" />
 
                 </div>
