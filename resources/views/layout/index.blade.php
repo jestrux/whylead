@@ -46,19 +46,8 @@
                 --content-color: 255 255 255;
             }
 
-            @media (prefers-color-scheme: dark) {
-                :root {
-                    --accent-color: 36 27 99;
-                    --stroke-color: 53 53 53;
-                    --border-color: rgba(255, 255, 255, 0.16);
-                    --canvas-color: 24 24 24;
-                    --card-color: 37 37 37;
-                    --content-color: 255 255 255;
-                }
-
-                input[type="date"] {
-                    color-scheme: dark;
-                }
+            body.dark input[type="date"] {
+                color-scheme: dark;
             }
 
             @layer components {

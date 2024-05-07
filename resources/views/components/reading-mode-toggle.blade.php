@@ -26,8 +26,8 @@
         transition: all 0.35s ease-out;
     }
 
-    body:not(.dark) #readingModeToggle #thumb svg:last-child,
-    body.dark #readingModeToggle #thumb svg:first-child {
+    body:not(.dark) #readingModeToggle #thumb svg.for-dark,
+    body.dark #readingModeToggle #thumb svg.for-light {
         display: none;
     }
 
@@ -54,9 +54,16 @@
 
 
     @media (min-width: 641px) {
-        body.dark #readingModeToggle #thumb svg {
-            fill: #010e1c;
+
+        body.dark #readingModeToggle #thumb svg.dark,
+        body.dark #readingModeToggle #thumb svg.light,
+        body.dark #readingModeToggle #thumb svg.system {
             stroke: #010e1c;
+        }
+
+        body.dark #readingModeToggle #thumb svg.dark,
+        body.dark #readingModeToggle #thumb svg.light {
+            fill: #010e1c;
         }
     }
 
@@ -89,8 +96,8 @@
 <button id="readingModeToggle" class="rounded-full overflow-hidden relative flex items-center focus:outline-none"
     onclick="toggleReadingMode()">
     <span id="thumb" class="flex items-center justify-center rounded-full">
-        <svg classs="block md:hidden" width="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
+        <svg class="for-light sblock smd:hidden" width="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -101,37 +108,49 @@
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
         </svg>
-        <svg classs="block md:hidden " width="14" viewBox="0 0 24 24" fill="yellow" stroke="yellow"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+        <svg class="for-dark sblock smd:hidden " width="14" viewBox="0 0 24 24" fill="currentColor"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
+
+        {{-- <svg class="for-system sblock smd:hidden" width="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M10.5 18a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z" />
+            <path fill-rule="evenodd"
+                d="M7.125 1.5A3.375 3.375 0 0 0 3.75 4.875v14.25A3.375 3.375 0 0 0 7.125 22.5h9.75a3.375 3.375 0 0 0 3.375-3.375V4.875A3.375 3.375 0 0 0 16.875 1.5h-9.75ZM6 4.875c0-.621.504-1.125 1.125-1.125h9.75c.621 0 1.125.504 1.125 1.125v14.25c0 .621-.504 1.125-1.125 1.125h-9.75A1.125 1.125 0 0 1 6 19.125V4.875Z"
+                clip-rule="evenodd" />
+        </svg> --}}
     </span>
 </button>
 
 <script>
-    if (window.localStorage.getItem('dark-mode') == null) {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.body.classList.add("dark");
-        }
-    } else if (window.localStorage.getItem('dark-mode'))
-        document.body.classList.add("dark");
+    function systemTheme() {
+        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
 
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-        if (window.localStorage.getItem('dark-mode') == null)
-            document.body.classList.toggle("dark", event.matches);
-    });
+    function setDarkMode(value, auto) {
+        document.body.classList.toggle("dark", value == null ? systemTheme() : value);
+        if (value == null) {
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+                setDarkMode(event.matches, true);
+            });
+        }
+
+        if (!auto) {
+            if (value == null)
+                window.localStorage.removeItem('in-dark-mode');
+            else
+                window.localStorage.setItem('in-dark-mode', value);
+        }
+    }
+
+    if (window.localStorage.getItem('in-dark-mode') == null)
+        setDarkMode(null, true);
+    else
+        setDarkMode(window.localStorage.getItem('in-dark-mode') != 'false');
 
     function toggleReadingMode() {
-        let readingMode = window.localStorage.getItem('dark-mode');
-        const newValue = readingMode && readingMode != null ? null : true;
-
-        if (!newValue) {
-            window.localStorage.removeItem('dark-mode');
-            document.body.classList.toggle('dark', window.matchMedia && window.matchMedia(
-                '(prefers-color-scheme: dark)').matches);
-        } else {
-            window.localStorage.setItem('dark-mode', true);
-            document.body.classList.add('dark');
-        }
+        const newValue = !document.body.classList.contains("dark");
+        setDarkMode(newValue == systemTheme() ? null : newValue);
     }
 </script>
