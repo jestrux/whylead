@@ -76,7 +76,7 @@
                                                     </template>
                                                 </ul>
 
-                                                <a href="{{ url('/contacts') }}"
+                                                <a x-bind:href="'{{ url('/contacts') }}?interest=' + solution.title"
                                                     class="self-end mt-auto mb-2 -mr-3 btn btn-outline btn-xs capitalize !text-content/80 border-none"
                                                     x-on:click="challenge = null">
                                                     Get in touch

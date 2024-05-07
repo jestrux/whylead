@@ -116,6 +116,7 @@
             </div>
         </div>
 
+        @pierdata(["model"=>"Solution", "pluck" => "title", "whereFeatured" => 1])
         <div id="contactFormWrapper" class="col-span-7">
             <h2 class="text-2xl font-bold leading-tight mb-6">
                 Send us a message
@@ -140,15 +141,7 @@
                         'width' => 'half',
                         'type' => 'select',
                         'meta' => [
-                            'choices' => [
-                                'Training',
-                                'Thrive in the Middle',
-                                'Perfomance Management',
-                                'Facilitation for Strategic Gatherings',
-                                'Team Building',
-                                'Keynote Speaking',
-                                'Consulting on Workplace Culture',
-                            ],
+                            'choices' => $data,
                         ],
                     ]),
                     pierField(['label' => 'Company', 'name' => 'company', 'required' => true, 'width' => 'half']),
@@ -164,11 +157,16 @@
                     pierField(['label' => 'Country', 'name' => 'country', 'width' => 'half']),
                     pierField(['label' => 'Expected Outcomes/Objectives', 'name' => 'objective', 'width' => 'half']),
                 ];
+
+                $values = [
+                    'Interested In' => $_GET['interest'] ?? null,
+                ];
             @endphp
 
-            <x-pier::new-form :fields="$fields" on-save="sendEmail"
+            <x-pier::new-form :fields="$fields" :values="$values" on-save="sendEmail"
                 success-message="We've received your message, we'll get back to you." />
         </div>
+        @endpierdata()
     </div>
 
     <script>
