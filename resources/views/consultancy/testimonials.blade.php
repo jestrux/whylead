@@ -31,12 +31,12 @@
     document.addEventListener('alpine:init', () => {
         Alpine.data('testimonials', () => ({
             currentStep: 0,
-            totalSteps: 2,
+            totalSteps: {{ count($testimonials) - 1 }},
             step: 0,
             canGoBack: false,
             canGoForward: true,
             goToStep: function(index) {
-                this.currentStep = index;
+                this.currentStep = Math.max(0, index);
                 this.canGoForward = index < this.totalSteps - 1;
                 this.canGoBack = index > 0;
             },
@@ -69,8 +69,10 @@
         <div class="mt-10 flex gap-8 transition-transform duration-500"
             x-bind:style="{ transform: `translateX(${-42 * currentStep}%)` }">
             @foreach ($testimonials as $testimonial)
-                <div
-                    class="w-5/12 saspect-[1/1.25] p-8 relative flex-shrink-0 border-l border-b border-b-content/[0.008] shadow-sm border-t border-content/10 bg-gradient-to-br from-primary/10 via-primary/[0.07] dark:from-content/5 dark:via-content/[0.01] to-transparent rounded-2xl overflow-hidden flex flex-col items-start justify-between">
+                <div class="w-5/12 saspect-[1/1.25] p-8 relative flex-shrink-0 border-l border-b border-b-content/[0.008] shadow-sm border-t border-content/10 bg-gradient-to-br from-primary/10 via-primary/[0.07] dark:from-content/5 dark:via-content/[0.01] to-transparent rounded-2xl overflow-hidden flex flex-col items-start justify-between"
+                    x-bind:class="{{ $loop->index - 1 }} != currentStep && ({{ $loop->index - 1 }} >= 0 || currentStep > 0) &&
+                        'hover:scale-105 hover:transition-transform hover:duration-300 cursor-pointer'"
+                    x-on:click="goToStep({{ $loop->index - 1 }})">
                     <svg class="absolute inset-3 w-12 opacity-5" fill="currentColor" viewBox="0 0 100 100">
                         <path
                             d="M90.4,54.9v17.7c0,4.9-4,8.9-8.9,8.9H63.8c-4.9,0-8.9-4-8.9-8.9V54.9c0-19.6,15.9-35.4,35.4-35.4V32  c-9.1,0.6-16.9,6.2-20.6,14.1h11.8C86.4,46.1,90.4,50,90.4,54.9z M37.2,81.5H19.5c-4.9,0-8.9-4-8.9-8.9V54.9  c0-19.6,15.9-35.4,35.4-35.4V32c-9.1,0.6-16.9,6.2-20.6,14.1h11.8c4.9,0,8.9,4,8.9,8.9v17.7C46.1,77.5,42.1,81.5,37.2,81.5z">
