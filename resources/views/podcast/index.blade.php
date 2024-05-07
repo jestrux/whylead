@@ -12,8 +12,11 @@
         </div>
 
         <div class="col-span-8">
+            @php
+                $openFirst = isset($_GET['openFirst']);
+            @endphp
             <div class="max-w-3xl mx-auto px-12 pt-4" x-data="{
-                listen: null,
+                listen: '{{ $openFirst ? $data[0]->_id : null }}',
                 filter: 'All',
                 setFilter(newFilter) {
                     this.filter = newFilter;
