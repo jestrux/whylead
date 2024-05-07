@@ -108,7 +108,7 @@
         </div>
 
         <ul class="hidden md:flex items-center gap-5 pb-2">
-            <x-menu-item url="{{ url('/about') }}">About Us</x-menu-item>
+            <x-menu-item url="{{ url('/training') }}">Training</x-menu-item>
 
             <div class="relative">
                 <a href="{{ url('/contacts') }}" class="btn btn-xs">

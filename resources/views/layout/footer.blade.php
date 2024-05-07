@@ -12,10 +12,14 @@
                         <p class="mt-1 text-sm">Invest at the perfect time.</p> --}}
                     </div>
                 </div>
-                <nav class="mt-11 flex gap-8"><a
-                        class="relative -mx-3 -my-2 rounded-lg px-3 py-2 text-sm opacity-70 hover:opacity-100 transition-opacity delay-150 hover:delay-0"
-                        href="{{ url('/training') }}"><span class="relative z-10">
-                            Training</span>
+                <nav class="mt-11 flex gap-8">
+                    <a class="hidden lg:block relative -mx-3 -my-2 rounded-lg px-3 py-2 text-sm opacity-70 hover:opacity-100 transition-opacity delay-150 hover:delay-0"
+                        href="{{ url('/thrive-in-the-middle') }}"><span class="relative z-10">Thrive in the Middle
+                            Managers</span>
+                    </a>
+                    <a class="relative -mx-3 -my-2 rounded-lg px-3 py-2 text-sm opacity-70 hover:opacity-100 transition-opacity delay-150 hover:delay-0"
+                        href="{{ url('/about') }}"><span class="relative z-10">
+                            About Us</span>
                     </a>
                     <a class="relative -mx-3 -my-2 rounded-lg px-3 py-2 text-sm opacity-70 hover:opacity-100 transition-opacity delay-150 hover:delay-0"
                         href="{{ url('/consultancy') }}"><span class="relative z-10">
@@ -23,10 +27,6 @@
                     </a>
                     <a class="relative -mx-3 -my-2 rounded-lg px-3 py-2 text-sm opacity-70 hover:opacity-100 transition-opacity delay-150 hover:delay-0"
                         href="/#"><span class="relative z-10">FAQs</span>
-                    </a>
-                    <a class="hidden lg:block relative -mx-3 -my-2 rounded-lg px-3 py-2 text-sm opacity-70 hover:opacity-100 transition-opacity delay-150 hover:delay-0"
-                        href="{{ url('/thrive-in-the-middle') }}"><span class="relative z-10">Thriving in the Middle
-                            Managers</span>
                     </a>
                 </nav>
             </div>
