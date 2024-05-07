@@ -25,9 +25,9 @@
                         href="{{ url('/consultancy') }}"><span class="relative z-10">
                             Consultancy</span>
                     </a>
-                    <a class="relative -mx-3 -my-2 rounded-lg px-3 py-2 text-sm opacity-70 hover:opacity-100 transition-opacity delay-150 hover:delay-0"
+                    {{-- <a class="relative -mx-3 -my-2 rounded-lg px-3 py-2 text-sm opacity-70 hover:opacity-100 transition-opacity delay-150 hover:delay-0"
                         href="/#"><span class="relative z-10">FAQs</span>
-                    </a>
+                    </a> --}}
                 </nav>
             </div>
 
