@@ -2,6 +2,74 @@
     $image = asset('img/thrive-tail.png');
 @endphp
 
+<style>
+    @keyframes plane {
+        from {
+            color: white;
+            opacity: 0.35;
+            transform: translate(0, 150%) rotate(-10deg);
+        }
+
+        60% {
+            color: white;
+            opacity: 0.45;
+            transform: translate(400%, -230%) rotate(-50deg);
+        }
+
+        65% {
+            color: white;
+            opacity: 0.6;
+            transform: translate(406%, -220%) rotate(-52deg);
+        }
+
+        70% {
+            color: white;
+            opacity: 0.75;
+            transform: translate(412%, -230%) rotate(-55deg);
+        }
+
+        75% {
+            color: white;
+            opacity: 0.9;
+            transform: translate(418%, -220%) rotate(-58deg);
+        }
+
+        80% {
+            color: white;
+            opacity: 1;
+            transform: translate(420%, -230%) rotate(-60deg);
+        }
+
+        90% {
+            fill: white !important;
+            color: #F26B21;
+            opacity: 1;
+            transform: translate(420%, -200%) rotate(-65deg);
+        }
+
+        95% {
+            fill: white !important;
+            color: #F26B21;
+            opacity: 1;
+            transform: translate(440%, -170%) rotate(-90deg);
+        }
+
+        to {
+            fill: white !important;
+            color: #F26B21;
+            opacity: 1;
+            transform: translate(-300%, -1000%) rotate(-80deg);
+        }
+    }
+
+    .animate-plane {
+        /* fill: none; */
+        stroke: url(#gradient);
+        stroke-width: 3;
+        animation: plane 10s linear infinite;
+    }
+</style>
+
 <section class="pt-12 pb-8 text-white">
     <div class="px-8 relative max-w-7xl mx-auto">
         <div class="lg:grid grid-cols-2 gap-16 items-center">
@@ -49,6 +117,17 @@
                 <p class="max-w-lg mx-auto text-[36px]/[1.4] text-center font-serif tracking-wide">
                     Build a Thriving Organization Through Our Tailored Services
                 </p>
+
+                <div class="absolute bottom-2 left-0 right-0 pointer-events-none">
+                    <div class="max-w-lg mx-auto flex justify-between">
+                        <span class="w-[50px] translate-y-full animate-plane">
+                            @include('common.thrive-plane')
+                        </span>
+                        <span class="w-[120px] translate-y-full -rotate-90 opacity-0">
+                            @include('common.thrive-plane-2')
+                        </span>
+                    </div>
+                </div>
             </div>
 
             <div class="flex-1 relative h-full">
