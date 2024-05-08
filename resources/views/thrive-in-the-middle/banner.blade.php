@@ -13,60 +13,132 @@
         60% {
             color: white;
             opacity: 0.45;
-            transform: translate(400%, -230%) rotate(-50deg);
+            transform: translate(400%, -430%) rotate(-50deg);
         }
 
         65% {
             color: white;
             opacity: 0.6;
-            transform: translate(406%, -220%) rotate(-52deg);
+            transform: translate(406%, -420%) rotate(-52deg);
         }
 
         70% {
             color: white;
             opacity: 0.75;
-            transform: translate(412%, -230%) rotate(-55deg);
+            transform: translate(412%, -430%) rotate(-55deg);
         }
 
         75% {
             color: white;
             opacity: 0.9;
-            transform: translate(418%, -220%) rotate(-58deg);
+            transform: translate(418%, -420%) rotate(-58deg);
         }
 
         80% {
             color: white;
             opacity: 1;
-            transform: translate(420%, -230%) rotate(-60deg);
+            transform: translate(420%, -430%) rotate(-60deg);
         }
 
         90% {
-            fill: white !important;
             color: #F26B21;
             opacity: 1;
-            transform: translate(420%, -200%) rotate(-65deg);
+            transform: translate(420%, -400%) rotate(-65deg);
         }
 
         95% {
-            fill: white !important;
             color: #F26B21;
             opacity: 1;
-            transform: translate(440%, -170%) rotate(-90deg);
+            transform: translate(440%, -370%) rotate(-90deg);
         }
 
         to {
-            fill: white !important;
             color: #F26B21;
             opacity: 1;
-            transform: translate(-300%, -1000%) rotate(-80deg);
+            transform: translate(-300%, -1200%) rotate(-80deg);
         }
     }
 
-    .animate-plane {
-        /* fill: none; */
-        stroke: url(#gradient);
+    @keyframes plane2 {
+        from {
+            color: white;
+            opacity: 0.35;
+            transform: translate(0, 150%) rotate(-90deg);
+        }
+
+        60% {
+            color: white;
+            opacity: 0.45;
+            transform: translate(-500%, -430%) rotate(-55deg);
+        }
+
+        65% {
+            color: white;
+            opacity: 0.6;
+            transform: translate(-506%, -420%) rotate(-52deg);
+        }
+
+        70% {
+            color: white;
+            opacity: 0.75;
+            transform: translate(-512%, -430%) rotate(-50deg);
+        }
+
+        75% {
+            color: white;
+            opacity: 0.9;
+            transform: translate(-518%, -420%) rotate(-47deg);
+        }
+
+        80% {
+            color: white;
+            opacity: 1;
+            transform: translate(-520%, -430%) rotate(-45deg);
+        }
+
+        90% {
+            color: #F26B21;
+            opacity: 1;
+            transform: translate(-520%, -400%) rotate(-35deg);
+        }
+
+        95% {
+            color: #F26B21;
+            opacity: 1;
+            transform: translate(-540%, -370%) rotate(0deg);
+        }
+
+        95% {
+            color: #F26B21;
+            opacity: 1;
+            transform: translate(-540%, -370%) rotate(0deg);
+        }
+
+        to {
+            color: #F26B21;
+            opacity: 1;
+            transform: translate(300%, -1200%) rotate(0deg);
+        }
+    }
+
+    .animate-plane .plane {
+        animation: plane 10s linear;
+    }
+
+    .animate-plane-2 .plane-2 {
+        animation: plane2 10s linear;
+    }
+
+    .animate-plane .plane-2,
+    .animate-plane-2 .plane {
+        display: none;
+    }
+
+    .plane,
+    .plane-2 {
+        /* stroke: url(#gradient); */
+        stroke: currentColor;
         stroke-width: 3;
-        animation: plane 10s linear infinite;
     }
 </style>
 
@@ -119,23 +191,40 @@
                 </p> --}}
 
                 <p class="pb-3 max-w-xl mx-auto text-2xl/[1.7] text-center font-light">
-                    A 12-week program designed to empower middle managers to thrive as growth, alignment, culture, and change catalysts within their organizations.
+                    A 12-week program designed to empower middle managers to thrive as growth, alignment, culture, and
+                    change catalysts within their organizations.
                 </p>
 
                 <div class="absolute bottom-2 left-0 right-0 pointer-events-none">
-                    <div class="max-w-lg mx-auto flex justify-between">
-                        <span class="w-[50px] translate-y-full animate-plane">
+                    <div x-data="{
+                        init() {
+                            var el = this.$root;
+                            this.$refs.plane.addEventListener('animationend', () => {
+                                el.classList.remove('animate-plane');
+                                el.classList.add('animate-plane-2');
+                            }, false);
+                            this.$refs.plane2.addEventListener('animationend', () => {
+                                el.classList.add('animate-plane');
+                                el.classList.remove('animate-plane-2');
+                            }, false);
+                        }
+                    }"
+                        class="animate-plane max-w-lg mx-auto flex justify-between relative h-12">
+                        <span class="plane absolute bottom-0 left-0 size-[50px] translate-y-full opacity-0"
+                            x-ref="plane">
                             @include('common.thrive-plane')
                         </span>
-                        <span class="w-[120px] translate-y-full -rotate-90 opacity-0">
-                            @include('common.thrive-plane-2')
+                        <span
+                            class="plane-2 absolute bottom-0 right-0 size-[50px] translate-y-full -rotate-90 opacity-0"
+                            x-ref="plane2">
+                            @include('common.thrive-plane')
                         </span>
                     </div>
                 </div>
             </div>
 
             <div class="flex-1 relative h-full">
-                <img class="rotate-4 absolute right-8 h-[380px]" src="{{ $image }}" alt="" />
+                <img class="rotate-4 absolute right-8 h-[380px] opacity-55" src="{{ $image }}" alt="" />
             </div>
         </div>
     </div>
