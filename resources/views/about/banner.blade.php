@@ -3,39 +3,40 @@
         <div class="lg:grid grid-cols-12 gap-12 items-start">
             <div class="col-span-5 relative">
                 <h2 class="text-2xl lg:text-4xl/[1.4] font-bold uppercase">
+                    <span class="font-light">Once</span>
+                    Upon A Time
+                </h2>
+
+                {{-- <h2 class="text-2xl lg:text-4xl/[1.4] font-bold uppercase">
                     <span class="font-light">Our</span>
                     Story
                 </h2>
 
-                {{-- <p class="text-lg/relaxed uppercase">
-                    This is Thrive Squad's story. Legend has it, they've been developing leaders, helping
-                    organizations thrive, and turning Mondays into Fundays.
-                </p> --}}
-
                 <p class="mt-0.5 text-xl/relaxed uppercase font-medium">
                     Developing leaders, helping
                     organizations thrive, and turning Mondays into Fundays.
+                </p> --}}
+
+                <p class="mt-1 text-base/loose opacity-70">
+                    We began with a simple but profound question: Why lead? This inquiry sparked a
+                    survey distributed to leaders across numerous organizations, and the findings
+                    were startling.
                 </p>
 
-                <p class="mt-2 text-base/loose opacity-70">
-                    We started with the question, Why Lead? And this question led to a simple survey that we shared with
-                    leaders across many organizations.
+                <p class="mt-3 text-base/loose opacity-70">
+                    Leaders were facing significant challenges; although much of an organization's
+                    success depended on their involvement, they often felt isolated in their efforts.
+                    Recognizing the crucial role and challenges of leadership, we knew it was time to
+                    Intervene.
                 </p>
 
-                <p class="mt-2 text-base/loose opacity-70">
-                    The results were shocking. Leaders were struggling. Alot of
-                    organizational success hinged on their participation, yet it felt like they were the only ones who
-                    cared. We understood the work and life of a leader, and we said, it’s time to step in and help.
-                </p>
-
-                <p class="mt-2 text-base/loose opacity-70">
-                    And
-                    that’s how WhyLead was started. To partner with leaders and organizations and provide the support
-                    needed to thrive.
+                <p class="mt-3 text-base/loose opacity-70">
+                    This was the genesis of WhyLead -created to forge partnerships with leaders and
+                    organizations, providing the essential support they need to Thrive.
                 </p>
 
                 <div class="mt-4 gap-3">
-                    <a href="#ourValues" class="btn w-full md:w-auto">
+                    <a href="#ourValues" x-on:click="smoothScrollTo($event, 'ourValues')" class="btn w-full md:w-auto">
                         Our values
                     </a>
                 </div>
@@ -52,7 +53,7 @@
                     </div>
 
                     <div class="px-6 pt-7 pb-4 text-base/loose font-light">
-                        We’ve been called trainers, coaches, and consultants. But we call ourselves king and
+                        We’ve been called trainers, coaches, and consultants. But we call ourselves kingmakers and
                         queenmakers, organizational paramedics, leadership miyagis, and the thrive squad.
                         We are who you call when you want your leaders and organization to thrive.
                     </div>

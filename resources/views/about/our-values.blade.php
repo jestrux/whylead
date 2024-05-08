@@ -10,8 +10,7 @@
                 </h2>
 
                 <p class="text-lg font-light">
-                    These values are deeply ingrained in our culture and drive our commitment to
-                    our clients and each other.
+                    These values define our culture and drive our commitment.
                 </p>
             </div>
 
@@ -77,13 +76,6 @@
                     </li>
                 @endforeach
             </ul>
-
-            <div class="text-center">
-                <p class="text-lg opacity-70">Ready to take your organisation to the next level?</p>
-                <a href="#" class="mt-6 btn">
-                    Tell us your needs
-                </a>
-            </div>
         </div>
     </div>
 </section>

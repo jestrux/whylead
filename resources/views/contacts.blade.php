@@ -141,7 +141,7 @@
                         'width' => 'half',
                         'type' => 'select',
                         'meta' => [
-                            'choices' => $data,
+                            'choices' => [...$data, 'Joining The Team'],
                         ],
                     ]),
                     pierField(['label' => 'Company', 'name' => 'company', 'required' => true, 'width' => 'half']),
