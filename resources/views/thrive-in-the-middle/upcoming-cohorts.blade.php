@@ -122,7 +122,7 @@
                                 {{ $date['year'] }}
                             </h5>
 
-                            <p class="text-base/loose uppercase">
+                            <p class="-mt-1 text-lg/loose opacity-70">
                                 {{ $date['description'] }}
                             </p>
 
