@@ -114,8 +114,12 @@
             </div>
 
             <div class="absolute inset-0 top-6 flex items-center">
-                <p class="max-w-lg mx-auto text-[36px]/[1.4] text-center font-serif tracking-wide">
+                {{-- <p class="max-w-lg mx-auto text-[36px]/[1.4] text-center font-serif tracking-wide">
                     Build a Thriving Organization Through Our Tailored Services
+                </p> --}}
+
+                <p class="pb-3 max-w-xl mx-auto text-2xl/[1.7] text-center font-light">
+                    A 12-week program designed to empower middle managers to thrive as growth, alignment, culture, and change catalysts within their organizations.
                 </p>
 
                 <div class="absolute bottom-2 left-0 right-0 pointer-events-none">
