@@ -1,6 +1,24 @@
 @pierdata(["model" => 'Challenge', "orderBy" => "order,asc"])
 @php
-    $challenges = $data;
+    $images = [
+        asset('img/uploads/leadership-challenges-managing-adversity.jpg'),
+        asset('img/uploads/leadership-challenges-helping-teams-grow.jpg'),
+        asset('img/uploads/leadership-challenges-inspiring-and-motivating.jpg'),
+
+        null, // asset("img/uploads/leadership-challenges-nurturing-company-culture.jpg"),
+        null, // asset("img/uploads/leadership-challenges-executive-alignment.jpg"),
+        null, // asset("img/uploads/leadership-challenges-strategic-adaptability.jpg"),
+
+        asset('img/uploads/leadership-challenges-managing-uncertainty.jpg'),
+        asset('img/uploads/leadership-challenges-making-tough-decisions.jpg'),
+        asset('img/uploads/leadership-challenges-fostering-innovation.jpg'),
+    ];
+
+    $challenges = $data->map(function ($item, $index) use ($images) {
+        $item->image = $images[$index] ?? $item->image;
+
+        return $item;
+    });
 @endphp
 
 <script>
