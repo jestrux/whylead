@@ -8,7 +8,7 @@
     <meta name="title" content="@yield('title')" />
     <meta name="description" content="@yield('description')" />
 
-    <title>@yield('title')</title>
+    <title>@yield('title', 'Developing Thriving Leaders, Teams And Organizations')</title>
     <link href="{{ asset('icon.png') }}" rel="shortcut icon" type="image/png" />
 
     <!-- Fonts -->

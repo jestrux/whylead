@@ -97,19 +97,19 @@
                             'month' => 'September',
                             'year' => 2024,
                             'description' =>
-                                'Bone up your skills just in time for the start of the last quarter and finish up your year strong.',
+                                'Secure your place in the September cohort of "Thrive in the Middle" and take your leadership ability to new heights!',
                         ],
                         [
                             'month' => 'January',
                             'year' => 2025,
                             'description' =>
-                                'A fresh new year brings your way an opportunity to start fresh and make this the year you level up.',
+                                'Start your New Year with a transformative step forward—join our January cohort of "Thrive in the Middle" and redefine your leadership journey for 2025!',
                         ],
                         [
                             'month' => 'April',
                             'year' => 2025,
                             'description' =>
-                                "A few months in, by this time you've figured out what's not working, let us help you clear that next bar.",
+                                'Gear up for a transformative Q3 with "Thrive in the Middle" this April. Secure your spot now and take your leadership ability to new heights!',
                         ],
                     ];
                 @endphp

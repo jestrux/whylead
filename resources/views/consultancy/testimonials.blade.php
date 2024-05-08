@@ -62,7 +62,7 @@
             </h2>
 
             <p class="text-lg opacity-70">
-                We asked our clients about their WhyLead experience, here's what they had to say.
+                Hear directly from our clients about their transformative journeys with WhyLead
             </p>
         </div>
 
