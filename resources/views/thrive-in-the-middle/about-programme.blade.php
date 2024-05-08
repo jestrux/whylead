@@ -139,7 +139,7 @@
             </div>
         </div>
 
-        <div class="mt-24 flex flex-col gap-4 lg:gap-12 items-center justify-center">
+        <div class="mt-24 flex flex-col gap-4 lg:gap-8 items-center justify-center">
             <div class="max-w-3xl mx-auto text-center">
                 <h2 class="text-2xl lg:text-4xl font-bold">
                     <span class="uppercase">
@@ -147,12 +147,6 @@
                         Programme
                     </span>
                 </h2>
-
-                <p class="text-lg font-light">
-                    We offer transformative career opportunities that blend
-                    professional growth with personal fulfillment within a globally connected,
-                    value-driven community
-                </p>
             </div>
 
             <ul role="list" class="grid grid-cols-1 lg:grid-cols-4 gap-4">

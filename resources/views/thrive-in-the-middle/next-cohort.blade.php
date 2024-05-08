@@ -2,7 +2,7 @@
     $steps = [
         [
             'image' => 'https://res.cloudinary.com/sfp-app/image/upload/v1711540972/z87huht3tyivdybtg6hv.jpg',
-            'date' => '7th May 2024',
+            'date' => '17th May 2024',
             'activity' => 'Applications\\nOpen',
         ],
         [
@@ -32,10 +32,6 @@
                     <span class="hidden md:inline"><br /></span>
                     Program Calendar
                 </h2>
-
-                {{-- <p class="lg:text-4xl font-normal tracking-normal mt-2">
-                    ( Q2 2024 )
-                </p> --}}
             </div>
 
             <ul role="list" class="grid grid-cols-1 lg:grid-cols-4 gap-2 relative">
@@ -74,98 +70,11 @@
             </ul>
 
             <div class="text-center">
-                <p class="text-lg opacity-70">Ready to take your skills to the next level?</p>
+                <p class="text-lg opacity-70">Ready to become your organisation's strongest link?</p>
                 <a href="#" class="mt-3 btn">
-                    Sign up today
+                    Enroll Today
                 </a>
             </div>
         </div>
     </div>
 </section>
-
-{{-- @php
-    $steps = [
-        [
-            'date' => '10th May 2024',
-            'activity' => 'Applications Open',
-        ],
-        [
-            'date' => '27th July 2024',
-            'activity' => 'Selection Closes',
-        ],
-        [
-            'date' => '6th September 2024',
-            'activity' => 'Thriving in The Middle begins',
-        ],
-        [
-            'date' => '23rd November 2024',
-            'activity' => 'Program ends, thriving continues',
-        ],
-    ];
-
-    $image = 'https://res.cloudinary.com/sfp-app/image/upload/v1711540531/vudvwz3j0vmlsqslsjio.jpg';
-@endphp
-
-<section class="pt-12">
-    <div class="px-8 relative max-w-7xl mx-auto">
-        <div class="lg:grid grid-cols-2 gap-16 items-center">
-            <div class="md:hidden">
-                <a href="#" class="block relative">
-                    <div
-                        class="relative aspect-video rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
-                        <img class="absolute w-full h-full object-cover object-top" src="{{ $image }}"
-                            alt="" />
-
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <span class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-accent">
-                                <svg class="w-6 ml-1" fill="currentColor" viewBox="0 0 24 24" stroke-width="1"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
-                                </svg>
-
-                            </span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="flex flex-col gap-2">
-                <h2 class="text-2xl lg:text-4xl/tight font-bold uppercase">
-                    <span class="font-light">Next Cohort</span>
-                    Program Calendar
-                </h2>
-
-                <p class="mt-0.5 text-lg/loose uppercase">
-                    10th MAY 2024 &mdash; 23rd Nov 2024
-                </p>
-
-                <div class="relative py-12 flex flex-col gap-12">
-                    <div class="absolute left-[5px] inset-y-0 border-l-2 border-dashed border-stroke"></div>
-
-                    @foreach ($steps as $step)
-                        <div class="flex items-start gap-4">
-                            <div class="flex-shrink-0 size-3 rounded-full border-2 border-accent bg-accent"></div>
-                            <div class="flex-1">
-                                <h5>{{ $step['date'] }}</h5>
-                                <p>{{ $step['activity'] }}</p>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-
-                <div class="mt-5">
-                    <a href="{{ url('/contacts') }}" class="btn w-full md:w-auto">
-                        Sign up today
-                    </a>
-                </div>
-            </div>
-
-            <div class="-rotate-1 shadow-xl flex-1 hidden md:flex items-center justify-center aspect-[2/1.3] relative">
-                <div class="relative rounded-xl overflow-hidden size-full bg-content/5">
-                    <img class="rotate-6 scale-125 size-full" src="{{ $image }}" alt="" />
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --}}

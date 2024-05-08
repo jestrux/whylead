@@ -30,8 +30,6 @@
 
     @include('home.unlock-potential')
 
-    @include('home.working-with-whylead')
-
     @include('home.faqs')
 
     @include('home.cta')
