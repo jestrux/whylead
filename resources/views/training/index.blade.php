@@ -17,13 +17,9 @@
     @endphp
     @include('training.banner')
 
-    @include('training.programmes-alt')
-
-    {{-- @include('training.programmes') --}}
+    @include('training.programmes')
 
     @include('training.approach')
-
-    {{-- @include('training.testimonials') --}}
 
     @include('training.faqs')
 
