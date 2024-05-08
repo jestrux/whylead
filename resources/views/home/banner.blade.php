@@ -71,19 +71,13 @@
 
 <section class="px-6">
     <div class="flex flex-col items-center justify-center">
-        <div class="max-w-2xl mx-auto my-10 text-center">
-            <h2 class="text-2xl lg:text-4xl font-bold">
+        <div class="max-w-2xl mx-auto mt-11 mb-7 text-center">
+            <h2 class="text-2xl/none lg:text-3xl/none font-bold">
                 <span class="uppercase tracking-wide">
-                    <span class="outline-text">Trusted </span>
+                    <span class="font-light text-primary">Trusted </span>
                     Globally
                 </span>
             </h2>
-
-            <p class="mt-1 text-lg/loose opacity-70">
-                Chosen as a Trusted Partner to Build Thriving Leaders,
-                <span class="hidden md:inline"><br /></span>
-                Teams, Cultures and Organizations.
-            </p>
         </div>
 
         <div class="px-8 space-y-6">
