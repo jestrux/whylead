@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     @php
-        $defaultTitle = 'Developing Thriving Leaders, Teams And Organizations';
+        $defaultTitle = 'WhyLead Consultancy';
+        $defaultDescription = 'Developing Thriving Leaders, Teams And Organizations';
         $defaultImage = asset('img/og-image.jpg');
     @endphp
 
     <meta name="title" content="@yield('title', $defaultTitle)" />
-    <meta name="description" content="@yield('description')" />
+    <meta name="description" content="@yield('description', $defaultDescription)" />
 
     <meta property="og:title" content="@yield('title', $defaultTitle)" />
-    <meta property="og:description" content="@yield('description')" />
+    <meta property="og:description" content="@yield('description', $defaultDescription)" />
     <meta property="og:url" content="https://whyleadothers.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="@yield('image', $defaultImage)" />
