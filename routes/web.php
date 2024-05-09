@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Country;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
@@ -8,9 +9,18 @@ Route::view('/', 'home.index');
 Route::view('/consultancy', 'consultancy.index');
 Route::view('/training', 'training.index');
 Route::view('/about', 'about.index');
-Route::view('/contacts', 'contacts');
+Route::get('/contacts', function () {
+    return view('contacts', [
+        "countries" => Country::all(),
+        "solutions" => pierData(model: "Solution", filters: ["pluck" => "title", "whereFeatured" => 1])["data"]
+    ]);
+});
 Route::view('/podcast', 'podcast.index');
 Route::view('/thrive-in-the-middle', 'thrive-in-the-middle.index');
+Route::get('/thrive-in-the-middle/form', function () {
+    return view('thrive-in-the-middle.enroll.index', ["countries" => Country::all()]);
+});
+
 Route::get('/fetch-podcasts', function (Request $request) {
     if ($request->input("admin") != env("ADMIN_CODE")) return response('', 404);
 

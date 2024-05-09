@@ -110,7 +110,7 @@
                 <x-faqs :data="$faqs" />
 
                 <div class="mt-5">
-                    <a href="#programmes" class="btn w-full md:w-auto">
+                    <a href="{{url('/thrive-in-the-middle/form')}}" class="btn w-full md:w-auto">
                         Sign up for next cohort today
                     </a>
                 </div>
