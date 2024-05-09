@@ -74,7 +74,7 @@
 
 <section class="pt-6 pb-12">
     <div class="max-w-4xl px-8 mx-auto">
-        <div class="bg-accent dark:bg-content/5 p-10 rounded-xl">
+        {{-- <div class="bg-accent dark:bg-content/5 p-10 rounded-xl">
             <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
             <script>
                 hbspt.forms.create({
@@ -83,9 +83,9 @@
                     formId: "32a577e3-e11c-4a81-8d47-928eac2da767"
                 });
             </script>
-        </div>
+        </div> --}}
 
-        {{-- <x-pier::new-form :fields="$fields" on-save="enroll"
+        <x-pier::new-form :fields="$fields" on-save="enroll"
             success-message="We've received your message, we'll get back to you." />
 
         <script>
@@ -107,8 +107,10 @@
                     })
                 };
 
+                // const url =
+                //     "https://api.hsforms.com/submissions/v3/integration/secure/submit/44889300/32a577e3-e11c-4a81-8d47-928eac2da767";
                 const url =
-                    "https://api.hsforms.com/submissions/v3/integration/secure/submit/44889300/32a577e3-e11c-4a81-8d47-928eac2da767";
+                    "https://api.hsforms.com/submissions/v3/integration/submit/44889300/32a577e3-e11c-4a81-8d47-928eac2da767";
 
                 console.log("Enroll: ", payload,
                     url
@@ -119,10 +121,11 @@
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
+                            "Authorization": "Bearer {{ env('HUBSPOT_APP_TOKEN') }}",
                         },
                         body: JSON.stringify(payload),
                     });
             }
-        </script> --}}
+        </script>
     </div>
 </section>
