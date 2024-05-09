@@ -21,6 +21,32 @@ Route::get('/thrive-in-the-middle/form', function () {
     return view('thrive-in-the-middle.enroll.index', ["countries" => Country::all()]);
 });
 
+Route::post('/subscribe', function (Request $request) {
+    $email = $request->input("email");
+    $response = Http::withHeaders([
+        'Content-Type' => 'application/json',
+        'Authorization' => 'Bearer ' . env('HUBSPOT_APP_TOKEN'),
+    ])->post("https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/$email/", [
+        "properties" => [
+            [
+                "property" =>  "email",
+                "value" =>  $email
+            ],
+        ]
+    ]);
+
+    $response = Http::withHeaders([
+        'Content-Type' => 'application/json',
+        'Authorization' => 'Bearer ' . env('HUBSPOT_APP_TOKEN'),
+    ])->post("https://api.hubapi.com/contacts/v1/lists/6/add", [
+        'emails' => [
+            $email
+        ]
+    ]);
+
+    return response()->json($response->body());
+});
+
 Route::get('/fetch-podcasts', function (Request $request) {
     if ($request->input("admin") != env("ADMIN_CODE")) return response('', 404);
 

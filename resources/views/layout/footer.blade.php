@@ -94,15 +94,49 @@
             <p class="mt-6 text-sm text-gray-500 md:mt-0">© Copyright <!-- -->2024<!-- -->. All rights reserved.</p>
         </div> --}}
         <div class="flex flex-col items-center border-t border-black/10 py-10 sm:flex-row-reverse sm:justify-between">
-            <form class="flex w-full justify-center md:w-auto">
+            <form x-data="{
+                saving: false,
+                showMessage: false,
+                async submit(e) {
+                    var form = e.target;
+                    this.saving = true;
+                    var res = await fetch(
+                        '{{ url('/subscribe') }}', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Authorization': 'Bearer {{ env('HUBSPOT_APP_TOKEN') }}',
+                            },
+                            body: JSON.stringify({
+                                '_token': '{{ csrf_token() }}',
+                                'email': form.email.value
+                            }),
+                        });
+
+                    this.saving = false;
+                    form.reset();
+                    console.log('Subscription: ', res);
+
+                    this.showMessage = true;
+
+                    setTimeout(() => {
+                        this.showMessage = false;
+                    }, 2000)
+                }
+            }" x-on:submit.prevent="submit($event)"
+                class="flex w-full justify-center md:w-auto relative">
+                <div x-show="showMessage" x-transition class="absolute left-0 -top-6 text-sm text-primary">
+                    Successfully subscribed
+                </div>
+
                 <div class="w-60 min-w-0 shrink">
-                    <input type="email" aria-label="Email address" placeholder="Email address" autocomplete="email"
-                        required=""
+                    <input name="email" type="email" aria-label="Email address" placeholder="Email address"
+                        autocomplete="email" required
                         class="block py-[calc(theme(spacing.2)-1px)] px-[calc(theme(spacing.3)-1px)] w-full appearance-none rounded-lg border border-stroke bg-card text-gray-900 placeholder:opacity-50 focus:border-cyan-500 focus:outline-none focus:ring-cyan-500 sm:text-sm" />
                 </div>
                 <button
-                    class="inline-flex justify-center rounded-lg py-2 px-3 text-sm font-semibold outline-2 outline-offset-2 transition-colors relative overflow-hidden bg-primary text-white before:absolute before:inset-0 active:before:bg-transparent hover:before:bg-white/10 active:bg-cyan-600 active:text-white/80 before:transition-colors ml-4 flex-none"
-                    type="submit" color="cyan" variant="solid">
+                    class="inline-flex justify-center rounded-lg py-2 px-3 text-sm font-semibold outline-2 outline-offset-2 transition-colors relative overflow-hidden bg-primary text-white before:absolute before:inset-0 active:before:bg-transparent hover:before:bg-white/10 active:bg-primary active:text-white/80 before:transition-colors ml-2 flex-none"
+                    x-bind:class="saving && 'opacity-30 pointer-events-none'" type="submit">
                     <span class="hidden lg:inline">Join our
                         newsletter
                     </span>
