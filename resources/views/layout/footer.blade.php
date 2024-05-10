@@ -36,7 +36,7 @@
                 $episode = $data;
             @endphp
 
-            <a href="{{ url('/podcast?openFirst') }}"
+            <a href="{{ url('/podcast/' . $episode->slug) }}"
                 class="group relative -mx-4 flex items-center self-stretch p-4 transition-colors bg-content/5 hover:bg-content/10 text-content sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto">
                 <div class="relative flex size-28 flex-none items-center justify-center">
                     <img class="absolute inset-0 size-full object-cover rounded-lg" src="{{ $episode->image }}"

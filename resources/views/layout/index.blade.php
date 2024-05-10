@@ -20,6 +20,15 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="@yield('image', $defaultImage)" />
 
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="@yield('title', $defaultTitle)" />
+    <meta name="twitter:description" content="@yield('description', $defaultDescription)" />
+    <meta name="twitter:site" content="@whyleadothers" />
+    <meta name="twitter:image" content="@yield('image', $defaultImage)" />
+
+    @yield('meta')
+
     <title>@yield('title', $defaultTitle)</title>
     <link href="{{ asset('icon.png') }}" rel="shortcut icon" type="image/png" />
 

@@ -16,6 +16,7 @@ Route::get('/contacts', function () {
     ]);
 });
 Route::view('/podcast', 'podcast.index');
+Route::view('/podcast/{slug}', 'podcast.detail');
 Route::view('/thrive-in-the-middle', 'thrive-in-the-middle.index');
 Route::get('/thrive-in-the-middle/form', function () {
     return view('thrive-in-the-middle.enroll.index', ["countries" => Country::all()]);
@@ -53,6 +54,7 @@ Route::get('/fetch-podcasts', function (Request $request) {
     $response = Http::get("https://www.buzzsprout.com/api/" . env('BUZZSPROUT_ID') . "/episodes.json?api_token=" . env('BUZZSPROUT_API_TOKEN'));
     $episodes = collect($response->json())->map(function ($ep) {
         $e = (object) $ep;
+        $link = str_replace(".mp3", "", $e->audio_url);
 
         return [
             '_id' => $e->id,
@@ -63,7 +65,8 @@ Route::get('/fetch-podcasts', function (Request $request) {
             'season' => $e->season_number,
             'number' => $e->episode_number,
             'date' => $e->published_at,
-            'link' => str_replace(".mp3", "", $e->audio_url),
+            'link' => $link,
+            'slug' => collect(explode("/", $link ?? ""))->last(),
             'total_plays' => $e->total_plays
         ];
     })->filter(fn ($e) => $e['number']);

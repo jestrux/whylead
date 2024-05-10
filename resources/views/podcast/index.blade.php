@@ -52,6 +52,10 @@
 
                 <div class="divide-y divide-stroke">
                     @foreach ($data as $episode)
+                        @php
+                            $shareLink = url('/podcast/' . $episode->slug);
+                        @endphp
+
                         <article x-data="{
                             total_plays: {{ $episode->total_plays }},
                             index: {{ $loop->index }}
@@ -65,7 +69,7 @@
 
                                 <div class="flex-1 flex flex-col items-start">
                                     <h2 id="episode-5-title" class="mt-2 text-sm font-bold">
-                                        <a href="{{ $episode->link }}" target="_blank" class="hover:opacity-80">
+                                        <a href="{{ $shareLink }}" class="hover:opacity-80">
                                             Episode {{ $episode->number }} <span class="opacity-50">&mdash;</span>
                                             <time datetime="2022-02-24T00:00:00.000Z"
                                                 class="font-mono text-sm leading-7 opacity-50">
@@ -101,7 +105,7 @@
                                             $actions = [
                                                 [
                                                     'label' => 'Facebook',
-                                                    'url' => 'http://www.facebook.com/sharer.php?u=' . $episode->link,
+                                                    'url' => 'http://www.facebook.com/sharer.php?u=' . $shareLink,
                                                     'external' => true,
                                                 ],
                                                 [
@@ -110,14 +114,14 @@
                                                         'http://twitter.com/intent/tweet?text=Listening to "' .
                                                         $episode->title .
                                                         '" at  &url=' .
-                                                        $episode->link,
+                                                        $shareLink,
                                                     'external' => true,
                                                 ],
                                                 [
                                                     'label' => 'LinkedIn',
                                                     'url' =>
                                                         'https://www.linkedin.com/sharing/share-offsite/?url=' .
-                                                        $episode->link,
+                                                        $shareLink,
                                                     'external' => true,
                                                 ],
                                                 [
@@ -126,12 +130,12 @@
                                                         'https://api.whatsapp.com/send/?text=Listening to "' .
                                                         $episode->title .
                                                         '" at  ' .
-                                                        $episode->link,
+                                                        $shareLink,
                                                     'external' => true,
                                                 ],
                                                 [
                                                     'label' => 'Copy link',
-                                                    'onClick' => "copyLink('$episode->_id', '$episode->link')",
+                                                    'onClick' => "copyLink('$shareLink', '$episode->_id')",
                                                 ],
                                             ];
                                         @endphp
@@ -156,7 +160,7 @@
                                 x-bind:style="height: listen == {{ $episode->_id }} ? '200px' : 0">
 
                                 <div x-cloak x-show="listen == {{ $episode->_id }}"
-                                    class="pointer-events-none absolute inset-0 rounded-lg bg-content/5">
+                                    class="pointer-events-none absolute inset-0 rounded-xl bg-content/5">
                                 </div>
 
                                 <template x-if="listen == {{ $episode->_id }}">
@@ -203,7 +207,7 @@
             });
         }
 
-        async function copyLink(episodeId, link) {
+        async function copyLink(link, episodeId) {
             try {
                 try {
                     await navigator.clipboard.writeText(link);
