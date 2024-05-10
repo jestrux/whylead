@@ -19,6 +19,15 @@
                         {{ $action['label'] ?? '..' }}
                     @endif
                 </a>
+            @elseif (isset($action['onClick']))
+                <button onclick="{{ $action['onClick'] }}"
+                    class="flex items-center gap-2 w-full px-3 py-1.5 text-left text-sm hover:bg-content/5 disabled:text-content/20 transition-colors">
+                    @if ($action['render'] ?? null)
+                        {!! $action['render'] !!}
+                    @else
+                        {{ $action['label'] ?? '..' }}
+                    @endif
+                </button>
             @endif
         @endforeach
     </div>
