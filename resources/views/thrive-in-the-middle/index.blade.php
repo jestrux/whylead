@@ -12,6 +12,8 @@
 
     @include('thrive-in-the-middle.about-programme')
 
+    @include('thrive-in-the-middle.programmes')
+
     @include('thrive-in-the-middle.next-cohort')
 
     @include('thrive-in-the-middle.upcoming-cohorts')
