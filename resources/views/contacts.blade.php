@@ -170,7 +170,7 @@
                 ];
             @endphp
 
-            <x-pier::new-form :fields="$fields" :values="$values" on-save="sendEmail"
+            <x-pier::new-form :$fields :$values :most-fields-required="false" on-save="sendEmail"
                 success-message="We've received your message, we'll get back to you." />
         </div>
     </div>
