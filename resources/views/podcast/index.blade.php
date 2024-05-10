@@ -7,7 +7,7 @@
 @section('content')
     @pierdata("Podcast")
     <div class="grid grid-cols-12 items-start max-w-7xl mx-auto px-8 py-8 xl:py-10">
-        <div class="col-span-4 sticky -top-16 xl:-top-24">
+        <div class="col-span-4 min-h-full">
             @include('podcast.sidebar')
         </div>
 
@@ -18,14 +18,25 @@
             <div class="max-w-3xl mx-auto px-12 pt-4" x-data="{
                 listen: '{{ $openFirst ? $data[0]->_id : null }}',
                 filter: 'All',
+                copiedLinkFor: null,
                 setFilter(newFilter) {
                     this.filter = newFilter;
                     window.scrollTo({ top: 0 });
                 },
                 get popular() { return this.filter == 'Popular' },
-                get latest() { return this.filter == 'Latest' }
-            }">
-                <h3 class="text-3xl font-bold">Podcast Episodes</h3>
+                get latest() { return this.filter == 'Latest' },
+                onEpisodeLinkCopied(e) {
+                    this.copiedLinkFor = e.detail;
+
+                    setTimeout(() => {
+                        this.copiedLinkFor = null;
+                    }, 2000);
+                }
+            }"
+                x-on:episode-link-copied.window="onEpisodeLinkCopied">
+                <h3 class="text-3xl font-bold">
+                    Podcast Episodes
+                </h3>
 
                 <div class="-mb-5 sticky top-16 z-10 h-16 bg-canvas flex items-center gap-3">
                     @foreach (['All', 'Latest', 'Popular'] as $item)
@@ -41,7 +52,10 @@
 
                 <div class="divide-y divide-stroke">
                     @foreach ($data as $episode)
-                        <article x-data="{ total_plays: {{ $episode->total_plays }}, index: {{ $loop->index }} }" x-show="(!popular || total_plays > 200) && (!latest || index < 4)"
+                        <article x-data="{
+                            total_plays: {{ $episode->total_plays }},
+                            index: {{ $loop->index }}
+                        }" x-show="(!popular || total_plays > 200) && (!latest || index < 4)"
                             x-transition class="py-6">
                             <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
                                 <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
@@ -106,6 +120,19 @@
                                                         $episode->link,
                                                     'external' => true,
                                                 ],
+                                                [
+                                                    'label' => 'Whatsapp',
+                                                    'url' =>
+                                                        'https://api.whatsapp.com/send/?text=Listening to "' .
+                                                        $episode->title .
+                                                        '" at  ' .
+                                                        $episode->link,
+                                                    'external' => true,
+                                                ],
+                                                [
+                                                    'label' => 'Copy link',
+                                                    'onClick' => "copyLink('$episode->_id', '$episode->link')",
+                                                ],
                                             ];
                                         @endphp
 
@@ -116,10 +143,12 @@
                                                 Share
                                             </span>
                                         </x-dropdown-menu>
+
+                                        <div x-show="copiedLinkFor == {{ $episode->_id }}" x-transition
+                                            class="ml-3 text-sm text-primary">
+                                            Episode link copied
+                                        </div>
                                     </div>
-                                    {{-- <div id='buzzsprout-small-player'></div>
-                                    <script type='text/javascript' charset='utf-8'
-                                        src='{{$episode->link}}.js?container_id=buzzsprout-small-player&player=small'></script> --}}
                                 </div>
                             </div>
 
@@ -147,5 +176,48 @@
 @endsection
 
 @section('scripts')
+    <script>
+        window.copyTextToClipboard = function(text) {
+            return new Promise((res, rej) => {
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                textArea.style.top = "0";
+                textArea.style.left = "0";
+                textArea.style.position = "fixed";
+
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+
+                try {
+                    const successful = document.execCommand('copy');
+
+                    if (successful) resolve();
+
+                    else reject();
+                } catch (err) {
+                    reject(err);
+                }
+
+                document.body.removeChild(textArea);
+            });
+        }
+
+        async function copyLink(episodeId, link) {
+            try {
+                try {
+                    await navigator.clipboard.writeText(link);
+                } catch (error) {
+                    await copyTextToClipboard(link);
+                }
+
+                window.dispatchEvent(new CustomEvent("episode-link-copied", {
+                    detail: episodeId
+                }));
+            } catch (error) {
+                alert('Failed to copy link!');
+            }
+        }
+    </script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 @endsection
