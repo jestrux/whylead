@@ -123,8 +123,8 @@
 
             @php
                 $fields = [
-                    pierField(['label' => 'First Name', 'name' => 'first_name', 'width' => 'half']),
-                    pierField(['label' => 'Last Name', 'name' => 'last_name', 'width' => 'half']),
+                    pierField(['label' => 'First Name', 'name' => 'firstname', 'width' => 'half']),
+                    pierField(['label' => 'Last Name', 'name' => 'lastname', 'width' => 'half']),
                     pierField([
                         'label' => 'Work Email',
                         'name' => 'email',
@@ -135,7 +135,7 @@
                     pierField(['label' => 'Phone Number', 'name' => 'phone', 'width' => 'half']),
                     pierField([
                         'label' => 'Interested In',
-                        'name' => 'interest',
+                        'name' => 'interested_in',
                         'required' => true,
                         'width' => 'half',
                         'type' => 'select',
@@ -143,7 +143,7 @@
                             'choices' => [...$solutions, 'Joining The Team'],
                         ],
                     ]),
-                    pierField(['label' => 'Company', 'name' => 'company', 'required' => true, 'width' => 'half']),
+                    pierField(['label' => 'Company Name', 'name' => 'company', 'required' => true, 'width' => 'half']),
                     pierField([
                         'label' => 'Company Size ( Number of Employees )',
                         'name' => 'company_size',
@@ -154,8 +154,8 @@
                         ],
                     ]),
                     pierField([
-                        'label' => 'Country',
-                        'name' => 'country',
+                        'label' => 'Select Country',
+                        'name' => 'select_country',
                         'width' => 'half',
                         'type' => 'select',
                         'meta' => [
@@ -177,46 +177,32 @@
 
     <script>
         function sendEmail(data, el) {
-            const formData = [
-                `Name: ${[data.first_name, data.last_name].join(' ')}`,
-                `Email: ${data.email}`,
-                `Phone Number: ${data.phone}`,
-                `Company: ${data.company}`,
-                `Company Size: ${data.company_size}`,
-                `Country: ${data.company_size}`,
-                `Interested In: ${data.interest}`,
-                `Objective: ${data.objective}`,
-            ].join('\n');
-
-            // return console.log("Email: ", formData);
-
-            const message = [
-                `From: ${data.name} <${data.email}>`,
-                `Sent On: ${new Intl.DateTimeFormat('en-UK',{
-                        year: "numeric",
-                        month: "long",
-                        day: "2-digit",
-                        hour: "numeric",
-                        minute: "numeric",
-                        hour12: true,
-                    }).format(new Date())}\n`,
-                formData
-            ].join("\n")
-
-            return fetch("https://us-central1-letterplace-c103c.cloudfunctions.net/api/mailer", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    "to": "wakyj07@gmail.com",
-                    // "to": "yoda@whyleadothers.com",
-                    "message": {
-                        subject: "WhyLead Website Contact Form",
-                        text: message
+            const payload = {
+                fields: Object.keys(data).map(field => {
+                    return {
+                        "objectTypeId": "0-1",
+                        "name": field,
+                        "value": data[field]
                     }
-                }),
-            });
+                })
+            };
+
+            const url =
+                "https://api.hsforms.com/submissions/v3/integration/submit/44889300/815d7409-950b-42e3-9a7d-5063788d9cad";
+
+            console.log("Enroll: ", payload,
+                url
+            );
+
+            return fetch(
+                url, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": "Bearer {{ env('HUBSPOT_APP_TOKEN') }}",
+                    },
+                    body: JSON.stringify(payload),
+                });
         }
     </script>
 @endsection
