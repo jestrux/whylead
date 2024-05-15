@@ -83,44 +83,44 @@
         <div class="px-8 space-y-6">
             <div class="grid grid-cols-3 lg:flex gap-6 lg:gap-8 items-center justify-between">
                 <img class="grayscale h-6"
-                    src="https://malala.org/packs/static/images/malala-primary-logo-large-0a880532137530e3eed5.svg" />
+                    src="{{asset('img/clients/malala.svg')}}" />
 
                 <img class="grayscale h-12"
-                    src="https://womenlifthealth.jobsoid.com/PortalJob/GetPortalLogo?size=medium" />
+                    src="{{asset('img/clients/women-lift.png')}}" />
 
                 <img class="grayscale h-10"
-                    src="https://www.greenclimate.fund/sites/default/files/organisation/logo-crdb.png" />
+                    src="{{asset('img/clients/crdb.png')}}" />
 
                 <img class="grayscale h-8"
-                    src="https://seeklogo.com/images/O/oryx-energies-logo-DB6F52BE4E-seeklogo.com.png" />
+                    src="{{asset('img/clients/oryx.png')}}" />
 
                 <img class="grayscale h-8"
-                    src="https://janegoodall.org/wp-content/themes/joyn-child/images/2021_JGI_LOGO_SIGNATURE_GREEN_420.png" />
+                    src="{{asset('img/clients/jane-goodall.png')}}" />
 
-                <img class="grayscale h-8" src="https://www.ubongo.org/wp-content/uploads/2018/04/Logo@2x.png" />
+                <img class="grayscale h-8" src="{{asset('img/clients/ubongo.png')}}" />
 
                 <img class="grayscale h-8"
-                    src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/RTI_International_%28logo%29.svg/1200px-RTI_International_%28logo%29.svg.png" />
+                    src="{{asset('img/clients/rti.png')}}" />
             </div>
 
             <div class="grid grid-cols-3 lg:flex gap-6 lg:gap-8 items-center justify-between">
-                <img class="grayscale h-12" src="https://www.una.or.tz/wp-content/uploads/2020/09/UNA-Tanzania.png" />
+                <img class="grayscale h-8" src="{{asset('img/clients/vodacom.png')}}" />
 
-                <img class="grayscale h-8" src="https://knauf.co.tz/wp-content/uploads/2021/01/Blue-logo.svg" />
+                <img class="grayscale h-8" src="{{asset('img/clients/knauf.svg')}}" />
 
                 <img class="grayscale h-6"
-                    src="https://uongozi.or.tz/newsite/wp-content/uploads/2022/04/Uongozi_Institute_logo02.svg" />
+                src="{{asset('img/clients/uongozi.svg')}}" />
 
 
-                <img class="grayscale h-8" src="https://www.guidestar.org/ViewEdoc.aspx?eDocId=9408228&approved=True" />
+                <img class="grayscale h-8" src="{{asset('img/clients/d-tree.png')}}" />
 
-                <img class="grayscale h-14" src="https://www.ihi.or.tz/static/images/ihilogo.png" />
+                <img class="grayscale h-14" src="{{asset('img/clients/ifakara.png')}}" />
 
                 <img class="grayscale h-5"
-                    src="https://partners.givingtuesday.ca/gtuploads/partners/60d3219c810acDOT%20Horizontal%20Logo%20-%20RGB.png" />
+                    src="{{asset('img/clients/dot.png')}}" />
 
                 <img class="grayscale h-8"
-                    src="https://nest360.org/wp-content/uploads/2021/04/NEST360_horizontal_logo_fullcolour.png" />
+                    src="{{asset('img/clients/nest.webp')}}" />
             </div>
         </div>
     </div>
