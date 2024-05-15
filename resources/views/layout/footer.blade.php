@@ -125,7 +125,7 @@
                 }
             }" x-on:submit.prevent="submit($event)"
                 class="flex w-full justify-center md:w-auto relative">
-                <div x-show="showMessage" x-transition class="absolute left-0 -top-6 text-sm text-primary">
+                <div x-cloak x-show="showMessage" x-transition class="absolute left-0 -top-6 text-sm text-primary">
                     Successfully subscribed
                 </div>
 

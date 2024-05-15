@@ -100,7 +100,7 @@
                                             </svg>
                                             <span aria-hidden="true">Listen</span>
                                         </button>
-                                        <span aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
+                                        <span x-cloak aria-hidden="true" class="text-sm font-bold text-slate-400">/</span>
                                         @php
                                             $actions = [
                                                 [
@@ -148,7 +148,7 @@
                                             </span>
                                         </x-dropdown-menu>
 
-                                        <div x-show="copiedLinkFor == {{ $episode->_id }}" x-transition
+                                        <div x-cloak x-show="copiedLinkFor == {{ $episode->_id }}" x-transition
                                             class="ml-3 text-sm text-primary">
                                             Episode link copied
                                         </div>

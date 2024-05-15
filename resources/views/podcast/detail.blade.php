@@ -218,7 +218,7 @@
                                             @endforeach
                                         </div>
 
-                                        <div x-show="copied" x-transition class="text-sm text-primary">
+                                        <div x-cloak x-show="copied" x-transition class="text-sm text-primary">
                                             Episode link copied
                                         </div>
                                     </div>
