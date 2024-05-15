@@ -31,8 +31,14 @@
                 </p>
 
                 <p class="mt-3 text-base/loose opacity-70">
-                    This was the genesis of WhyLead -created to forge partnerships with leaders and
+                    This was the genesis of WhyLead &mdash; created to forge partnerships with leaders and
                     organizations, providing the essential support they need to Thrive.
+                </p>
+
+                <p class="mt-3 text-base/loose opacity-70">
+                    We are committed to empowering leaders and organizations to thrive. We achieve this by nurturing
+                    leadership talent and cultivating a workplace culture that serves the organization's mission and
+                    strategic goals.
                 </p>
 
                 <div class="mt-4 gap-3">

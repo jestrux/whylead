@@ -2,38 +2,40 @@
     $steps = [
         [
             'icon' =>
-                'M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z',
+                'M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z',
             'image' =>
                 'https://images.unsplash.com/photo-1573496774426-fe3db3dd1731?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDQ2fHxjb3Jwb3JhdGUlMjB0ZWFtfGVufDB8fHx8MTcxMjU3MzQxOXww&ixlib=rb-4.0.3&q=80&w=1080',
             'title' => 'Ideal Candidates',
             'description' =>
-                'This program targets middle management. People on the director level, and head of department level. ',
+                'Somebody who has managers who sit below them and leaders who sit above them. i.e. Senior Managers, Heads of Dept, Directors, etc',
         ],
         [
             'icon' =>
-                'M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941',
-            'image' =>
-                'https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDEyfHxjb3Jwb3JhdGUlMjB0ZWFtfGVufDB8fHx8MTcxMjU3MzM1M3ww&ixlib=rb-4.0.3&q=80&w=1080',
-            'title' => 'Program Duration',
-            'description' => 'The program runs for 3 months. ',
-        ],
-        [
-            'icon' =>
-                'M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z',
+                'M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18',
             'image' =>
                 // 'https://images.unsplash.com/photo-1515169067868-5387ec356754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDd8fHRlYW0lMjBidWlsZGluZ3xlbnwwfHx8fDE3MTI1NjA4NDZ8MA&ixlib=rb-4.0.3&q=80&w=1080',
                 'https://images.unsplash.com/photo-1604246562628-284cb1768678?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDI3fHx0ZWFtJTIwYnVpbGRpbmd8ZW58MHx8fHwxNzEyNTczMTE0fDA&ixlib=rb-4.0.3&q=80&w=1080',
             'title' => 'Facilitation Approach',
             'description' =>
-                'Workshop based immersive learning with group coaching from the world’s leading subject matter experts.',
+                "We've embraced the KASH model of instruction, infusing every moment with Knowledge, (change in) Attitude, and (development of) Skills and Habits.",
         ],
         [
             'icon' =>
-                'M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z',
+                'M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25',
             'image' =>
                 'https://images.unsplash.com/photo-1515169067868-5387ec356754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDd8fHRlYW0lMjBidWlsZGluZ3xlbnwwfHx8fDE3MTI1NjA4NDZ8MA&ixlib=rb-4.0.3&q=80&w=1080',
             'title' => 'Learning Approach',
-            'description' => 'This is a hybrid program that will run both in-person and virtual.',
+            'description' =>
+                'The program is designed to foster holistic leadership development through interactive workshops, group coaching, and real-world applications.',
+        ],
+        [
+            'icon' =>
+                'M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z',
+            'image' =>
+                'https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDEyfHxjb3Jwb3JhdGUlMjB0ZWFtfGVufDB8fHx8MTcxMjU3MzM1M3ww&ixlib=rb-4.0.3&q=80&w=1080',
+            'title' => 'Program Duration',
+            'description' =>
+                'For 12 weeks, participants engage in a blend of in-person workshops, virtual group coaching, and hands-on challenges that facilitate real-world application.',
         ],
     ];
 
@@ -110,7 +112,7 @@
                 <x-faqs :data="$faqs" />
 
                 <div class="mt-5">
-                    <a href="{{url('/thrive-in-the-middle/form')}}" class="btn w-full md:w-auto">
+                    <a href="{{ url('/thrive-in-the-middle/form') }}" class="btn w-full md:w-auto">
                         Sign up for next cohort today
                     </a>
                 </div>
