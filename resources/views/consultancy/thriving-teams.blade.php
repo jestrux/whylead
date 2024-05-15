@@ -31,11 +31,11 @@
 
             <div class="col-span-6 pt-6 pb-16 flex flex-col gap-2">
                 <h2 class="mt-3 text-2xl lg:text-3xl font-bold uppercase">
-                    Thriving teams
+                    Develop Thriving teams
                 </h2>
 
                 <p class="mt-2 text-lg/relaxed uppercase">
-                    We Help Teams Unleashing Collective Potential for Peak Performance
+                    We Help Teams Unleash Collective Potential for Peak Performance
                 </p>
 
                 <p class="mt-2 text-base/loose opacity-70">
@@ -48,7 +48,7 @@
 
                 <p class="mt-3 text-base/relaxed opacity-70">
                     When teams <span class="font-bold">
-                        <span class="inline-block scale-150 translate-y-0.5 ml-px">&#8482;</span>
+                        <sup class="inline-block translate-y-2.5 -mr-3.5 text-lg font-bold">&#8482; &nbsp;</sup>
                         communicate openly, collaborate happily, and challenge willingly
                     </span>
                     they create organizations that are:

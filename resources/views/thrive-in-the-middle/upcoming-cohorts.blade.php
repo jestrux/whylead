@@ -72,8 +72,7 @@
                     </div>
 
                     <p class="mt-6 text-lg/loose uppercase">
-                        Can't make any of these? Not to worry, there's usually a new cohort you can jump on at the start
-                        of every quarter.
+                        You can't enroll in any of these cohorts? Don't worry, There's usually a cohort you can join at the start of every quarter.
                     </p>
 
                     <p class="mt-4 text-xl/relaxed opacity-70">
@@ -127,8 +126,9 @@
                             </p>
 
                             <div class="mt-2">
-                                <a href="{{ url('/contacts') }}" class="btn btn-sm w-full md:w-auto">
-                                    Sign up today
+                                <a href="{{ url('/thrive-in-the-middle/form') }}?cohort={{ $date['month'] }} - {{ $date['year'] }}"
+                                    class="btn btn-sm w-full md:w-auto">
+                                    Enroll today
                                 </a>
                             </div>
                         </div>

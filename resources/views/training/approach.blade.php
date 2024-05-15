@@ -82,11 +82,11 @@
 
                 <div class="mt-5">
                     <p class="mb-3 text-base/relaxed opacity-70">
-                        Not sure exactly what you're looking for?
+                        Please tell us your capacity needs.
                     </p>
 
-                    <a href="{{ url('/contacts') }}" class="btn w-full md:w-auto">
-                        Let us help you find it
+                    <a href="{{ url('/contacts?interest=Training') }}" class="btn w-full md:w-auto">
+                        Let Us Help You Solve Them
                     </a>
                 </div>
             </div>

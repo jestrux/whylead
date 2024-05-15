@@ -24,7 +24,7 @@
                 </h2>
 
                 <p class="mt-2 text-lg/relaxed uppercase">
-                    Driving Success Through by Optimizing Performance Through Insightful Metrics
+                    Driving Success by Optimizing Performance Through Insightful Metrics
                 </p>
 
                 <p class="mt-2 text-base/loose opacity-70">

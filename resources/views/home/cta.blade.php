@@ -11,17 +11,15 @@
             </h2>
 
             <p class="mt-3 text-base/relaxed opacity-70 max-w-2xl mx-auto">
-                Unsure of the unique impact we can make on your organization?
-                <span class="hidden md:inline"><br /></span>
                 Contact us and we'll help you articulate your needs and design your path to
                 thriving leaders, teams, and organization.
             </p>
         </div>
 
         <div class="mb-4 w-full flex flex-col md:flex-row items-center justify-center gap-3">
-            <a href="{{ url('/contacts') }}" class="btn">
+            <a href="{{ url('/contacts' . (isset($interest) ? "?interest=$interest" : '')) }}" class="btn">
                 <span class="mx-5">
-                    Talk to Us
+                    Get in touch
                 </span>
             </a>
         </div>

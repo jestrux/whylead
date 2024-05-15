@@ -16,8 +16,6 @@
             @php
                 $steps = [
                     [
-                        // 'image' =>
-                        //     'https://images.unsplash.com/photo-1515169067868-5387ec356754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDd8fHRlYW0lMjBidWlsZGluZ3xlbnwwfHx8fDE3MTI1NjA4NDZ8MA&ixlib=rb-4.0.3&q=80&w=1080',
                         'image' => asset('img/uploads/programmes-empowering-high-performing-teams.jpg'),
                         'title' => 'Empowering high performing teams',
                         'description' =>
@@ -29,8 +27,6 @@
                         ],
                     ],
                     [
-                        // 'image' =>
-                        //     'https://images.unsplash.com/photo-1573164713712-03790a178651?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDE0fHxibGFjayUyMGxlYWRlcnNoaXB8ZW58MHx8fHwxNzEyNTU5MTk2fDA&ixlib=rb-4.0.3&q=80&w=1080',
                         'image' => asset('img/uploads/programmes-get-the-right-things-done.jpg'),
                         'title' => 'Get the right things done',
                         'description' =>
@@ -42,8 +38,6 @@
                         ],
                     ],
                     [
-                        // 'image' =>
-                        //     'https://images.unsplash.com/photo-1527525443983-6e60c75fff46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDR8fGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzEyNTYwMzgxfDA&ixlib=rb-4.0.3&q=80&w=1080',
                         'image' => asset('img/uploads/programmes-eq-for-effective-collaboration.jpg'),
                         'title' => 'EQ for effective collaboration',
                         'description' =>
@@ -55,8 +49,6 @@
                         ],
                     ],
                     [
-                        // 'image' =>
-                        //     'https://images.unsplash.com/photo-1611329857570-f02f340e7378?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDR8fHByb2JsZW0lMjBzb2x2aW5nfGVufDB8fHx8MTcxMjU2MDYwM3ww&ixlib=rb-4.0.3&q=80&w=1080',
                         'image' => asset('img/uploads/programmes-complex-problem-solving.jpg'),
                         'title' => 'Complex problem solving',
                         'description' =>
@@ -68,8 +60,18 @@
                         ],
                     ],
                     [
-                        // 'image' =>
-                        //     'https://images.unsplash.com/photo-1573497491208-6b1acb260507?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDEyfHxtZWV0aW5nfGVufDB8fHx8MTcxMjU2MDczNnww&ixlib=rb-4.0.3&q=80&w=1080',
+                        'image' =>
+                            'https://images.unsplash.com/photo-1573497491208-6b1acb260507?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDEyfHxtZWV0aW5nfGVufDB8fHx8MTcxMjU2MDczNnww&ixlib=rb-4.0.3&q=80&w=1080',
+                        'title' => 'Training for Trainers',
+                        'description' =>
+                            'Designed to equip your managers to elevate their skills as internal trainers, transforming them into proficient educators who can effectively transfer knowledge and foster a learning-oriented culture within your organization. ',
+                        'checklist' => [
+                            'Cost-Effective Development',
+                            'Improved Leadership and Communication Skills',
+                            'Becoming a Trusted Facilitator',
+                        ],
+                    ],
+                    [
                         'image' => asset('img/uploads/programmes-feedback.jpg'),
                         'title' => 'Giving And Receiving Feedback Effectively',
                         'description' =>
@@ -81,8 +83,6 @@
                         ],
                     ],
                     [
-                        // 'image' =>
-                        //     'https://images.unsplash.com/photo-1556740758-90de374c12ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDEyfHxjdXN0b21lciUyMGNhcmV8ZW58MHx8fHwxNzEyNTYwNDEwfDA&ixlib=rb-4.0.3&q=80&w=1080',
                         'image' => asset('img/uploads/programmes-customer-centric.jpg'),
                         'title' => 'Customer centric culture',
                         'description' =>
@@ -114,16 +114,11 @@
                                         <div class="absolute inset-0 flex items-center justify-center">
                                             <span
                                                 class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-accent">
-                                                {{-- <svg class="w-14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor">
-                                                <path d="M8 5v14l11-7z" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg> --}}
-
                                                 <svg class="w-6 ml-1" fill="currentColor" viewBox="0 0 24 24"
                                                     stroke-width="1" stroke="currentColor">
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
                                                 </svg>
-
                                             </span>
                                         </div>
                                     </div>
@@ -131,9 +126,6 @@
                             </div>
 
                             <div class="flex flex-col gap-2">
-                                {{-- <h2 class="mt-3 text-2xl lg:text-4xl/tight font-bold uppercase">
-                                    {{ $programme['title'] }}
-                                </h2> --}}
                                 <h3 class="mt-2 text-3xl uppercase font-bold">
                                     {{ $programme['title'] }}
                                 </h3>
@@ -141,9 +133,6 @@
                                 <p class="text-lg/loose">
                                     {{ $programme['description'] }}
                                 </p>
-
-                                {{-- <p class="mt-1 text-sm/loose opacity-70">
-                                </p> --}}
 
                                 <p class="mt-2 text-base/relaxed opacity-70">
                                     Key Outcomes include:
@@ -179,7 +168,7 @@
                                 </ul>
 
                                 <div class="mt-5">
-                                    <a href="{{ url('/contacts') }}" class="btn w-full md:w-auto">
+                                    <a href="{{ url('/contacts?interest=Training') }}" class="btn w-full md:w-auto">
                                         Transform your team
                                     </a>
                                 </div>
@@ -195,47 +184,6 @@
                         </div>
                     </div>
                 </section>
-
-                {{-- <li
-                    class="relative min-h-full w-full flex flex-col px-4 pt-2 pb-4 bg-card dark:bg-content/5 border border-stroke rounded-xl shadow">
-                    <div class="-mx-2 h-56 relative rounded-lg overflow-hidden">
-                        <img class="size-full object-cover rounded-lg" src="{{ $step['image'] }}" alt="" />
-                    </div>
-
-                    <h3 class="mt-3.5 text-xl/tight font-semibold">
-                        {{ $step['title'] }}
-                    </h3>
-
-                    <p class="mt-1 text-sm/loose opacity-70">
-                        {{ $step['description'] }}
-                    </p>
-
-                    <p class="mt-1 text-sm/loose font-semibold opacity-70 dark:opacity-90">
-                        Key Outcomes include:
-                    </p>
-
-                    <ul role="list" class="mb-3 text-sm">
-                        @foreach ($step['checklist'] as $item)
-                            <li class="flex items-start gap-1 py-1">
-                                <svg class="size-6 flex-none text-accent dark:text-content/50" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <circle cx="12" cy="12" r="8.25" />
-
-                                    <path class="text-black dark:text-white"
-                                        d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"
-                                        fill="currentColor" stroke="none" />
-                                </svg>
-                                <p class="pt-0.5 text-sm opacity-70">
-                                    {{ $item }}
-                                </p>
-                            </li>
-                        @endforeach
-                    </ul>
-
-                    <button class="mt-auto btn btn-sm w-full">
-                        Transform your team
-                    </button>
-                </li> --}}
             @endforeach
         </ul>
     </div>
@@ -272,13 +220,12 @@
                 }
 
                 .scrollable-section {
-                    position: sticky !important;
-                    top: 0 !important;
                     min-height: calc(95vh - 96px) !important;
                     display: flex !important;
                     align-items: center !important;
                     transition: all 0.35s ease-out;
                     opacity: 0;
+                    pointer-events: none;
                 }
 
                 .scroll-section-slides .scrollable-section {
@@ -291,6 +238,7 @@
 
                 .scroll-section-slides .scrollable-section.visible {
                     opacity: 1;
+                    pointer-events: auto;
                 }
 
                 .scroll-section-indicator {
@@ -298,9 +246,6 @@
                     top: 0;
                     bottom: 0;
                     width: 12px;
-                    // background: red;
-                    // left: 2.8rem;
-                    // margin-left: -2rem;
                     z-index: 10;
                 }
 
@@ -318,9 +263,33 @@
                     max-height: calc(100vh - 160px);
                     margin: auto;
                     width: 4px;
-                    gap: 1.5rem;
-                    font-size: 1.3rem;
+                    gap: 1rem;
+                    font-size: 1rem;
                     font-weight: bold;
+                }
+
+                .slide-button {
+                    display: flex;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                }
+
+                .slide-button svg {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+
+                .slide-button:hover {
+                    opacity: 0.9;
+                }
+
+                .scrollable-sections:not(.can-slide-up) .slide-up,
+                .scrollable-sections:not(.can-slide-down) .slide-down {
+                    pointer-events: none;
+                    opacity: 0.2;
                 }
 
                 .scroll-section-progress-wrapper {
@@ -354,6 +323,12 @@
             scrollSectionIndicator.className = "scroll-section-indicator";
             scrollSectionIndicator.innerHTML = `
                     <div class="scroll-section-indicator-wrapper">
+                        <button class="slide-button slide-up">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                            </svg>
+                        </button>
+
                         <span class="scroll-section-current-page">01</span>
 
                         <div class="scroll-section-progress-wrapper">
@@ -361,6 +336,12 @@
                         </div>
 
                         <span class="scroll-section-total-pages">01</span>
+
+                        <button class="slide-button slide-down">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </button>
                     </div>
                 `;
 
@@ -387,7 +368,7 @@
             sections,
             parent,
             totalPages,
-            slideSections,
+            slideSections
         }) {
             new IntersectionObserver(
                 ([e]) => {
@@ -404,6 +385,7 @@
                     }
 
                     currentPage.textContent = page.toString().padStart(2, "0");
+                    currentPage.setAttribute("data-page", page);
                     var scrollPercent = (page / totalPages) * 100 + "%";
                     progress.style.height = scrollPercent;
 
@@ -425,7 +407,31 @@
             ).observe(section);
         }
 
+        function observeCurrentPage(item, callback) {
+            var observer = new MutationObserver(function(mutations) {
+                var openChanged = mutations.find(
+                    ({
+                        attributeName
+                    }) => attributeName == "data-page"
+                );
+
+                const page = item.getAttribute("data-page");
+                if (openChanged && page != null) callback(Number(page));
+            });
+
+            observer.observe(item, {
+                attributes: true
+            });
+        }
+
+        function scrollTo(element, jump) {
+            window.scrollTo({
+                top: element.getBoundingClientRect().top + window.pageYOffset
+            });
+        }
+
         document.querySelectorAll(".scrollable-sections").forEach(function(node) {
+            var currentPageIndex = 0;
             var sectionSlides = getScrollSectionSlides();
             var slidesWrapper = sectionSlides.querySelector(
                 ".scroll-section-slides-wrapper"
@@ -438,12 +444,28 @@
             );
             var progress = indicator.querySelector(".scroll-section-progress");
             var pageCount = indicator.querySelector(".scroll-section-total-pages");
+            var slideUp = indicator.querySelector(".slide-up");
+            var slideDown = indicator.querySelector(".slide-down");
             var sections = node.querySelectorAll(".scrollable-section");
+
+            slideUp.onclick = function() {
+                scrollTo(sections[currentPageIndex - 1])
+            }
+
+            slideDown.onclick = function() {
+                scrollTo(sections[currentPageIndex + 1]);
+            }
 
             node.prepend(sectionSlides);
             node.appendChild(indicator);
 
             pageCount.textContent = sections.length.toString().padStart(2, "0");
+
+            observeCurrentPage(currentPage, (newPage) => {
+                currentPageIndex = Math.max(0, newPage - 1);
+                node.classList.toggle("can-slide-up", currentPageIndex > 0);
+                node.classList.toggle("can-slide-down", newPage < sections.length);
+            });
 
             sections.forEach(function(section, index) {
                 let new_section = section.cloneNode(true);

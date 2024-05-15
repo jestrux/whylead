@@ -59,10 +59,10 @@
                             'color' => 'url(#progressGradient)',
                             'patternColor' => 'rgba(255, 255, 255, 0.2)',
                             'title' => 'Post-engagement growth',
+                            // 'description' =>
+                            //     'Nearly all clients discover new growth avenues post-engagement with our expertise after working with WhyLead.',
                             'description' =>
-                                'Nearly all clients discover new growth avenues post-engagement with our expertise after working with WhyLead.',
-                            'description' =>
-                                'Nearly all clients discover new growth avenues post-engagement with our expertise',
+                                'Nearly all clients discover new growth avenues after engaging our expert consultants',
                         ],
                         [
                             'percent' => 82,

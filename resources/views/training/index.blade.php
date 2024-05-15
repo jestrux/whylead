@@ -12,7 +12,11 @@
     @php
         $images = $data->filter(fn($item) => $item->type == 'image');
         $getImage = function ($name) use ($images) {
-            return str_replace("http://localhost:8000/", asset(''), $images->first(fn($item) => $item->name == $name)->image);
+            return str_replace(
+                'http://localhost:8000/',
+                asset(''),
+                $images->first(fn($item) => $item->name == $name)->image,
+            );
         };
     @endphp
     @include('training.banner')
@@ -23,7 +27,7 @@
 
     @include('training.faqs')
 
-    @include('home.cta')
+    @include('home.cta', ['interest' => 'Training'])
     @endpierdata()
 @endsection
 

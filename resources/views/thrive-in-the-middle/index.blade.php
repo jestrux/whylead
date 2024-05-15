@@ -24,7 +24,7 @@
 
     @include('training.faqs')
 
-    @include('home.cta')
+    @include('home.cta', ["interest" => "Thrive in the Middle"])
 @endsection
 
 @section('scripts')

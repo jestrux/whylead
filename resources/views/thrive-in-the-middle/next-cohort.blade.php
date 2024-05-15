@@ -71,7 +71,7 @@
 
             <div class="text-center">
                 <p class="text-lg opacity-70">Ready to become your organisation's strongest link?</p>
-                <a href="#" class="mt-3 btn">
+                <a href="{{url('/thrive-in-the-middle/form')}}" class="mt-3 btn">
                     Enroll Today
                 </a>
             </div>

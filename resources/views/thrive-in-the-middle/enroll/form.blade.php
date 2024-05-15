@@ -44,9 +44,10 @@
             'width' => 'half',
             'type' => 'select',
             'meta' => [
-                'choices' => ['0-3', '4-8', '9-14', '15-19', '20+'],
+                'choices' => ['0 - 3', '4 - 8', '9 - 14', '15 - 19', '20+'],
             ],
         ]),
+        pierField(['label' => 'Cohort', 'name' => 'cohort', 'width' => 'half', 'required' => false]),
         pierField([
             'label' => 'What format of the Thrive in the Middle are you considering?',
             'name' => 'what_format_of_the_thrive_in_the_middle_are_you_considering_',
@@ -58,12 +59,16 @@
             ],
         ]),
     ];
+
+    $values = [
+        'Cohort' => $_GET['cohort'] ?? null,
+    ];
 @endphp
 
 
 <section class="pt-6 pb-12">
     <div class="max-w-4xl px-8 mx-auto">
-        <x-pier::new-form :fields="$fields" on-save="enroll"
+        <x-pier::new-form :$fields :$values on-save="enroll"
             success-message="We've received your message, we'll get back to you." />
 
         <script>

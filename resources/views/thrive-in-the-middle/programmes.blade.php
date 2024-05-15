@@ -71,22 +71,15 @@
                 </h2>
 
                 <p class="text-lg/loose uppercase">
-                    In a world that demands disruptive thinking and approaches, how do become part of the wind that
-                    pushes the tide of change?
+                    These modules provide the tools and insights necessary for navigating complex challenges, fostering
+                    a culture of continuous improvement, and driving strategic success.
                 </p>
-
-                {{-- <p class="text-base/loose opacity-70">
-                    Healthy Teams Communicate (openly), Collaborate (happily), and Challenge (willingly). Healthy Teams
-                    are Thriving Teams. We work with your teams to get you to a healthier place through our SPR model.
-                    We facilitate offsite retreats but we also work on a retainer basis with teams that require a
-                    longer-term engagement.
-                </p> --}}
 
                 <x-faqs :data="$faqs" />
 
                 <div class="mt-5">
                     <a href="{{ url('/thrive-in-the-middle/form') }}" class="btn w-full md:w-auto">
-                        Download Program Brochure
+                        Sign Up for Next Cohort
                     </a>
                 </div>
             </div>
