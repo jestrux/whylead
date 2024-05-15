@@ -181,14 +181,14 @@
 
                         <span></span>
 
-                        <button x-on:click="showPrompt = false" class="btn btn-sm srounded-r-full flex-shrink-0">
-                            Contact Us
+                        <a x-bind:href="'{{url('/')}}' + course.action" x-on:click="showPrompt = false" class="btn btn-sm srounded-r-full flex-shrink-0">
+                            Get in touch
 
                             <svg class="-mr-1 size-4" fill="none" viewBox="0 0 24 24" stroke-width="3"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                             </svg>
-                        </button>
+                        </a>
                     </div>
                 </div>
 

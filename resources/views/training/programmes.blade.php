@@ -169,7 +169,7 @@
 
                                 <div class="mt-5">
                                     <a href="{{ url('/contacts?interest=Training') }}" class="btn w-full md:w-auto">
-                                        Transform your team
+                                        Transform Your Leaders
                                     </a>
                                 </div>
                             </div>

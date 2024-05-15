@@ -37,7 +37,7 @@
                 </h2>
 
                 <p class="mt-1 text-lg/relaxed uppercase">
-                    Our Programmes Are Designed To Develop Leaders Who Can Lead 21st Century Thriving Organizations
+                    Our Programmes Are Designed To Develop Leaders Who Can Lead Thriving Organizations In The 21st Century.
                 </p>
             </div>
 
