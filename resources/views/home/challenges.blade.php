@@ -24,10 +24,16 @@
 <script>
     document.addEventListener("alpine:init", () => {
         Alpine.data("challenges", () => ({
-            setChallenge(name) {
-                if (!name)
+            setChallenge(name, url) {
+                if (!name) {
                     this.challenge = null;
-                else
+
+                    if (url) {
+                        setTimeout(() => {
+                            window.location.href = url;
+                        }, 2000);
+                    }
+                } else
                     this.challenge = Object.assign({}, this.challenges.find((c) => c.title ==
                         name));
 
@@ -105,9 +111,9 @@
                                                     </template>
                                                 </ul>
 
-                                                <a x-bind:href="'{{ url('/contacts') }}?interest=' + solution.title"
+                                                <button
                                                     class="self-end mt-auto mb-2 -mr-3 btn btn-outline btn-xs capitalize !text-content/80 border-none"
-                                                    x-on:click="setChallenge()">
+                                                    x-on:click="setChallenge(null, '{{ url('/contacts') }}?interest=' + solution.title)">
                                                     Get in touch
 
                                                     <svg class="-mr-1 size-3.5" fill="none" viewBox="0 0 24 24"
@@ -115,7 +121,7 @@
                                                         <path stroke-linecap="round" stroke-linejoin="round"
                                                             d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                                                     </svg>
-                                                </a>
+                                                </button>
                                             </div>
                                         </li>
                                     </template>

@@ -1,5 +1,5 @@
 @php
-    $isHomePage = true;
+    $isPopupPage = true;
 @endphp
 
 @extends('layout.index')

@@ -184,7 +184,7 @@
     @yield('scripts')
 
     <script>
-        @unless (isset($isHomePage))
+        @unless (isset($isPopupPage))
             localStorage.initialPopupShown = true;
         @endunless
     </script>
