@@ -15,9 +15,9 @@
             index: 0,
             phrases: [
                 { image: '{{ asset('img/banner.png') }}', label: 'fear&nbsp;of&nbsp;change' },
-                { image: '{{ asset('img/banner.png') }}', label: 'worry&nbsp;or&nbsp;fear' },
-                { image: '{{ asset('img/banner.png') }}', label: 'slow&nbsp;days' },
-                { image: '{{ asset('img/banner.png') }}', label: 'disconnect' },
+                { image: '{{ asset('img/banner.png') }}', label: 'Leadership&nbsp;fog' },
+                { image: '{{ asset('img/banner.png') }}', label: 'team&nbsp;discord' },
+                { image: '{{ asset('img/banner.png') }}', label: 'strategic&nbsp;drift' },
             ],
             get phrase() {
                 return this.phrases[this.index].label;
