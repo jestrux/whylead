@@ -6,7 +6,7 @@
 
 @section('content')
     @pierdata("Podcast")
-    <div class="grid grid-cols-12 items-start max-w-7xl mx-auto px-8 py-8 xl:py-10">
+    <div class="lg:grid grid-cols-12 items-start max-w-7xl mx-auto lg:px-8 lg:py-8 xl:py-10">
         <div class="col-span-4 min-h-full">
             @include('podcast.sidebar')
         </div>
@@ -15,7 +15,7 @@
             @php
                 $openFirst = isset($_GET['openFirst']);
             @endphp
-            <div class="max-w-3xl mx-auto px-12 pt-4" x-data="{
+            <div class="max-w-3xl mx-auto lg:px-12 pt-4" x-data="{
                 listen: '{{ $openFirst ? $data[0]->_id : null }}',
                 filter: 'All',
                 copiedLinkFor: null,
@@ -34,11 +34,11 @@
                 }
             }"
                 x-on:episode-link-copied.window="onEpisodeLinkCopied">
-                <h3 class="text-3xl font-bold">
+                <h3 class="text-3xl font-bold px-4 lg:px-0 mt-6 md:mt-0">
                     Podcast Episodes
                 </h3>
 
-                <div class="-mb-5 sticky top-16 z-10 h-16 bg-canvas flex items-center gap-3">
+                <div class="-mb-5 sticky top-12 lg:top-16 z-10 h-16 px-4 lg:px-0 bg-canvas flex items-center gap-3">
                     @foreach (['All', 'Latest', 'Popular'] as $item)
                         <button
                             class="inline-flex text-xs/none font-bold py-2 px-3.5 rounded-full border uppercase tracking-widest"
@@ -60,7 +60,7 @@
                             total_plays: {{ $episode->total_plays }},
                             index: {{ $loop->index }}
                         }" x-show="(!popular || total_plays > 200) && (!latest || index < 4)"
-                            x-transition class="py-6">
+                            x-transition class="py-6 px-4 md:px-0">
                             <div class="md:px-4 lg:px-0 flex flex-row-reverse items-center gap-6">
                                 <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
                                     href="#">

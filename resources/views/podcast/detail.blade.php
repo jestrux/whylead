@@ -59,13 +59,13 @@
 @endif
 
 @section('content')
-    <div class="grid grid-cols-12 items-start max-w-7xl mx-auto px-8 py-8 xl:py-10">
-        <div class="col-span-4 min-h-full">
+    <div class="lg:grid grid-cols-12 items-start max-w-7xl mx-auto px-4 lg:px-8 py-8 xl:py-10">
+        <div class="hidden lg:block col-span-4 min-h-full">
             @include('podcast.sidebar')
         </div>
 
         <div class="col-span-8">
-            <div class="max-w-3xl mx-auto px-12" x-data="{
+            <div class="max-w-3xl mx-auto lg:px-12" x-data="{
                 copied: false,
                 onEpisodeLinkCopied(e) {
                     this.copied = true;
@@ -74,7 +74,8 @@
                         this.copied = false;
                     }, 2000);
                 }
-            }" x-on:episode-link-copied.window="onEpisodeLinkCopied">
+            }"
+                x-on:episode-link-copied.window="onEpisodeLinkCopied">
                 <div>
                     <div class="mb-8">
                         <a href="{{ url('/podcast') }}" class="h-6 text-sm font-medium text-primary flex items-center gap-2">
