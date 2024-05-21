@@ -55,16 +55,17 @@
         <div class="fixed inset-0 z-50 bg-black/50 flex items-center justify-between">
             <div class="w-full max-w-5xl mx-auto relative">
                 <button x-on:click="setChallenge()"
-                    class="absolute p-1 rounded right-3 lg:-right-3 -top-4 lg:-top-3 z-50 bg-content text-canvas">
+                    class="absolute p-1 rounded right-3 lg:-right-3 top-3 lg:-top-3 z-50 bg-content text-canvas">
                     <svg class="size-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
                     </svg>
                 </button>
 
-                <div class="relative lg:grid grid-cols-12 bg-card border border-stroke rounded-2xl overflow-hidden">
-                    <div class="relative z-10 col-span-7 flex flex-col max-h-[500px] overflow-auto">
-                        <div class="p-8">
-                            <h3 class="text-accent dark:text-content uppercase font-bold tracking-wide text-xl/none"
+                <div class="relative lg:grid grid-cols-12 bg-card border border-stroke lg:rounded-2xl overflow-hidden">
+                    <div
+                        class="relative z-10 col-span-7 flex flex-col h-screen lg:h-auto lg:max-h-[500px] overflow-auto">
+                        <div class="p-4 lg:p-8">
+                            <h3 class="mt-4 text-accent dark:text-content uppercase font-bold tracking-wide text-xl/none"
                                 x-text="challenge.title">
                                 Build thriving teams
                             </h3>

@@ -58,10 +58,9 @@
     ];
 @endphp
 
-<div class="mt-14 max-w-7xl mx-auto px-8">
-
-    <div class="rounded-3xl bg-accent text-white relative">
-        <div class="sp-16 lg:grid grid-cols-2" x-data="{ effectiveLeaders: true }">
+<div class="mt-14 max-w-7xl mx-auto lg:px-8">
+    <div class="lg:rounded-3xl bg-accent text-white relative">
+        <div class="lg:grid grid-cols-2" x-data="{ effectiveLeaders: true }">
             <div class="p-8 lg:px-0 lg:pt-12 lg:pl-16">
                 <div class="lg:pr-14">
                     <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">
@@ -121,7 +120,7 @@
                     <div @if (!$positive) x-cloak @endif x-show="{{ $flag }}"
                         class="flex-1 flex flex-col gap-12">
                         @foreach ($item['indicators'] as $indicator)
-                            <div class="text-xl flex items-start gap-4">
+                            <div class="text-xl flex flex-col lg:flex-row items-start gap-4">
                                 <div style="background: {{ $item['color'] }}"
                                     class="text-black/70 size-10 flex items-center justify-center rounded-lg">
                                     <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"

@@ -31,19 +31,19 @@
 </script>
 @endpierdata()
 
-<div x-cloak x-show="showPrompt" class="hidden fixed inset-0 z-50 bg-black/70 lg:flex items-center justify-between"
+<div x-cloak x-show="showPrompt" class="fixed inset-0 z-50 bg-black/70 lg:flex items-center justify-between"
     x-data="coursePopup">
     <div class="w-full max-w-4xl mx-auto relative">
         <button x-on:click="showPrompt = false; updateScroll()"
-            class="absolute p-1 rounded -right-3 -top-3 z-50 bg-content text-canvas border border-white/30">
+            class="absolute p-1 rounded right-2 lg:-right-3 top-1 lg:-top-3 z-50 bg-content text-canvas border border-white/30">
             <svg class="size-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
             </svg>
         </button>
 
-        <div x-show="!course" class="grid grid-cols-12 bg-card border border-stroke rounded-2xl overflow-hidden">
-            <div class="col-span-7 p-10 relative z-10 h-full overflow-y-auto max-h-[420px]">
-                <h3 class="uppercase font-bold tracking-wide text-2xl">
+        <div x-show="!course" class="lg:grid grid-cols-12 bg-card border border-stroke lg:rounded-2xl overflow-hidden">
+            <div class="col-span-7 p-4 lg:p-10 relative z-10 h-screen overflow-y-auto lg:max-h-[420px]">
+                <h3 class="mt-10 lg:mt-0 uppercase font-bold tracking-wide text-2xl">
                     Your partner in building a thriving
                     organization
                 </h3>
@@ -90,9 +90,9 @@
         </div>
 
         <template x-if="course">
-            <div class="relative grid grid-cols-12 bg-card border border-stroke rounded-2xl overflow-hidden">
-                <div class="relative z-50 col-span-7 flex flex-col h-full overflow-y-auto max-h-[420px]">
-                    <div class="p-4 flex items-center bg-card sticky top-0">
+            <div class="relative lg:grid grid-cols-12 bg-card border border-stroke rounded-2xl overflow-hidden">
+                <div class="relative z-50 col-span-7 flex flex-col h-screen overflow-y-auto lg:max-h-[420px]">
+                    <div class="lg:p-4 flex flex-col lg:flex-row gap-4 items-center lg:bg-card sticky top-0">
                         <button x-on:click="course = null"
                             class="self-start btn btn-outline btn-sm border-none !text-primary">
                             <svg class="-ml-1 size-4" fill="none" viewBox="0 0 24 24" stroke-width="3"
@@ -103,14 +103,14 @@
                             Go Back
                         </button>
 
-                        <div class="flex-1 text-center pr-16">
+                        <div class="flex-1 text-center lg:pr-16">
                             <h3 class="uppercase font-bold tracking-wide text-base/none" x-text="course.title">
                                 Build thriving teams
                             </h3>
                         </div>
                     </div>
 
-                    <div class="p-4 pl-8">
+                    <div class="p-4 lg:pl-8">
                         <p class="text-base/loose" x-text="course.description">
                             Thriving teams start with the knowledge that not all that go alone are meant to be alone.
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus tempora, assumenda
@@ -126,7 +126,7 @@
                                 What to expect
                             </h5>
 
-                            <div x-data="{ expanded: -1 }" class="flex-1 w-full">
+                            <div x-data="{ expanded: -1 }" class="-mx-4 lg:mx-0 flex-1 lg:w-full">
                                 <template x-for="(entry, index) in course.faqs">
                                     <button
                                         class="w-full text-left focus:outline-none flex gap-8 md:gap-4 pt-4 px-4 md:px-0"
@@ -135,7 +135,6 @@
                                         <div class="flex-1">
                                             <h3 class="mb-4 text-lg/none font-medium md:text-base/none"
                                                 x-text="entry.question">
-
                                             </h3>
                                             <div class="transition-all duration-200 max-h-0 overflow-hidden"
                                                 :style="expanded == index ?
@@ -167,7 +166,7 @@
                     </div>
 
                     <div
-                        class="sticky bottom-0 bg-card z-10 pt-3 pb-2 pl-2 border-t border-stroke mt-auto flex items-center justify-between">
+                        class="sticky bottom-0 bg-card z-10 pt-3 pb-2 px-4 lg:px-0 lg:pl-2 border-t border-stroke mt-auto flex items-center justify-between">
                         {{-- <a href="#" class="btn btn-outline btn-sm !text-black/70">
                         <svg class="-ml-1 size-4" fill="none" viewBox="0 0 24 24" stroke-width="3"
                             stroke="currentColor">
@@ -175,13 +174,14 @@
                         </svg>
                         Prev
                     </a> --}}
-                        <span class="ml-3 opacity-60" x-text="course.prompt">
+                        <span class="lg:ml-3 opacity-60" x-text="course.prompt">
                             Ready to start building thriving teams?
                         </span>
 
                         <span></span>
 
-                        <a x-bind:href="'{{url('/')}}' + course.action" x-on:click="showPrompt = false" class="btn btn-sm srounded-r-full flex-shrink-0">
+                        <a x-bind:href="'{{ url('/') }}' + course.action" x-on:click="showPrompt = false"
+                            class="btn btn-sm srounded-r-full flex-shrink-0">
                             Get in touch
 
                             <svg class="-mr-1 size-4" fill="none" viewBox="0 0 24 24" stroke-width="3"

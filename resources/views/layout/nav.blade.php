@@ -57,13 +57,13 @@
 <section id="mainNavigationMenu"
     class="sticky -top-px inset-x-0 z-50 lg:transition-colors duration-300 border-stroke md:bg-card text-content">
     <div class="relative flex items-center justify-between p-3 md:hidden">
-        <a href="#" class="ml-1 -mb-5">
+        <a href="{{ url('/') }}" class="ml-1 -mb-5">
             @include('common.logo', ['fill' => '#fff'])
         </a>
 
         <div id="mobileNavButtons" class="flex items-center gap-5">
             <div class="text-accent">
-                <a href="#" class="btn btn-sm font-bold btn-outline px-0 border-none">
+                <a href="{{ url('/contacts') }}" class="btn btn-sm font-bold btn-outline px-0 border-none">
                     <span class="capitalize">
                         Start thriving
                     </span>
