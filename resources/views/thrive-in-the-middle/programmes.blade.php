@@ -36,8 +36,8 @@
         'https://images.unsplash.com/photo-1622675103136-e4b90c9a33d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDMzfHxsZWFkZXJzaGlwJTIwdHJhaW5pbmd8ZW58MHx8fHwxNzA4NDMxMTM0fDA&ixlib=rb-4.0.3&q=80&w=1080';
 @endphp
 
-<section id="thrivingTeams" class="py-12 lg:pb-24">
-    <div class="relative max-w-7xl mx-auto px-8">
+<section id="thrivingTeams" class="py-4 lg:py-12 lg:pb-24">
+    <div class="relative max-w-7xl mx-auto px-4 lg:px-8">
         <div class="lg:grid grid-cols-12 gap-16 items-center">
             <div class="md:hidden">
                 <a href="#" class="block relative">
@@ -65,7 +65,7 @@
                 </div>
             </div>
 
-            <div class="col-span-6 pt-6 pb-20 flex flex-col gap-2">
+            <div class="col-span-6 pt-2 lg:pt-6 pb-6 lg:pb-20 flex flex-col gap-1 lg:gap-2">
                 <h2 class="mt-3 text-2xl lg:text-3xl font-bold uppercase">
                     Programmes
                 </h2>
@@ -75,7 +75,9 @@
                     a culture of continuous improvement, and driving strategic success.
                 </p>
 
-                <x-faqs :data="$faqs" />
+                <div class="-mx-4 lg:mx-0">
+                    <x-faqs :data="$faqs" />
+                </div>
 
                 <div class="mt-5">
                     <a href="{{ url('/thrive-in-the-middle/form') }}" class="btn w-full md:w-auto">

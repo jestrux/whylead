@@ -29,8 +29,7 @@
                 'The program is designed to foster holistic leadership development through interactive workshops, group coaching, and real-world applications.',
         ],
         [
-            'icon' =>
-                'M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z',
+            'icon' => 'M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z',
             'image' =>
                 'https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDEyfHxjb3Jwb3JhdGUlMjB0ZWFtfGVufDB8fHx8MTcxMjU3MzM1M3ww&ixlib=rb-4.0.3&q=80&w=1080',
             'title' => 'Program Duration',
@@ -60,10 +59,10 @@
     $image = 'https://res.cloudinary.com/sfp-app/image/upload/v1711540531/vudvwz3j0vmlsqslsjio.jpg';
 @endphp
 
-<section class="pt-28 pb-20">
-    <div class="px-8 relative max-w-7xl mx-auto">
+<section class="py-8 lg:pt-28 lg:pb-20">
+    <div class="px-4 lg:px-8 relative max-w-7xl mx-auto">
         <div class="lg:grid grid-cols-2 gap-16 items-center">
-            <div class="md:hidden">
+            <div class="md:hidden mb-3">
                 <a href="#" class="block relative">
                     <div
                         class="relative aspect-video rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
@@ -109,7 +108,9 @@
                     Below are some key outcomes for the organization.
                 </p>
 
-                <x-faqs :data="$faqs" />
+                <div class="-mx-4 lg:mx-0">
+                    <x-faqs :data="$faqs" />
+                </div>
 
                 <div class="mt-5">
                     <a href="{{ url('/thrive-in-the-middle/form') }}" class="btn w-full md:w-auto">
@@ -141,7 +142,7 @@
             </div>
         </div>
 
-        <div class="mt-24 flex flex-col gap-4 lg:gap-8 items-center justify-center">
+        <div class="mt-12 lg:mt-24 flex flex-col gap-4 lg:gap-8 items-center justify-center">
             <div class="max-w-3xl mx-auto text-center">
                 <h2 class="text-2xl lg:text-4xl font-bold">
                     <span class="uppercase">

@@ -34,10 +34,10 @@
                 </h2>
             </div>
 
-            <ul role="list" class="grid grid-cols-1 lg:grid-cols-4 gap-2 relative">
-                <div class="absolute top-0 h-20 bg-red-50s -inset-x-2 flex items-center">
+            <ul role="list" class="grid grid-cols-1 lg:grid-cols-4 gap-2 relative my-4 py-6 lg:my-0 lg:py-0">
+                <div class="absolute top-0 h-full lg:h-20 bg-red-50s -inset-x-2 flex flex-col lg:flex-row items-center">
                     <div class="flex-shrink-0 size-3 rounded-full border-2 border-accent dark:border-content/20"></div>
-                    <div class="flex-1 border-t-2 border-dashed border-stroke"></div>
+                    <div class="flex-1 border-l-2 lg:border-l-0 lg:border-t-2 border-dashed border-stroke"></div>
                     <div class="flex-shrink-0 size-3 rounded-full border-2 border-accent dark:border-content/20"></div>
                 </div>
 
@@ -71,7 +71,7 @@
 
             <div class="text-center">
                 <p class="text-lg opacity-70">Ready to become your organisation's strongest link?</p>
-                <a href="{{url('/thrive-in-the-middle/form')}}" class="mt-3 btn">
+                <a href="{{ url('/thrive-in-the-middle/form') }}" class="mt-3 btn">
                     Enroll Today
                 </a>
             </div>

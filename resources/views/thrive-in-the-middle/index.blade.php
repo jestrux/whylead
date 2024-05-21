@@ -5,7 +5,7 @@
 @extends('layout.index')
 
 @section('content')
-    <div class="absolute inset-0 h-[400px] bg-accent">
+    <div class="hidden lg:block absolute inset-0 h-[400px] bg-accent">
     </div>
 
     @include('thrive-in-the-middle.banner')
@@ -18,13 +18,13 @@
 
     @include('thrive-in-the-middle.upcoming-cohorts')
 
-    <div class="-mb-6">
+    <div class="-mb-16 lg:-mb-6">
         @include('consultancy.testimonials')
     </div>
 
-    @include('training.faqs')
+    @include('home.faqs')
 
-    @include('home.cta', ["interest" => "Thrive in the Middle"])
+    @include('home.cta', ['interest' => 'Thrive in the Middle'])
 @endsection
 
 @section('scripts')

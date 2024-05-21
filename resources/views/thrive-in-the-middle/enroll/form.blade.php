@@ -67,7 +67,7 @@
 
 
 <section class="pt-6 pb-12">
-    <div class="max-w-4xl px-8 mx-auto">
+    <div class="max-w-4xl px-4 lg:px-8 mx-auto">
         <x-pier::new-form :$fields :$values on-save="enroll"
             success-message="We've received your message, we'll get back to you." />
 
