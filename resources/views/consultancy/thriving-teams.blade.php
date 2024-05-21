@@ -2,8 +2,8 @@
     $image = $getImage('Thriving Teams Image');
 @endphp
 
-<section id="thrivingTeams" class="py-12 lg:py-20">
-    <div class="relative max-w-7xl mx-auto px-8">
+<section id="thrivingTeams" class="py-6 lg:py-20">
+    <div class="relative max-w-7xl mx-auto px-4 lg:px-8">
         <div class="lg:grid grid-cols-12 gap-16 items-center">
             <div class="md:hidden">
                 <a href="#" class="block relative">
@@ -29,7 +29,7 @@
                 </div>
             </div>
 
-            <div class="col-span-6 pt-6 pb-16 flex flex-col gap-2">
+            <div class="col-span-6 pt-6 lg:pb-16 flex flex-col gap-2">
                 <h2 class="mt-3 text-2xl lg:text-3xl font-bold uppercase">
                     Develop Thriving teams
                 </h2>

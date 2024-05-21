@@ -87,13 +87,18 @@
     </div>
 
     <div id="mainNavigationMenuItems"
-        class="max-w-7xl mx-auto fixed top-0 bottom-0 flex flex-col px-8 py-8 md:flex-row items-centers md:justify-between md:relative md:bg-transparent md:py-0">
+        class="max-w-7xl mx-auto fixed inset-0 flex flex-col px-8 py-8 md:flex-row items-centers md:justify-between md:relative md:bg-transparent md:py-0">
         <nav role="off-canvas" class="w-full flex items-center justify-center mt-12 md:w-auto md:mt-0">
             <ul class="w-full relative z-50 md:flex flex-col justify-center items-center h-full md:flex-row md:gap-x-8">
                 {{-- <x-menu-item exact url="/">Home</x-menu-item> --}}
                 <x-menu-item url="{{ url('/consultancy') }}">Consultancy</x-menu-item>
                 <x-menu-item url="{{ url('/podcast') }}">Podcast</x-menu-item>
-                {{-- <x-menu-item url="{{ url('#') }}">About Us</x-menu-item> --}}
+
+                <x-menu-item class="md:hidden" url="{{ url('/training') }}">Training</x-menu-item>
+                <x-menu-item class="md:hidden" url="{{ url('/thrive-in-the-middle') }}">Thrive in the Middle
+                    Managers</x-menu-item>
+                <x-menu-item class="md:hidden" url="{{ url('/about') }}">About Us</x-menu-item>
+
                 <x-menu-item class="md:hidden" url="{{ url('/contacts') }}">Contact Us</x-menu-item>
             </ul>
         </nav>

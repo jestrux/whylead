@@ -3,7 +3,7 @@
 @endphp
 
 <section>
-    <div class="px-8 py-12 lg:py-20 relative max-w-7xl mx-auto">
+    <div class="px-4 lg:px-8 py-6 lg:py-20 relative max-w-7xl mx-auto">
         <div class="lg:grid grid-cols-12 gap-20 items-center">
             <div class="md:hidden">
                 <a href="#" class="block relative">
@@ -63,7 +63,9 @@
                     ];
                 @endphp
 
-                <x-faqs :data="$data" />
+                <div class="-mx-4">
+                    <x-faqs :data="$data" />
+                </div>
 
                 <div class="mt-3 gap-3">
                     <a href="#" class="btn w-full md:w-auto">
@@ -76,8 +78,7 @@
                 class="col-span-6 h-full -rotate-1 shadow-xl flex-1 hidden md:flex items-center justify-center relative">
                 <div
                     class="relative rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
-                    <img class="rotate-6 scale-125 absolute size-full" src="{{ $image }}"
-                        alt="" />
+                    <img class="rotate-6 scale-125 absolute size-full" src="{{ $image }}" alt="" />
 
                 </div>
 

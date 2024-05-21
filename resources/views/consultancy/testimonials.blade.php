@@ -54,8 +54,8 @@
     });
 </script>
 
-<section class="pt-4 pb-8" x-data="testimonials">
-    <div class="relative px-6 max-w-7xl mx-auto overflow-visible">
+<section class="pt-4 pb-8 overflow-hidden" x-data="testimonials">
+    <div class="relative lg:px-6 max-w-7xl mx-auto w-screen lg:overflow-visible">
         <div class="max-w-5xl mx-auto text-center">
             <h2 class="text-2xl lg:text-4xl font-bold uppercase">
                 Testimonials
@@ -66,10 +66,10 @@
             </p>
         </div>
 
-        <div class="mt-10 flex gap-8 transition-transform duration-500"
+        <div class="mt-10 hidden lg:flex lg:gap-8 transition-transform duration-500"
             x-bind:style="{ transform: `translateX(${-42 * currentStep}%)` }">
             @foreach ($testimonials as $testimonial)
-                <div class="w-5/12 saspect-[1/1.25] p-8 relative flex-shrink-0 border-l border-b border-b-content/[0.008] shadow-sm border-t border-content/10 bg-gradient-to-br from-primary/10 via-primary/[0.07] dark:from-content/5 dark:via-content/[0.01] to-transparent rounded-2xl overflow-hidden flex flex-col items-start justify-between"
+                <div class="w-11/12 lg:w-5/12 saspect-[1/1.25] p-8 relative flex-shrink-0 border-l border-b border-b-content/[0.008] shadow-sm border-t border-content/10 bg-gradient-to-br from-primary/10 via-primary/[0.07] dark:from-content/5 dark:via-content/[0.01] to-transparent rounded-2xl overflow-hidden flex flex-col items-start justify-between"
                     x-bind:class="{{ $loop->index - 1 }} != currentStep && ({{ $loop->index - 1 }} >= 0 || currentStep > 0) &&
                         'hover:scale-105 hover:transition-transform hover:duration-300 cursor-pointer'"
                     x-on:click="goToStep({{ $loop->index - 1 }})">
@@ -99,7 +99,39 @@
             <div class="w-32">&nbsp;</div>
         </div>
 
-        <div class="z-10 absolute inset-x-12 -bottom-14 flex items-center justify-between gap-4">
+        <div class="mt-6 flex lg:hidden flex-col gap-6">
+            @foreach ($testimonials as $testimonial)
+                <div class="p-6 relative flex-shrink-0 border-l border-b border-b-content/[0.008] shadow-sm border-t border-content/10 bg-gradient-to-br from-primary/10 via-primary/[0.07] dark:from-content/5 dark:via-content/[0.01] to-transparent rounded-2xl overflow-hidden flex flex-col items-start justify-between"
+                    x-bind:class="{{ $loop->index - 1 }} != currentStep && ({{ $loop->index - 1 }} >= 0 || currentStep > 0) &&
+                        'hover:scale-105 hover:transition-transform hover:duration-300 cursor-pointer'"
+                    x-on:click="goToStep({{ $loop->index - 1 }})">
+                    <svg class="absolute inset-3 w-12 opacity-5" fill="currentColor" viewBox="0 0 100 100">
+                        <path
+                            d="M90.4,54.9v17.7c0,4.9-4,8.9-8.9,8.9H63.8c-4.9,0-8.9-4-8.9-8.9V54.9c0-19.6,15.9-35.4,35.4-35.4V32  c-9.1,0.6-16.9,6.2-20.6,14.1h11.8C86.4,46.1,90.4,50,90.4,54.9z M37.2,81.5H19.5c-4.9,0-8.9-4-8.9-8.9V54.9  c0-19.6,15.9-35.4,35.4-35.4V32c-9.1,0.6-16.9,6.2-20.6,14.1h11.8c4.9,0,8.9,4,8.9,8.9v17.7C46.1,77.5,42.1,81.5,37.2,81.5z">
+                        </path>
+                    </svg>
+
+                    <p class="text-base/loose font-light">
+                        {{ $testimonial['description'] }}
+                    </p>
+
+                    <div class="mt-6 flex items-center gap-2">
+                        <img class="bg-canvas h-10 flex-shrink-0 flex items-end rounded-full border border-stroke object-cover"
+                            src="{{ $testimonial['image'] }}" alt="" />
+
+                        <div class="pt-px">
+                            <h5 class="text-sm opacity-80">{{ $testimonial['name'] }}</h5>
+                            <p class="mt-px text-sm opacity-50">{{ $testimonial['position'] }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+
+            <div class="w-32">&nbsp;</div>
+        </div>
+
+        <div class="z-10 mt-4 hidden lg:flex items-center justify-between gap-4">
             <button x-on:click="previousStep()"
                 class="size-10 rounded-full flex items-center justify-center hover:bg-content/5"
                 x-bind:class="!canGoBack && 'pointer-events-none opacity-20'">

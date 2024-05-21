@@ -10,10 +10,10 @@
             $entry = (object) $e;
         @endphp
 
-        <button class="flex flex-row-reverse gap-8 md:gap-4 w-full text-left focus:outline-none pt-4 px-4 md:px-0"
+        <button class="flex flex-row-reverse gap-4 lg:gap-8 md:gap-4 w-full text-left focus:outline-none pt-4 px-4 md:px-0"
             x-on:click="expanded = expanded == {{ $i }} ? -1 : {{ $i }}">
             <div class="flex-1">
-                <h3 class="mb-4 text-lg/none font-medium md:text-base/none">
+                <h3 class="mb-4 text-lg font-medium md:text-base/none">
                     {{ $entry->question }}
                 </h3>
                 <div class="transition-all duration-200 max-h-0 overflow-hidden"

@@ -3,7 +3,7 @@
 @endphp
 
 <section>
-    <div class="px-8 py-12 lg:py-20 relative max-w-7xl mx-auto">
+    <div class="lg:mt-0 px-4 lg:px-8 py-6 lg:py-20 relative max-w-7xl mx-auto">
         <div class="lg:grid grid-cols-12 gap-20 items-center">
             <div class="md:hidden">
                 <a href="#" class="block relative">
@@ -15,7 +15,7 @@
                 </a>
             </div>
 
-            <div class="col-span-6 pt-8 pb-16 flex flex-col gap-2">
+            <div class="col-span-6 pt-8 lg:pb-16 flex flex-col gap-2">
                 <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">
                     <span class="uppercase">
                         Performance
@@ -71,7 +71,9 @@
                     ];
                 @endphp
 
-                <x-faqs :data="$data" />
+                <div class="-mx-4">
+                    <x-faqs :data="$data" />
+                </div>
 
                 {{-- <ul role="list" class="divide-y divide-black/5">
                     @foreach ($data as $item)

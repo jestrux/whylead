@@ -2,8 +2,8 @@
     $image = $getImage('Facilitating Strategic Gatherings Image');
 @endphp
 
-<section class="py-12 lg:py-20">
-    <div class="relative max-w-7xl mx-auto px-8">
+<section class="py-6 lg:py-20">
+    <div class="relative max-w-7xl mx-auto px-4 lg:px-8">
         <div class="lg:grid grid-cols-12 gap-16 items-center">
             <div class="md:hidden">
                 <a href="#" class="block relative">
@@ -28,7 +28,7 @@
                 </div>
             </div>
 
-            <div class="col-span-6 pt-8 pb-16 flex flex-col gap-2">
+            <div class="col-span-6 pt-8 lg:pb-16 flex flex-col gap-2">
                 <h2 class="mt-3 text-2xl lg:text-3xl font-bold uppercase">
                     <span class="outline-text">Facilitating</span> Strategic gatherings
                 </h2>
@@ -66,7 +66,9 @@
                     ];
                 @endphp
 
-                <x-faqs :data="$data" />
+                <div class="-mx-4">
+                    <x-faqs :data="$data" />
+                </div>
 
                 <div class="mt-5 gap-3">
                     <a href="#" class="btn w-full md:w-auto">

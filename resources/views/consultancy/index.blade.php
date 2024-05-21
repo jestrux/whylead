@@ -5,14 +5,18 @@
 @extends('layout.index')
 
 @section('content')
-    <div class="absolute inset-0 h-[400px] bg-accent">
+    <div class="hidden lg:block absolute inset-0 h-[400px] bg-accent">
     </div>
 
     @pierdata(["model" => "Content", "wherePage" => "Consultancy"])
     @php
         $images = $data->filter(fn($item) => $item->type == 'image');
         $getImage = function ($name) use ($images) {
-            return str_replace("http://localhost:8000/", asset(''), $images->first(fn($item) => $item->name == $name)->image);
+            return str_replace(
+                'http://localhost:8000/',
+                asset(''),
+                $images->first(fn($item) => $item->name == $name)->image,
+            );
         };
     @endphp
 
@@ -26,7 +30,9 @@
 
     @include('consultancy.happier-workplace')
 
-    @include('consultancy.testimonials')
+    <div class="-my-14">
+        @include('consultancy.testimonials')
+    </div>
 
     @include('home.unlock-potential')
 
