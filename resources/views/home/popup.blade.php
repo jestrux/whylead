@@ -90,8 +90,8 @@
         </div>
 
         <template x-if="course">
-            <div class="relative lg:grid grid-cols-12 bg-card border border-stroke rounded-2xl overflow-hidden">
-                <div class="relative z-50 col-span-7 flex flex-col h-screen overflow-y-auto lg:max-h-[420px]">
+            <div class="relative lg:grid grid-cols-12 bg-card border border-stroke lg:rounded-2xl overflow-hidden">
+                <div class="relative z-20 col-span-7 flex flex-col h-screen overflow-y-auto lg:max-h-[420px]">
                     <div class="lg:p-4 flex flex-col lg:flex-row gap-4 items-center lg:bg-card sticky top-0">
                         <button x-on:click="course = null"
                             class="self-start btn btn-outline btn-sm border-none !text-primary">

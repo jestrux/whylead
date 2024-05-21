@@ -34,7 +34,7 @@
                 </h2>
             </div>
 
-            <ul role="list" class="grid grid-cols-1 lg:grid-cols-4 gap-2 relative my-4 py-6 lg:my-0 lg:py-0">
+            <ul role="list" class="flex flex-col lg:grid grid-cols-4 gap-2 relative my-4 py-6 lg:my-0 lg:py-0">
                 <div class="absolute top-0 h-full lg:h-20 bg-red-50s -inset-x-2 flex flex-col lg:flex-row items-center">
                     <div class="flex-shrink-0 size-3 rounded-full border-2 border-accent dark:border-content/20"></div>
                     <div class="flex-1 border-l-2 lg:border-l-0 lg:border-t-2 border-dashed border-stroke"></div>

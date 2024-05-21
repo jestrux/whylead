@@ -50,7 +50,7 @@
     });
 </script>
 
-<section x-data="challenges" class="py-20">
+<section x-data="challenges" class="py-12 lg:py-20">
     <template x-if="challenge">
         <div class="fixed inset-0 z-50 bg-black/50 flex items-center justify-between">
             <div class="w-full max-w-5xl mx-auto relative">
@@ -170,12 +170,12 @@
             {{-- <p class="mt-4 text-lg/relaxed">
                 Click one of the challenges below to get started.
             </p> --}}
-            <p class="mt-5 text-lg opacity-70">
+            <p class="mt-2 lg:mt-5 text-lg opacity-70">
                 Click your top challenge below to discover targeted solutions.
             </p>
         </div>
 
-        <ul role="list" class="mx-auto mt-16 grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <ul role="list" class="mx-auto mt-4 lg:mt-16 flex flex-col lg:grid grid-cols-3 gap-6">
             @foreach ($challenges as $challenge)
                 @php
                     $i = $loop->iteration;

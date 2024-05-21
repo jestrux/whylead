@@ -152,7 +152,7 @@
                 </h2>
             </div>
 
-            <ul role="list" class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+            <ul role="list" class="flex flex-col lg:grid grid-cols-4 gap-4">
                 @foreach ($steps as $step)
                     <li
                         class="bg-gradient-to-br from-accent via-accent/90 to-accent/95 text-white relative min-h-full w-full px-8 py-6 shadow rounded-3xl overflow-hidden">

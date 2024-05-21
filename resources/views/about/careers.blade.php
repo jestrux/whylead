@@ -76,7 +76,7 @@
                 </p>
             </div>
 
-            <ul role="list" class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <ul role="list" class="flex flex-col lg:grid grid-cols-3 gap-10">
                 @foreach ($steps as $step)
                     <li
                         class="bg-card dark:bg-content/5 border border-stroke relative min-h-full w-full p-3 rounded-2xl overflow-hidden">

@@ -140,6 +140,11 @@
             object-fit: cover;
         }
 
+        .h-screen {
+            height: 100vh;
+            height: 100dvh;
+        }
+
         @media (min-width: 1024px) {
             .lg\:text-4xl {
                 /* font-size: 2.25rem; */

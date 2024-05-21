@@ -58,10 +58,10 @@
     ];
 @endphp
 
-<div class="mt-14 max-w-7xl mx-auto lg:px-8">
+<div class="lg:mt-14 max-w-7xl mx-auto lg:px-8">
     <div class="lg:rounded-3xl bg-accent text-white relative">
         <div class="lg:grid grid-cols-2" x-data="{ effectiveLeaders: true }">
-            <div class="p-8 lg:px-0 lg:pt-12 lg:pl-16">
+            <div class="px-4 lg:px-0 pt-8 lg:pt-12 lg:pl-16">
                 <div class="lg:pr-14">
                     <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">
                         <span class="uppercase">
@@ -110,7 +110,7 @@
                 </div>
             </div>
 
-            <div class="p-8 lg:p-14 flex flex-col border-l border-white/10">
+            <div class="p-6 lg:p-14 flex flex-col border-l border-white/10">
                 @foreach ($choices as $item)
                     @php
                         $positive = $loop->index == 0;
@@ -146,7 +146,7 @@
             </div>
         </div>
 
-        <div class="px-8 pb-8 lg:hidden">
+        <div class="px-6 lg:px-8 pb-8 lg:hidden">
             <a href="#" class="btn w-full">
                 Develop thriving leaders
             </a>

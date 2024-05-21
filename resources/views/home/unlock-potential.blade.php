@@ -18,7 +18,7 @@
                 </p> --}}
             </div>
 
-            <ul role="list" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <ul role="list" class="flex flex-col lg:grid grid-cols-3 gap-8">
                 @php
                     $steps = [
                         [
@@ -85,7 +85,7 @@
 
             <div class="text-center">
                 <p class="text-lg opacity-70">Ready to take your organisation to the next level?</p>
-                <a href="#" class="mt-3 btn">
+                <a href="#" class="mt-3 btn w-full md:w-auto">
                     Tell us your needs
                 </a>
             </div>

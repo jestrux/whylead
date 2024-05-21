@@ -1,5 +1,5 @@
 <section class="sbg-neutral-100">
-    <div class="px-8 py-12 lg:pt-36 lg:pb-20 relative max-w-7xl mx-auto">
+    <div class="px-4 lg:px-8 py-6 lg:pt-36 lg:pb-20 relative max-w-7xl mx-auto">
         <div class="lg:grid grid-cols-2 gap-16 items-center">
             <div class="md:hidden">
                 <a href="#" class="block relative">

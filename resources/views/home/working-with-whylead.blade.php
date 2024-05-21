@@ -1,5 +1,5 @@
-<section class="py-10 lg:py-14">
-    <div class="relative max-w-7xl mx-auto px-8">
+<section class="py-8 lg:py-14">
+    <div class="relative max-w-7xl mx-auto px-4 lg:px-8">
         <div class="flex flex-col gap-4 lg:gap-8 items-center justify-center">
             <div class="max-w-5xl mx-auto text-center">
                 <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">
@@ -9,13 +9,9 @@
                         <span class="outline-text"> looks like</span>
                     </span>
                 </h2>
-
-                {{-- <p class="lg:text-4xl font-normal tracking-normal lowercase">
-                    in these 3 tried and true steps
-                </p> --}}
             </div>
 
-            <ul role="list" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <ul role="list" class="flex flex-col lg:grid grid-cols-3 gap-8">
                 @php
                     $steps = [
                         [
@@ -44,7 +40,7 @@
 
                 @foreach ($steps as $step)
                     <li
-                        class="bg-gradient-to-br from-accent via-accent/90 to-accent/95 text-white relative min-h-full w-full px-8 py-6 shadow rounded-3xl overflow-hidden">
+                        class="bg-gradient-to-br from-accent via-accent/90 to-accent/95 text-white relative smin-h-full w-full px-8 py-6 shadow rounded-3xl overflow-hidden">
                         <div
                             class="absolute opacity-5 dark:opacity-[0.03] {{ $loop->index == 0 ? 'right-[23%]' : '-left-[25%]' }}">
                             @include('common.icon')
@@ -84,7 +80,7 @@
                 <p class="text-xl opacity-70">
                     We are on a mission to help organizations thrive
                 </p>
-                <a href="#" class="mt-3 btn">
+                <a href="#" class="mt-3 btn w-full md:w-auto">
                     Hire WhyLead today
                 </a>
             </div>

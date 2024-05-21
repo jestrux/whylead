@@ -1,6 +1,6 @@
 <section id="programmes" class="py-10 lg:py-20 bg-content/5">
-    <div class="relative max-w-7xl mx-auto lg:px-8">
-        <div class="mb-6 lg:mb-12 flex gap-12 mx-w-3xl mx-auto">
+    <div class="relative max-w-7xl mx-auto">
+        <div class="mb-6 lg:mb-12 flex gap-12 mx-w-3xl mx-auto px-4 lg:px-8">
             <div class="flex-1 text-center">
                 <h2 class="text-2xl lg:text-4xl font-bold uppercase">
                     <span class="font-light">Training </span> programmes

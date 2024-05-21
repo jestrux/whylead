@@ -1,7 +1,7 @@
 <section class="bg-content/5">
-    <div class="px-8 relative max-w-6xl mx-auto">
+    <div class="px-4 lg:px-8 relative max-w-6xl mx-auto">
         <div class="lg:grid grid-cols-12 gap-16 items-center">
-            <div class="md:hidden">
+            <div class="md:hidden pt-8">
                 <a href="#" class="block relative">
                     <div
                         class="relative aspect-video rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
