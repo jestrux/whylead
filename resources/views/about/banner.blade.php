@@ -1,6 +1,6 @@
-<section id="aboutUs" x-intersect.threshold.65="activeSection = 'aboutUs'" class="py-12 lg:pt-16 lg:pb-0">
-    <div class="relative max-w-7xl mx-auto px-8">
-        <div class="lg:grid grid-cols-12 gap-12 items-start">
+<section id="aboutUs" x-intersect.threshold.15="activeSection = 'aboutUs'" class="py-12 lg:pt-16 lg:pb-0">
+    <div class="relative max-w-7xl mx-auto px-4 lg:px-8">
+        <div class="flex flex-col lg:grid grid-cols-12 gap-6 lg:gap-12 items-start">
             <div class="col-span-5 relative">
                 <h2 class="text-2xl lg:text-4xl/[1.4] font-bold uppercase">
                     <span class="font-light">Once</span>
@@ -48,7 +48,7 @@
                 </div>
             </div>
 
-            <div class="col-span-7 pt-4 pb-16 sflex flex-col gap-2">
+            <div class="col-span-7 pt-4 lg:pb-16 sflex flex-col gap-2">
                 <div
                     class="max-w-lg ml-auto w-full bg-accent/5 dark:bg-content/5 border border-stroke shadow-sm rotate-1 rounded-2xl items-center justify-center relative">
                     <div

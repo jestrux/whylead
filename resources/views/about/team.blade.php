@@ -57,9 +57,8 @@
     });
 </script>
 
-<section id="team" x-intersect.threshold.75="activeSection = 'team'" x-data="testimonials"
-    class="py-10 lg:pb-16 bg-content/5 dark:bg-content/[0.02]">
-    <div class="relative px-6 max-w-7xl mx-auto overflow-visible">
+<section id="team" x-data="testimonials" class="py-10 lg:pb-16 bg-content/5 dark:bg-content/[0.02]">
+    <div class="relative px-4 lg:px-6 max-w-7xl mx-auto overflow-visible">
         <div class="mb-2 flex gap-12 max-w-2xl mx-auto">
             <div class="flex-1 text-center">
                 <h2 class="text-2xl lg:text-4xl font-bold uppercase">
@@ -72,7 +71,7 @@
             </div>
         </div>
 
-        <div class="mb-2 flex items-center justify-center gap-16">
+        <div class="mb-2 hidden lg:flex items-center justify-center gap-16">
             <button x-on:click="previousStep()"
                 class="size-10 rounded-full flex items-center justify-center hover:bg-content/5"
                 x-bind:class="!canGoBack && 'pointer-events-none opacity-20'">
@@ -92,10 +91,11 @@
             </button>
         </div>
 
-        <div class="flex flex-wraps gap-8 transition-transform duration-500"
+        <div x-intersect.threshold.15="activeSection = 'team'"
+            class="hidden lg:flex flex-wraps gap-8 transition-transform duration-500"
             x-bind:style="{ transform: `translateX(${-10 * currentStep}%)` }">
             @foreach ($steps as $step)
-                <div x-data="{ selected: false }" x-modelable="selected" x-model="currentStep == {{ $loop->index }}"
+                <div x-data="{ get selected() { return currentStep == {{ $loop->index }} } }"
                     class="flex-shrink-0 relative min-h-full flex items-start border rounded-l-[100px] rounded-r-[50px]"
                     x-bind:class="selected ? 'w-3/5 bg-card dark:bg-content/5 border-stroke' :
                         'w-auto border-transparent'">
@@ -248,6 +248,39 @@
             </div>
 
             <div class="w-32">&nbsp;</div>
+        </div>
+
+        <div x-intersect.threshold.15="activeSection = 'team'" class="lg:hidden flex flex-col gap-6 mt-6">
+            @foreach ($steps as $step)
+                <div class="p-4 border rounded-xl bg-card dark:bg-content/5 border-stroke">
+                    <div class="flex items-start gap-2">
+                        <div class="size-14 flex-shrink-0 relative overflow-hidden bg-content/5 rounded-full">
+                            <img class="size-full rounded-full object-cover object-top" src="{{ $step['image'] }}"
+                                alt="" />
+                        </div>
+
+                        <div class="pt-1.5 flex-1">
+                            <h3 class="text-xl/tight font-semibold">
+                                {{ $step['name'] }}
+                            </h3>
+
+                            <p class="mt-0.5 text-sm/relaxed text-[#fa9158]">
+                                {{ $step['position'] }}
+                            </p>
+                        </div>
+                    </div>
+
+                    @php
+                        $paragraphs = explode("\\n\\n", $step['description']);
+                    @endphp
+
+                    @foreach ($paragraphs as $paragraph)
+                        <p class="mt-2 text-xs/loose xl:text-sm/[1.8] relative z-10 opacity-80">
+                            {!! $paragraph !!}
+                        </p>
+                    @endforeach
+                </div>
+            @endforeach
         </div>
     </div>
 </section>

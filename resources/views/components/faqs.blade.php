@@ -25,7 +25,7 @@
             </div>
 
             <div class="-mt-0.5 flex flex-col justify-between flex-shrink-0"
-                :class="{ ' rotate-180': expanded == index }">
+                x-bind:class="{ ' rotate-180': expanded == {{ $i }} }">
                 <svg class="size-5 text-primary" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor">
                     <path x-show="expanded != {{ $i }}" stroke-linecap="round" stroke-linejoin="round"

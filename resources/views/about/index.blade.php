@@ -15,12 +15,15 @@
             window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
         }
     }">
-        <div class="sticky top-16 z-10 flex items-center pointer-events-none">
+        <div class="sticky top-16 z-20 flex items-center pointer-events-none">
             <div
                 class="mt-4 pointer-events-auto h-10 px-1 rounded-full border border-stroke bg-canvas mx-auto inline-flex items-center justify-center">
                 @foreach (['About Us' => 'aboutUs', 'Our Values' => 'ourValues', 'The Team' => 'team', 'Careers' => 'careers'] as $item => $target)
+                    @php
+                        $i = $loop->index;
+                    @endphp
                     <a href="#{{ $target }}" x-on:click="smoothScrollTo($event, '{{ $target }}')"
-                        class="inline-flex text-xs/none font-bold py-2 px-3.5 rounded-full border border-stroke uppercase tracking-widest"
+                        class="{{ $i == 3 ? 'hidden lg:inline-flex' : 'inline-flex' }} text-xs/none font-bold py-2 px-3.5 rounded-full border border-stroke uppercase tracking-widest"
                         x-bind:class="activeSection == '{{ $target }}' ? 'bg-primary text-white border-primary' :
                             'opacity-70 bg-canvas border-transparent'">
                         {{ $item }}

@@ -57,8 +57,8 @@
 @endphp
 
 <section id="careers" x-intersect.threshold.5="activeSection = 'careers'" class="py-12">
-    <div class="px-8 relative max-w-7xl mx-auto">
-        <div class="mb-20 flex flex-col gap-4 lg:gap-12 items-center justify-center">
+    <div class="px-4 lg:px-8 relative max-w-7xl mx-auto">
+        <div class="mb-10 lg:mb-20 flex flex-col gap-4 lg:gap-12 items-center justify-center">
             <div class="max-w-3xl mx-auto text-center">
                 <h2 class="text-2xl lg:text-4xl font-bold">
                     <span class="uppercase">
@@ -107,27 +107,12 @@
         </div>
 
         <div class="lg:grid grid-cols-2 gap-16 items-center">
-            <div class="md:hidden">
+            <div class="md:hidden mb-3">
                 <a href="#" class="block relative">
                     <div
                         class="relative aspect-video rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
                         <img class="absolute w-full h-full object-cover object-top" src="{{ $image }}"
                             alt="" />
-
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <span class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-accent">
-                                {{-- <svg class="w-14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor">
-                                    <path d="M8 5v14l11-7z" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg> --}}
-
-                                <svg class="w-6 ml-1" fill="currentColor" viewBox="0 0 24 24" stroke-width="1"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
-                                </svg>
-
-                            </span>
-                        </div>
                     </div>
                 </a>
             </div>
@@ -146,7 +131,9 @@
                         Evaluate your fit with our compatibility checklist
                     </p>
 
-                    <x-faqs :data="$faqs" />
+                    <div class="-mx-4 lg:mx-0">
+                        <x-faqs :data="$faqs" />
+                    </div>
                 </div>
 
                 <p class="mt-4 text-base/relaxed opacity-70">
