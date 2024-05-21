@@ -2,34 +2,19 @@
     $image = $getImage('Banner Image');
 @endphp
 
-<section class="pt-12 pb-8 text-white">
-    <div class="px-8 relative max-w-7xl mx-auto">
+<section class="lg:pt-12 lg:pb-8 lg:text-white">
+    <div class="lg:px-8 relative max-w-7xl mx-auto">
         <div class="lg:grid grid-cols-2 gap-16 items-center">
             <div class="md:hidden">
                 <a href="#" class="block relative">
                     <div
-                        class="relative aspect-video rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
+                        class="relative aspect-video lg:rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
                         <img class="absolute w-full h-full object-top" src="{{ $image }}" alt="" />
-
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <span class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-accent">
-                                {{-- <svg class="w-14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor">
-                                    <path d="M8 5v14l11-7z" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg> --}}
-
-                                <svg class="w-6 ml-1" fill="currentColor" viewBox="0 0 24 24" stroke-width="1"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
-                                </svg>
-
-                            </span>
-                        </div>
                     </div>
                 </a>
             </div>
 
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-2 py-6 px-4 lg:py-0 lg:px-0">
                 <h2 class="mt-3 text-2xl lg:text-4xl/tight font-bold uppercase">
                     Everything <span class="font-light">Rises and</span>
                     <span class="hidden md:inline"><br /></span>
@@ -37,7 +22,8 @@
                 </h2>
 
                 <p class="mt-1 text-lg/relaxed uppercase">
-                    Our Programmes Are Designed To Develop Leaders Who Can Lead Thriving Organizations In The 21st Century.
+                    Our Programmes Are Designed To Develop Leaders Who Can Lead Thriving Organizations In The 21st
+                    Century.
                 </p>
             </div>
 

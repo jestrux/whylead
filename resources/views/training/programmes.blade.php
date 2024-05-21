@@ -1,6 +1,6 @@
 <section id="programmes" class="py-10 lg:py-20 bg-content/5">
-    <div class="relative max-w-7xl mx-auto px-8">
-        <div class="mb-12 flex gap-12 mx-w-3xl mx-auto">
+    <div class="relative max-w-7xl mx-auto lg:px-8">
+        <div class="mb-6 lg:mb-12 flex gap-12 mx-w-3xl mx-auto">
             <div class="flex-1 text-center">
                 <h2 class="text-2xl lg:text-4xl font-bold uppercase">
                     <span class="font-light">Training </span> programmes
@@ -97,36 +97,25 @@
             @endphp
 
             @foreach ($steps as $programme)
-                <section class="py-12 scrollable-section">
-                    <div class="px-8 relative max-w-7xl mx-auto">
+                <section class="lg:py-12 scrollable-section">
+                    <div class="px-4 lg:px-8 relative max-w-7xl mx-auto">
                         <div class="lg:grid grid-cols-2 gap-16 items-center">
                             @php
                                 $image = $programme['image'];
                             @endphp
 
-                            <div class="md:hidden">
+                            <div class="md:hidden mb-3">
                                 <a href="#" class="block relative">
                                     <div
                                         class="relative aspect-video rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
                                         <img class="absolute w-full h-full object-cover object-top"
                                             src="{{ $image }}" alt="" />
-
-                                        <div class="absolute inset-0 flex items-center justify-center">
-                                            <span
-                                                class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-accent">
-                                                <svg class="w-6 ml-1" fill="currentColor" viewBox="0 0 24 24"
-                                                    stroke-width="1" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
-                                                </svg>
-                                            </span>
-                                        </div>
                                     </div>
                                 </a>
                             </div>
 
-                            <div class="flex flex-col gap-2">
-                                <h3 class="mt-2 text-3xl uppercase font-bold">
+                            <div class="flex flex-col gap-1 lg:gap-2">
+                                <h3 class="mt-2 text-2xl lg:text-3xl uppercase font-bold">
                                     {{ $programme['title'] }}
                                 </h3>
 
@@ -191,6 +180,8 @@
 
 <script>
     (function activateScrollableSections() {
+        if (window.innerWidth <= 1023) return;
+
         var threshold = 0.5;
         var scrollSectionStyles = document.createElement("style");
         scrollSectionStyles.innerHTML = /*css*/ `

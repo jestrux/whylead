@@ -5,7 +5,7 @@
 @extends('layout.index')
 
 @section('content')
-    <div class="absolute inset-0 h-[400px] bg-accent">
+    <div class="hidden lg:block absolute inset-0 h-[400px] bg-accent">
     </div>
 
     @pierdata(["model" => "Content", "wherePage" => "Training"])
@@ -25,7 +25,7 @@
 
     @include('training.approach')
 
-    @include('training.faqs')
+    @include('home.faqs')
 
     @include('home.cta', ['interest' => 'Training'])
     @endpierdata()
