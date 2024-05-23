@@ -71,7 +71,7 @@
                     </h2>
                 </div>
 
-                <div class="mt-8 flex flex-col gap-2">
+                <div class="hidden lg:flex flex-col mt-8 gap-2">
                     @foreach ($choices as $item)
                         @php
                             $positive = $loop->index == 0;
@@ -110,7 +110,7 @@
                 </div>
             </div>
 
-            <div class="p-6 lg:p-14 flex flex-col border-l border-white/10">
+            <div class="hidden lg:flex flex-col p-6 lg:p-14 border-l border-white/10">
                 @foreach ($choices as $item)
                     @php
                         $positive = $loop->index == 0;
@@ -141,6 +141,46 @@
                                 </div>
                             </div>
                         @endforeach
+                    </div>
+                @endforeach
+            </div>
+
+            <div class="lg:hidden py-6">
+                @foreach ($choices as $item)
+                    @php
+                        $positive = $loop->index == 0;
+                    @endphp
+
+                    <div>
+                        <div class="bg-white text-black px-6 py-2 z-10 sticky top-14"
+                            style="background: {{ $item['color'] }}">
+                            <h3 class="font-bold">{{ $item['title'] }}</h3>
+                        </div>
+
+                        <div class="mt-6 px-6 pb-6">
+                            @foreach ($item['indicators'] as $indicator)
+                                <div class="text-xl flex flex-col lg:flex-row items-start gap-4">
+                                    <div style="background: {{ $item['color'] }}"
+                                        class="text-black/70 size-10 flex items-center justify-center rounded-lg">
+                                        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                            stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="{{ $indicator['icon'] }}" />
+                                        </svg>
+                                    </div>
+
+                                    <div class="flex-1 -mt-px">
+                                        <h3 class="text-lg">
+                                            {{ $indicator['title'] }}
+                                        </h3>
+
+                                        <p class="mt-1 text-sm/relaxed font-light lg:block opacity-80">
+                                            {{ $indicator['description'] }}
+                                        </p>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
                     </div>
                 @endforeach
             </div>
