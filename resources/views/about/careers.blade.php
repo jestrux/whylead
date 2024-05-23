@@ -186,7 +186,7 @@
                 </ul>
 
                 <div class="mt-5">
-                    <a href="{{ url('/contacts?interest=Joining The Team') }}" class="btn w-full md:w-auto">
+                    <a href="{{ url('/apply-for-job') }}" class="btn w-full md:w-auto">
                         Come Join our team
                     </a>
                 </div>
