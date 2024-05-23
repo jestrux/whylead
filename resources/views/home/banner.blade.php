@@ -21,19 +21,19 @@
     }
 
     .slide-image {
-        transform: scale(0.6);
+        transform: scale(1) translate(0, 5rem);
     }
 
     .slide-image.second {
-        transform: scale(0.55);
+        transform: scale(0.8) translate(0, 4rem);
     }
 
     .slide-image.third {
-        transform: scale(0.6);
+        transform: scale(0.75) translate(0, 3rem);
     }
 
     .slide-image.fourth {
-        transform: scale(0.55);
+        transform: scale(0.85) translate(0, 3rem);
     }
 
     @media (max-width: 1023px) {
@@ -41,6 +41,7 @@
             top: auto;
             bottom: 0;
             transform-origin: bottom;
+            object-fit: contain;
         }
     }
 
