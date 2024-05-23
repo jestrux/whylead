@@ -60,8 +60,8 @@
                         <template x-for="_course in courses">
                             <li>
                                 <button x-on:click="course = _course"
-                                    class="text-content/70 group hover:bg-content/5 hover:text-content transition-colors flex items-center justify-between border border-stroke hover:border-content/30 rounded-md py-3 pl-4 pr-2.5 w-full text-sm/none font-medium uppercase tracking-wide">
-                                    <span x-text="_course.title"></span>
+                                    class="text-content/70 group hover:bg-content/5 hover:text-content transition-colors flex items-center justify-between border border-stroke hover:border-content/30 rounded-md py-3 pl-4 pr-2.5 w-full text-sm font-medium uppercase tracking-wide">
+                                    <span class="flex-1 text-left" x-text="_course.title"></span>
 
                                     <svg class="w-5 h-5 opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all"
                                         fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"

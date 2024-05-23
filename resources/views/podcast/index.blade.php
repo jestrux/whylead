@@ -7,7 +7,7 @@
 @section('content')
     @pierdata("Podcast")
     <div class="lg:grid grid-cols-12 items-start max-w-7xl mx-auto lg:px-8 lg:py-8 xl:py-10">
-        <div class="col-span-4 min-h-full">
+        <div class="col-span-4 min-h-full mt-8 lg:mt-0">
             @include('podcast.sidebar')
         </div>
 
