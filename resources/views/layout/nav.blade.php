@@ -8,6 +8,11 @@
             /* color: white */
         }
 
+        body.dark #mainNavigationMenu,
+        body.dark #mainNavigationMenuItems {
+            background: #252525;
+        }
+
         #mainNavigationMenu.open button>svg:first-of-type,
         #mainNavigationMenu:not(.open) button>svg:last-of-type {
             display: none;
@@ -62,7 +67,7 @@
         </a>
 
         <div id="mobileNavButtons" class="flex items-center gap-5">
-            <div class="text-accent">
+            <div class="opacity-70">
                 <a href="{{ url('/contacts') }}" class="btn btn-sm font-bold btn-outline px-0 border-none">
                     <span class="capitalize">
                         Start thriving
