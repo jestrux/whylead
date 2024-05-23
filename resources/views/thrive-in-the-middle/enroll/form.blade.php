@@ -37,7 +37,7 @@
                 'choices' => $countries,
             ],
         ]),
-        pierField(['label' => 'Job Title', 'name' => 'jobtitle', 'width' => 'half']),
+        pierField(['label' => "What's your job Title?", 'name' => 'jobtitle', 'width' => 'half']),
         pierField([
             'label' => 'Total Years of Professional Experience',
             'name' => 'total_years_of_professional_experience',
@@ -47,7 +47,34 @@
                 'choices' => ['0 - 3', '4 - 8', '9 - 14', '15 - 19', '20+'],
             ],
         ]),
-        pierField(['label' => 'Cohort', 'name' => 'cohort', 'width' => 'half', 'required' => false]),
+        pierField([
+            'label' => 'Are you managing a team?',
+            'name' => 'are_you_managing_a_team',
+            'width' => 'half',
+            'type' => 'radio',
+            'meta' => [
+                'choices' => ['Yes', 'No'],
+            ],
+        ]),
+        pierField([
+            'label' => 'What is the size of your team?',
+            'name' => 'what_is_the_size_of_your_team',
+            'width' => 'half',
+            'type' => 'select',
+            'meta' => [
+                'choices' => ['1 - 10', '11 - 25', '26 - 40', '41 - 60', '61 - 100'],
+            ],
+        ]),
+        pierField(['label' => 'What Cohort would you like to join?', 'name' => 'cohort', 'width' => 'half', 'required' => false]),
+        pierField([
+            'label' => 'How did you hear about us?',
+            'name' => 'how_did_you_hear_about_us_',
+            'width' => 'half',
+            'type' => 'select',
+            'meta' => [
+                'choices' => ['Referral', 'Website', 'LinkedIn', 'X (Twitter)', 'Youtube', 'Other'],
+            ],
+        ]),
         pierField([
             'label' => 'What format of the Thrive in the Middle are you considering?',
             'name' => 'what_format_of_the_thrive_in_the_middle_are_you_considering_',
