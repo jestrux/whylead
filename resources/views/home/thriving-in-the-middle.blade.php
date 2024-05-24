@@ -94,7 +94,7 @@
                 </ul>
 
                 <div class="mt-5">
-                    <a href="#" class="btn w-full md:w-auto">
+                    <a href="{{ url('/thrive-in-the-middle/form') }}" class="btn w-full md:w-auto">
                         Enroll to next cohort now
                     </a>
                 </div>

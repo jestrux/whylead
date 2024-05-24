@@ -69,7 +69,7 @@
 
         <p class="px-6 mt-4 md:mt-6s self-center text-center">
             Got more questions? We'd love to hear from you.
-            <a href="#" class="text-primary font-semibold underline">
+            <a href="{{ url('/contacts') }}" class="text-primary font-semibold underline">
                 Contact us now
             </a>
         </p>

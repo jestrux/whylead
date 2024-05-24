@@ -99,7 +99,7 @@
                 </ul> --}}
 
                 <div class="mt-3 gap-3">
-                    <a href="#" class="btn w-full md:w-auto">
+                    <a href="{{ url('/contacts?interest=Performance Management') }}" class="btn w-full md:w-auto">
                         Get in touch
                     </a>
                 </div>

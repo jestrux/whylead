@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="mt-3 gap-3">
-                    <a href="#" class="btn w-full md:w-auto">
+                    <a href="{{ url('/contacts?interest=Happier Workplace') }}" class="btn w-full md:w-auto">
                         Get in touch
                     </a>
                 </div>

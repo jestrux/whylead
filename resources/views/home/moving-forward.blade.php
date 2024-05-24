@@ -49,7 +49,7 @@
                 </p>
 
                 <div class="mt-2">
-                    <a href="#" class="btn w-full md:w-auto">
+                    <a href="{{ url('/contacts') }}" class="btn w-full md:w-auto">
                         Build a thriving team today
                     </a>
                 </div>
