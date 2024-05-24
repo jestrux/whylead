@@ -156,7 +156,7 @@
     </div>
 </section>
 
-<section class="px-6 mt-8 lg:mt-0">
+<section class="px-6 mt-8 lg:mt-4">
     <div class="flex flex-col items-center justify-center">
         <div class="max-w-2xl mx-auto mb-7 text-center">
             <h2 class="text-2xl/none lg:text-3xl/none font-bold">
