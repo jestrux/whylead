@@ -66,31 +66,6 @@
             fill: #010e1c;
         }
     }
-
-    @media (max-width: 640px) {
-        #readingModeToggle {
-            background: transparent;
-            width: 48px;
-            height: 22px;
-            padding: 0;
-        }
-
-        body.dark #readingModeToggle {
-            background: #195799;
-            color: #1059a7;
-            border-color: #81a2c6;
-        }
-
-        #readingModeToggle #thumb {
-            width: 28px;
-            height: 28px;
-        }
-
-        body.dark #readingModeToggle #thumb {
-            background: #010e1c;
-            border-color: #010e1c;
-        }
-    }
 </style>
 
 <button id="readingModeToggle" class="rounded-full overflow-hidden relative flex items-center focus:outline-none"

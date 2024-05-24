@@ -59,7 +59,7 @@
             @include('common.logo', ['fill' => '#fff'])
         </a>
 
-        <div id="mobileNavButtons" class="flex items-center gap-5">
+        <div id="mobileNavButtons" class="flex items-center gap-3.5">
             <div class="opacity-70">
                 <a href="{{ url('/contacts') }}" class="btn btn-sm font-bold btn-outline px-0 border-none">
                     <span class="capitalize">
@@ -67,6 +67,10 @@
                     </span>
                 </a>
             </div>
+
+            @if (!isset($isThriveFormPage))
+                <x-reading-mode-toggle />
+            @endif
 
             <button onclick="toggleMenu()"
                 class="z-10 flex items-center justify-center border rounded-full w-9 h-9 focus:outline-none">
