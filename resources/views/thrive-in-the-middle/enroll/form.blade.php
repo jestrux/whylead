@@ -65,7 +65,7 @@
                 'choices' => ['1 - 10', '11 - 25', '26 - 40', '41 - 60', '61 - 100'],
             ],
         ]),
-        pierField(['label' => 'What Cohort would you like to join?', 'name' => 'cohort', 'width' => 'half', 'required' => false]),
+        pierField(['label' => 'Preferred Cohort', 'name' => 'cohort', 'width' => 'half', 'required' => false]),
         pierField([
             'label' => 'How did you hear about us?',
             'name' => 'how_did_you_hear_about_us_',
@@ -91,7 +91,6 @@
         'Cohort' => $_GET['cohort'] ?? null,
     ];
 @endphp
-
 
 <section class="pt-6 pb-12">
     <div class="max-w-4xl px-4 lg:px-8 mx-auto">

@@ -81,16 +81,16 @@
 
                         <div class="group transition-colors relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6"
                             x-bind:class="{{ $flag }} ?
-                                'pointer-events-none bg-white lg:bg-white/5 lg:ring-1 lg:ring-inset lg:ring-white/20 text-accent lg:text-white' :
+                                'pointer-events-none bg-white lg:bg-white lg:ring-1 lg:ring-inset lg:ring-white/20 text-accent lg:text-black' :
                                 'text-white/70 lg:text-white'">
-                            <div class="transition absolute inset-0 bg-white/5 scale-x-0 origin-left group-hover:scale-x-100 rounded-l-xl"
+                            <div class="transition absolute inset-0 bg-white/10 scale-x-0 origin-left group-hover:scale-x-100 rounded-l-xl"
                                 x-bind:class="{{ $flag }} ? 'scale-x-100' :
                                     'group-hover:scale-x-100'">
                             </div>
 
                             <div class="transition-transform"
                                 x-bind:class="{{ $flag }} ? 'translate-x-2' : 'group-hover:translate-x-2'">
-                                <h3 style="color: {{ $item['color'] }}">
+                                <h3>
                                     <button x-on:click="{{ $action }}" class="text-lg font-bold uppercase"
                                         id="headlessui-tabs-tab-:R2jaanla:" role="tab" type="button"
                                         aria-selected="true" tabindex="0" data-headlessui-state="selected"
@@ -187,14 +187,14 @@
         </div>
 
         <div class="px-6 lg:px-8 pb-8 lg:hidden">
-            <a href="#" class="btn w-full">
+            <a href="{{ url('/contacts?interest=Training') }}" class="btn w-full">
                 Develop thriving leaders
             </a>
         </div>
 
         <div class="hidden lg:flex justify-center absolute -bottom-24 inset-x-0">
-            <a href="#"
-                class="group flex flex-col items-center justify-center text-center gap-3 size-36 bg-[#FEF1EA] dark:bg-[#242424] text-content/80 rounded-full">
+            <a href="{{ url('/contacts?interest=Training') }}"
+                class="z-10 group flex flex-col items-center justify-center text-center gap-3 size-36 bg-[#FEF1EA] dark:bg-[#242424] text-content/80 rounded-full">
                 <div class="text-xs/relaxed font-bold uppercase">
                     Develop<br /> thriving leaders
                 </div>

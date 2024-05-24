@@ -2,7 +2,8 @@
 <script>
     document.addEventListener('alpine:init', () => {
         Alpine.data("coursePopup", () => ({
-            showPrompt: localStorage.initialPopupShown != 'true',
+            // showPrompt: localStorage.initialPopupShown != 'true',
+            showPrompt: false,
             courses: {!! json_encode($data) !!},
             course: null,
             updateScroll() {

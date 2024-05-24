@@ -21,7 +21,7 @@
     }
 
     .slide-image {
-        transform: scale(1) translate(0, 5rem);
+        transform: scale(0.7) translate(0, 3rem);
     }
 
     .slide-image.second {

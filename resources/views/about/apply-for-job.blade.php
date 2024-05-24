@@ -52,17 +52,17 @@
             pierField([
                 'label' => 'Resume / CV',
                 'name' => 'cv',
-                'placeholder' => 'Enter link to your CV',
+                'placeholder' => 'Enter link to your CV or LinkedIn Profile',
                 'width' => 'half',
             ]),
             pierField([
-                'label' => 'Cover Letter',
+                'label' => 'Motivation Letter',
                 'name' => 'cover_letter',
-                'placeholder' => 'Enter link to your cover letter',
+                'placeholder' => 'Enter link to your motivation letter',
                 'width' => 'half',
             ]),
             pierField([
-                'label' => 'What role are you applying for',
+                'label' => 'What role are you interested in?',
                 'name' => 'role',
                 'width' => 'half',
                 'type' => 'select',

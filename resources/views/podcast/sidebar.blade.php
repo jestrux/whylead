@@ -40,7 +40,7 @@
         <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5">
             <path d="M0 5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5Z" class="fill-[#5C4EB8]/60" />
             <path d="M6 1a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V1Z" class="fill-[#5C4EB8]/80" />
-        </svg><span class="ml-2.5">Listen</span>
+        </svg><span class="ml-2.5">Listen On</span>
     </h2>
     <div class="h-px bg-gradient-to-r from-slate-200/0 via-slate-200 to-slate-200/0 lg:hidden"></div>
     <ul role="list"
@@ -60,8 +60,8 @@
             <a class="group flex items-center" aria-label="Deezer" href="https://www.deezer.com/us/show/1000438761"
                 target="_blank">
 
-                <div class="size-6 xl:size-7 inline-flex items-center">
-                    <svg fill="currentColor" class="group-hover:opacity-70" viewBox="0 0 198.4 129.5">
+                <div class="inline-flex items-center">
+                    <svg fill="currentColor" class="size-6 xl:size-7 group-hover:opacity-70" viewBox="0 0 198.4 129.5">
                         <path
                             d="M 155.5 0 L 155.5 25.0996 L 198.4 25.0996 L 198.4 0 L 155.5 0 Z M 51.8008 34.8008 L 51.8008 59.9004 L 94.6992 59.9004 L 94.6992 34.8008 L 51.8008 34.8008 Z M 155.5 34.8008 L 155.5 59.9004 L 198.4 59.9004 L 198.4 34.8008 L 155.5 34.8008 Z M 51.8008 69.5996 L 51.8008 94.6992 L 94.6992 94.6992 L 94.6992 69.5996 L 51.8008 69.5996 Z M 103.699 69.5996 L 103.699 94.6992 L 146.6 94.6992 L 146.6 69.5996 L 103.699 69.5996 Z M 155.5 69.5996 L 155.5 94.6992 L 198.4 94.6992 L 198.4 69.5996 L 155.5 69.5996 Z M 0 104.4 L 0 129.5 L 42.9004 129.5 L 42.9004 104.4 L 0 104.4 Z M 51.8008 104.4 L 51.8008 129.5 L 94.6992 129.5 L 94.6992 104.4 L 51.8008 104.4 Z M 103.699 104.4 L 103.699 129.5 L 146.6 129.5 L 146.6 104.4 L 103.699 104.4 Z M 155.5 104.4 L 155.5 129.5 L 198.4 129.5 L 198.4 104.4 L 155.5 104.4 Z" />
                     </svg>
@@ -75,8 +75,8 @@
             <a class="group flex items-center" aria-label="Castbox"
                 href="https://castbox.fm/channel/id5672485?country=us" target="_blank">
 
-                <div class="size-6 xl:size-7 inline-flex items-center">
-                    <svg fill="currentColor" class="group-hover:opacity-70" viewBox="0 0 24 24">
+                <div class="inline-flex items-center">
+                    <svg fill="currentColor" class="size-6 xl:size-7 group-hover:opacity-70" viewBox="0 0 24 24">
                         <path
                             d="M12 0c-.29 0-.58.068-.812.206L2.417 5.392c-.46.272-.804.875-.804 1.408v10.4c0 .533.344 1.135.804 1.407l8.77 5.187c.465.275 1.162.275 1.626 0l8.77-5.187c.46-.272.804-.874.804-1.407V6.8c0-.533-.344-1.136-.804-1.408L12.813.206A1.618 1.618 0 0012 0zm-.85 8.304c.394 0 .714.303.714.676v2.224c0 .207.191.375.427.375s.428-.168.428-.375V9.57c0-.373.32-.675.713-.675.394 0 .712.302.712.675v4.713c0 .374-.318.676-.712.676-.394 0-.713-.302-.713-.676v-1.31c0-.206-.192-.374-.428-.374s-.427.168-.427.374v1.226c0 .374-.32.676-.713.676-.394 0-.713-.302-.713-.676v-1.667c0-.207-.192-.375-.428-.375-.235 0-.427.168-.427.375v3.31c0 .373-.319.676-.712.676-.394 0-.713-.303-.713-.676v-2.427c0-.206-.191-.374-.428-.374-.235 0-.427.168-.427.374v.178a.71.71 0 01-.712.708.71.71 0 01-.713-.708v-2.123a.71.71 0 01.713-.708.71.71 0 01.712.708v.178c0 .206.192.373.427.373.237 0 .428-.167.428-.373v-1.53c0-.374.32-.676.713-.676.393 0 .712.303.712.676v.646c0 .206.192.374.427.374.236 0 .428-.168.428-.374V8.98c0-.373.319-.676.713-.676zm4.562 2.416c.393 0 .713.302.713.676v2.691c0 .374-.32.676-.713.676-.394 0-.712-.303-.712-.676v-2.691c0-.374.319-.676.712-.676zm2.28 1.368c.395 0 .713.303.713.676v.67c0 .374-.318.676-.712.676-.394 0-.713-.302-.713-.675v-.67c0-.374.32-.677.713-.677Z" />
                     </svg>
@@ -90,8 +90,8 @@
             <a class="group flex items-center" aria-label="Youtube"
                 href="https://youtube.com/@WhyLead?si=xixPWnVjb1FqxnCv" target="_blank">
 
-                <div class="size-6 xl:size-7 inline-flex items-center">
-                    <svg fill="currentColor" class="group-hover:opacity-70" viewBox="0 0 24 24">
+                <div class="inline-flex items-center">
+                    <svg fill="currentColor" class="size-6 xl:size-7 group-hover:opacity-70" viewBox="0 0 24 24">
                         <path
                             d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                     </svg>

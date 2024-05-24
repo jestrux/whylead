@@ -70,7 +70,7 @@
                     Programmes
                 </h2>
 
-                <p class="text-lg/loose uppercase">
+                <p class="text-lg/loose">
                     These modules provide the tools and insights necessary for navigating complex challenges, fostering
                     a culture of continuous improvement, and driving strategic success.
                 </p>

@@ -3,14 +3,7 @@
 
         #mainNavigationMenu,
         #mainNavigationMenuItems {
-            background: #fff;
-            /* background: var(--primary-color); */
-            /* color: white */
-        }
-
-        body.dark #mainNavigationMenu,
-        body.dark #mainNavigationMenuItems {
-            background: #252525;
+            background: rgb(var(--canvas-color));
         }
 
         #mainNavigationMenu.open button>svg:first-of-type,
@@ -100,8 +93,7 @@
                 <x-menu-item url="{{ url('/podcast') }}">Podcast</x-menu-item>
 
                 <x-menu-item class="md:hidden" url="{{ url('/training') }}">Training</x-menu-item>
-                <x-menu-item class="md:hidden" url="{{ url('/thrive-in-the-middle') }}">Thrive in the Middle
-                    Managers</x-menu-item>
+                <x-menu-item class="md:hidden" url="{{ url('/thrive-in-the-middle') }}">Thrive in the Middle</x-menu-item>
                 <x-menu-item class="md:hidden" url="{{ url('/about') }}">About Us</x-menu-item>
 
                 <x-menu-item class="md:hidden" url="{{ url('/contacts') }}">Contact Us</x-menu-item>
@@ -133,10 +125,9 @@
                 </small>
             </div>
 
-            {{-- <a href="#" class="btn text-sm font-bold py-2 px-4">
-                Get a quote
-            </a> --}}
-            <x-reading-mode-toggle />
+            @if (!isset($isThriveFormPage))
+                <x-reading-mode-toggle />
+            @endif
         </ul>
     </div>
 </section>

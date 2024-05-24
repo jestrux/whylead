@@ -5,8 +5,8 @@
         asset('img/uploads/leadership-challenges-helping-teams-grow.jpg'),
         asset('img/uploads/leadership-challenges-inspiring-and-motivating.jpg'),
 
-        null, // asset("img/uploads/leadership-challenges-nurturing-company-culture.jpg"),
-        null, // asset("img/uploads/leadership-challenges-executive-alignment.jpg"),
+        asset("img/uploads/leadership-challenges-nurturing-company-culture.jpg"),
+        asset("img/uploads/leadership-challenges-executive-alignment.jpg"),
         null, // asset("img/uploads/leadership-challenges-strategic-adaptability.jpg"),
 
         asset('img/uploads/leadership-challenges-managing-uncertainty.jpg'),
@@ -112,9 +112,9 @@
                                                     </template>
                                                 </ul>
 
-                                                <button
+                                                <a
                                                     class="self-end mt-auto mb-2 -mr-3 btn btn-outline btn-xs capitalize !text-content/80 border-none"
-                                                    x-on:click="setChallenge(null, '{{ url('/contacts') }}?interest=' + solution.title)">
+                                                    x-bind:href="'{{ url('/contacts') }}?interest=' + solution.title">
                                                     Get in touch
 
                                                     <svg class="-mr-1 size-3.5" fill="none" viewBox="0 0 24 24"
@@ -122,7 +122,7 @@
                                                         <path stroke-linecap="round" stroke-linejoin="round"
                                                             d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                                                     </svg>
-                                                </button>
+                                                </a>
                                             </div>
                                         </li>
                                     </template>
