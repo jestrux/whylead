@@ -33,7 +33,7 @@
     }
 
     .slide-image.fourth {
-        transform: scale(0.85) translate(0, 3rem);
+        transform: scale(0.7) translate(0, 2rem);
     }
 
     @media (max-width: 1023px) {
