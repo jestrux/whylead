@@ -15,7 +15,7 @@
             @php
                 $openFirst = isset($_GET['openFirst']);
             @endphp
-            <div class="max-w-3xl mx-auto md:px-12 pt-4" x-data="{
+            <div class="max-w-3xl mx-auto px-4 lg:px-12 pt-4" x-data="{
                 listen: '{{ $openFirst ? $data[0]->_id : null }}',
                 filter: 'All',
                 copiedLinkFor: null,
@@ -61,7 +61,7 @@
                             index: {{ $loop->index }}
                         }" x-show="(!popular || total_plays > 200) && (!latest || index < 4)"
                             x-transition class="py-6 px-4 md:px-0">
-                            <div class="md:px-4 md:px-0 flex flex-row-reverse items-center gap-6">
+                            <div class="lg:px-4 md:px-0 flex flex-row-reverse items-center gap-6">
                                 <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
                                     href="#">
                                     <img alt=""class="absolute size-full" src="{{ $episode->image }}" />
