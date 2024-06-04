@@ -3,14 +3,14 @@
     <img alt=""class="absolute size-full" src="https://storage.buzzsprout.com/vbfue1s8u9mtbxjkkwbuhprhreez" />
 </div>
 
-<div class="mt-6 lg:text-left text-center">
+<div class="mt-6 md:text-left text-center">
     <p class="text-xl font-bold "><a href="/">Why Lead?</a></p>
     <p class="mt-3 xl:text-lg font-medium leading-8 opacity-70">
         "Everything rises and falls on leadership," - John Maxwell
     </p>
 </div>
 
-<section class="mt-6 hidden lg:block">
+<section class="mt-6 hidden md:block">
     <h2 class="flex items-center font-mono text-sm font-medium leading-7 "><svg aria-hidden="true" viewBox="0 0 10 10"
             class="h-2.5 w-2.5">
             <path d="M0 5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5Z" class="fill-primary/60" />
@@ -19,7 +19,7 @@
         <span class="ml-2.5">About</span>
     </h2>
 
-    <p class="mt-2 text-sm xl:text-base/loose leading-7 opacity-70 lg:line-clamp-4s">
+    <p class="mt-2 text-sm xl:text-base/loose leading-7 opacity-70 md:line-clamp-4s">
         Our Principle Consultant Ben Owden hosts weekly conversations with leaders across the world. We have curated
         some of the best thinker practitioners from al the world. We hope that these conversations will help you
         find the clarity and conviction you need to lead a more meaningful and impactful life.
@@ -30,21 +30,21 @@
     </p>
 
     {{-- <button type="button"
-        class="mt-2 hidden text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900 lg:inline-block">Show
+        class="mt-2 hidden text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900 md:inline-block">Show
         more
     </button> --}}
 </section>
 
 <section class="mt-6 sticky top-24">
-    <h2 class="sr-only flex items-center font-mono text-sm font-medium leading-7  lg:not-sr-only">
+    <h2 class="sr-only flex items-center font-mono text-sm font-medium leading-7  md:not-sr-only">
         <svg aria-hidden="true" viewBox="0 0 10 10" class="h-2.5 w-2.5">
             <path d="M0 5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5Z" class="fill-[#5C4EB8]/60" />
             <path d="M6 1a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V1Z" class="fill-[#5C4EB8]/80" />
         </svg><span class="ml-2.5">Listen On</span>
     </h2>
-    <div class="h-px bg-gradient-to-r from-slate-200/0 via-slate-200 to-slate-200/0 lg:hidden"></div>
+    <div class="h-px bg-gradient-to-r from-slate-200/0 via-slate-200 to-slate-200/0 md:hidden"></div>
     <ul role="list"
-        class="mt-4 text-content/70 overflow-auto flex justify-center gap-10 text-base font-medium leading-7 opacity-70 sm:gap-2 lg:flex-col lg:gap-4">
+        class="mt-4 text-content/70 overflow-auto flex justify-center gap-10 text-base font-medium leading-7 opacity-70 sm:gap-2 md:flex-col md:gap-4">
         <li class="flex">
             <a class="group flex items-center" aria-label="Spotify"
                 href="https://open.spotify.com/show/1VXv2qDPMpI0L28JjpnB82" target="_blank">
