@@ -57,7 +57,7 @@
 @endphp
 
 <section id="careers" x-intersect.threshold.5="activeSection = 'careers'" class="py-12">
-    <div class="px-4 lg:px-8 relative max-w-7xl mx-auto">
+    <div class="px-4 md:px-8 relative max-w-7xl mx-auto">
         <div class="mb-10 lg:mb-20 flex flex-col gap-4 lg:gap-12 items-center justify-center">
             <div class="max-w-3xl mx-auto text-center">
                 <h2 class="text-2xl lg:text-4xl font-bold">
@@ -76,7 +76,7 @@
                 </p>
             </div>
 
-            <ul role="list" class="flex flex-col lg:grid grid-cols-3 gap-10">
+            <ul role="list" class="flex flex-col md:grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-10">
                 @foreach ($steps as $step)
                     <li
                         class="bg-card dark:bg-content/5 border border-stroke relative min-h-full w-full p-3 rounded-2xl overflow-hidden">
@@ -131,7 +131,7 @@
                         Evaluate your fit with our compatibility checklist
                     </p>
 
-                    <div class="-mx-4 lg:mx-0">
+                    <div class="-mx-4 md:mx-0">
                         <x-faqs :data="$faqs" />
                     </div>
                 </div>
@@ -192,7 +192,7 @@
                 </div>
             </div>
 
-            <div class="-rotate-1 shadow-xl flex-1 hidden md:flex items-center justify-center aspect-[2/1.8] relative">
+            <div class="-rotate-1 shadow-xl flex-1 hidden lg:flex items-center justify-center aspect-[2/1.8] relative">
                 <div class="relative rounded-xl overflow-hidden size-full bg-content/5">
                     <img class="rotate-6 scale-125 size-full" src="{{ $image }}" alt="" />
                 </div>

@@ -14,7 +14,7 @@
                 </p>
             </div>
 
-            <ul role="list" class="flex flex-col lg:grid grid-cols-3 gap-8">
+            <ul role="list" class="flex flex-col md:grid grid-cols-3 gap-4 lg:gap-8">
                 @php
                     $steps = [
                         [
