@@ -5,7 +5,7 @@
 @extends('layout.index')
 
 @section('content')
-    <div class="hidden lg:block absolute inset-0 h-[400px] bg-accent">
+    <div class="hidden md:block absolute inset-0 h-[400px] bg-accent">
     </div>
 
     @pierdata(["model" => "Content", "wherePage" => "Consultancy"])

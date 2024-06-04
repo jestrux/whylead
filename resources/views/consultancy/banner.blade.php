@@ -2,10 +2,10 @@
     $image = $getImage('Banner Image');
 @endphp
 
-<section class="lg:pt-12 lg:pb-8 lg:text-white">
-    <div class="lg:px-8 relative max-w-7xl mx-auto">
-        <div class="lg:grid grid-cols-2 gap-16 items-center">
-            <div class="lg:hidden">
+<section class="md:pt-12 lg:pb-8 md:text-white">
+    <div class="md:px-8 relative max-w-7xl mx-auto">
+        <div class="md:grid grid-cols-2 gap-16 items-center">
+            <div class="md:hidden">
                 <a href="#" class="block relative">
                     <div class="relative aspect-video lg:rounded-xl overflow-hidden w-full h-full bg-neutral-300">
                         <img class="absolute w-full h-full object-top" src="{{ $image }}" alt="" />
@@ -45,7 +45,7 @@
             </div>
 
             <div class="flex-1">
-                <div class="relative -rotate-1 shadow-xl hidden lg:flex items-center justify-center aspect-[2/0.8]">
+                <div class="relative -rotate-1 shadow-xl hidden md:flex items-center justify-center aspect-[2/0.8]">
                     <div class="relative rounded-xl overflow-hidden size-full bg-content/5">
                         <img class="rotate-6 scale-125 size-full" src="{{ $image }}" alt="" />
                     </div>

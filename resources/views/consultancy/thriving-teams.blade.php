@@ -2,9 +2,9 @@
     $image = $getImage('Thriving Teams Image');
 @endphp
 
-<section id="thrivingTeams" class="py-6 lg:py-20">
-    <div class="relative max-w-7xl mx-auto px-4 lg:px-8">
-        <div class="lg:grid grid-cols-12 gap-16 items-center">
+<section id="thrivingTeams" class="py-6 md:py-28 lg:py-20">
+    <div class="relative max-w-7xl mx-auto px-4 md:px-8">
+        <div class="md:grid grid-cols-12 gap-16 items-center">
             <div class="md:hidden">
                 <a href="#" class="block relative">
                     <div
@@ -23,7 +23,7 @@
                         alt="" />
                 </div>
 
-                <div class="absolute -top-6 -bottom-6 -left-6 rotate-2s">
+                <div class="absolute -top-3 lg:-top-6 -bottom-6 -left-6 rotate-2s">
                     <x-stat-card stat="84%"
                         description=" of clients say they identified new possibilities for action & improvement as a result of our team retreat facilitation" />
                 </div>

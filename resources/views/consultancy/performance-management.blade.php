@@ -3,8 +3,8 @@
 @endphp
 
 <section>
-    <div class="lg:mt-0 px-4 lg:px-8 py-6 lg:py-20 relative max-w-7xl mx-auto">
-        <div class="lg:grid grid-cols-12 gap-20 items-center">
+    <div class="lg:mt-0 px-4 md:px-8 py-6 lg:py-20 relative max-w-7xl mx-auto">
+        <div class="md:grid grid-cols-12 gap-20 items-center">
             <div class="md:hidden">
                 <a href="#" class="block relative">
                     <div
@@ -71,7 +71,7 @@
                     ];
                 @endphp
 
-                <div class="-mx-4">
+                <div class="-mx-4 md:mx-0">
                     <x-faqs :data="$data" />
                 </div>
 
@@ -114,7 +114,7 @@
 
                 </div>
 
-                <div class="absolute -top-6 -bottom-6 -left-6 rotate-1">
+                <div class="absolute -top-3 lg:-top-6 -bottom-6 -left-6 rotate-1">
                     <x-stat-card stat="81%"
                         description="of HR leaders planned to make changes to their ineffective performance management systems." />
                 </div>

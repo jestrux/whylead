@@ -141,7 +141,7 @@
     const mainSiteLogoImage = document.querySelector("#mainSiteLogo");
 
     @isset($isHomePage)
-        const collapsedClasses = ["md:bg-transparent", "lg:text-white"];
+        const collapsedClasses = ["md:bg-transparent", "md:text-white"];
         const raisedClasses = ["md:shadow-sm", "md:border-b", "md:bg-card", "text-content"];
     @else
         const collapsedClasses = [];
