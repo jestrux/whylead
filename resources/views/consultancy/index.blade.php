@@ -5,9 +5,6 @@
 @extends('layout.index')
 
 @section('content')
-    <div class="hidden md:block absolute inset-0 h-[400px] bg-accent">
-    </div>
-
     @pierdata(["model" => "Content", "wherePage" => "Consultancy"])
     @php
         $images = $data->filter(fn($item) => $item->type == 'image');
@@ -20,7 +17,11 @@
         };
     @endphp
 
-    @include('consultancy.banner')
+    <div class="relative">
+        <div class="hidden md:block absolute inset-0 bg-accent">
+        </div>
+        @include('consultancy.banner')
+    </div>
 
     @include('consultancy.thriving-teams')
 

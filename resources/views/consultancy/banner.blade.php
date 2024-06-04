@@ -2,7 +2,7 @@
     $image = $getImage('Banner Image');
 @endphp
 
-<section class="md:pt-12 lg:pb-8 md:text-white">
+<section class="md:pt-12 md:pb-8 md:text-white">
     <div class="md:px-8 relative max-w-7xl mx-auto">
         <div class="md:grid grid-cols-2 gap-16 items-center">
             <div class="md:hidden">
