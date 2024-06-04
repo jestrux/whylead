@@ -1,5 +1,5 @@
 <section class="py-10 lg:py-14">
-    <div class="relative max-w-7xl mx-auto px-4 lg:px-8">
+    <div class="relative max-w-7xl mx-auto px-4 md:px-8">
         <div class="flex flex-col gap-4 lg:gap-10 items-center justify-center">
             <div class="max-w-5xl mx-auto text-center">
                 <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">
@@ -18,7 +18,7 @@
                 </p> --}}
             </div>
 
-            <ul role="list" class="flex flex-col lg:grid grid-cols-3 gap-8">
+            <ul role="list" class="flex flex-col md:grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
                 @php
                     $steps = [
                         [

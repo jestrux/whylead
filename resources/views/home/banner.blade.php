@@ -36,7 +36,7 @@
         transform: scale(0.7) translate(0, 2rem);
     }
 
-    @media (max-width: 1023px) {
+    @media (max-width: 767px) {
         .slide-image {
             top: auto;
             bottom: 0;
@@ -45,7 +45,7 @@
         }
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
         .face {
             transform: translateZ(30px);
         }
@@ -82,7 +82,7 @@
 
 <section class="px-4 md:px-0 relative">
     <div class="w-full max-w-[1400px] mx-auto px-6 py-12">
-        <div class="px-8 max-w-7xl mx-auto lg:grid grid-cols-2 h-screen max-h-[50vh] lg:max-h-[65vh]"
+        <div class="px-8 max-w-7xl mx-auto md:grid grid-cols-2 h-screen max-h-[50vh] md:max-h-[65vh]"
             x-data="{
                 index: 0,
                 phrases: [
@@ -103,18 +103,18 @@
             <div class="flex items-center justify-center relative" style="perspective: 2500px; ">
                 <div class="absolute inset-0 flex items-center justify-center">
                     <div class="relative h-full flex items-start py-4">
-                        <span class="text-accent dark:text-content/80 text-[500px]/none lg:text-[620px]/none"
+                        <span class="text-accent dark:text-content/80 text-[500px]/none md:text-[620px]/none"
                             style="font-family: 'Rocket', sans-serif;">
                             NO
                         </span>
 
-                        <div x-cloak class="absolute top-28 lg:top-40 h-10 lg:h-16 inset-x-0"
+                        <div x-cloak class="absolute top-28 md:top-40 h-10 md:h-16 inset-x-0"
                             style="transform: rotate3d(0, 1, 0, 20deg);">
                             <div class="relative w-full h-full cube transition-transform duration-1000"
                                 x-bind:style="`transform: rotateX(${90*index}deg);`">
                                 <template x-for="(phrase, index) in phrases">
                                     <div x-cloak
-                                        class="face absolute inset-0 text-accent dark:text-content/80 px-3 bg-canvas flex items-center justify-between text-xl lg:text-3xl uppercase"
+                                        class="face absolute inset-0 text-accent dark:text-content/80 px-3 bg-canvas flex items-center justify-between text-xl md:text-3xl uppercase"
                                         x-bind:class="{ 'second': index == 1, 'third': index == 2, 'fourth': index == 3 }"
                                         style="font-family: 'Rocket', sans-serif;">
                                         <template x-for="letter in phrase.label.split('')">
@@ -126,7 +126,7 @@
                         </div>
 
                         <div x-show="false"
-                            class="text-accent dark:text-content/80 absolute top-40 h-16 inset-x-0 px-3 bg-canvas flex items-center justify-between text-xl lg:text-3xl uppercase"
+                            class="text-accent dark:text-content/80 absolute top-40 h-16 inset-x-0 px-3 bg-canvas flex items-center justify-between text-xl md:text-3xl uppercase"
                             style="font-family: 'Rocket', sans-serif">
                             <span>F</span>
                             <span>E</span>
@@ -148,7 +148,7 @@
             </div>
 
             <div class="flex items-center justify-center">
-                <img class="absolute h-5/6 lg:h-full transition-transform duration-1000 slide-image"
+                <img class="absolute h-5/6 md:h-full transition-transform duration-1000 slide-image"
                     x-bind:src="`{{ asset('img/banner/') }}/${index + 1}.png`" alt=""
                     x-bind:class="{ 'second': index == 1, 'third': index == 2, 'fourth': index == 3 }" />
             </div>
@@ -156,10 +156,10 @@
     </div>
 </section>
 
-<section class="px-6 mt-8 lg:mt-4">
+<section class="px-6 mt-8 md:mt-4">
     <div class="flex flex-col items-center justify-center">
         <div class="max-w-2xl mx-auto mb-7 text-center">
-            <h2 class="text-2xl/none lg:text-3xl/none font-bold">
+            <h2 class="text-2xl/none md:text-3xl/none font-bold">
                 <span class="uppercase tracking-wide">
                     <span class="font-light text-primary">Trusted </span>
                     Globally
@@ -167,7 +167,7 @@
             </h2>
         </div>
 
-        <div class="max-w-5xl mx-auto flex flex-wrap gap-6 lg:gap-8 items-center justify-center">
+        <div class="max-w-5xl mx-auto flex flex-wrap gap-6 md:gap-8 items-center justify-center">
             <img class="grayscale h-6" src="{{ asset('img/clients/malala.svg') }}" />
 
             <img class="grayscale h-12" src="{{ asset('img/clients/women-lift.png') }}" />

@@ -41,18 +41,18 @@
                 </h2>
             </div>
 
-            <ul role="list" class="w-full px-6 flex flex-col lg:grid grid-cols-3 justify-between gap-8">
+            <ul role="list" class="w-full px-6 flex flex-col md:grid grid-cols-3 justify-between gap-8">
                 @php
                     $numbers = [
                         [
-                            'percent' => 100,
-                            'color' => '#F26B21',
-                            'patternColor' => 'rgba(255, 255, 255, 0.35)',
-                            'title' => 'Effective tailored solutions',
+                            'percent' => 82,
+                            'color' => '#EBB305',
+                            'patternColor' => 'rgba(0, 0, 0, 0.2)',
+                            'title' => 'Team skill improvement',
                             // 'description' =>
-                            //     'Every client has seen their challenges turn into opportunities for growth with our tailored solutions.',
+                            //     'Most of the clients who have worked with WhyLead managed to improve their skills through our programs.',
                             'description' =>
-                                'Every client has seen their challenges turn into opportunities for growth',
+                                'Most of the clients who have worked with WhyLead managed to improve their skills through.',
                         ],
                         [
                             'percent' => 98,
@@ -65,14 +65,14 @@
                                 'Nearly all clients discover new growth avenues after engaging our expert consultants',
                         ],
                         [
-                            'percent' => 82,
-                            'color' => '#EBB305',
-                            'patternColor' => 'rgba(0, 0, 0, 0.2)',
-                            'title' => 'Team skill improvement',
+                            'percent' => 100,
+                            'color' => '#F26B21',
+                            'patternColor' => 'rgba(255, 255, 255, 0.35)',
+                            'title' => 'Effective tailored solutions',
                             // 'description' =>
-                            //     'Most of the clients who have worked with WhyLead managed to improve their skills through our programs.',
+                            //     'Every client has seen their challenges turn into opportunities for growth with our tailored solutions.',
                             'description' =>
-                                'Most of the clients who have worked with WhyLead managed to improve their skills through.',
+                                'Every client has seen their challenges turn into opportunities for growth',
                         ],
                     ];
                 @endphp

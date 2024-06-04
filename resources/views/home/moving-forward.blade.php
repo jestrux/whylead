@@ -1,7 +1,7 @@
 <section class="bg-content/5">
-    <div class="px-4 lg:px-8 relative max-w-6xl mx-auto">
+    <div class="px-4 md:px-8 relative max-w-6xl mx-auto">
         <div class="lg:grid grid-cols-12 gap-16 items-center">
-            <div class="md:hidden pt-8">
+            <div class="lg:hidden pt-8">
                 <a href="#" class="block relative">
                     <div
                         class="relative aspect-video rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
@@ -34,11 +34,11 @@
                         moving
                         forward together,
                         <span class="outline-text">then</span>
-                        {{-- <span class="hidden md:inline"><br /></span>> --}}
+                        {{-- <span class="hidden lg:inline"><br /></span>> --}}
                         success
                         <span class="outline-text">takes care of itself</span>
                         {{-- <span class="outline-text">Thriving</span>
-                        <span class="hidden md:inline"><br /></span>>
+                        <span class="hidden lg:inline"><br /></span>>
                         <span class="outline-text">Thriving</span> --}}
                     </span>
                 </h2>
@@ -49,7 +49,7 @@
                 </p>
 
                 <div class="mt-2">
-                    <a href="{{ url('/contacts') }}" class="btn w-full md:w-auto">
+                    <a href="{{ url('/contacts') }}" class="btn w-full lg:w-auto">
                         Build a thriving team today
                     </a>
                 </div>
@@ -57,7 +57,7 @@
 
             <div class="col-span-6">
                 <a href="#"
-                    class="hidden md:block min-h-full -rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-xl relative rounded-xl overflow-hidden size-full bg-neutral-300">
+                    class="hidden lg:block min-h-full -rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-xl relative rounded-xl overflow-hidden size-full bg-neutral-300">
                     <img class="rotate-6 scale-125 size-full object-cover object-top"
                         src="https://res.cloudinary.com/sfp-app/image/upload/v1711540531/vudvwz3j0vmlsqslsjio.jpg"
                         alt="" />

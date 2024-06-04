@@ -1,7 +1,7 @@
 <section class="sbg-neutral-100">
-    <div class="px-4 lg:px-8 py-6 lg:pt-36 lg:pb-20 relative max-w-7xl mx-auto">
+    <div class="px-4 md:px-8 py-6 lg:pt-36 lg:pb-20 relative max-w-7xl mx-auto">
         <div class="lg:grid grid-cols-2 gap-16 items-center">
-            <div class="md:hidden">
+            <div class="lg:hidden">
                 <a href="#" class="block relative">
                     <div
                         class="relative aspect-video rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
@@ -94,7 +94,7 @@
                 </ul>
 
                 <div class="mt-5">
-                    <a href="{{ url('/thrive-in-the-middle/form') }}" class="btn w-full md:w-auto">
+                    <a href="{{ url('/thrive-in-the-middle/form') }}" class="btn w-full lg:w-auto">
                         Enroll to next cohort now
                     </a>
                 </div>
@@ -102,7 +102,7 @@
 
             <div>
                 <a href="#"
-                    class="-rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-xl flex-1 hidden md:flex items-center justify-center aspect-[2/1.8] relative">
+                    class="-rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-xl flex-1 hidden lg:flex items-center justify-center aspect-[2/1.8] relative">
                     <div
                         class="relative rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
                         <img class="rotate-6 scale-125 w-full h-full object-cover object-top"

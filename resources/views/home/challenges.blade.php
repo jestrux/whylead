@@ -50,21 +50,21 @@
     });
 </script>
 
-<section x-data="challenges" class="py-12 lg:py-20">
+<section x-data="challenges" class="py-12 md:py-20">
     <template x-if="challenge">
         <div class="fixed inset-0 z-50 bg-black/50 flex items-center justify-between">
             <div class="w-full max-w-5xl mx-auto relative">
                 <button x-on:click="setChallenge()"
-                    class="absolute p-1 rounded right-3 lg:-right-3 top-3 lg:-top-3 z-50 bg-content text-canvas">
+                    class="absolute p-1 rounded right-3 md:-right-3 top-3 md:-top-3 z-50 bg-content text-canvas">
                     <svg class="size-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
                     </svg>
                 </button>
 
-                <div class="relative lg:grid grid-cols-12 bg-card border border-stroke lg:rounded-2xl overflow-hidden">
+                <div class="relative md:grid grid-cols-12 bg-card border border-stroke md:rounded-2xl overflow-hidden">
                     <div
-                        class="relative z-10 col-span-7 flex flex-col h-screen lg:h-auto lg:max-h-[500px] overflow-auto">
-                        <div class="p-4 lg:p-8">
+                        class="relative z-10 col-span-7 flex flex-col h-screen md:h-auto md:max-h-[500px] overflow-auto">
+                        <div class="p-4 md:p-8">
                             <h3 class="mt-4 text-accent dark:text-content uppercase font-bold tracking-wide text-xl/none"
                                 x-text="challenge.title">
                                 Build thriving teams
@@ -79,7 +79,7 @@
                                     Recommended solutions
                                 </h5>
 
-                                <ul role="list" class="flex flex-col lg:grid grid-cols-2 gap-4">
+                                <ul role="list" class="flex flex-col md:grid grid-cols-2 gap-4">
                                     <template x-for="(solution, index) in challenge.solutions">
                                         <li>
                                             <div
@@ -131,7 +131,7 @@
                         </div>
                     </div>
 
-                    <div class="hidden lg:block col-span-5 min-h-full m-2 rounded-xl overflow-hidden relative">
+                    <div class="hidden md:block col-span-5 min-h-full m-2 rounded-xl overflow-hidden relative">
                         <img class="absolute w-full h-full object-cover bg-black/5"
                             src="https://images.unsplash.com/photo-1573164574511-73c773193279?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDR8fGFmcmljYW4lMjBhbWVyaWNhbiUyMGxlYWRlcnN8ZW58MHx8fHwxNzA5NjM2OTQwfDA&ixlib=rb-4.0.3&q=80&w=1080"
                             x-bind:src="challenge.image" alt="" />
@@ -152,9 +152,9 @@
         </div>
     </template>
 
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
         <div class="mx-auto max-w-4xl sm:text-center">
-            <h2 class="text-2xl lg:text-4xl font-bold max-w-4xl">
+            <h2 class="text-2xl md:text-4xl font-bold max-w-4xl">
                 <span class="uppercase tracking-wide">
                     <span class="outline-text">Pick </span>
                     your top
@@ -163,19 +163,19 @@
                     <span class="outline-text">challenge</span>
                 </span>
             </h2>
-            {{-- <h2 class="text-2xl lg:text-[40px]/tight font-bold">
+            {{-- <h2 class="text-2xl md:text-[40px]/tight font-bold">
                 Pick Your Top Leadership Challenges
             </h2> --}}
 
             {{-- <p class="mt-4 text-lg/relaxed">
                 Click one of the challenges below to get started.
             </p> --}}
-            <p class="mt-2 lg:mt-5 text-lg opacity-70">
+            <p class="mt-2 md:mt-5 text-lg opacity-70">
                 Click your top challenge below to discover targeted solutions.
             </p>
         </div>
 
-        <ul role="list" class="mx-auto mt-4 lg:mt-16 flex flex-col lg:grid grid-cols-3 gap-6">
+        <ul role="list" class="mx-auto mt-4 md:mt-16 flex flex-col md:grid grid-cols-3 gap-6">
             @foreach ($challenges as $challenge)
                 @php
                     $i = $loop->iteration;

@@ -152,7 +152,7 @@
                     @endphp
 
                     <div>
-                        <div class="bg-white text-black px-6 py-2 z-10 sticky top-14"
+                        <div class="bg-white text-black px-6 py-2 z-10 sticky top-14 md:top-[70px]"
                             style="background: {{ $item['color'] }}">
                             <h3 class="font-bold">{{ $item['title'] }}</h3>
                         </div>

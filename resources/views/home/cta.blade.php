@@ -1,6 +1,6 @@
-<section class="lg:mb-20">
+<section class="md:mb-8 lg:mb-20">
     <div
-        class="lg:rounded-3xl bg-content/5 max-w-3xl mx-auto px-6 py-12 lg:py-12 lg:px-16 flex flex-col gap-6 justify-center items-center text-center">
+        class="md:rounded-3xl bg-content/5 max-w-3xl mx-auto px-6 py-12 lg:py-12 lg:px-16 flex flex-col gap-6 justify-center items-center text-center">
         <div class="flex-1 flex flex-col items-center">
             <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-wide">
                 <span class="outline-text">Ready to </span>

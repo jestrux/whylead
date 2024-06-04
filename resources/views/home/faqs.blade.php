@@ -1,5 +1,5 @@
 <section class="py-10 lg:py-14">
-    <div class="max-w-5xl mx-auto lg:px-8 flex flex-col gap-8 items-center">
+    <div class="max-w-5xl mx-auto md:px-8 flex flex-col gap-8 items-center">
         <div class="text-center">
             <h2 class="text-2xl lg:text-4xl font-bold uppercase tracking-wide">
                 <span class="outline-text">Frequently
