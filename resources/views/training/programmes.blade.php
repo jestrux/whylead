@@ -1,8 +1,8 @@
-<section id="programmes" class="py-10 lg:py-20 bg-content/5">
+<section id="programmes" class="py-10 md:py-20 bg-content/5">
     <div class="relative max-w-7xl mx-auto">
-        <div class="mb-6 lg:mb-12 flex gap-12 mx-w-3xl mx-auto px-4 lg:px-8">
+        <div class="mb-6 lg:mb-12 flex gap-12 mx-w-3xl mx-auto px-4 md:px-8">
             <div class="flex-1 text-center">
-                <h2 class="text-2xl lg:text-4xl font-bold uppercase">
+                <h2 class="text-2xl md:text-4xl font-bold uppercase">
                     <span class="font-light">Training </span> programmes
                 </h2>
 
@@ -97,9 +97,9 @@
             @endphp
 
             @foreach ($steps as $programme)
-                <section class="lg:py-12 scrollable-section">
-                    <div class="px-4 lg:px-8 relative max-w-7xl mx-auto">
-                        <div class="lg:grid grid-cols-2 gap-16 items-center">
+                <section class="md:py-12 scrollable-section">
+                    <div class="px-4 md:px-8 relative max-w-7xl mx-auto">
+                        <div class="md:grid grid-cols-2 gap-16 items-center">
                             @php
                                 $image = $programme['image'];
                             @endphp
@@ -114,8 +114,8 @@
                                 </a>
                             </div>
 
-                            <div class="flex flex-col gap-1 lg:gap-2">
-                                <h3 class="mt-2 text-2xl lg:text-3xl uppercase font-bold">
+                            <div class="flex flex-col gap-1 md:gap-2">
+                                <h3 class="mt-2 text-2xl md:text-3xl uppercase font-bold">
                                     {{ $programme['title'] }}
                                 </h3>
 
@@ -180,7 +180,7 @@
 
 <script>
     (function activateScrollableSections() {
-        if (window.innerWidth <= 1023) return;
+        if (window.innerWidth <= 767) return;
 
         var threshold = 0.5;
         var scrollSectionStyles = document.createElement("style");
@@ -238,6 +238,12 @@
                     bottom: 0;
                     width: 12px;
                     z-index: 10;
+                }
+
+                @media only screen and (max-width: 1023px) {
+                    .scroll-section-indicator {
+                        left: 2rem;
+                    }
                 }
 
                 .no-scroll-indicators .scroll-section-indicator-wrapper {

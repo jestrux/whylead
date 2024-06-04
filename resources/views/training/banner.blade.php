@@ -2,9 +2,9 @@
     $image = $getImage('Banner Image');
 @endphp
 
-<section class="lg:pt-12 lg:pb-8 lg:text-white">
-    <div class="lg:px-8 relative max-w-7xl mx-auto">
-        <div class="lg:grid grid-cols-2 gap-16 items-center">
+<section class="md:pt-12 md:pb-8 md:text-white">
+    <div class="md:px-8 relative max-w-7xl mx-auto">
+        <div class="md:grid grid-cols-2 gap-16 items-center">
             <div class="md:hidden">
                 <a href="#" class="block relative">
                     <div

@@ -5,9 +5,6 @@
 @extends('layout.index')
 
 @section('content')
-    <div class="hidden lg:block absolute inset-0 h-[400px] bg-accent">
-    </div>
-
     @pierdata(["model" => "Content", "wherePage" => "Training"])
     @php
         $images = $data->filter(fn($item) => $item->type == 'image');
@@ -19,7 +16,12 @@
             );
         };
     @endphp
-    @include('training.banner')
+
+    <div class="relative">
+        <div class="hidden md:block absolute inset-0 bg-accent">
+        </div>
+        @include('training.banner')
+    </div>
 
     @include('training.programmes')
 
