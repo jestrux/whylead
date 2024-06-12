@@ -36,21 +36,11 @@
         'https://images.unsplash.com/photo-1622675103136-e4b90c9a33d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDMzfHxsZWFkZXJzaGlwJTIwdHJhaW5pbmd8ZW58MHx8fHwxNzA4NDMxMTM0fDA&ixlib=rb-4.0.3&q=80&w=1080';
 @endphp
 
-<section id="thrivingTeams" class="py-4 lg:py-12 lg:pb-24">
-    <div class="relative max-w-7xl mx-auto px-4 lg:px-8">
+<section id="thrivingTeams" class="py-4 lg:py-12 md:pb-14 lg:pb-24">
+    <div class="relative max-w-7xl mx-auto px-4 md:px-8">
         <div class="lg:grid grid-cols-12 gap-16 items-center">
-            <div class="md:hidden">
-                <a href="#" class="block relative">
-                    <div
-                        class="relative aspect-video rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
-                        <img class="absolute size-full object-cover object-top" src="{{ $image }}"
-                            alt="" />
-                    </div>
-                </a>
-            </div>
-
             <div
-                class="col-span-6 h-full -rotate-1 shadow-xl flex-1 hidden md:flex items-center justify-center relative">
+                class="col-span-6 h-full -rotate-1 shadow-xl flex-1 hidden lg:flex items-center justify-center relative">
                 <div class="p-12 relative bg-accent text-white rounded-xl size-full flex flex-col justify-between">
                     <img class="w-1/2" src="{{ asset('img/thrive-logo.png') }}" alt="" />
 
@@ -75,7 +65,7 @@
                     a culture of continuous improvement, and driving strategic success.
                 </p>
 
-                <div class="-mx-4 lg:mx-0">
+                <div class="-mx-4 md:mx-0">
                     <x-faqs :data="$faqs" />
                 </div>
 

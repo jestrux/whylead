@@ -27,10 +27,10 @@
 @endphp
 
 <section class="py-6 lg:py-12">
-    <div class="px-4 lg:px-8 relative max-w-7xl mx-auto">
-        <div class="lg:grid grid-cols-2 gap-16 items-center">
+    <div class="px-4 md:px-8 relative max-w-7xl mx-auto">
+        <div class="md:grid grid-cols-2 gap-16 items-center">
             <div class="min-h-full flex-1 flex flex-col lg:flex-row items-start py-4">
-                <div class="lg:sticky top-28">
+                <div class="md:sticky top-28">
                     <div class="relative -rotate-1 shadow-xl flex items-center justify-center aspect-[2/0.8]">
                         <div class="relative rounded-xl overflow-hidden size-full bg-content/5">
                             <img class="rotate-6 scale-125 size-full object-top" src="{{ $image }}"
@@ -46,8 +46,7 @@
                         </div>
                     </div>
 
-                    <div class="hidden lg:block">
-
+                    <div class="hidden md:block">
                         <p class="mt-6 text-lg/loose uppercase">
                             You can't enroll in any of these cohorts? Don't worry, There's usually a cohort you can join
                             at

@@ -5,10 +5,15 @@
 @extends('layout.index')
 
 @section('content')
-    <div class="hidden lg:block absolute inset-0 h-[400px] bg-accent">
+    <div class="hidden md:block absolute inset-x-0 top-0 h-20 bg-accent">
     </div>
 
-    @include('thrive-in-the-middle.banner')
+    <div class="relative">
+        <div class="hidden md:block absolute inset-0 bg-accent">
+        </div>
+        @include('thrive-in-the-middle.banner')
+    </div>
+
 
     @include('thrive-in-the-middle.about-programme')
 
@@ -18,7 +23,7 @@
 
     @include('thrive-in-the-middle.upcoming-cohorts')
 
-    <div class="-mb-16 lg:-mb-6">
+    <div class="-mt-24 -mb-16 lg:-mb-6">
         @include('consultancy.testimonials')
     </div>
 

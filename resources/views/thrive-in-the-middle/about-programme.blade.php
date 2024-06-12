@@ -60,9 +60,9 @@
 @endphp
 
 <section class="py-8 lg:pt-28 lg:pb-20">
-    <div class="px-4 lg:px-8 relative max-w-7xl mx-auto">
+    <div class="px-4 md:px-8 relative max-w-7xl mx-auto">
         <div class="lg:grid grid-cols-2 gap-16 items-center">
-            <div class="md:hidden mb-3">
+            <div class="lg:hidden mb-3">
                 <a href="#" class="block relative">
                     <div
                         class="relative aspect-video rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
@@ -108,7 +108,7 @@
                     Below are some key outcomes for the organization.
                 </p>
 
-                <div class="-mx-4 lg:mx-0">
+                <div class="-mx-4 md:mx-0">
                     <x-faqs :data="$faqs" />
                 </div>
 
@@ -120,7 +120,7 @@
             </div>
 
             <div
-                class="-rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300 flex-1 hidden md:flex items-center justify-center aspect-[2/1.8] relative">
+                class="-rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300 flex-1 hidden lg:flex items-center justify-center aspect-[2/1.8] relative">
                 <div class="relative rounded-xl overflow-hidden size-full bg-content/5">
                     <img class="rotate-6 scale-125 size-full" src="{{ $image }}" alt="" />
 
@@ -152,7 +152,7 @@
                 </h2>
             </div>
 
-            <ul role="list" class="flex flex-col lg:grid grid-cols-4 gap-4">
+            <ul role="list" class="flex flex-col md:grid grid-cols-2 lg:grid-cols-4 gap-4">
                 @foreach ($steps as $step)
                     <li
                         class="bg-gradient-to-br from-accent via-accent/90 to-accent/95 text-white relative min-h-full w-full px-8 py-6 shadow rounded-3xl overflow-hidden">

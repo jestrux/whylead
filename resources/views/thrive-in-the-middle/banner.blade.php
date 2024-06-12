@@ -144,9 +144,64 @@
     }
 </style>
 
-<section class="text-white relative">
+<section class="lg:pt-12 px-8 pb-4 text-white relative">
+    <div class="lg:hidden relative flex flex-col gap-5 py-8 px-4">
+        {{-- <img class="h-14 object-contain" src="{{ asset('img/thrive-logo.png') }}" alt="" /> --}}
+
+        <p class="pt-6 max-w-xl mx-auto text-2xl/[1.7] text-center font-light">
+            A 12-week program designed to empower middle managers to thrive as growth, alignment, culture, and
+            change catalysts within their organizations.
+        </p>
+    </div>
+
+    <div class="hidden lg:block relative max-w-7xl mx-auto px-4 lg:px-8">
+        <div class="h-60 flex gap-4 items-center">
+            <div class="relative h-full flex items-center pb-24">
+                <img class="h-[120px] object-contain" src="{{ asset('img/thrive-logo.png') }}" alt="" />
+            </div>
+
+            <div class="flex-1 pt-3 text-2xl lg:text-3xl text-center font-bold">
+                <p class="pb-12 max-w-xl mx-auto text-2xl/[1.7] text-center font-light">
+                    A 12-week program designed to empower middle managers to thrive as growth, alignment, culture, and
+                    change catalysts within their organizations.
+                </p>
+            </div>
+
+            <div class="h-full flex-shrink-0 w-[150px]">
+                <img class="rotate-4 absolute -bottom-32 right-8 h-[380px] opacity-55" src="{{ $image }}"
+                    alt="" />
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden lg:block absolute bottom-10 left-0 right-0 pointer-events-none">
+        <div x-data="{
+            init() {
+                var el = this.$root;
+                this.$refs.plane.addEventListener('animationend', () => {
+                    el.classList.remove('animate-plane');
+                    el.classList.add('animate-plane-2');
+                }, false);
+                this.$refs.plane2.addEventListener('animationend', () => {
+                    el.classList.add('animate-plane');
+                    el.classList.remove('animate-plane-2');
+                }, false);
+            }
+        }" class="animate-plane max-w-lg mx-auto flex justify-between relative h-12">
+            <span class="plane absolute bottom-0 left-0 size-[50px] translate-y-full opacity-0" x-ref="plane">
+                @include('common.thrive-plane')
+            </span>
+            <span class="plane-2 absolute bottom-0 right-0 size-[50px] translate-y-full -rotate-90 opacity-0"
+                x-ref="plane2">
+                @include('common.thrive-plane')
+            </span>
+        </div>
+    </div>
+</section>
+
+{{-- <section class="text-white relative">
     <div class="lg:px-8 relative max-w-7xl mx-auto">
-        <div class="md:hidden relative flex flex-col gap-5 bg-accent py-8 px-4">
+        <div class="lg:hidden relative flex flex-col gap-5 bg-accent py-8 px-4">
             <img class="h-14 object-contain" src="{{ asset('img/thrive-logo.png') }}" alt="" />
 
             <p class="text-xl/relaxed text-center font-light">
@@ -195,4 +250,4 @@
             </span>
         </div>
     </div>
-</section>
+</section> --}}

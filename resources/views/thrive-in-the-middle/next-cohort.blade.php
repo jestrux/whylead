@@ -34,17 +34,17 @@
                 </h2>
             </div>
 
-            <ul role="list" class="flex flex-col lg:grid grid-cols-4 gap-2 relative my-4 py-6 lg:my-0 lg:py-0">
-                <div class="absolute top-0 h-full lg:h-20 bg-red-50s -inset-x-2 flex flex-col lg:flex-row items-center">
+            <ul role="list" class="flex flex-col md:grid grid-cols-4 gap-2 relative my-4 py-6 md:my-0 md:py-0">
+                <div class="absolute top-0 h-full md:h-20 bg-red-50s -inset-x-2 flex flex-col md:flex-row items-center">
                     <div class="flex-shrink-0 size-3 rounded-full border-2 border-accent dark:border-content/20"></div>
-                    <div class="flex-1 border-l-2 lg:border-l-0 lg:border-t-2 border-dashed border-stroke"></div>
+                    <div class="flex-1 border-l-2 md:border-l-0 md:border-t-2 border-dashed border-stroke"></div>
                     <div class="flex-shrink-0 size-3 rounded-full border-2 border-accent dark:border-content/20"></div>
                 </div>
 
                 @foreach ($steps as $step)
                     <li
                         class="text-whites borders border-stroke sshadow-sm relative min-h-full w-full rounded-2xl overflow-hidden py-4 text-left">
-                        <div class="min-h-full relative flex flex-col items-center justify-between gap-8 lg:p-2">
+                        <div class="min-h-full relative flex flex-col items-center justify-between gap-8 md:p-2">
                             <small
                                 class="inline-flex text-xs/none font-bold py-2 px-3.5 rounded-full border border-stroke bg-canvas uppercase tracking-widest">
                                 {{-- <span class="mt-px">Step 0{{ $loop->iteration }}</span> --}}

@@ -1,6 +1,6 @@
 <footer class="border-t border-stroke">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col items-start justify-between gap-y-12 pb-6 pt-16 lg:flex-row lg:items-center lg:py-16">
+    <div class="">
+        <div class="mx-auto max-w-7xl px-4 md:px-8 flex flex-col items-start justify-between gap-y-12 lg:flex-row lg:items-center py-4 lg:py-8">
             <div>
                 <div class="flex items-center">
                     <a href="{{ url('/') }}">
@@ -92,7 +92,7 @@
             </form>
             <p class="mt-6 text-sm text-gray-500 md:mt-0">© Copyright <!-- -->2024<!-- -->. All rights reserved.</p>
         </div> --}}
-        <div class="flex flex-col items-center border-t border-black/10 py-10 sm:flex-row-reverse sm:justify-between">
+        <div class="mx-auto max-w-7xl px-4 md:px-8 flex flex-col items-center border-t border-black/10 py-10 sm:flex-row-reverse sm:justify-between">
             <form x-data="{
                 saving: false,
                 showMessage: false,

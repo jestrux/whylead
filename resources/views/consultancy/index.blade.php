@@ -17,6 +17,9 @@
         };
     @endphp
 
+    <div class="hidden md:block absolute inset-x-0 top-0 h-20 bg-accent">
+    </div>
+
     <div class="relative">
         <div class="hidden md:block absolute inset-0 bg-accent">
         </div>
