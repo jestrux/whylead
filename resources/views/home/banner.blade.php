@@ -67,21 +67,26 @@
         }
 
         .slide-image.second {
-            transform: scale(1) translate(-5rem, 0rem);
+            transform: scale(0.9) translate(-2rem, 0.5rem);
         }
 
         .slide-image.third {
-            transform: scale(0.9) translate(-2rem, 0rem);
+            transform: scale(0.95) translate(-5rem, 1.5rem);
         }
 
         .slide-image.fourth {
-            transform: scale(0.9) translate(-5rem, -2rem);
+            transform: scale(1) translate(-4rem, 0rem);
         }
     }
 </style>
 
 <section class="px-4 md:px-0 relative">
-    <div class="w-full max-w-[1400px] mx-auto px-6 py-12">
+    @foreach ([1, 2, 3, 4] as $item)
+        <img class="absolute top-0 left-1/2 -translate-x-1/2 h-full" src="{{ asset('img/banner/img' . $item . '.png') }}"
+            alt="" />
+    @endforeach
+
+    <div class="w-full max-w-[1400px] mx-auto px-6 py-12 bg-canvas z-10 relative">
         <div class="px-8 max-w-7xl mx-auto md:grid grid-cols-2 h-screen max-h-[50vh] md:max-h-[65vh]"
             x-data="{
                 index: 0,
@@ -100,7 +105,7 @@
                     }, 3000)
                 }
             }">
-            <div class="flex items-center justify-center relative" style="perspective: 2500px; ">
+            <div class="flex items-center justify-center relative md:z-10" style="perspective: 2500px; ">
                 <div class="absolute inset-0 flex items-center justify-center">
                     <div class="relative h-full flex items-start py-4">
                         <span class="text-accent dark:text-content/80 text-[500px]/none md:text-[620px]/none"
@@ -147,9 +152,9 @@
                 </div>
             </div>
 
-            <div class="flex items-center justify-center">
+            <div class="flex items-center justify-center bg-canvass">
                 <img class="absolute h-5/6 md:h-full transition-transform duration-1000 slide-image"
-                    x-bind:src="`{{ asset('img/banner/') }}/${index + 1}.png`" alt=""
+                    x-bind:src="`{{ asset('img/banner/') }}/img${index + 1}.png`" alt=""
                     x-bind:class="{ 'second': index == 1, 'third': index == 2, 'fourth': index == 3 }" />
             </div>
         </div>

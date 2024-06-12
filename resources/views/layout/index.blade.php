@@ -30,7 +30,8 @@
     @yield('meta')
 
     <title>@yield('title', $defaultTitle)</title>
-    <link href="{{ asset('icon.png') }}" rel="shortcut icon" type="image/png" />
+
+    <link rel="shortcut icon" href="{{ asset('icon.svg') }}" type="image/svg+xml" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
