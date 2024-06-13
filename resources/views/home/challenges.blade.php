@@ -55,7 +55,7 @@
         <div class="fixed inset-0 z-50 bg-black/50 flex items-center justify-between">
             <div class="w-full max-w-5xl mx-auto relative">
                 <button x-on:click="setChallenge()"
-                    class="absolute p-1 rounded right-3 md:-right-3 top-3 md:-top-3 z-50 bg-content text-canvas">
+                    class="absolute p-1 rounded right-3 lg:-right-3 top-3 md:-top-3 z-50 bg-content text-canvas">
                     <svg class="size-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
                     </svg>
@@ -79,7 +79,7 @@
                                     Recommended solutions
                                 </h5>
 
-                                <ul role="list" class="flex flex-col md:grid grid-cols-2 gap-4">
+                                <ul role="list" class="flex flex-col lg:grid grid-cols-2 gap-4">
                                     <template x-for="(solution, index) in challenge.solutions">
                                         <li>
                                             <div

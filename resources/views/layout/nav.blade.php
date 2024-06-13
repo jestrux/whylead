@@ -1,6 +1,5 @@
 <style>
-    @media only screen and (max-width: 680px) {
-
+    @media only screen and (max-width: 767px) {
         #mainNavigationMenu,
         #mainNavigationMenuItems {
             background: rgb(var(--canvas-color));

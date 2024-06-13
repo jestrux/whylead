@@ -81,10 +81,12 @@
 </style>
 
 <section class="px-4 md:px-0 relative">
-    @foreach ([1, 2, 3, 4] as $item)
-        <img class="absolute top-0 left-1/2 -translate-x-1/2 h-full" src="{{ asset('img/banner/img' . $item . '.png') }}"
-            alt="" />
-    @endforeach
+    <div class="max-w-lg mx-auto overflow-hidden absolute inset-x-0">
+        @foreach ([1, 2, 3, 4] as $item)
+            <img class="absolute top-0 h-full" src="{{ asset('img/banner/img' . $item . '.png') }}"
+                alt="" />
+        @endforeach
+    </div>
 
     <div class="w-full max-w-[1400px] mx-auto px-6 py-12 bg-canvas z-10 relative">
         <div class="px-8 max-w-7xl mx-auto md:grid grid-cols-2 h-screen max-h-[50vh] md:max-h-[65vh]"
