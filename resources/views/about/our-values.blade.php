@@ -21,14 +21,14 @@
                             'icon' => 'm3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z',
                             'title' => 'Ubuntu Kwanza',
                             'description' =>
-                                'Treating All as Ends, Never Means. working to create win-win outcomes for all earthlings.',
+                                'Treating All as Ends, Never Means. Working to create win-win outcomes for all earthlings.',
                         ],
                         [
                             'icon' =>
                                 'M3 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061A1.125 1.125 0 0 1 3 16.811V8.69ZM12.75 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061a1.125 1.125 0 0 1-1.683-.977V8.69Z',
                             'title' => 'Game 6',
                             'description' =>
-                                'We do what we say we do. we are who we say we are. we seize every opportunity we say yes to. We go ALL-IN in and Give our absolute best. ',
+                                'We do what we say we do. We are who we say we are. We seize every opportunity we say yes to. We go ALL-IN in and Give our absolute best. ',
                         ],
                         [
                             'icon' => 'M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z',

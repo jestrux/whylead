@@ -57,7 +57,7 @@
 
             <div class="col-span-6 pt-2 lg:pt-6 pb-6 lg:pb-20 flex flex-col gap-1 lg:gap-2">
                 <h2 class="mt-3 text-2xl lg:text-3xl font-bold uppercase">
-                    Programmes
+                    Programs
                 </h2>
 
                 <p class="text-lg/loose">

@@ -13,7 +13,7 @@
         </div>
     </div>
 
-    <div class="my-1 relative text-sm/snug max-w-[310px] line-clamp-2">
+    <div class="my-1 relative text-sm/snug max-w-[340px] line-clamp-3">
         {{ $description }}
     </div>
 </div>

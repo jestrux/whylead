@@ -6,23 +6,17 @@
                     <div
                         class="relative aspect-video rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
                         <img class="absolute w-full h-full object-cover object-top"
-                            src="https://images.unsplash.com/photo-1622675103136-e4b90c9a33d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDMzfHxsZWFkZXJzaGlwJTIwdHJhaW5pbmd8ZW58MHx8fHwxNzA4NDMxMTM0fDA&ixlib=rb-4.0.3&q=80&w=1080"
-                            alt="" />
+                            src="{{ asset('img/uploads/home-thrive-in-the-middle.jpg') }}" alt="" />
 
-                        <div class="absolute inset-0 flex items-center justify-center">
+                        {{-- <div class="absolute inset-0 flex items-center justify-center">
                             <span class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-accent">
-                                {{-- <svg class="w-14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor">
-                                    <path d="M8 5v14l11-7z" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg> --}}
-
                                 <svg class="w-6 ml-1" fill="currentColor" viewBox="0 0 24 24" stroke-width="1"
                                     stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
                                 </svg>
-
                             </span>
-                        </div>
+                        </div> --}}
                     </div>
                 </a>
             </div>
@@ -48,7 +42,7 @@
                 </p>
 
                 <p class="text-base/relaxed opacity-70">
-                    Key Outcomes for participating organizations include:
+                    Key outcomes for participating organizations include:
                 </p>
 
                 @php
@@ -106,23 +100,17 @@
                     <div
                         class="relative rounded-xl srounded-t-full srounded-b-[100%] overflow-hidden w-full h-full bg-neutral-300">
                         <img class="rotate-6 scale-125 w-full h-full object-cover object-top"
-                            src="https://images.unsplash.com/photo-1622675103136-e4b90c9a33d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDMzfHxsZWFkZXJzaGlwJTIwdHJhaW5pbmd8ZW58MHx8fHwxNzA4NDMxMTM0fDA&ixlib=rb-4.0.3&q=80&w=1080"
-                            alt="" />
+                            src="{{ asset('img/uploads/home-thrive-in-the-middle.jpg') }}" alt="" />
 
-                        <div class="absolute inset-0 flex items-center justify-center">
+                        {{-- <div class="absolute inset-0 flex items-center justify-center">
                             <span class="size-16 flex items-center justify-center rounded-full bg-white text-accent">
-                                {{-- <svg class="w-14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor">
-                                    <path d="M8 5v14l11-7z" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg> --}}
-
                                 <svg class="size-8 ml-1" fill="currentColor" viewBox="0 0 24 24" stroke-width="1"
                                     stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
                                 </svg>
-
                             </span>
-                        </div>
+                        </div> --}}
                     </div>
                 </a>
             </div>

@@ -52,7 +52,7 @@
                             // 'description' =>
                             //     'Most of the clients who have worked with WhyLead managed to improve their skills through our programs.',
                             'description' =>
-                                'Most of the clients who have worked with WhyLead managed to improve their skills through.',
+                                'Most of the clients who have worked with WhyLead managed to improve their skills.',
                         ],
                         [
                             'percent' => 98,

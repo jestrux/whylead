@@ -21,7 +21,7 @@
                                 'https://res.cloudinary.com/sfp-app/image/upload/v1711556946/grcuqrtowisdjwhagoy3.jpg',
                             'title' => 'The very best in the business',
                             'description' =>
-                                'This program is designed to empower middle managers to thrive as change and alignment agents by inspiring their teams’ conviction, commitment, and a sense of congruence to drive strategic results for the organization. Key Outcomes for participating organizations include.',
+                                'This program is designed to empower middle managers to thrive as change and alignment agents by inspiring their teams’ conviction, commitment, and a sense of congruence to drive strategic results for the organization. Key outcomes for participating organizations include.',
                             'name' => 'Naamani Nyozi',
                             'position' => 'Managing director, Dow Za',
                         ],
@@ -30,7 +30,7 @@
                                 'https://res.cloudinary.com/sfp-app/image/upload/v1711557040/gadvrlzzwxryjnyqduaf.jpg',
                             'title' => 'The cool teachers you never had',
                             'description' =>
-                                'This program is designed to empower middle managers to thrive as change and alignment agents by inspiring their teams’ conviction, commitment, and a sense of congruence to drive strategic results for the organization. Key Outcomes for participating organizations include.',
+                                'This program is designed to empower middle managers to thrive as change and alignment agents by inspiring their teams’ conviction, commitment, and a sense of congruence to drive strategic results for the organization. Key outcomes for participating organizations include.',
                             'name' => 'Mboyo Kabeni',
                             'position' => 'Project manager, The Soife Fund',
                         ],

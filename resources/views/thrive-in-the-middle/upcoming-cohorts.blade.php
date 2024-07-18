@@ -3,7 +3,7 @@
         [
             'icon' =>
                 'M3 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061A1.125 1.125 0 0 1 3 16.811V8.69ZM12.75 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061a1.125 1.125 0 0 1-1.683-.977V8.69Z',
-            'question' => 'Holistic leadership development',
+            'question' => 'Holistic Leadership Development',
             'answer' =>
                 "Our program seamlessly integrates insights from a diverse range of bodies of knowledge, offering a holistic approach to leadership development. This comprehensive learning experience ensures that leaders are well-equipped to address a wide array of challenges and opportunities in today's dynamic business landscape.",
         ],

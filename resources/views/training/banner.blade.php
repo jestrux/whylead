@@ -16,13 +16,15 @@
 
             <div class="flex flex-col gap-2 py-6 px-4 lg:py-0 lg:px-0">
                 <h2 class="mt-3 text-2xl lg:text-4xl/tight font-bold uppercase">
-                    Everything <span class="font-light">Rises and</span>
+                    Leadership is
                     <span class="hidden md:inline"><br /></span>
-                    Falls on Leadership
+                    <span class="font-light">the key to </span>99% of all
+                    <span class="hidden md:inline"><br /></span>
+                    <span class="font-light">successful</span> efforts
                 </h2>
 
                 <p class="mt-1 text-lg/relaxed uppercase">
-                    Our Programmes Are Designed To Develop Leaders Who Can Lead Thriving Organizations In The 21st
+                    Our programs Are Designed To Develop Leaders Who Can Lead Thriving Organizations In The 21st
                     Century.
                 </p>
             </div>

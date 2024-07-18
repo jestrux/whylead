@@ -48,7 +48,7 @@
                 </div>
             </div>
 
-            <div class="col-span-7 pt-4 lg:pb-16 flex items-start lg:flex-col gap-8 lg:gap-2">
+            <div class="col-span-7 pt-4 lg:pb-16 flex items-start flex-col lg:gap-2">
                 <div
                     class="max-w-lg ml-auto w-full bg-accent/5 dark:bg-content/5 border border-stroke shadow-sm rotate-1 rounded-2xl items-center justify-center relative">
                     <div
@@ -59,8 +59,7 @@
                     </div>
 
                     <div class="px-6 pt-7 pb-4 text-base/loose font-light">
-                        We’ve been called trainers, coaches, and consultants. But we call ourselves kingmakers and
-                        queenmakers, organizational paramedics, leadership miyagis, and the thrive squad.
+                        We’ve been called trainers, coaches, and consultants. But we call ourselves organizational paramedics, leadership miyagis, and the thrive squad.
                         We are who you call when you want your leaders and organization to thrive.
                     </div>
                 </div>

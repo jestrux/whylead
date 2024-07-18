@@ -11,8 +11,7 @@
             </h2>
 
             <p class="mt-3 text-base/relaxed opacity-70 max-w-2xl mx-auto">
-                Contact us and we'll help you articulate your needs and design your path to
-                thriving leaders, teams, and organization.
+                We will help you articulate your needs and co-design a path for you to thriving leaders, teams, and organization.
             </p>
         </div>
 

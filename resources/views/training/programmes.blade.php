@@ -3,7 +3,7 @@
         <div class="mb-6 lg:mb-12 flex gap-12 mx-w-3xl mx-auto px-4 md:px-8">
             <div class="flex-1 text-center">
                 <h2 class="text-2xl md:text-4xl font-bold uppercase">
-                    <span class="font-light">Training </span> programmes
+                    <span class="font-light">Training </span> programs
                 </h2>
 
                 <p class="mt-2 text-lg">
@@ -55,7 +55,7 @@
                             'Leaders will delve into crafting impactful questions, avoiding biases, and embracing complexity. Techniques and tools will be explored. Constructive Controversy skills and implementing Black-Box-FMEA Thinking will equip leaders to navigate challenges adeptly, fostering a culture of continual learning and improvement.',
                         'checklist' => [
                             'Avoiding Assumptions and Bias in Problem Solving',
-                            'Tackling All Facets of Complexity',
+                            'Tackling all Facets of Complexity',
                             'Building Challenger Safety for Collaborative Problem Solving',
                         ],
                     ],
@@ -124,7 +124,7 @@
                                 </p>
 
                                 <p class="mt-2 text-base/relaxed opacity-70">
-                                    Key Outcomes include:
+                                    Key outcomes include:
                                 </p>
 
                                 @php

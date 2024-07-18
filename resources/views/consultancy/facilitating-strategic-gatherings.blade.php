@@ -24,7 +24,7 @@
 
                 <div class="absolute -top-6 -bottom-6 -left-6">
                     <x-stat-card stat="82%"
-                        description="of clients our facilitation aligned with their goals and expectations" />
+                        description="of clients said our facilitation aligned with their goals and expectations" />
                 </div>
             </div>
 
