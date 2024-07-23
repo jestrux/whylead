@@ -13,6 +13,7 @@ Route::view('/apply-for-job', 'about.apply-for-job');
 Route::get('/contacts', function () {
     return view('contacts', [
         "countries" => Country::all(),
+        "courses" => pierData(model: "Course", filters: ["pluck" => "title"])["data"],
         "solutions" => pierData(model: "Solution", filters: ["pluck" => "title", "whereFeatured" => 1])["data"]
     ]);
 });

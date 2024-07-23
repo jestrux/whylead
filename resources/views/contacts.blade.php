@@ -139,7 +139,7 @@
                         'width' => 'half',
                         'type' => 'select',
                         'meta' => [
-                            'choices' => [...$solutions, 'Joining The Team'],
+                            'choices' => [...$solutions, ...$courses, 'Joining The Team'],
                         ],
                     ]),
                     pierField(['label' => 'Company Name', 'name' => 'company', 'required' => true, 'width' => 'half']),

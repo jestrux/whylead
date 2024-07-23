@@ -181,8 +181,9 @@
 
                         <span></span>
 
-                        <a x-bind:href="'{{ url('/') }}' + course.action" x-on:click="showPrompt = false"
-                            class="btn btn-sm srounded-r-full flex-shrink-0">
+                        <a x-bind:href="'{{ url('/') }}' + course.action + (course.action == '/contacts' ?
+                            ('?interest=' + course.title) : '')"
+                            x-on:click="showPrompt = false" class="btn btn-sm srounded-r-full flex-shrink-0">
                             Get in touch
 
                             <svg class="-mr-1 size-4" fill="none" viewBox="0 0 24 24" stroke-width="3"

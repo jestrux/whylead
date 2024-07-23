@@ -4,6 +4,12 @@
 
 @extends('layout.index')
 
+@section('title', 'Training | WhyLead')
+@section('description',
+    'Leadership is the key to 99% of all successful efforts. Our programs are designed to develop
+    leaders who can lead thriving organizations in the 21st century.')
+@section('image', asset('img/uploads/page-thumbnail-training.jpg'))
+
 @section('content')
     @pierdata(["model" => "Content", "wherePage" => "Training"])
     @php

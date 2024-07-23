@@ -1,8 +1,10 @@
 @extends('layout.index')
 
 @section('title', 'Podcast | WhyLead')
-
-@section('description', 'Podcast for WhyLead')
+@section('description',
+    'A curated list of the best conversations with thinker practitioners across the world hosted by
+    our our principle consultant Ben Owden.')
+@section('image', asset('img/uploads/page-thumbnail-podcast.jpg'))
 
 @section('content')
     @pierdata("Podcast")

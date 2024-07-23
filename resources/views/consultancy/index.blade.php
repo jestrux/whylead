@@ -4,6 +4,12 @@
 
 @extends('layout.index')
 
+@section('title', 'Consultancy | WhyLead')
+@section('description',
+    'Build a thriving organization through our wide range of services tailored for leaders, teams
+    and organizations.')
+@section('image', asset('img/uploads/page-thumbnail-consultancy.jpg'))
+
 @section('content')
     @pierdata(["model" => "Content", "wherePage" => "Consultancy"])
     @php
