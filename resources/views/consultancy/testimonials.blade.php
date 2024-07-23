@@ -56,7 +56,7 @@
 
 <section class="mt-24 pt-4 pb-8 overflow-hidden" x-data="testimonials">
     <div class="relative md:px-6 max-w-7xl mx-auto w-screen lg:overflow-visible">
-        <div class="max-w-5xl mx-auto text-center">
+        <div class="lg:max-w-5xl mx-auto text-center">
             <h2 class="text-2xl lg:text-4xl font-bold uppercase">
                 Testimonials
             </h2>

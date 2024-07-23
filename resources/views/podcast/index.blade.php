@@ -17,7 +17,7 @@
             @php
                 $openFirst = isset($_GET['openFirst']);
             @endphp
-            <div class="max-w-3xl mx-auto px-4 lg:px-12 pt-4" x-data="{
+            <div class="max-w-3xl mx-auto lg:px-12 pt-4" x-data="{
                 listen: '{{ $openFirst ? $data[0]->_id : null }}',
                 filter: 'All',
                 copiedLinkFor: null,
