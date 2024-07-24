@@ -15,7 +15,7 @@
     </div>
 
     <div class="relative">
-        <div class="hidden md:block absolute inset-0 bg-accent">
+        <div class="absolute inset-0 bg-accent">
         </div>
         @include('thrive-in-the-middle.banner')
     </div>
