@@ -4,7 +4,7 @@
 
 @extends('layout.index')
 
-@section('title', 'Consultancy | WhyLead')
+@section('title', 'We Solve People & Culture Problems')
 @section('description',
     'Build a thriving organization through our wide range of services tailored for leaders, teams
     and organizations.')

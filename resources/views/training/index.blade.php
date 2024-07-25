@@ -4,10 +4,8 @@
 
 @extends('layout.index')
 
-@section('title', 'Training | WhyLead')
-@section('description',
-    'Leadership is the key to 99% of all successful efforts. Our programs are designed to develop
-    leaders who can lead thriving organizations in the 21st century.')
+@section('title', 'We Provide Leadership Training')
+@section('description', 'We use your business model, strategy, and culture to develop the context of our training.')
 @section('image', asset('img/uploads/page-thumbnail-training.jpg'))
 
 @section('content')
