@@ -7,7 +7,7 @@
         ],
         [
             'image' => 'https://res.cloudinary.com/sfp-app/image/upload/v1711540989/ykp8fjasngktaayokhab.jpg',
-            'date' => '6th Aug 2024',
+            'date' => '23rd Aug 2024',
             'activity' => 'Selection\\nCloses',
         ],
         [
