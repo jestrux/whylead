@@ -1,6 +1,7 @@
 <footer class="border-t border-stroke">
     <div class="">
-        <div class="mx-auto max-w-7xl px-4 md:px-8 flex flex-col items-start justify-between gap-y-12 lg:flex-row lg:items-center py-4 lg:py-8">
+        <div
+            class="mx-auto max-w-7xl px-4 md:px-8 flex flex-col items-start justify-between gap-y-12 lg:flex-row lg:items-center py-4 lg:py-8">
             <div>
                 <div class="flex items-center">
                     <a href="{{ url('/') }}">
@@ -45,12 +46,6 @@
                     <p class="text-base font-semibold inline-flex items-center gap-1">
                         <span class="absolute inset-0 sm:rounded-2xl"></span>
                         Our latest podcast episode
-
-                        <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke-width="2.3"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                        </svg>
                     </p>
 
                     <div class="mt-1 text-sm/relaxed opacity-70 group-hover:opacity-80 line-clamp-3">
@@ -92,7 +87,8 @@
             </form>
             <p class="mt-6 text-sm text-gray-500 md:mt-0">© Copyright <!-- -->2024<!-- -->. All rights reserved.</p>
         </div> --}}
-        <div class="mx-auto max-w-7xl px-4 md:px-8 flex flex-col items-center border-t border-black/10 py-10 sm:flex-row-reverse sm:justify-between">
+        <div
+            class="mx-auto max-w-7xl px-4 md:px-8 flex flex-col items-center border-t border-black/10 py-10 sm:flex-row-reverse sm:justify-between">
             <form x-data="{
                 saving: false,
                 showMessage: false,
