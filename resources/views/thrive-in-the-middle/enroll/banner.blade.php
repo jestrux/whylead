@@ -7,7 +7,7 @@
         <img class="h-14 object-contain" src="{{ asset('img/thrive-logo.png') }}" alt="" />
 
         <h2 class="flex-1 pt-3 text-2xl lg:text-3xl text-center font-bold">
-            Enroll in Programme
+            Enroll in Program
         </h2>
     </div>
 
@@ -16,7 +16,7 @@
             <img class="h-20" src="{{ asset('img/thrive-logo.png') }}" alt="" />
 
             <h2 class="flex-1 pt-3 text-2xl lg:text-3xl text-center font-bold">
-                Enroll in Programme
+                Enroll in Program
             </h2>
 
             <div class="h-full flex-shrink-0 w-[150px]">

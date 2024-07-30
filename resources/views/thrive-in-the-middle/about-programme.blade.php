@@ -137,7 +137,7 @@
                 <h2 class="text-2xl lg:text-4xl font-bold">
                     <span class="uppercase">
                         <span class="outline-text">About the</span>
-                        Programme
+                        Program
                     </span>
                 </h2>
             </div>
