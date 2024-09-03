@@ -71,23 +71,29 @@
             <div class="flex flex-col gap-2">
                 @php
                     $dates = [
-                        [
-                            'month' => 'September',
-                            'year' => 2024,
-                            'description' =>
-                                'Secure your place in the September cohort of "Thrive in the Middle" and take your leadership ability to new heights!',
-                        ],
+                        // [
+                        //     'month' => 'September',
+                        //     'year' => 2024,
+                        //     'description' =>
+                        //         'Secure your place in the September cohort of Thrive in the Middle and take your leadership ability to new heights!',
+                        // ],
                         [
                             'month' => 'January',
                             'year' => 2025,
                             'description' =>
-                                'Start your New Year with a transformative step forward—join our January cohort of "Thrive in the Middle" and redefine your leadership journey for 2025!',
+                                'Start your New Year with a transformative step forward—join our January cohort of Thrive in the Middle and redefine your leadership journey for 2025!',
                         ],
                         [
-                            'month' => 'April',
+                            'month' => 'May',
                             'year' => 2025,
                             'description' =>
-                                'Gear up for a transformative Q3 with "Thrive in the Middle" this April. Secure your spot now and take your leadership ability to new heights!',
+                                'Gear up for a transformative Q3 with Thrive in the Middle this April. Secure your spot now and take your leadership ability to new heights!',
+                        ],
+                        [
+                            'month' => 'August',
+                            'year' => 2025,
+                            'description' =>
+                                'End the Year Strong by equipping yourself for a powerful Q4—join our August cohort of Thrive in the Middle and close out the year with leadership excellence!',
                         ],
                     ];
                 @endphp

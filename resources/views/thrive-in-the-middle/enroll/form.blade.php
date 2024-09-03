@@ -88,7 +88,7 @@
     ];
 
     $values = [
-        'Cohort' => $_GET['cohort'] ?? null,
+        'Preferred Cohort' => $_GET['cohort'] ?? null,
     ];
 @endphp
 
