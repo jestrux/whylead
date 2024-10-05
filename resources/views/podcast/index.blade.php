@@ -5,7 +5,7 @@
 @section('image', asset('img/uploads/page-thumbnail-podcast.jpg'))
 
 @section('content')
-    @pierdata("Podcast")
+    @pierdata(["model" => "Podcast", "perPage" => 200])
     <div class="md:grid grid-cols-12 items-start max-w-7xl mx-auto md:px-8 md:py-8 xl:py-10">
         <div class="col-span-4 min-h-full mt-8 md:mt-0">
             @include('podcast.sidebar')
