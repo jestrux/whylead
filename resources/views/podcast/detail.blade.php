@@ -348,6 +348,14 @@
                                 }
                             </style>
 
+                            <script>
+                                window.addEventListener("load", function() {
+                                    document.querySelectorAll("#podcastDescription a").forEach(item => {
+                                        item.setAttribute("target", "_blank");
+                                    });
+                                })
+                            </script>
+
                             <div id="podcastDescription" class="mt-6 text-base/loose">
                                 {!! $episodeDescription !!}
                             </div>
