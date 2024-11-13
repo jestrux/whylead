@@ -2,36 +2,36 @@
     if (!function_exists('turnUrlIntoHyperlink')) {
         function turnUrlIntoHyperlink($string)
         {
-            //The Regular Expression filter
-            $reg_exUrl =
-                "/(?i)\b((?:https?:\/\/|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))/";
+            // Split the HTML into segments: those inside anchor tags and those outside
+            $segments = preg_split('/(<a\s+[^>]*>.*?<\/a>)/i', $string, -1, PREG_SPLIT_DELIM_CAPTURE);
 
-            // Check if there is a url in the text
-            if (preg_match_all($reg_exUrl, $string, $url)) {
-                // Loop through all matches
-                foreach ($url[0] as $newLinks) {
-                    if (strstr($newLinks, ':') === false) {
-                        $link = 'http://' . $newLinks;
-                    } else {
-                        $link = $newLinks;
+            // URL pattern matching http or https
+            $reg_exUrl = "#https?://[^\s<>\"']+#i";
+
+            // Process each segment
+            foreach ($segments as $index => $segment) {
+                // Skip if this is an anchor tag segment (odd indices after split)
+                if ($index % 2 === 1) {
+                    continue;
+                }
+
+                // Process URLs only in non-anchor segments
+                if (preg_match_all($reg_exUrl, $segment, $urls)) {
+                    foreach ($urls[0] as $url) {
+                        $replace = sprintf(
+                            '<a class="text-primary" href="%s" title="%s" target="_blank">%s</a>',
+                            $url,
+                            $url,
+                            $url,
+                        );
+                        $segment = str_replace($url, $replace, $segment);
                     }
-
-                    // Create Search and Replace strings
-                    $search = $newLinks;
-                    $replace =
-                        '<a class="text-primary" href="' .
-                        $link .
-                        '" title="' .
-                        $newLinks .
-                        '" target="_blank">' .
-                        $link .
-                        '</a>';
-                    $string = str_replace($search, $replace, $string);
+                    $segments[$index] = $segment;
                 }
             }
 
-            //Return result
-            return $string;
+            // Rejoin all segments
+            return implode('', $segments);
         }
     }
 
@@ -276,7 +276,8 @@
                                             href="https://castbox.fm/channel/id5672485?country=us" target="_blank">
 
                                             <div class="inline-flex items-center">
-                                                <svg fill="currentColor" class="size-6 xl:size-7 group-hover:opacity-70" viewBox="0 0 24 24">
+                                                <svg fill="currentColor" class="size-6 xl:size-7 group-hover:opacity-70"
+                                                    viewBox="0 0 24 24">
                                                     <path
                                                         d="M12 0c-.29 0-.58.068-.812.206L2.417 5.392c-.46.272-.804.875-.804 1.408v10.4c0 .533.344 1.135.804 1.407l8.77 5.187c.465.275 1.162.275 1.626 0l8.77-5.187c.46-.272.804-.874.804-1.407V6.8c0-.533-.344-1.136-.804-1.408L12.813.206A1.618 1.618 0 0012 0zm-.85 8.304c.394 0 .714.303.714.676v2.224c0 .207.191.375.427.375s.428-.168.428-.375V9.57c0-.373.32-.675.713-.675.394 0 .712.302.712.675v4.713c0 .374-.318.676-.712.676-.394 0-.713-.302-.713-.676v-1.31c0-.206-.192-.374-.428-.374s-.427.168-.427.374v1.226c0 .374-.32.676-.713.676-.394 0-.713-.302-.713-.676v-1.667c0-.207-.192-.375-.428-.375-.235 0-.427.168-.427.375v3.31c0 .373-.319.676-.712.676-.394 0-.713-.303-.713-.676v-2.427c0-.206-.191-.374-.428-.374-.235 0-.427.168-.427.374v.178a.71.71 0 01-.712.708.71.71 0 01-.713-.708v-2.123a.71.71 0 01.713-.708.71.71 0 01.712.708v.178c0 .206.192.373.427.373.237 0 .428-.167.428-.373v-1.53c0-.374.32-.676.713-.676.393 0 .712.303.712.676v.646c0 .206.192.374.427.374.236 0 .428-.168.428-.374V8.98c0-.373.319-.676.713-.676zm4.562 2.416c.393 0 .713.302.713.676v2.691c0 .374-.32.676-.713.676-.394 0-.712-.303-.712-.676v-2.691c0-.374.319-.676.712-.676zm2.28 1.368c.395 0 .713.303.713.676v.67c0 .374-.318.676-.712.676-.394 0-.713-.302-.713-.675v-.67c0-.374.32-.677.713-.677Z" />
                                                 </svg>
@@ -341,7 +342,13 @@
                                 </ul>
                             </div>
 
-                            <div class="mt-6 text-base/loose">
+                            <style>
+                                #podcastDescription a {
+                                    color: #F26B21;
+                                }
+                            </style>
+
+                            <div id="podcastDescription" class="mt-6 text-base/loose">
                                 {!! $episodeDescription !!}
                             </div>
                         </article>
