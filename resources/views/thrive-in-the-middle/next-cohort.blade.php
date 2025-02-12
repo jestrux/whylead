@@ -2,22 +2,22 @@
     $steps = [
         [
             'image' => 'https://res.cloudinary.com/sfp-app/image/upload/v1711540972/z87huht3tyivdybtg6hv.jpg',
-            'date' => '24th Aug 2024',
+            'date' => '1st Feb 2025',
             'activity' => 'Applications\\nOpen',
         ],
         [
             'image' => 'https://res.cloudinary.com/sfp-app/image/upload/v1711540989/ykp8fjasngktaayokhab.jpg',
-            'date' => '10th Jan 2025',
+            'date' => '23rd April 2025',
             'activity' => 'Selection\\nCloses',
         ],
         [
             'image' => 'https://res.cloudinary.com/sfp-app/image/upload/v1711540237/sxj9meo6zbkadvvlkw15.jpg',
-            'date' => '30th Jan 2025',
+            'date' => '2nd May 2025',
             'activity' => 'Thriving in The Middle begins',
         ],
         [
             'image' => 'https://res.cloudinary.com/sfp-app/image/upload/v1711540531/vudvwz3j0vmlsqslsjio.jpg',
-            'date' => '26th Apr 2025',
+            'date' => '11th July 2025',
             'activity' => 'Program ends, thriving continues',
         ],
     ];
