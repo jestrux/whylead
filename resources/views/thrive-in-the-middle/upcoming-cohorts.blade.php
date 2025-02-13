@@ -78,22 +78,22 @@
                         //         'Secure your place in the September cohort of Thrive in the Middle and take your leadership ability to new heights!',
                         // ],
                         [
-                            'month' => 'January',
-                            'year' => 2026,
-                            'description' =>
-                                'Start your New Year with a transformative step forward—join our January cohort of Thrive in the Middle and redefine your leadership journey for 2026!',
-                        ],
-                        [
                             'month' => 'May',
-                            'year' => 2026,
+                            'year' => 2025,
                             'description' =>
                                 'Gear up for a transformative Q3 with Thrive in the Middle this April. Secure your spot now and take your leadership ability to new heights!',
                         ],
                         [
                             'month' => 'August',
-                            'year' => 2026,
+                            'year' => 2025,
                             'description' =>
                                 'End the Year Strong by equipping yourself for a powerful Q4—join our August cohort of Thrive in the Middle and close out the year with leadership excellence!',
+                        ],
+                        [
+                            'month' => 'January',
+                            'year' => 2026,
+                            'description' =>
+                                'Start your New Year with a transformative step forward—join our January cohort of Thrive in the Middle and redefine your leadership journey for 2027!',
                         ],
                     ];
                 @endphp
