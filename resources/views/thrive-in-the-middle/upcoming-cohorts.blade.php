@@ -93,7 +93,7 @@
                             'month' => 'January',
                             'year' => 2026,
                             'description' =>
-                                'Start your New Year with a transformative step forward—join our January cohort of Thrive in the Middle and redefine your leadership journey for 2027!',
+                                'Start your New Year with a transformative step forward—join our January cohort of Thrive in the Middle and redefine your leadership journey for 2026!',
                         ],
                     ];
                 @endphp
