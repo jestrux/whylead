@@ -22,7 +22,12 @@
                 setFilter(newFilter) {
                     this.filter = newFilter;
                     window.scrollTo({ top: 0 });
+
+                    this.popularEpisodes.forEach((node, i) => {
+                        node.style.display = newFilter == 'Popular' && i > 6 ? 'none' : '';
+                    });
                 },
+                get popularEpisodes() { return document.querySelectorAll('.popular-episode'); },
                 get popular() { return this.filter == 'Popular' },
                 get latest() { return this.filter == 'Latest' },
                 onEpisodeLinkCopied(e) {
@@ -54,13 +59,16 @@
                     @foreach ($data as $episode)
                         @php
                             $shareLink = url('/podcast/' . $episode->slug);
+                            $cleanTitle = str_replace('&', '%26', $episode->title);
                         @endphp
 
                         <article x-data="{
-                            total_plays: {{ $episode->total_plays }},
+                            is_popular_episode: {{ $episode->total_plays > 180 ? 'true' : 'false' }},
                             index: {{ $loop->index }}
-                        }" x-show="(!popular || total_plays > 200) && (!latest || index < 4)"
-                            x-transition class="py-6 px-4 md:px-0">
+                        }" x-show="(!popular || is_popular_episode) && (!latest || index < 4)"
+                            x-transition class="py-6 px-4 md:px-0"
+                            x-bind:class="is_popular_episode ? 'popular-episode' : ''"
+                        >
                             <div class="lg:px-4 md:px-0 flex flex-row-reverse items-center gap-6">
                                 <div class="flex-shrink-0 relative border size-20 overflow-hidden rounded-xl bg-content/5 shadow-xl"
                                     href="#">
@@ -112,7 +120,7 @@
                                                     'label' => 'Twitter',
                                                     'url' =>
                                                         'http://twitter.com/intent/tweet?text=Listening to "' .
-                                                        $episode->title .
+                                                        $cleanTitle .
                                                         '" at  &url=' .
                                                         $shareLink,
                                                     'external' => true,
@@ -128,7 +136,7 @@
                                                     'label' => 'Whatsapp',
                                                     'url' =>
                                                         'https://api.whatsapp.com/send/?text=Listening to "' .
-                                                        $episode->title .
+                                                        $cleanTitle .
                                                         '" at  ' .
                                                         $shareLink,
                                                     'external' => true,
