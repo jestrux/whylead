@@ -48,9 +48,7 @@
 
                     <div class="hidden md:block">
                         <p class="mt-6 text-lg/loose uppercase">
-                            You can't enroll in any of these cohorts? Don't worry, There's usually a cohort you can join
-                            at
-                            the start of every quarter.
+                            Can't enroll in any of these cohorts? Don't worry, we run two cohorts every year so there's always another opportunity coming up.
                         </p>
 
                         <p class="mt-4 text-xl/relaxed opacity-70">
@@ -71,29 +69,19 @@
             <div class="flex flex-col gap-2">
                 @php
                     $dates = [
-                        // [
-                        //     'month' => 'September',
-                        //     'year' => 2024,
-                        //     'description' =>
-                        //         'Secure your place in the September cohort of Thrive in the Middle and take your leadership ability to new heights!',
-                        // ],
                         [
                             'month' => 'May',
-                            'year' => 2025,
-                            'description' =>
-                                'Gear up for a transformative Q3 with Thrive in the Middle this April. Secure your spot now and take your leadership ability to new heights!',
-                        ],
-                        [
-                            'month' => 'August',
-                            'year' => 2025,
-                            'description' =>
-                                'End the Year Strong by equipping yourself for a powerful Q4—join our August cohort of Thrive in the Middle and close out the year with leadership excellence!',
-                        ],
-                        [
-                            'month' => 'January',
                             'year' => 2026,
+                            'label' => 'Essentials Edition',
                             'description' =>
-                                'Start your New Year with a transformative step forward—join our January cohort of Thrive in the Middle and redefine your leadership journey for 2026!',
+                                'The Essentials Edition distills three of the most catalytic modules from the full Thrive in the Middle journey into an intense, experiential 3-day workshop. Instead of trying to cover everything, this edition goes deep on the levers that create the fastest behavioral change for middle managers. These three areas are foundational to the role of a middle manager as a culture shaper, alignment driver, and execution partner between strategy and reality.',
+                        ],
+                        [
+                            'month' => 'September',
+                            'year' => 2026,
+                            'label' => 'Full Program',
+                            'description' =>
+                                'An intensive 7-week leadership transformation journey designed to equip middle managers to become the catalysts of execution, growth, alignment, culture, and change within their organizations. Middle managers sit at the spine of the organization, navigating upward expectations, downward support, and cross-functional collaboration. Over the 7 weeks, managers move through a sequenced learning pathway that blends competency assessments, in-person workshops, immersive real-world challenges, virtual group coaching, and continuous application tools.',
                         ],
                     ];
                 @endphp
@@ -105,6 +93,12 @@
                                 <span class="outline-text">{{ $date['month'] }}</span>
                                 {{ $date['year'] }}
                             </h5>
+
+                            @if (!empty($date['label']))
+                                <span class="inline-flex text-xs/none font-bold py-1.5 pt-2 px-2.5 rounded-full bg-content/5 border-2 border-stroke uppercase tracking-widest">
+                                    {{ $date['label'] }}
+                                </span>
+                            @endif
 
                             <p class="-mt-1 text-lg/loose opacity-70">
                                 {{ $date['description'] }}

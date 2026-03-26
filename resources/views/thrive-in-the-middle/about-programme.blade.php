@@ -34,7 +34,7 @@
                 'https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDEyfHxjb3Jwb3JhdGUlMjB0ZWFtfGVufDB8fHx8MTcxMjU3MzM1M3ww&ixlib=rb-4.0.3&q=80&w=1080',
             'title' => 'Program Duration',
             'description' =>
-                'For 12 weeks, participants engage in a blend of in-person workshops, virtual group coaching, and hands-on challenges that facilitate real-world application.',
+                'For 7 weeks, participants engage in a blend of in-person workshops, virtual group coaching, and hands-on challenges that facilitate real-world application.',
         ],
     ];
 
@@ -95,7 +95,7 @@
                 <p class="text-base/loose opacity-70">
                     Being a middle manager is challenging. Those above have priorities. Those below have questions.
                     Peers need help to drive strategic goals. And disruption is closing in. And the middle manager has
-                    to transform this tension into triumph. This 12 weeks cohort-based program aims at strengthening an
+                    to transform this tension into triumph. This 7 weeks cohort-based program aims at strengthening an
                     organization’s spinal cord: Middle Managers.
                 </p>
 

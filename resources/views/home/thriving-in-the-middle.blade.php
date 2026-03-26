@@ -31,11 +31,11 @@
                 </h2>
 
                 <p class="mt-2 text-lg/relaxed uppercase">
-                    A 12-week leadership program for Middle Managers
+                    A 7-week leadership program for Middle Managers
                 </p>
 
                 <p class="mt-2 text-base/loose opacity-70">
-                    This is a transformative 12-week program tailored for middle managers, focusing on empowering them
+                    This is a transformative 7-week program tailored for middle managers, focusing on empowering them
                     as essential agents of growth, alignment, culture, and change within their organizations. It tackles
                     the unique challenges middle managers face, from navigating the demands of both senior leadership
                     and direct reports to driving strategic goals amid disruptions.

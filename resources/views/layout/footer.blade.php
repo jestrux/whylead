@@ -179,8 +179,8 @@
                 </a>
             </div>
 
-            <p class="mt-6 text-sm opacity-70 sm:mt-0">Copyright © <!-- -->2024<!-- --> WhyLead. All rights
-                reserved.
+            <p class="mt-6 text-sm opacity-70 sm:mt-0">
+                Copyright © {{ now()->year }} WhyLead. All rights reserved.
             </p>
         </div>
     </div>

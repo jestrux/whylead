@@ -149,7 +149,7 @@
         {{-- <img class="h-14 object-contain" src="{{ asset('img/thrive-logo.png') }}" alt="" /> --}}
 
         <p class="pt-6 max-w-xl mx-auto text-2xl/[1.7] text-center font-light">
-            A 12-week program designed to empower middle managers to thrive as growth, alignment, culture, and
+            A 7-week program designed to empower middle managers to thrive as growth, alignment, culture, and
             change catalysts within their organizations.
         </p>
     </div>
@@ -162,7 +162,7 @@
 
             <div class="flex-1 pt-3 text-2xl lg:text-3xl text-center font-bold">
                 <p class="pb-12 max-w-xl mx-auto text-2xl/[1.7] text-center font-light">
-                    A 12-week program designed to empower middle managers to thrive as growth, alignment, culture, and
+                    A 7-week program designed to empower middle managers to thrive as growth, alignment, culture, and
                     change catalysts within their organizations.
                 </p>
             </div>
