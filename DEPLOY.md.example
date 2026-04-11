@@ -1,0 +1,41 @@
+# Deployment — Local Reference (not in version control)
+
+Copy this file to `DEPLOY.md` and fill in your credentials.
+
+## Server Details
+
+- **Host:** ssh.example.com
+- **Port:** 22
+- **User:** your-ssh-username
+- **SSH Key:** ~/.ssh/id_ed25519
+
+## Directory Structure
+
+- **App root:** `/path/to/app/`
+- **Web root:** `/path/to/public_html/`
+- **Branch:** `statamic`
+
+## Connect
+
+```bash
+ssh -p PORT -i ~/.ssh/id_ed25519 USER@HOST
+```
+
+## Deploy
+
+```bash
+# Pull latest code
+ssh -p PORT -i ~/.ssh/id_ed25519 USER@HOST \
+  'cd /path/to/app && git pull origin statamic && php artisan statamic:stache:clear && php artisan cache:clear'
+
+# Upload built frontend assets (run yarn build locally first)
+rsync -avz -e "ssh -p PORT -i ~/.ssh/id_ed25519" \
+  public/build/ \
+  USER@HOST:/path/to/public_html/build/
+```
+
+## Notes
+
+- The web root (`public_html/`) is separate from the app root — built assets must be rsynced separately.
+- `public_html/index.php` bootstraps the app using absolute paths.
+- No Node/Yarn on the server — always build assets locally before deploying.

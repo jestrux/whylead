@@ -207,3 +207,10 @@ This project has domain-specific skills available. You MUST activate the relevan
 - To filter on a particular test name: `php artisan test --compact --filter=testName` (recommended after making a change to a related file).
 
 </laravel-boost-guidelines>
+
+## Deployment
+
+- The app is deployed to shared hosting at `2026.whyleadothers.com` (MySiteArea).
+- SSH credentials and full deploy commands are in `DEPLOY.md` (gitignored — not in version control).
+- Always build frontend assets locally with `yarn run build` before deploying, then rsync `public/build/` to the server's `public_html/build/` — the server has no Node/Yarn.
+- After a `git pull` on the server, run `php artisan statamic:stache:clear && php artisan cache:clear`.

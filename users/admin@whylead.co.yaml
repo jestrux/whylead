@@ -1,7 +1,7 @@
 name: Admin
 super: true
 id: fd71187b-ce02-4fb5-aea6-ef16950edd29
-password_hash: $2y$12$o2pE7pNWahOkGVoIYTp1XeNDg90qmjwkqhj/LhVz9R5mLCL3l.PgW
+password_hash: $2y$10$hWhatQovtt.IyJF2hfFKoOrKZNTPvWSmBBXMIfC8plzESIevP40ce
 preferences:
   collections:
     challenges:
