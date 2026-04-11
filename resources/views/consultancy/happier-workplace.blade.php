@@ -1,5 +1,5 @@
 @php
-    $image = $getImage('Happier Workplace Image');
+    $image = $getImage('happier_workplace_image');
 @endphp
 
 <section>

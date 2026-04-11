@@ -1,0 +1,40 @@
+/*! tailwindcss v4.2.2 | MIT License | https://tailwindcss.com */
+[data-ui-button-group][data-measuring] {
+  flex-direction: row !important;
+  display: flex !important;
+}
+
+@keyframes pop-15e572af {
+0%,
+    100% {
+        transform: scale(1);
+}
+50% {
+        transform: scale(1.2);
+}
+}
+.animate-pop[data-v-15e572af] {
+    animation: pop-15e572af 0.275s cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+@supports(text-box: ex alphabetic) {
+[data-ui-badge][data-v-7128564c] {
+            padding-block: 0.65rem;
+}
+}
+
+[data-ui-hover-card-content] {
+    max-height: var(--reka-hover-card-content-available-height);
+    transform-origin: var(--reka-hover-card-content-transform-origin);
+}
+
+.dotted-line[data-v-471045b0]::before,
+.dotted-line[data-v-471045b0]::after {
+    background: linear-gradient(90deg, var(--color-gray-400) 1.5px, transparent 1.5px) 50% 50% / 8px 1.5px repeat-x;
+    height: 1.5px;
+}
+.dark .dotted-line[data-v-471045b0]::before,
+.dark .dotted-line[data-v-471045b0]::after {
+    background: linear-gradient(90deg, var(--color-gray-600) 1.5px, transparent 1.5px) 50% 50% / 8px 1.5px repeat-x;
+    height: 1.5px;
+}

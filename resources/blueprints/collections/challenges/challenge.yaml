@@ -1,0 +1,41 @@
+title: Challenge
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+          -
+            handle: description
+            field:
+              type: textarea
+              display: Description
+          -
+            handle: icon
+            field:
+              type: text
+              display: Icon (SVG path)
+          -
+            handle: image
+            field:
+              type: text
+              display: Image URL
+          -
+            handle: order
+            field:
+              type: integer
+              display: Order
+          -
+            handle: solutions
+            field:
+              type: entries
+              display: Solutions
+              collections:
+                - solutions
+              mode: default

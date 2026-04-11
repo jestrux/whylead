@@ -14,7 +14,12 @@
             </p> --}}
         </div>
 
-        @pierdata('FAQ')
+        @php
+            $data = \Statamic\Facades\Entry::query()
+                ->where('collection', 'faqs')
+                ->get()
+                ->map(fn($e) => (object) ['question' => $e->get('question'), 'answer' => $e->get('answer')]);
+        @endphp
         <div x-data="{
             expanded: -1,
             indices: {{ collect($data)->keys() }},
@@ -65,7 +70,6 @@
                 </button>
             @endforeach
         </div>
-        @endpierdata()
 
         <p class="px-6 mt-4 md:mt-6s self-center text-center">
             Got more questions? We'd love to hear from you.

@@ -1,4 +1,23 @@
-@pierdata(["model" => 'Challenge', "orderBy" => "order,asc"])
+@php
+    $data = \Statamic\Facades\Entry::query()
+        ->where('collection', 'challenges')
+        ->orderBy('order', 'asc')
+        ->get()
+        ->map(function ($entry) {
+            $solutions = collect($entry->get('solutions') ?? [])->map(function ($id) {
+                $sol = \Statamic\Facades\Entry::find($id);
+                return $sol ? (object) [
+                    'title' => $sol->get('title'),
+                    'description' => $sol->get('description'),
+                    'checklist_items' => null,
+                ] : null;
+            })->filter()->values();
+
+            $obj = (object) $entry->data()->all();
+            $obj->solutions = $solutions;
+            return $obj;
+        });
+@endphp
 @php
     $images = [
         asset('img/uploads/leadership-challenges-managing-adversity.jpg'),
@@ -212,4 +231,3 @@
         </ul>
     </div>
 </section>
-@endpierdata()

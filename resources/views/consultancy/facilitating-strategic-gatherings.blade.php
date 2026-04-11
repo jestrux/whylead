@@ -1,5 +1,5 @@
 @php
-    $image = $getImage('Facilitating Strategic Gatherings Image');
+    $image = $getImage('facilitating_gatherings_image');
 @endphp
 
 <section class="py-6 md:py-28 lg:py-20">

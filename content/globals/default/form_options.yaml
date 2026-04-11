@@ -1,0 +1,44 @@
+job_roles:
+  - 'Leadership Development Consultant'
+  - 'Organizational Development Consultant'
+  - 'Competency Assessment Tool Developer'
+  - 'Performance Management Consultant'
+  - 'Research Consultant'
+  - 'Data Science Consultant'
+  - 'Team Building Facilitator'
+  - 'Executive Coach'
+discovery_channels:
+  - Referral
+  - Website
+  - LinkedIn
+  - 'X (Twitter)'
+  - Youtube
+  - Other
+company_sizes:
+  - '10-40'
+  - '40-70'
+  - '70-120'
+  - '120-250'
+  - '250-500'
+  - 'Over 500'
+experience_brackets:
+  - '0 - 3'
+  - '4 - 8'
+  - '9 - 14'
+  - '15 - 19'
+  - '20+'
+team_sizes:
+  - '1 - 10'
+  - '11 - 25'
+  - '26 - 40'
+  - '41 - 60'
+  - '61 - 100'
+program_interest:
+  - Myself
+  - 'Leaders in my organisation'
+program_formats:
+  - 'Hybrid | Face to Face and Virtual'
+  - 'Fully Virtual Program'
+boolean_choices:
+  - 'Yes'
+  - 'No'

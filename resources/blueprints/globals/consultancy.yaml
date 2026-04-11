@@ -1,0 +1,23 @@
+title: 'Consultancy Page'
+fields:
+  -
+    handle: banner_image
+    field:
+      type: text
+      display: 'Banner Image'
+      instructions: 'Path relative to public/ (e.g. img/uploads/my-image.jpg)'
+  -
+    handle: thriving_teams_image
+    field:
+      type: text
+      display: 'Thriving Teams Image'
+  -
+    handle: happier_workplace_image
+    field:
+      type: text
+      display: 'Happier Workplace Image'
+  -
+    handle: facilitating_gatherings_image
+    field:
+      type: text
+      display: 'Facilitating Strategic Gatherings Image'

@@ -5,7 +5,21 @@
 @section('image', asset('img/uploads/page-thumbnail-podcast.jpg'))
 
 @section('content')
-    @pierdata(["model" => "Podcast", "perPage" => 200])
+    @php
+        $data = \Statamic\Facades\Entry::query()
+            ->where('collection', 'podcasts')
+            ->orderBy('date', 'desc')
+            ->limit(200)
+            ->get()
+            ->map(function ($entry) {
+                $obj = (object) $entry->data()->all();
+                $obj->_id = $entry->id();
+                $obj->dateMeta = (object) [
+                    'regular' => \Carbon\Carbon::parse($entry->get('date'))->format('M j, Y'),
+                ];
+                return $obj;
+            });
+    @endphp
     <div class="md:grid grid-cols-12 items-start max-w-7xl mx-auto md:px-8 md:py-8 xl:py-10">
         <div class="col-span-4 min-h-full mt-8 md:mt-0">
             @include('podcast.sidebar')
@@ -171,7 +185,7 @@
                             </div>
 
                             <div class="transition-all duration-200 relative"
-                                x-bind:style="height: listen == {{ $episode->_id }} ? '200px' : 0">
+                                x-bind:style="{ height: listen == {{ $episode->_id }} ? '200px' : 0 }">
 
                                 <div x-cloak x-show="listen == {{ $episode->_id }}"
                                     class="pointer-events-none absolute inset-0 rounded-xl bg-content/5">
@@ -190,7 +204,6 @@
             </div>
         </div>
     </div>
-    @endpierdata()
 @endsection
 
 @section('scripts')

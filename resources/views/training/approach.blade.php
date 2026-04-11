@@ -31,7 +31,7 @@
         ],
     ];
 
-    $image = $getImage('Our Learning Approach Image');
+    $image = $getImage('learning_approach_image');
 @endphp
 
 <section id="careers" class="pt-6 lg:pt-12">

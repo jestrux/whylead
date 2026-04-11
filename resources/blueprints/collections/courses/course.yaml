@@ -1,0 +1,33 @@
+title: Course
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+          -
+            handle: description
+            field:
+              type: textarea
+              display: Description
+          -
+            handle: prompt
+            field:
+              type: text
+              display: Prompt (CTA text)
+          -
+            handle: action
+            field:
+              type: text
+              display: Action URL
+          -
+            handle: order
+            field:
+              type: integer
+              display: Order

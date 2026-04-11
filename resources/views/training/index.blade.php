@@ -9,16 +9,9 @@
 @section('image', asset('img/uploads/page-thumbnail-training.jpg'))
 
 @section('content')
-    @pierdata(["model" => "Content", "wherePage" => "Training"])
     @php
-        $images = $data->filter(fn($item) => $item->type == 'image');
-        $getImage = function ($name) use ($images) {
-            return str_replace(
-                'http://localhost:8000/',
-                asset(''),
-                $images->first(fn($item) => $item->name == $name)->image,
-            );
-        };
+        $_g = \Statamic\Facades\GlobalSet::find('training')->inCurrentSite();
+        $getImage = fn(string $field) => asset($_g->get($field) ?? '');
     @endphp
 
     <div class="hidden md:block absolute inset-x-0 top-0 h-20 bg-accent">
@@ -37,7 +30,6 @@
     @include('home.faqs')
 
     @include('home.cta', ['interest' => 'Training'])
-    @endpierdata()
 @endsection
 
 @section('scripts')

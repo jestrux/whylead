@@ -34,7 +34,7 @@ return [
             'driver' => 'local',
             // 'root' => storage_path('app'),
             'root' => public_path('img/uploads'),
-            'url' => env('APP_URL') . '/img/uploads',
+            'url' => env('APP_URL').'/img/uploads',
             'throw' => false,
         ],
 
@@ -42,6 +42,14 @@ return [
             'driver' => 'local',
             'root' => storage_path('app/public'),
             'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
+        'uploads' => [
+            'driver' => 'local',
+            'root' => public_path('img/uploads'),
+            'url' => env('APP_URL').'/img/uploads',
             'visibility' => 'public',
             'throw' => false,
         ],

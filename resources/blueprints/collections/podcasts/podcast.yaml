@@ -1,0 +1,58 @@
+title: Podcast
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+          -
+            handle: description
+            field:
+              type: textarea
+              display: Description
+          -
+            handle: featuring
+            field:
+              type: text
+              display: Featuring (guest name)
+          -
+            handle: number
+            field:
+              type: integer
+              display: Episode Number
+          -
+            handle: season
+            field:
+              type: integer
+              display: Season
+          -
+            handle: date
+            field:
+              type: date
+              display: Published Date
+          -
+            handle: link
+            field:
+              type: text
+              display: Audio Link
+          -
+            handle: slug
+            field:
+              type: text
+              display: Slug
+          -
+            handle: image
+            field:
+              type: text
+              display: Artwork URL
+          -
+            handle: total_plays
+            field:
+              type: integer
+              display: Total Plays

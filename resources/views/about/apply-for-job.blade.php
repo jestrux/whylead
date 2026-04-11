@@ -39,53 +39,28 @@
     </div>
 
     @php
+        $_formOptions = \Statamic\Facades\GlobalSet::find('form_options')->inCurrentSite();
         $fields = [
-            pierField(['label' => 'First Name', 'name' => 'firstname', 'width' => 'half']),
-            pierField(['label' => 'Last Name', 'name' => 'lastname', 'width' => 'half']),
-            pierField([
-                'label' => 'Email',
-                'name' => 'email',
-                'type' => 'email',
-                'width' => 'half',
-            ]),
-            pierField(['label' => 'Phone Number', 'name' => 'phone', 'width' => 'half']),
-            pierField([
-                'label' => 'Resume / CV',
-                'name' => 'cv',
-                'placeholder' => 'Enter link to your CV or LinkedIn Profile',
-                'width' => 'half',
-            ]),
-            pierField([
-                'label' => 'Motivation Letter',
-                'name' => 'cover_letter',
-                'placeholder' => 'Enter link to your motivation letter',
-                'width' => 'half',
-            ]),
-            pierField([
+            ['label' => 'First Name', 'name' => 'firstname', 'width' => 'half'],
+            ['label' => 'Last Name', 'name' => 'lastname', 'width' => 'half'],
+            ['label' => 'Email', 'name' => 'email', 'type' => 'email', 'width' => 'half'],
+            ['label' => 'Phone Number', 'name' => 'phone', 'width' => 'half'],
+            ['label' => 'Resume / CV', 'name' => 'cv', 'placeholder' => 'Enter link to your CV or LinkedIn Profile', 'width' => 'half'],
+            ['label' => 'Motivation Letter', 'name' => 'cover_letter', 'placeholder' => 'Enter link to your motivation letter', 'width' => 'half'],
+            [
                 'label' => 'What role are you interested in?',
                 'name' => 'role',
                 'width' => 'half',
                 'type' => 'select',
-                'meta' => [
-                    'choices' => [
-                        'Leadership Development Consultant',
-                        'Organizational Development Consultant',
-                        'Competency Assessment Tool Developer',
-                        'Performance Management Consultant',
-                        'Research Consultant',
-                        'Data Science Consultant  ',
-                        'Team Building Facilitator',
-                        'Executive Coach',
-                    ],
-                ],
-            ]),
+                'meta' => ['choices' => $_formOptions->get('job_roles') ?? []],
+            ],
         ];
     @endphp
 
 
     <section class="pt-6 pb-12">
         <div class="max-w-4xl px-4 lg:px-8 mx-auto">
-            <x-pier::new-form :$fields on-save="enroll"
+            <x-dynamic-form :$fields on-save="enroll"
                 success-message="We've received your message, we'll get back to you." />
 
             <script>

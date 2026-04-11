@@ -1,4 +1,21 @@
-@pierdata(["model" => 'Course', "orderBy" => "order,asc"])
+@php
+    $data = \Statamic\Facades\Entry::query()
+        ->where('collection', 'courses')
+        ->orderBy('order', 'asc')
+        ->get()
+        ->map(function ($entry) {
+            $faqs = \Illuminate\Support\Facades\DB::table('course_faqs as cf')
+                ->join('course_f_a_q as f', 'f._id', '=', 'cf.faqs_id')
+                ->where('cf.course_id', $entry->id())
+                ->orderBy('f.order')
+                ->get(['f.question', 'f.answer', 'f.order'])
+                ->toArray();
+
+            $obj = (object) $entry->data()->all();
+            $obj->faqs = $faqs;
+            return $obj;
+        });
+@endphp
 <script>
     document.addEventListener('alpine:init', () => {
         Alpine.data("coursePopup", () => ({
@@ -30,7 +47,6 @@
         }));
     });
 </script>
-@endpierdata()
 
 <div x-cloak x-show="showPrompt" class="fixed inset-0 z-50 bg-black/70 md:flex items-center justify-between"
     x-data="coursePopup">

@@ -31,9 +31,11 @@
                 </nav>
             </div>
 
-            @pierdata(["model" => "Podcast", "first" => true])
             @php
-                $episode = $data;
+                $episode = \Statamic\Facades\Entry::query()
+                    ->where('collection', 'podcasts')
+                    ->orderBy('date', 'desc')
+                    ->first();
             @endphp
 
             <a href="{{ url('/podcast/' . $episode->slug) }}"
@@ -72,7 +74,6 @@
                     </object> --}}
                 </div>
             </a>
-            @endpierdata()
         </div>
         {{-- <div
             class="flex flex-col items-center border-t border-gray-200 pb-12 pt-8 md:flex-row-reverse md:justify-between md:pt-6">

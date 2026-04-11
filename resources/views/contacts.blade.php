@@ -121,52 +121,36 @@
             </h2>
 
             @php
+                $_formOptions = \Statamic\Facades\GlobalSet::find('form_options')->inCurrentSite();
                 $fields = [
-                    pierField(['label' => 'First Name', 'name' => 'firstname', 'width' => 'half']),
-                    pierField(['label' => 'Last Name', 'name' => 'lastname', 'width' => 'half']),
-                    pierField([
-                        'label' => 'Work Email',
-                        'name' => 'email',
-                        'type' => 'email',
-                        'required' => true,
-                        'width' => 'half',
-                    ]),
-                    pierField(['label' => 'Phone Number', 'name' => 'phone', 'width' => 'half']),
-                    pierField([
+                    ['label' => 'First Name', 'name' => 'firstname', 'width' => 'half'],
+                    ['label' => 'Last Name', 'name' => 'lastname', 'width' => 'half'],
+                    ['label' => 'Work Email', 'name' => 'email', 'type' => 'email', 'required' => true, 'width' => 'half'],
+                    ['label' => 'Phone Number', 'name' => 'phone', 'width' => 'half'],
+                    [
                         'label' => 'Interested In',
                         'name' => 'interested_in',
                         'required' => true,
                         'width' => 'half',
                         'type' => 'select',
-                        'meta' => [
-                            'choices' => [...$solutions, ...$courses, 'Joining The Team'],
-                        ],
-                    ]),
-                    pierField(['label' => 'Company Name', 'name' => 'company', 'required' => true, 'width' => 'half']),
-                    pierField([
+                        'meta' => ['choices' => [...$solutions, ...$courses, 'Joining The Team']],
+                    ],
+                    ['label' => 'Company Name', 'name' => 'company', 'required' => true, 'width' => 'half'],
+                    [
                         'label' => 'Company Size ( Number of Employees )',
                         'name' => 'company_size',
                         'width' => 'half',
                         'type' => 'select',
-                        'meta' => [
-                            'choices' => ['10-40', '40-70', '70-120', '120-250', '250-500', 'Over 500'],
-                        ],
-                    ]),
-                    pierField([
+                        'meta' => ['choices' => $_formOptions->get('company_sizes') ?? []],
+                    ],
+                    [
                         'label' => 'Select Country',
                         'name' => 'select_country',
                         'width' => 'half',
                         'type' => 'select',
-                        'meta' => [
-                            'choices' => $countries,
-                        ],
-                    ]),
-                    pierField([
-                        'label' => 'Expected Outcomes/Objectives',
-                        'name' => 'objective',
-                        'type' => 'long text',
-                        'width' => 'half',
-                    ]),
+                        'meta' => ['choices' => $countries],
+                    ],
+                    ['label' => 'Expected Outcomes/Objectives', 'name' => 'objective', 'type' => 'long text', 'width' => 'half'],
                 ];
 
                 $values = [
@@ -174,7 +158,7 @@
                 ];
             @endphp
 
-            <x-pier::new-form :$fields :$values :most-fields-required="false" on-save="sendEmail"
+            <x-dynamic-form :$fields :$values :most-fields-required="false" on-save="sendEmail"
                 success-message="We've received your message, we'll get back to you." />
         </div>
     </div>

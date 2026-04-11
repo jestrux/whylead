@@ -1,0 +1,50 @@
+title: 'Form Options'
+fields:
+  -
+    handle: job_roles
+    field:
+      type: list
+      display: 'Job Roles'
+      instructions: 'Roles shown in the Apply for Job form'
+  -
+    handle: discovery_channels
+    field:
+      type: list
+      display: 'Discovery Channels'
+      instructions: 'Options for "How did you hear about us?" in enrollment forms'
+  -
+    handle: company_sizes
+    field:
+      type: list
+      display: 'Company Sizes'
+      instructions: 'Employee count ranges shown in the Contact form'
+  -
+    handle: experience_brackets
+    field:
+      type: list
+      display: 'Experience Brackets'
+      instructions: 'Years of professional experience ranges in enrollment forms'
+  -
+    handle: team_sizes
+    field:
+      type: list
+      display: 'Team Sizes'
+      instructions: 'Team size ranges in enrollment forms'
+  -
+    handle: program_interest
+    field:
+      type: list
+      display: 'Program Interest Options'
+      instructions: '"I am interested with the program for" choices'
+  -
+    handle: program_formats
+    field:
+      type: list
+      display: 'Program Formats'
+      instructions: 'Delivery format options for Thrive in the Middle'
+  -
+    handle: boolean_choices
+    field:
+      type: list
+      display: 'Boolean Choices'
+      instructions: 'Yes/No options for radio fields'

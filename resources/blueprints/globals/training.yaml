@@ -1,0 +1,13 @@
+title: 'Training Page'
+fields:
+  -
+    handle: banner_image
+    field:
+      type: text
+      display: 'Banner Image'
+      instructions: 'Path relative to public/ (e.g. img/uploads/my-image.jpg)'
+  -
+    handle: learning_approach_image
+    field:
+      type: text
+      display: 'Learning Approach Image'

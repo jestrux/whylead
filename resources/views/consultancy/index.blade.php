@@ -11,16 +11,9 @@
 @section('image', asset('img/uploads/page-thumbnail-consultancy.jpg'))
 
 @section('content')
-    @pierdata(["model" => "Content", "wherePage" => "Consultancy"])
     @php
-        $images = $data->filter(fn($item) => $item->type == 'image');
-        $getImage = function ($name) use ($images) {
-            return str_replace(
-                'http://localhost:8000/',
-                asset(''),
-                $images->first(fn($item) => $item->name == $name)->image,
-            );
-        };
+        $_g = \Statamic\Facades\GlobalSet::find('consultancy')->inCurrentSite();
+        $getImage = fn(string $field) => asset($_g->get($field) ?? '');
     @endphp
 
     <div class="hidden md:block absolute inset-x-0 top-0 h-20 bg-accent">
@@ -49,7 +42,6 @@
     @include('home.faqs')
 
     @include('home.cta')
-    @endpierdata()
 @endsection
 
 @section('scripts')

@@ -35,7 +35,19 @@
         }
     }
 
-    $episode = pierData('Podcast', ['whereSlug' => $slug, 'first' => true])['data'] ?? null;
+    $entry = \Statamic\Facades\Entry::query()
+        ->where('collection', 'podcasts')
+        ->where('slug', $slug)
+        ->first();
+
+    $episode = null;
+    if ($entry) {
+        $episode = (object) $entry->data()->all();
+        $episode->_id = $entry->id();
+        $episode->dateMeta = (object) [
+            'regular' => \Carbon\Carbon::parse($entry->get('date'))->format('M j, Y'),
+        ];
+    }
     $episodeExists = isset($episode->title);
 
     $episodeDescription = '';

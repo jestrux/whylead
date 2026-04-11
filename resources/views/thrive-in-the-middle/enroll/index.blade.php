@@ -30,9 +30,7 @@
             border-color: #342e61 !important;
         }
 
-        .pier-form-field .pier-select,
-        .pier-form-field .pier-textarea,
-        .pier-form-field .pier-input {
+        .df-input {
             background-color: white !important;
             color: black !important;
         }

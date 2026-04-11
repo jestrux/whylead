@@ -1,5 +1,5 @@
 @php
-    $image = $getImage('Banner Image');
+    $image = $getImage('banner_image');
 @endphp
 
 <section class="md:pt-12 md:pb-8 md:text-white">

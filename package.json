@@ -6,7 +6,9 @@
         "build": "vite build",
         "pier:lean": "(composer update jestrux/pier)",
         "prepier:watch": "(php artisan serve)",
-        "pier:watch": "watch 'npm run pier:lean' ../pier-package/"
+        "pier:watch": "watch 'npm run pier:lean' ../pier-package/",
+        "cp:dev": "vite --config vite-cp.config.js",
+        "cp:build": "vite build --config vite-cp.config.js"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.19",
@@ -14,7 +16,10 @@
         "laravel-vite-plugin": "^1.0",
         "postcss": "^8.4.40",
         "tailwindcss": "^3.4.7",
-        "vite": "^5.0",
+        "vite": "^7.0.4",
         "watch": "^1.0.2"
+    },
+    "dependencies": {
+        "@statamic/cms": "file:./vendor/statamic/cms/resources/dist-package"
     }
 }

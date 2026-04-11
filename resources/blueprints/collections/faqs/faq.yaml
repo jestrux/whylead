@@ -1,0 +1,18 @@
+title: FAQ
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: question
+            field:
+              type: text
+              required: true
+              display: Question
+          -
+            handle: answer
+            field:
+              type: textarea
+              display: Answer

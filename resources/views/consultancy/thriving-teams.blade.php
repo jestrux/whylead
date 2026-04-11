@@ -1,5 +1,5 @@
 @php
-    $image = $getImage('Thriving Teams Image');
+    $image = $getImage('thriving_teams_image');
 @endphp
 
 <section id="thrivingTeams" class="py-6 md:py-28 lg:py-20">
