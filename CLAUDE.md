@@ -213,6 +213,7 @@ This project has domain-specific skills available. You MUST activate the relevan
 - The app is deployed to shared hosting at `2026.whyleadothers.com` (MySiteArea).
 - SSH credentials and full deploy commands are in `DEPLOY.md` (gitignored — not in version control).
 - Always build frontend assets locally with `yarn run build` before deploying, then rsync `public/build/` to the server's `public_html/build/` — the server has no Node/Yarn.
+- If images in `public/img/uploads/` changed, also rsync that directory to `public_html/img/uploads/` — the web root is separate from the app root and does not pick up git changes automatically.
 - After a `git pull` on the server, run `php artisan statamic:stache:clear && php artisan cache:clear`.
 - When pulling after a CP password change, run `git checkout users/admin@whylead.co.yaml` first — Statamic rewrites that file on the server causing merge conflicts. Avoid `!` in passwords; it gets mangled by shell escaping over SSH.
 - CP credentials are in `DEPLOY.md` (gitignored).

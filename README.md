@@ -26,19 +26,11 @@ The app is hosted on shared hosting at `2026.whyleadothers.com`.
 SSH credentials and step-by-step deploy commands are in `DEPLOY.md` (gitignored).
 Copy `DEPLOY.md.example` to `DEPLOY.md` and fill in your credentials.
 
-**Quick deploy after pushing to `statamic` branch:**
+**Quick deploy after pushing to `statamic` branch** (see `DEPLOY.md` for exact commands with credentials):
 
-```bash
-# 1. Pull on server
-ssh -p 18765 -i ~/.ssh/id_ed25519 u2441-qhfc5wtejp8h@ssh.whyleadothers.com \
-  'cd /home/customer/www/whyleadothers.com/2026.whyleadothers.com && git pull origin statamic && php artisan statamic:stache:clear && php artisan cache:clear'
-
-# 2. If frontend changed — build locally then upload
-yarn run build
-rsync -avz -e "ssh -p 18765 -i ~/.ssh/id_ed25519" \
-  public/build/ \
-  u2441-qhfc5wtejp8h@ssh.whyleadothers.com:/home/customer/www/2026.whyleadothers.com/public_html/build/
-```
+1. SSH into the server and run `git pull origin statamic && php artisan statamic:stache:clear && php artisan cache:clear`
+2. If frontend changed — run `yarn run build` locally, then rsync `public/build/` to `public_html/build/`
+3. If images changed — rsync `public/img/uploads/` to `public_html/img/uploads/`
 
 ## Content Management
 

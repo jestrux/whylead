@@ -32,6 +32,11 @@ ssh -p PORT -i ~/.ssh/id_ed25519 USER@HOST \
 rsync -avz -e "ssh -p PORT -i ~/.ssh/id_ed25519" \
   public/build/ \
   USER@HOST:/path/to/public_html/build/
+
+# Upload images (when public/img/uploads/ has changed)
+rsync -avz -e "ssh -p PORT -i ~/.ssh/id_ed25519" \
+  public/img/uploads/ \
+  USER@HOST:/path/to/public_html/img/uploads/
 ```
 
 ## Statamic CP
@@ -42,6 +47,6 @@ rsync -avz -e "ssh -p PORT -i ~/.ssh/id_ed25519" \
 
 ## Notes
 
-- The web root (`public_html/`) is separate from the app root — built assets must be rsynced separately.
+- The web root (`public_html/`) is separate from the app root — built assets and uploaded images must be rsynced separately; git pull alone is not enough.
 - `public_html/index.php` bootstraps the app using absolute paths.
 - No Node/Yarn on the server — always build assets locally before deploying.
