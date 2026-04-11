@@ -43,3 +43,7 @@ rsync -avz -e "ssh -p 18765 -i ~/.ssh/id_ed25519" \
 ## Content Management
 
 Content is managed via the Statamic CP at `/cp`. Collections include courses, podcasts, solutions, and testimonials.
+
+### CP Password Changes
+
+When updating the CP password, Statamic rewrites `users/admin@whylead.co.yaml` on the server. Always run `git checkout users/admin@whylead.co.yaml` before pulling to avoid merge conflicts. Avoid special characters like `!` in passwords — they get mangled by shell escaping over SSH.

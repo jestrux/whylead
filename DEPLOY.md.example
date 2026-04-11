@@ -34,6 +34,12 @@ rsync -avz -e "ssh -p PORT -i ~/.ssh/id_ed25519" \
   USER@HOST:/path/to/public_html/build/
 ```
 
+## Statamic CP
+
+- **URL:** https://your-domain.com/cp
+- **Email:** your-email
+- **Password:** your-password
+
 ## Notes
 
 - The web root (`public_html/`) is separate from the app root — built assets must be rsynced separately.
