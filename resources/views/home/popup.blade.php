@@ -4,15 +4,11 @@
         ->orderBy('order', 'asc')
         ->get()
         ->map(function ($entry) {
-            $faqs = \Illuminate\Support\Facades\DB::table('course_faqs as cf')
-                ->join('course_f_a_q as f', 'f._id', '=', 'cf.faqs_id')
-                ->where('cf.course_id', $entry->id())
-                ->orderBy('f.order')
-                ->get(['f.question', 'f.answer', 'f.order'])
-                ->toArray();
-
             $obj = (object) $entry->data()->all();
-            $obj->faqs = $faqs;
+            $obj->faqs = collect($obj->faqs ?? [])
+                ->sortBy('order')
+                ->values()
+                ->toArray();
             return $obj;
         });
 @endphp

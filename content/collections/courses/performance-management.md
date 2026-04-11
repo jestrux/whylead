@@ -6,4 +6,20 @@ description: 'Performance management is the backbone of thriving in the competit
 prompt: 'Ready to improve your perfomance management?'
 action: /contacts
 order: 3
+faqs:
+  -
+    type: faq
+    question: 'Strategic Alignment'
+    answer: 'Through the alignment of individual goals with the organization''s strategic objectives, performance management ensures that every team member is working towards the same end goal, thereby streamlining efforts and maximizing efficiency.'
+    order: 1
+  -
+    type: faq
+    question: 'Enhanced Motivation and Engagement'
+    answer: 'By fostering an environment where self-motivation and personal growth are encouraged, performance management increases employee engagement and satisfaction. This leads to higher productivity levels and a reduced turnover rate.'
+    order: 2
+  -
+    type: faq
+    question: 'Continuous Organizational Improvement'
+    answer: 'Performance management is not a static process; it is dynamic, with regular assessments and adjustments based on data-driven insights. This continuous cycle of evaluation and improvement keeps the organization agile and responsive to change, ensuring long-term success and adaptability.'
+    order: 3
 ---

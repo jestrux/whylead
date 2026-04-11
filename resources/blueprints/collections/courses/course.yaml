@@ -31,3 +31,29 @@ tabs:
             field:
               type: integer
               display: Order
+          -
+            handle: faqs
+            field:
+              type: replicator
+              display: FAQs
+              sets:
+                faq:
+                  display: FAQ
+                  fields:
+                    -
+                      handle: question
+                      field:
+                        type: text
+                        display: Question
+                        required: true
+                    -
+                      handle: answer
+                      field:
+                        type: textarea
+                        display: Answer
+                        required: true
+                    -
+                      handle: order
+                      field:
+                        type: integer
+                        display: Order
