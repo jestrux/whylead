@@ -1,0 +1,26 @@
+title: 'Home Page'
+fields:
+  -
+    handle: service_features
+    field:
+      type: replicator
+      display: 'Service Features'
+      sets:
+        feature:
+          display: Feature
+          fields:
+            -
+              handle: icon
+              field:
+                type: text
+                display: 'Icon (SVG path)'
+            -
+              handle: title
+              field:
+                type: text
+                display: Title
+            -
+              handle: description
+              field:
+                type: textarea
+                display: Description

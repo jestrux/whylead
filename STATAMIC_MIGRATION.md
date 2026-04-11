@@ -67,20 +67,20 @@ Create a Statamic Navigation tree for the main nav so menu items are CP-managed 
 
 ---
 
-## Phase 2 — Content Collections (Medium lift)
+## Phase 2 — Content Collections (Medium lift) ✅
 
 Move all hardcoded Blade arrays into proper Statamic collections and globals.
 
-### 2.1 New collections
+### ✅ 2.1 New collections
 | Collection | Fields | Notes |
 |---|---|---|
 | `team` | name, position, description, image, values (array) | Replace hardcoded staff array in `about/team.blade.php` |
 | `testimonials` | client_name, client_position, quote, image, company | Replace hardcoded array in `consultancy/testimonials.blade.php` |
 | `programs` | title, description, image, outcomes (array), order | Replace hardcoded array in `training/programmes.blade.php` |
 | `cohorts` | label, month, year, description, enrollment_link | Replace hardcoded dates in `thrive-in-the-middle/upcoming-cohorts.blade.php` |
-| `audit_sections` | title, color, indicators (replicator: icon, title, description) | Replace hardcoded leadership audit in `home/leaders.blade.php` |
+| `audit_sections` | title, color, indicators (grid: icon, title, description) | Replace hardcoded leadership audit in `home/leaders.blade.php` |
 
-### 2.2 Expand existing globals with page-specific content
+### ✅ 2.2 Expand existing globals with page-specific content
 Rather than creating many small globals, consolidate by page:
 
 **`about` global** (new) — replaces hardcoded content in about views:
@@ -91,10 +91,10 @@ Rather than creating many small globals, consolidate by page:
 **`home` global** (new) — replaces hardcoded content in home views:
 - `service_features` replicator (icon, title, description) — currently in `home/working-with-whylead.blade.php`
 
-**`thrive_in_the_middle` global** (expand existing) — add:
+**`thrive_in_the_middle` global** (new) — replaces hardcoded content:
 - `program_benefits` replicator (icon, title) — currently in `home/thriving-in-the-middle.blade.php`
 
-### 2.3 Taxonomies
+### ✅ 2.3 Taxonomies
 **`faq_section` taxonomy** — tag FAQs by section (General, Careers, Thrive in the Middle) so the single `faqs` collection serves all pages with filtered queries instead of separate hardcoded arrays.
 
 ---
@@ -156,7 +156,7 @@ Statamic fires `Statamic\Events\FormSubmitted` on every submission. Create a lis
 | Phase | Effort | What changes | Unlocks |
 |---|---|---|---|
 | 1 — Quick wins | Low | Assets fieldtype, challenge images, FAQ categories, Navigation | CP-managed nav and content |
-| 2 — Content collections | Medium | Team, testimonials, programs, cohorts, audit sections moved to Statamic | All content CP-managed, no more hardcoded Blade arrays |
+| 2 — Content collections ✅ | Medium | Team, testimonials, programs, cohorts, audit sections moved to Statamic | All content CP-managed, no more hardcoded Blade arrays |
 | 3 — Pages collection | Medium | Pages become Statamic entries with structure tree | Per-page SEO, live preview, CP page editing |
 | 4 — Statamic forms | Medium-High | Native forms replace custom builders, HubSpot via event listener | CP form management, submission inbox, standard Statamic form flow |
 

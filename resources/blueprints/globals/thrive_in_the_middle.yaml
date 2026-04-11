@@ -1,0 +1,21 @@
+title: 'Thrive in the Middle'
+fields:
+  -
+    handle: program_benefits
+    field:
+      type: replicator
+      display: 'Program Benefits'
+      sets:
+        benefit:
+          display: Benefit
+          fields:
+            -
+              handle: icon
+              field:
+                type: text
+                display: 'Icon (SVG path)'
+            -
+              handle: title
+              field:
+                type: text
+                display: Title

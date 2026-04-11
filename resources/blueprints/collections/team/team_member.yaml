@@ -1,0 +1,40 @@
+title: Team Member
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Name
+          -
+            handle: position
+            field:
+              type: text
+              display: Position
+          -
+            handle: description
+            field:
+              type: textarea
+              display: Description
+          -
+            handle: image
+            field:
+              type: assets
+              display: Image
+              container: uploads
+              max_files: 1
+          -
+            handle: values
+            field:
+              type: list
+              display: Personal Values (Trinity)
+          -
+            handle: order
+            field:
+              type: integer
+              display: Order

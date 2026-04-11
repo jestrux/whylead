@@ -1,0 +1,35 @@
+title: Program
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+          -
+            handle: description
+            field:
+              type: textarea
+              display: Description
+          -
+            handle: image
+            field:
+              type: assets
+              display: Image
+              container: uploads
+              max_files: 1
+          -
+            handle: outcomes
+            field:
+              type: list
+              display: Key Outcomes
+          -
+            handle: order
+            field:
+              type: integer
+              display: Order

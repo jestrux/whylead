@@ -12,98 +12,25 @@
             </div>
         </div>
 
-        <ul role="list" class="scrollable-sections flex flex-col gap-8">
-            @php
-                $steps = [
-                    [
-                        'image' => asset('img/uploads/programmes-empowering-high-performing-teams.jpg'),
-                        'title' => 'Empowering high performing teams',
-                        'description' =>
-                            'Designed to equip leaders with the essential mindset and skills necessary to cultivate self-motivation in the face of challenges and pressure. Upon completion, leaders will possess the mindset, strategies, and action plans to consistently harness self-motivation.',
-                        'checklist' => [
-                            'Resilience in the Face of Challenges',
-                            'Increased Team Morale and Productivity',
-                            'Improved Decision-Making and Problem-Solving',
-                        ],
-                    ],
-                    [
-                        'image' => asset('img/uploads/programmes-get-the-right-things-done.jpg'),
-                        'title' => 'Get the right things done',
-                        'description' =>
-                            'Designed to help leaders and organizations get the right things done in executing their strategy. This is done by utilizing goal management systems, attention, focus, and time management techniques. ',
-                        'checklist' => [
-                            'Improved Productivity & Accountability',
-                            'Accelerated Strategy Execution',
-                            'Improved Strategic Alignment',
-                        ],
-                    ],
-                    [
-                        'image' => asset('img/uploads/programmes-eq-for-effective-collaboration.jpg'),
-                        'title' => 'EQ for effective collaboration',
-                        'description' =>
-                            'Designed to enhance the emotional intelligence of leaders. By embracing EQ principles, leaders cultivate a harmonious, inclusive, and high-performing work environment. ',
-                        'checklist' => [
-                            'Improved Collaboration & Conflict Resolution',
-                            'Thriving Through Accelerated DIE',
-                            'Adaptive Communication & Cross-Cultural Competence',
-                        ],
-                    ],
-                    [
-                        'image' => asset('img/uploads/programmes-complex-problem-solving.jpg'),
-                        'title' => 'Complex problem solving',
-                        'description' =>
-                            'Leaders will delve into crafting impactful questions, avoiding biases, and embracing complexity. Techniques and tools will be explored. Constructive Controversy skills and implementing Black-Box-FMEA Thinking will equip leaders to navigate challenges adeptly, fostering a culture of continual learning and improvement.',
-                        'checklist' => [
-                            'Avoiding Assumptions and Bias in Problem Solving',
-                            'Tackling all Facets of Complexity',
-                            'Building Challenger Safety for Collaborative Problem Solving',
-                        ],
-                    ],
-                    [
-                        'image' =>
-                            'https://images.unsplash.com/photo-1573497491208-6b1acb260507?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNjE2NXwwfDF8c2VhcmNofDEyfHxtZWV0aW5nfGVufDB8fHx8MTcxMjU2MDczNnww&ixlib=rb-4.0.3&q=80&w=1080',
-                        'title' => 'Training for Trainers',
-                        'description' =>
-                            'Designed to equip your managers to elevate their skills as internal trainers, transforming them into proficient educators who can effectively transfer knowledge and foster a learning-oriented culture within your organization. ',
-                        'checklist' => [
-                            'Cost-Effective Development',
-                            'Improved Leadership and Communication Skills',
-                            'Becoming a Trusted Facilitator',
-                        ],
-                    ],
-                    [
-                        'image' => asset('img/uploads/programmes-feedback.jpg'),
-                        'title' => 'Giving And Receiving Feedback Effectively',
-                        'description' =>
-                            'Designed to empower leaders to give and receive feedback effectively. Hold their colleagues accountable while still showing them care and support. They will learn strategies for initiating, having, and following up on difficult conversations.',
-                        'checklist' => [
-                            'A Culture of Continuous Improvement ',
-                            'Conflict Resolution and Relationship Building',
-                            'Improved Performance and Productivity',
-                        ],
-                    ],
-                    [
-                        'image' => asset('img/uploads/programmes-customer-centric.jpg'),
-                        'title' => 'Customer centric culture',
-                        'description' =>
-                            'Designed to help people develop a customer care mindset that will empower them to serve clients of all kinds relentlessly. Being able to build meaningful and long-term relationships with clients and develop strategies to bridge the expectation gap.  ',
-                        'checklist' => [
-                            'Enhanced Customer Satisfaction and Loyalty',
-                            'Enhanced Cross-Selling and Up-Selling Opportunities',
-                            'Improved Customer Retention and Lifetime Value',
-                        ],
-                    ],
-                ];
-            @endphp
+        @php
+            $iconPath = 'M3 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061A1.125 1.125 0 0 1 3 16.811V8.69ZM12.75 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061a1.125 1.125 0 0 1-1.683-.977V8.69Z';
 
-            @foreach ($steps as $programme)
+            $programs = \Statamic\Facades\Entry::query()
+                ->where('collection', 'programs')
+                ->orderBy('order')
+                ->get();
+        @endphp
+
+        <ul role="list" class="scrollable-sections flex flex-col gap-8">
+            @foreach ($programs as $programme)
+                @php
+                    $image = $programme->augmentedValue('image')->value()?->url() ?? '';
+                    $outcomes = $programme->get('outcomes') ?? [];
+                @endphp
+
                 <section class="md:py-12 scrollable-section">
                     <div class="px-4 md:px-8 relative max-w-7xl mx-auto">
                         <div class="md:grid grid-cols-2 gap-16 items-center">
-                            @php
-                                $image = $programme['image'];
-                            @endphp
-
                             <div class="md:hidden mb-3">
                                 <a href="#" class="block relative">
                                     <div
@@ -116,41 +43,31 @@
 
                             <div class="flex flex-col gap-1 md:gap-2">
                                 <h3 class="mt-2 text-2xl md:text-3xl uppercase font-bold">
-                                    {{ $programme['title'] }}
+                                    {{ $programme->get('title') }}
                                 </h3>
 
                                 <p class="text-lg/loose">
-                                    {{ $programme['description'] }}
+                                    {{ $programme->get('description') }}
                                 </p>
 
                                 <p class="mt-2 text-base/relaxed opacity-70">
                                     Key outcomes include:
                                 </p>
 
-                                @php
-                                    $checklist = collect($programme['checklist'])->map(
-                                        fn($title) => [
-                                            'icon' =>
-                                                'M3 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061A1.125 1.125 0 0 1 3 16.811V8.69ZM12.75 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061a1.125 1.125 0 0 1-1.683-.977V8.69Z',
-                                            'title' => $title,
-                                        ],
-                                    );
-                                @endphp
-
                                 <ul role="list" class="flex flex-col divide-y divide-stroke">
-                                    @foreach ($checklist as $item)
+                                    @foreach ($outcomes as $outcome)
                                         <li class="flex items-center gap-2 py-2">
                                             <div
                                                 class="bg-content/5 dark:bg-content/10 border border-stroke size-7 rounded flex items-center justify-center">
                                                 <svg class="size-4 flex-none" viewBox="0 0 24 24">
                                                     <path fill="none" stroke="currentColor" stroke-linecap="round"
                                                         stroke-linejoin="round" stroke-width="1.6"
-                                                        d="{{ $item['icon'] }}" />
+                                                        d="{{ $iconPath }}" />
                                                 </svg>
                                             </div>
 
                                             <span class="text-base">
-                                                {{ $item['title'] }}
+                                                {{ $outcome }}
                                             </span>
                                         </li>
                                     @endforeach

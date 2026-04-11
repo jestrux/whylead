@@ -1,0 +1,38 @@
+title: Cohort
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title (e.g. May 2026)
+          -
+            handle: month
+            field:
+              type: text
+              display: Month
+          -
+            handle: year
+            field:
+              type: integer
+              display: Year
+          -
+            handle: label
+            field:
+              type: text
+              display: Label (e.g. Essentials Edition)
+          -
+            handle: description
+            field:
+              type: textarea
+              display: Description
+          -
+            handle: order
+            field:
+              type: integer
+              display: Order

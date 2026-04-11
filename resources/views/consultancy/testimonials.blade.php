@@ -1,30 +1,17 @@
 @php
-    $testimonials = [
-        [
-            'image' => 'https://res.cloudinary.com/sfp-app/image/upload/v1714305970/irycwvcf8vcbnmcee6gi.png',
-            'title' => 'The very best in the business',
-            'description' =>
-                'The sessions Ben delivered truly helped the team think critically and open up about how we understand our team/organizational culture, values, and norms. The outdoor activities led by Goodhope were creative, challenging, and fun.',
-            'name' => 'Gloria Kahamba',
-            'position' => 'Country Director, D-Tree',
-        ],
-        [
-            'image' => 'https://res.cloudinary.com/sfp-app/image/upload/v1714305970/n71j8v2ohnag4cwxxmiv.png',
-            'title' => 'The cool teachers you never had',
-            'description' =>
-                "The session was very helpful for enhancing communication, building trust, and being vulnerable to each other. This I believe will improve the team's conviction, commitment, and congruence.",
-            'name' => 'Honorati Masanja',
-            'position' => 'Executive Director, Ifakara health Institute',
-        ],
-        [
-            'image' => 'https://res.cloudinary.com/sfp-app/image/upload/v1714305970/zkcgxr3zwd7ldlzdwnbn.png',
-            'title' => 'The cool teachers you never had',
-            'description' =>
-                'I am extremely delighted to recommend to you the extraordinary services of WhyLead. Malala Fund collaborated with WhyLead to create a three-day team retreat for our organization after many years of only virtual work. We walked away with a sense of greater bonding, a renewed sense of purpose, and refreshed excitement to go back to our work.',
-            'name' => 'Lisa Biancalana',
-            'position' => 'Acting COO, Malala Fund',
-        ],
-    ];
+    $testimonials = \Statamic\Facades\Entry::query()
+        ->where('collection', 'testimonials')
+        ->orderBy('order')
+        ->get()
+        ->map(fn($e) => [
+            'image' => $e->augmentedValue('image')->value()?->url() ?? '',
+            'title' => $e->get('title'),
+            'description' => $e->get('quote'),
+            'name' => $e->get('name'),
+            'position' => $e->get('position'),
+        ])
+        ->values()
+        ->all();
 @endphp
 
 <script>

@@ -1,0 +1,40 @@
+title: Testimonial
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Quote Title
+          -
+            handle: quote
+            field:
+              type: textarea
+              display: Quote
+          -
+            handle: name
+            field:
+              type: text
+              display: Client Name
+          -
+            handle: position
+            field:
+              type: text
+              display: Client Position
+          -
+            handle: image
+            field:
+              type: assets
+              display: Image
+              container: uploads
+              max_files: 1
+          -
+            handle: order
+            field:
+              type: integer
+              display: Order

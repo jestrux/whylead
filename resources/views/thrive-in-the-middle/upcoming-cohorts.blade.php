@@ -52,22 +52,18 @@
 
             <div class="flex flex-col gap-2">
                 @php
-                    $dates = [
-                        [
-                            'month' => 'May',
-                            'year' => 2026,
-                            'label' => 'Essentials Edition',
-                            'description' =>
-                                'The Essentials Edition distills three of the most catalytic modules from the full Thrive in the Middle journey into an intense, experiential 3-day workshop. Instead of trying to cover everything, this edition goes deep on the levers that create the fastest behavioral change for middle managers. These three areas are foundational to the role of a middle manager as a culture shaper, alignment driver, and execution partner between strategy and reality.',
-                        ],
-                        [
-                            'month' => 'September',
-                            'year' => 2026,
-                            'label' => 'Full Program',
-                            'description' =>
-                                'An intensive 7-week leadership transformation journey designed to equip middle managers to become the catalysts of execution, growth, alignment, culture, and change within their organizations. Middle managers sit at the spine of the organization, navigating upward expectations, downward support, and cross-functional collaboration. Over the 7 weeks, managers move through a sequenced learning pathway that blends competency assessments, in-person workshops, immersive real-world challenges, virtual group coaching, and continuous application tools.',
-                        ],
-                    ];
+                    $dates = \Statamic\Facades\Entry::query()
+                        ->where('collection', 'cohorts')
+                        ->orderBy('order')
+                        ->get()
+                        ->map(fn($e) => [
+                            'month' => $e->get('month'),
+                            'year' => $e->get('year'),
+                            'label' => $e->get('label'),
+                            'description' => $e->get('description'),
+                        ])
+                        ->values()
+                        ->all();
                 @endphp
 
                 <div class="divide-y divide-stroke">

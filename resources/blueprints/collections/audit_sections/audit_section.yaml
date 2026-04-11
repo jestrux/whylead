@@ -1,0 +1,49 @@
+title: Audit Section
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title (e.g. When they don't)
+          -
+            handle: description
+            field:
+              type: text
+              display: Description
+          -
+            handle: color
+            field:
+              type: text
+              display: Color (hex)
+          -
+            handle: indicators
+            field:
+              type: grid
+              display: Indicators
+              fields:
+                -
+                  handle: icon
+                  field:
+                    type: text
+                    display: Icon (SVG path)
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: description
+                  field:
+                    type: textarea
+                    display: Description
+          -
+            handle: order
+            field:
+              type: integer
+              display: Order
