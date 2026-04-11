@@ -1,0 +1,80 @@
+title: Page
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+          -
+            handle: template
+            field:
+              type: text
+              display: Template
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: meta_title
+            field:
+              type: text
+              display: Meta Title
+          -
+            handle: meta_description
+            field:
+              type: textarea
+              display: Meta Description
+          -
+            handle: og_image
+            field:
+              type: assets
+              display: OG Image
+              container: uploads
+              max_files: 1
+  images:
+    display: Images
+    sections:
+      -
+        fields:
+          -
+            handle: banner_image
+            field:
+              type: assets
+              display: Banner Image
+              container: uploads
+              max_files: 1
+          -
+            handle: thriving_teams_image
+            field:
+              type: assets
+              display: Thriving Teams Image
+              container: uploads
+              max_files: 1
+          -
+            handle: happier_workplace_image
+            field:
+              type: assets
+              display: Happier Workplace Image
+              container: uploads
+              max_files: 1
+          -
+            handle: facilitating_gatherings_image
+            field:
+              type: assets
+              display: Facilitating Gatherings Image
+              container: uploads
+              max_files: 1
+          -
+            handle: learning_approach_image
+            field:
+              type: assets
+              display: Learning Approach Image
+              container: uploads
+              max_files: 1

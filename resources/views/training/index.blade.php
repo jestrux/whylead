@@ -10,7 +10,7 @@
 
 @section('content')
     @php
-        $_g = \Statamic\Facades\GlobalSet::find('training')->inCurrentSite();
+        $_g = \Statamic\Facades\Entry::query()->where('collection', 'pages')->where('slug', 'training')->first();
     @endphp
 
     <div class="hidden md:block absolute inset-x-0 top-0 h-20 bg-accent">

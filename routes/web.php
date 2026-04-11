@@ -7,11 +7,6 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 use Statamic\Facades\Entry;
 
-Route::view('/', 'home.index');
-Route::view('/consultancy', 'consultancy.index');
-Route::view('/training', 'training.index');
-Route::view('/about', 'about.index');
-Route::view('/apply-for-job', 'about.apply-for-job');
 Route::get('/contacts', function () {
     return view('contacts', [
         'countries' => Country::all(),
@@ -19,9 +14,7 @@ Route::get('/contacts', function () {
         'solutions' => Entry::query()->where('collection', 'solutions')->where('featured', true)->get()->map(fn ($e) => $e->get('title')),
     ]);
 });
-Route::view('/podcast', 'podcast.index');
 Route::view('/podcast/{slug}', 'podcast.detail');
-Route::view('/thrive-in-the-middle', 'thrive-in-the-middle.index');
 Route::get('/thrive-in-the-middle/form', function () {
     return view('thrive-in-the-middle.enroll.index', ['countries' => Country::all()]);
 });
