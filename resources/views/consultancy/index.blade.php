@@ -13,7 +13,6 @@
 @section('content')
     @php
         $_g = \Statamic\Facades\GlobalSet::find('consultancy')->inCurrentSite();
-        $getImage = fn(string $field) => asset($_g->get($field) ?? '');
     @endphp
 
     <div class="hidden md:block absolute inset-x-0 top-0 h-20 bg-accent">

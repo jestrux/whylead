@@ -1,5 +1,5 @@
 @php
-    $image = $getImage('thriving_teams_image');
+    $image = $_g->augmentedValue('thriving_teams_image')->value()?->url() ?? '';
 @endphp
 
 <section id="thrivingTeams" class="py-6 md:py-28 lg:py-20">

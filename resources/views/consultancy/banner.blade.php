@@ -1,5 +1,5 @@
 @php
-    $image = $getImage('banner_image');
+    $image = $_g->augmentedValue('banner_image')->value()?->url() ?? '';
 @endphp
 
 <section class="md:pt-12 md:pb-8 md:text-white">

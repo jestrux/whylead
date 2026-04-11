@@ -1,5 +1,5 @@
 @php
-    $image = $getImage('happier_workplace_image');
+    $image = $_g->augmentedValue('happier_workplace_image')->value()?->url() ?? '';
 @endphp
 
 <section>

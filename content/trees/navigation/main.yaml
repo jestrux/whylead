@@ -1,0 +1,25 @@
+tree:
+  -
+    id: 52bb2d30-530c-49f2-83d4-9ed91f21a3b0
+    title: Consultancy
+    url: /consultancy
+  -
+    id: f18d6fa3-83e1-42c9-8628-64ef9b56a1eb
+    title: Podcast
+    url: /podcast
+  -
+    id: be5c4d0f-8b2e-4a2e-8333-aa1f9df56bd7
+    title: Training
+    url: /training
+  -
+    id: 93a441e9-5925-4c68-973a-808909a6d70c
+    title: 'Thrive in the Middle'
+    url: /thrive-in-the-middle
+  -
+    id: 08361137-6970-48f2-8a12-32b5dfbc1eee
+    title: 'About Us'
+    url: /about
+  -
+    id: 70b2d619-2ba2-4944-ac82-779ad6a11b2a
+    title: 'Contact Us'
+    url: /contacts

@@ -24,8 +24,10 @@ tabs:
           -
             handle: image
             field:
-              type: text
-              display: Image URL
+              type: assets
+              display: Image
+              container: uploads
+              max_files: 1
           -
             handle: order
             field:

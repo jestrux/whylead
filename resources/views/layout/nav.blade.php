@@ -51,6 +51,16 @@
     }
 </style>
 
+@php
+    $navTree = \Statamic\Facades\Nav::find('main')?->trees()->first()?->tree() ?? [];
+    $navItems = collect($navTree)->map(fn($item) => (object) [
+        'title' => $item['title'] ?? '',
+        'url' => $item['url'] ?? '#',
+    ]);
+    $desktopLeftItems = $navItems->take(2);
+    $desktopRightItems = $navItems->skip(2)->take(1);
+@endphp
+
 <section id="mainNavigationMenu"
     class="sticky -top-px inset-x-0 z-50 lg:transition-colors duration-300 border-stroke md:bg-card text-content">
     <div class="relative flex items-center justify-between p-3 md:hidden">
@@ -91,15 +101,13 @@
         class="max-w-7xl mx-auto fixed inset-0 flex flex-col px-8 py-8 md:flex-row items-centers md:justify-between md:relative md:bg-transparent md:py-0">
         <nav role="off-canvas" class="w-full flex items-center justify-center mt-12 md:w-auto md:mt-0">
             <ul class="w-full relative z-50 md:flex flex-col justify-center items-center h-full md:flex-row md:gap-x-8">
-                {{-- <x-menu-item exact url="/">Home</x-menu-item> --}}
-                <x-menu-item url="{{ url('/consultancy') }}">Consultancy</x-menu-item>
-                <x-menu-item url="{{ url('/podcast') }}">Podcast</x-menu-item>
+                @foreach ($desktopLeftItems as $item)
+                    <x-menu-item url="{{ $item->url }}">{{ $item->title }}</x-menu-item>
+                @endforeach
 
-                <x-menu-item class="md:hidden" url="{{ url('/training') }}">Training</x-menu-item>
-                <x-menu-item class="md:hidden" url="{{ url('/thrive-in-the-middle') }}">Thrive in the Middle</x-menu-item>
-                <x-menu-item class="md:hidden" url="{{ url('/about') }}">About Us</x-menu-item>
-
-                <x-menu-item class="md:hidden" url="{{ url('/contacts') }}">Contact Us</x-menu-item>
+                @foreach ($navItems->skip(2) as $item)
+                    <x-menu-item class="md:hidden" url="{{ $item->url }}">{{ $item->title }}</x-menu-item>
+                @endforeach
             </ul>
         </nav>
 
@@ -113,7 +121,9 @@
         </div>
 
         <ul class="hidden md:flex items-center gap-5 pb-2">
-            <x-menu-item url="{{ url('/training') }}">Training</x-menu-item>
+            @foreach ($desktopRightItems as $item)
+                <x-menu-item url="{{ $item->url }}">{{ $item->title }}</x-menu-item>
+            @endforeach
 
             <div class="relative">
                 <a href="{{ url('/contacts') }}" class="btn btn-xs">

@@ -31,7 +31,7 @@
         ],
     ];
 
-    $image = $getImage('learning_approach_image');
+    $image = $_g->augmentedValue('learning_approach_image')->value()?->url() ?? '';
 @endphp
 
 <section id="careers" class="pt-6 lg:pt-12">

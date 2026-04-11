@@ -3,11 +3,14 @@ fields:
   -
     handle: banner_image
     field:
-      type: text
+      type: assets
       display: 'Banner Image'
-      instructions: 'Path relative to public/ (e.g. img/uploads/my-image.jpg)'
+      container: uploads
+      max_files: 1
   -
     handle: learning_approach_image
     field:
-      type: text
+      type: assets
       display: 'Learning Approach Image'
+      container: uploads
+      max_files: 1

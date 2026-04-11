@@ -1,28 +1,11 @@
 @php
-    $faqs = [
-        [
-            'icon' =>
-                'M3 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061A1.125 1.125 0 0 1 3 16.811V8.69ZM12.75 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061a1.125 1.125 0 0 1-1.683-.977V8.69Z',
-            'question' => 'Are you unafraid of pushing the envelope and dive into unknowns?',
-            'answer' =>
-                "Here, your big ideas find a home, equipped with the tools, technology, and training to thrive. Your new role is just the beginning, with boundless opportunities for growth and advancement. We foster a culture of perpetual learning, and if you share our passion for growth, you'll find your place here.",
-            // "Those who thrive here are the ones committed to building a career, not just cashing a paycheck. We're not just offering a job; we're inviting you to embark on a fulfilling journey. Here, your big ideas find a home, equipped with the tools, technology, and training to thrive. Your new role is just the beginning, with boundless opportunities for growth and advancement. We foster a culture of perpetual learning, and if you share our passion for growth, you'll find your place here.",
-        ],
-        [
-            'icon' =>
-                'M3 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061A1.125 1.125 0 0 1 3 16.811V8.69ZM12.75 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061a1.125 1.125 0 0 1-1.683-.977V8.69Z',
-            'question' => "Do you feel like your talents aren't being maximized?",
-            'answer' =>
-                "One thing this job will do is push your creativity to the fullest. Your new role is just the beginning, with boundless opportunities for growth and advancement. We foster a culture of perpetual learning, and if you share our passion for growth, you'll find your place here.",
-        ],
-        [
-            'icon' =>
-                'M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941',
-            'question' => 'Are you passionate about making a difference?',
-            'answer' =>
-                "At WhyLead, it's more than just business—it's about our impact and how we achieve it. We actively support initiatives that enhance our work, enrich our lives, and contribute to our communities.",
-        ],
-    ];
+    $faqs = \Statamic\Facades\Entry::query()
+        ->where('collection', 'faqs')
+        ->whereTaxonomy('faq_section::careers')
+        ->get()
+        ->map(fn($e) => ['question' => $e->get('title'), 'answer' => $e->get('answer')])
+        ->values()
+        ->all();
 
     $steps = [
         [

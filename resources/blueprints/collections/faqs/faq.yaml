@@ -6,7 +6,7 @@ tabs:
       -
         fields:
           -
-            handle: question
+            handle: title
             field:
               type: text
               required: true
@@ -16,3 +16,11 @@ tabs:
             field:
               type: textarea
               display: Answer
+          -
+            handle: faq_section
+            field:
+              type: terms
+              display: Section
+              taxonomies:
+                - faq_section
+              mode: select

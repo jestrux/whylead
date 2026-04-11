@@ -3,21 +3,28 @@ fields:
   -
     handle: banner_image
     field:
-      type: text
+      type: assets
       display: 'Banner Image'
-      instructions: 'Path relative to public/ (e.g. img/uploads/my-image.jpg)'
+      container: uploads
+      max_files: 1
   -
     handle: thriving_teams_image
     field:
-      type: text
+      type: assets
       display: 'Thriving Teams Image'
+      container: uploads
+      max_files: 1
   -
     handle: happier_workplace_image
     field:
-      type: text
+      type: assets
       display: 'Happier Workplace Image'
+      container: uploads
+      max_files: 1
   -
     handle: facilitating_gatherings_image
     field:
-      type: text
+      type: assets
       display: 'Facilitating Strategic Gatherings Image'
+      container: uploads
+      max_files: 1

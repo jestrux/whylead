@@ -18,7 +18,7 @@
             $data = \Statamic\Facades\Entry::query()
                 ->where('collection', 'faqs')
                 ->get()
-                ->map(fn($e) => (object) ['question' => $e->get('question'), 'answer' => $e->get('answer')]);
+                ->map(fn($e) => (object) ['question' => $e->get('title'), 'answer' => $e->get('answer')]);
         @endphp
         <div x-data="{
             expanded: -1,

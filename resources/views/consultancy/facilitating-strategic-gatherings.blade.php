@@ -1,5 +1,5 @@
 @php
-    $image = $getImage('facilitating_gatherings_image');
+    $image = $_g->augmentedValue('facilitating_gatherings_image')->value()?->url() ?? '';
 @endphp
 
 <section class="py-6 md:py-28 lg:py-20">
