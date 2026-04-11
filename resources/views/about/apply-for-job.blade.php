@@ -4,7 +4,7 @@
 
 @extends('layout.index')
 
-@section('title', 'Thrive In The Middle')
+@section('title', 'Apply for Job — WhyLead')
 @section('description', 'Being a middle manager is challenging. Those above have priorities.')
 
 @section('content')
