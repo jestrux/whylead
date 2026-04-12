@@ -13,25 +13,16 @@
         <input
             type="text"
             class="input-text flex-1"
-            :placeholder="config.placeholder || 'Paste SVG path (d attribute)'"
+            :placeholder="(config && config.placeholder) || 'Paste SVG path (d attribute)'"
             :value="value"
-            @input="update($event.target.value)"
+            @input="$emit('update:value', $event.target.value)"
         />
     </div>
 </template>
 
 <script>
 export default {
-    mixins: [Fieldtype],
-    computed: {
-        value() {
-            return this.fieldValue ?? '';
-        },
-    },
-    methods: {
-        update(val) {
-            this.$emit('input', val);
-        },
-    },
+    props: ['value', 'config', 'meta', 'handle', 'readOnly'],
+    emits: ['update:value'],
 };
 </script>
