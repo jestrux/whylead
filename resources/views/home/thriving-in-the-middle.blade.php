@@ -46,8 +46,8 @@
                 </p>
 
                 @php
-                    $_g_thrive = \Statamic\Facades\GlobalSet::find('thrive_in_the_middle')->inCurrentSite();
-                    $checklist = collect($_g_thrive->get('program_benefits') ?? [])->map(fn($v) => [
+                    $_thrive_page = \Statamic\Facades\Entry::query()->where('collection', 'pages')->where('slug', 'thrive-in-the-middle')->first();
+                    $checklist = collect($_thrive_page?->get('program_benefits') ?? [])->map(fn($v) => [
                         'icon' => $v['icon'] ?? '',
                         'title' => $v['title'] ?? '',
                     ])->all();

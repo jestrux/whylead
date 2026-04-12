@@ -7,9 +7,7 @@
         ->values()
         ->all();
 
-    $_g_about = \Statamic\Facades\GlobalSet::find('about')->inCurrentSite();
-
-    $steps = collect($_g_about->get('career_benefits') ?? [])->map(fn($v) => [
+    $steps = collect($page->get('career_benefits') ?? [])->map(fn($v) => [
         'icon' => $v['icon'] ?? '',
         'image' => isset($v['image']) ? asset('img/uploads/' . $v['image']) : '',
         'title' => $v['title'] ?? '',
@@ -104,7 +102,7 @@
                 </p>
 
                 @php
-                    $checklist = collect($_g_about->get('job_qualifications') ?? [])->map(fn($v) => [
+                    $checklist = collect($page->get('job_qualifications') ?? [])->map(fn($v) => [
                         'icon' => $v['icon'] ?? '',
                         'title' => $v['title'] ?? '',
                     ])->all();

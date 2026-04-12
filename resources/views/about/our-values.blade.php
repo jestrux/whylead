@@ -16,8 +16,7 @@
 
             <ul role="list" class="flex flex-col md:grid grid-cols-3 gap-4 lg:gap-8">
                 @php
-                    $_g_about = \Statamic\Facades\GlobalSet::find('about')->inCurrentSite();
-                    $steps = collect($_g_about->get('values') ?? [])->map(fn($v) => [
+                    $steps = collect($page->get('values') ?? [])->map(fn($v) => [
                         'icon' => $v['icon'] ?? '',
                         'title' => $v['title'] ?? '',
                         'description' => $v['description'] ?? '',

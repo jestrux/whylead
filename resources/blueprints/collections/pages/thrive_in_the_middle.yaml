@@ -1,0 +1,66 @@
+title: 'Thrive in the Middle'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+          -
+            handle: template
+            field:
+              type: text
+              display: Template
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: meta_title
+            field:
+              type: text
+              display: Meta Title
+          -
+            handle: meta_description
+            field:
+              type: textarea
+              display: Meta Description
+          -
+            handle: og_image
+            field:
+              type: assets
+              display: OG Image
+              container: uploads
+              max_files: 1
+  content:
+    display: Content
+    sections:
+      -
+        fields:
+          -
+            handle: program_benefits
+            field:
+              type: replicator
+              display: 'Program Benefits'
+              sets:
+                benefit:
+                  display: Benefit
+                  fields:
+                    -
+                      handle: icon
+                      field:
+                        type: wl-icon-picker
+                        display: 'Icon (SVG path)'
+                        width: 50
+                    -
+                      handle: title
+                      field:
+                        type: text
+                        display: Title
+                        width: 50

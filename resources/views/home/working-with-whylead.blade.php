@@ -13,8 +13,7 @@
 
             <ul role="list" class="flex flex-col md:grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
                 @php
-                    $_g_home = \Statamic\Facades\GlobalSet::find('home')->inCurrentSite();
-                    $steps = collect($_g_home->get('service_features') ?? [])->map(fn($v) => [
+                    $steps = collect($page->get('service_features') ?? [])->map(fn($v) => [
                         'icon' => $v['icon'] ?? '',
                         'title' => $v['title'] ?? '',
                         'description' => $v['description'] ?? '',

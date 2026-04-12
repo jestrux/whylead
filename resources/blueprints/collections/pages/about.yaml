@@ -1,0 +1,127 @@
+title: About
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+          -
+            handle: template
+            field:
+              type: text
+              display: Template
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: meta_title
+            field:
+              type: text
+              display: Meta Title
+          -
+            handle: meta_description
+            field:
+              type: textarea
+              display: Meta Description
+          -
+            handle: og_image
+            field:
+              type: assets
+              display: OG Image
+              container: uploads
+              max_files: 1
+  content:
+    display: Content
+    sections:
+      -
+        fields:
+          -
+            handle: values
+            field:
+              type: replicator
+              display: 'Company Values'
+              sets:
+                value:
+                  display: Value
+                  fields:
+                    -
+                      handle: icon
+                      field:
+                        type: wl-icon-picker
+                        display: 'Icon (SVG path)'
+                        width: 50
+                    -
+                      handle: title
+                      field:
+                        type: text
+                        display: Title
+                        width: 50
+                    -
+                      handle: description
+                      field:
+                        type: textarea
+                        display: Description
+          -
+            handle: career_benefits
+            field:
+              type: replicator
+              display: 'Career Benefits'
+              sets:
+                benefit:
+                  display: Benefit
+                  fields:
+                    -
+                      handle: icon
+                      field:
+                        type: wl-icon-picker
+                        display: 'Icon (SVG path)'
+                        width: 50
+                    -
+                      handle: image
+                      field:
+                        type: assets
+                        display: Image
+                        container: uploads
+                        max_files: 1
+                        width: 50
+                    -
+                      handle: title
+                      field:
+                        type: text
+                        display: Title
+                        width: 50
+                    -
+                      handle: description
+                      field:
+                        type: textarea
+                        display: Description
+                        width: 50
+          -
+            handle: job_qualifications
+            field:
+              type: replicator
+              display: 'Job Qualifications'
+              sets:
+                qualification:
+                  display: Qualification
+                  fields:
+                    -
+                      handle: icon
+                      field:
+                        type: wl-icon-picker
+                        display: 'Icon (SVG path)'
+                        width: 50
+                    -
+                      handle: title
+                      field:
+                        type: text
+                        display: Title
+                        width: 50
