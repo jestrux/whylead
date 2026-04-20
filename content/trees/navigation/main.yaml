@@ -8,13 +8,13 @@ tree:
     title: Podcast
     url: /podcast
   -
-    id: be5c4d0f-8b2e-4a2e-8333-aa1f9df56bd7
-    title: Training
-    url: /training
-  -
     id: 93a441e9-5925-4c68-973a-808909a6d70c
     title: 'Thrive in the Middle'
     url: /thrive-in-the-middle
+  -
+    id: be5c4d0f-8b2e-4a2e-8333-aa1f9df56bd7
+    title: Training
+    url: /training
   -
     id: 08361137-6970-48f2-8a12-32b5dfbc1eee
     title: 'About Us'
