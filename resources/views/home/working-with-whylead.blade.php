@@ -13,7 +13,8 @@
 
             <ul role="list" class="flex flex-col md:grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
                 @php
-                    $steps = collect($page->get('service_features') ?? [])->map(fn($v) => [
+                    $_home_page = \Statamic\Facades\Entry::query()->where('collection', 'pages')->where('slug', 'home')->first();
+                    $steps = collect($_home_page?->get('service_features') ?? [])->map(fn($v) => [
                         'icon' => $v['icon'] ?? '',
                         'title' => $v['title'] ?? '',
                         'description' => $v['description'] ?? '',
