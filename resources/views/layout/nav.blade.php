@@ -95,8 +95,8 @@
                 <x-menu-item url="{{ url('/consultancy') }}">Consultancy</x-menu-item>
                 <x-menu-item url="{{ url('/podcast') }}">Podcast</x-menu-item>
 
-                <x-menu-item class="md:hidden" url="{{ url('/training') }}">Training</x-menu-item>
                 <x-menu-item class="md:hidden" url="{{ url('/thrive-in-the-middle') }}">Thrive in the Middle</x-menu-item>
+                <x-menu-item class="md:hidden" url="{{ url('/training') }}">Training</x-menu-item>
                 <x-menu-item class="md:hidden" url="{{ url('/about') }}">About Us</x-menu-item>
 
                 <x-menu-item class="md:hidden" url="{{ url('/contacts') }}">Contact Us</x-menu-item>
@@ -113,7 +113,7 @@
         </div>
 
         <ul class="hidden md:flex items-center gap-5 pb-2">
-            <x-menu-item url="{{ url('/training') }}">Training</x-menu-item>
+            <x-menu-item url="{{ url('/thrive-in-the-middle') }}">Thrive in the Middle</x-menu-item>
 
             <div class="relative">
                 <a href="{{ url('/contacts') }}" class="btn btn-xs">
