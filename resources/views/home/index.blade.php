@@ -22,6 +22,8 @@
         </div>
     </div>
 
+    @include('home.acend')
+
     @include('home.unlock-potential')
 
     @include('home.moving-forward')
