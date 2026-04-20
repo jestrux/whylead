@@ -25,6 +25,8 @@
 
     @include('thrive-in-the-middle.programmes')
 
+    @include('home.acend')
+
     @include('thrive-in-the-middle.next-cohort')
 
     @include('thrive-in-the-middle.upcoming-cohorts')
