@@ -16,7 +16,8 @@
 
             <ul role="list" class="flex flex-col md:grid grid-cols-3 gap-4 lg:gap-8">
                 @php
-                    $steps = collect($page->get('values') ?? [])->map(fn($v) => [
+                    $_about_page = $_about_page ?? \Statamic\Facades\Entry::query()->where('collection', 'pages')->where('slug', 'about')->first();
+                    $steps = collect($_about_page?->get('values') ?? [])->map(fn($v) => [
                         'icon' => $v['icon'] ?? '',
                         'title' => $v['title'] ?? '',
                         'description' => $v['description'] ?? '',

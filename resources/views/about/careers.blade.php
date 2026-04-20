@@ -7,7 +7,8 @@
         ->values()
         ->all();
 
-    $steps = collect($page->get('career_benefits') ?? [])->map(fn($v) => [
+    $_about_page = \Statamic\Facades\Entry::query()->where('collection', 'pages')->where('slug', 'about')->first();
+    $steps = collect($_about_page?->get('career_benefits') ?? [])->map(fn($v) => [
         'icon' => $v['icon'] ?? '',
         'image' => isset($v['image']) ? asset('img/uploads/' . $v['image']) : '',
         'title' => $v['title'] ?? '',
@@ -102,7 +103,7 @@
                 </p>
 
                 @php
-                    $checklist = collect($page->get('job_qualifications') ?? [])->map(fn($v) => [
+                    $checklist = collect($_about_page?->get('job_qualifications') ?? [])->map(fn($v) => [
                         'icon' => $v['icon'] ?? '',
                         'title' => $v['title'] ?? '',
                     ])->all();
