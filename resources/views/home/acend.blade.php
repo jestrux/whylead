@@ -7,7 +7,7 @@
                 <img src="{{ asset('img/uploads/acend-logo.png') }}" alt="ACEND"
                     class="h-14 self-start" />
 
-                <h2 class="text-2xl lg:text-4xl font-bold uppercase leading-tight text-accent">
+                <h2 class="text-2xl lg:text-4xl font-bold uppercase leading-tight text-accent dark:text-content">
                     Most Leadership Programs Inspire Change. Few Give You A System To Track, Scale, And Sustain It.
                 </h2>
 
