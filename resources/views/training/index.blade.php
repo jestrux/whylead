@@ -510,15 +510,55 @@
     {{-- ====================== KASH MODEL (tabs) ====================== --}}
     <section class="relative py-12 md:py-16 bg-accent/[0.04]">
         <div class="max-w-7xl mx-auto px-4 md:px-8">
-            <div class="max-w-2xl t-reveal" x-data x-intersect.once="$el.classList.add('in')">
-                <p class="text-xs font-bold uppercase tracking-widest text-primary">Our methodology</p>
-                <h2 class="mt-3 text-3xl lg:text-4xl font-bold uppercase leading-tight">
-                    The <span class="outline-text">KASH</span> model
-                </h2>
-                <p class="mt-3 text-base/loose opacity-70">
-                    We work the KASH model &mdash; <strong>Knowledge, Attitude, Skills</strong> and <strong>Habits</strong> &mdash;
-                    so people don&rsquo;t just gain knowledge, they change how they lead and work.
-                </p>
+            {{-- Section header: intro copy on the left, credibility stat on the right --}}
+            <div class="grid lg:grid-cols-[minmax(0,1.55fr)_minmax(0,1fr)] gap-6 lg:gap-12 items-end t-reveal"
+                x-data x-intersect.once="$el.classList.add('in')">
+                <div class="max-w-2xl">
+                    <p class="text-xs font-bold uppercase tracking-widest text-primary">Our methodology</p>
+                    <h2 class="mt-3 text-3xl lg:text-4xl font-bold uppercase leading-tight">
+                        The <span class="outline-text">KASH</span> model
+                    </h2>
+                    <p class="mt-3 text-base/loose opacity-70">
+                        We work the KASH model &mdash; <strong>Knowledge, Attitude, Skills</strong> and <strong>Habits</strong> &mdash;
+                        so people don&rsquo;t just gain knowledge, they change how they lead and work.
+                    </p>
+                    <p class="mt-4 text-sm italic opacity-60 max-w-md">
+                        Rooted in decades of adult-learning research &mdash; because knowing something rarely changes what you do.
+                    </p>
+                </div>
+                <div class="lg:justify-self-end">
+                    <div class="inline-flex items-center gap-4 rounded-2xl border border-stroke bg-card px-5 py-4 shadow-[0_18px_40px_-24px_rgba(15,27,61,0.18)]">
+                        <span class="text-4xl md:text-5xl font-bold text-primary tabular-nums leading-none">100%</span>
+                        <span class="text-sm/tight text-content/70 max-w-[190px]">
+                            of clients said our solutions addressed their pain points.
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Contrast: what most training does vs. what KASH does --}}
+            <div class="mt-10 grid md:grid-cols-2 gap-4 md:gap-5 t-reveal t-d1"
+                x-data x-intersect.once="$el.classList.add('in')">
+                <div class="relative rounded-2xl border border-stroke bg-card/60 p-5 md:p-6">
+                    <p class="text-[10px] font-bold uppercase tracking-[0.22em] text-content/45 mb-2">Training that fades</p>
+                    <p class="text-lg md:text-xl font-semibold text-content/70 [text-wrap:balance]">
+                        Sit through it. Certificate. Forget.
+                    </p>
+                    <p class="mt-3 text-sm/relaxed text-content/60">
+                        Most leadership programs stop at &ldquo;know&rdquo; &mdash; a room, a slide deck, a certificate.
+                        Thirty days later, the behaviours haven&rsquo;t moved.
+                    </p>
+                </div>
+                <div class="relative rounded-2xl border border-primary/40 bg-primary/[0.05] p-5 md:p-6">
+                    <p class="text-[10px] font-bold uppercase tracking-[0.22em] text-primary mb-2">The WhyLead way</p>
+                    <p class="text-lg md:text-xl font-semibold text-content [text-wrap:balance]">
+                        Learn it. Own it. Practice it. Live it.
+                    </p>
+                    <p class="mt-3 text-sm/relaxed text-content/75">
+                        We move people through <strong>Knowledge, Attitude, Skills</strong> and <strong>Habits</strong> &mdash; in that order &mdash;
+                        so change shows up on Monday morning and stays.
+                    </p>
+                </div>
             </div>
 
             <div class="mt-10 grid lg:grid-cols-[minmax(260px,0.34fr)_minmax(0,0.66fr)] gap-6 lg:gap-10 items-start"
@@ -579,6 +619,7 @@
                     @endforeach
                 </div>
             </div>
+
         </div>
     </section>
 
