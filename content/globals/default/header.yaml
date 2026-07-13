@@ -1,0 +1,71 @@
+wl_current: whylead
+wl_home_url: 'https://whyleadothers.com'
+platforms:
+  -
+    key: whylead
+    label: WhyLead
+    here: Consultancy
+    desc: 'Organizational transformation and advisory'
+    blurb: 'Leadership programs, culture, team effectiveness, facilitation and organizational development.'
+    url: 'https://whyleadothers.com'
+    cta_label: 'Talk to WhyLead'
+    cta_url: /contacts
+  -
+    key: acend
+    label: ACEND
+    here: ACEND
+    desc: 'Leadership intelligence for the middle'
+    blurb: 'Assess, understand and develop the managers responsible for turning strategy into execution.'
+    url: 'https://acend.whyleadothers.com'
+    cta_label: 'Assess Your Managers'
+    cta_url: 'https://acend.whyleadothers.com'
+  -
+    key: tb
+    label: 'Thriving Boundlessly'
+    here: 'Thriving Boundlessly'
+    desc: 'Performance intelligence'
+    blurb: 'Turn fragmented people and performance data into better development, promotion, retention and succession decisions.'
+    url: 'https://www.thriveboundlessly.com'
+    cta_label: 'Request a Demo'
+    cta_url: 'https://www.thriveboundlessly.com'
+nav_groups:
+  -
+    title: Solutions
+    direct_url: ''
+    items:
+      -
+        label: 'Strategy & Team Building Facilitation'
+        tag: ''
+        url: /consultancy
+      -
+        label: 'Leadership Development Training'
+        tag: ''
+        url: /consultancy
+      -
+        label: 'Performance Management'
+        tag: 'Thriving Boundlessly'
+        url: 'https://www.thriveboundlessly.com'
+      -
+        label: 'Leadership Assessments'
+        tag: ACEND
+        url: 'https://acend.whyleadothers.com'
+  -
+    title: 'Ideas & Resources'
+    direct_url: ''
+    items:
+      -
+        label: 'Leadership Podcast'
+        tag: ''
+        url: 'https://whyleadothers.com/podcast'
+      -
+        label: 'Free Leadership Readiness Assessment'
+        tag: ACEND
+        url: 'https://acend.whyleadothers.com/readiness'
+      -
+        label: 'Our Insights'
+        tag: ''
+        url: 'https://acend.whyleadothers.com/insights'
+  -
+    title: About
+    direct_url: /about
+    items: []

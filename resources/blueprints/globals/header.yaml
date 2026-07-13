@@ -1,0 +1,109 @@
+title: Header
+tabs:
+  brand:
+    display: 'Brand & Platform Switcher'
+    sections:
+      -
+        instructions: >-
+          The parent-brand header is shared across WhyLead, ACEND and Thriving Boundlessly.
+          Pick which platform this site represents in "Current Platform" — that platform's label
+          appears next to the logo and its CTA button appears on the right of the header.
+        fields:
+          -
+            handle: wl_current
+            field:
+              type: select
+              display: 'Current Platform'
+              instructions: 'Which brand this site represents. Determines the label beside the logo, the "You are here" pill in the switcher, and the header CTA.'
+              options:
+                whylead: WhyLead
+                acend: ACEND
+                tb: 'Thriving Boundlessly'
+              default: whylead
+              clearable: false
+              width: 50
+          -
+            handle: wl_home_url
+            field:
+              type: text
+              display: 'WhyLead Home URL'
+              instructions: 'Clicking the logo goes here. Usually https://whyleadothers.com.'
+              default: 'https://whyleadothers.com'
+              width: 50
+          -
+            handle: platforms
+            field:
+              type: grid
+              display: Platforms
+              instructions: >-
+                The three brands that appear in the platform switcher (top-left dropdown next to the logo).
+                "Key" must be one of whylead / acend / tb — it matches the value of "Current Platform" above.
+              mode: stacked
+              min_rows: 1
+              add_row: 'Add platform'
+              fields:
+                -
+                  handle: key
+                  field: { type: text, display: Key, instructions: 'One of: whylead, acend, tb', width: 33 }
+                -
+                  handle: label
+                  field: { type: text, display: 'Full Name', instructions: 'e.g. WhyLead, ACEND, Thriving Boundlessly', width: 33 }
+                -
+                  handle: here
+                  field: { type: text, display: 'Short Label', instructions: 'Shown next to the logo when this platform is current. e.g. "Consultancy"', width: 33 }
+                -
+                  handle: desc
+                  field: { type: text, display: 'Short Description', instructions: 'One-line tagline in the switcher dropdown.' }
+                -
+                  handle: blurb
+                  field: { type: textarea, display: 'Long Blurb', instructions: 'Longer description (not yet shown in UI — kept for future use).' }
+                -
+                  handle: url
+                  field: { type: text, display: 'Platform URL', width: 50 }
+                -
+                  handle: cta_label
+                  field: { type: text, display: 'CTA Button Label', instructions: 'e.g. "Talk to WhyLead"', width: 50 }
+                -
+                  handle: cta_url
+                  field: { type: text, display: 'CTA Button URL' }
+  navigation:
+    display: 'Nav Groups'
+    sections:
+      -
+        instructions: >-
+          The center of the header shows menu groups. Each group is either a dropdown of items
+          OR a direct link (fill in "Direct Link URL" for a direct link and leave the items empty).
+        fields:
+          -
+            handle: nav_groups
+            field:
+              type: grid
+              display: 'Nav Groups'
+              mode: stacked
+              min_rows: 1
+              add_row: 'Add group'
+              fields:
+                -
+                  handle: title
+                  field: { type: text, display: 'Group Title', instructions: 'e.g. "Solutions", "About"', width: 50 }
+                -
+                  handle: direct_url
+                  field: { type: text, display: 'Direct Link URL', instructions: 'Fill in ONLY if this group should be a single direct link. Leave the items list empty.', width: 50 }
+                -
+                  handle: items
+                  field:
+                    type: grid
+                    display: 'Dropdown Items'
+                    instructions: 'Only used if Direct Link URL is empty.'
+                    mode: stacked
+                    add_row: 'Add item'
+                    fields:
+                      -
+                        handle: label
+                        field: { type: text, display: Label, width: 50 }
+                      -
+                        handle: tag
+                        field: { type: text, display: Tag, instructions: 'Optional pill shown on the right (e.g. "ACEND", "Thriving Boundlessly").', width: 50 }
+                      -
+                        handle: url
+                        field: { type: text, display: URL }
