@@ -75,34 +75,6 @@
         ],
     ];
 
-    // Thrive in the Middle — the 4-stage flagship pathway, each with a week marker + icon.
-    $titmStages = [
-        [
-            'n' => '01', 'k' => 'Assess', 'week' => 'Week 1',
-            'title' => '360° pre-assessment',
-            'desc' => 'Measure where your middle managers truly are before we build a single slide.',
-            'icon' => 'M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605',
-        ],
-        [
-            'n' => '02', 'k' => 'Learn', 'week' => 'Weeks 2–5',
-            'title' => 'In-person workshops',
-            'desc' => 'Immersive sessions grounded in your strategy, operating model and culture.',
-            'icon' => 'M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25',
-        ],
-        [
-            'n' => '03', 'k' => 'Apply', 'week' => 'Ongoing',
-            'title' => 'Thrive Boundlessly',
-            'desc' => 'Applied challenges that stretch new leadership behaviours into real work.',
-            'icon' => 'M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z',
-        ],
-        [
-            'n' => '04', 'k' => 'Sustain', 'week' => 'Weeks 6–7+',
-            'title' => 'Virtual group coaching',
-            'desc' => 'Ongoing coaching that keeps momentum going long after the workshop ends.',
-            'icon' => 'M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99',
-        ],
-    ];
-
     // The 6 modules taught inside Thrive in the Middle — sourced from the program's live page.
     // Each has a signature question and the outcomes participants leave with.
     $titmModules = [
@@ -322,66 +294,38 @@
             background: linear-gradient(180deg, #F26B21 0%, #EBB305 100%); -webkit-background-clip: text; background-clip: text; color: transparent;
         }
 
-        /* ---- Thrive in the Middle: horizontal animated pathway ---- */
-        .t-path-track { position: relative; }
-        .t-path-line {
-            position: absolute; left: 10%; right: 10%; top: 30px; height: 2px; border-radius: 3px;
-            overflow: hidden;
-            background: linear-gradient(90deg, rgba(255,255,255,.18), #F26B21 55%, rgba(255,255,255,.18));
-        }
-        .t-path-line::after {
-            content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 22%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,.9), transparent);
-            filter: blur(.5px);
-            animation: tPathFlow 2.8s linear infinite;
-        }
-        @keyframes tPathFlow { from { transform: translateX(-120%); } to { transform: translateX(520%); } }
-
-        .t-path-node {
-            transition: transform .28s cubic-bezier(.34,1.56,.64,1), box-shadow .28s ease,
-                        border-color .28s ease, background-color .28s ease, color .28s ease;
-        }
-        .t-path-item:hover .t-path-node {
-            transform: translateY(-4px) scale(1.08);
-            background-color: #F26B21; border-color: #F26B21; color: #fff;
-            box-shadow: 0 16px 32px -10px rgba(242, 107, 33, .6);
-        }
-        @media (prefers-reduced-motion: reduce) {
-            .t-path-line::after { animation: none; }
-        }
-
-        /* ---- Thrive modules: interactive spotlight ---- */
+        /* ---- Thrive modules: interactive spotlight (warm orange card, navy accent) ---- */
         .t-mod-nav-item {
             position: relative; display: grid; grid-template-columns: 44px minmax(0, 1fr) 20px;
             gap: 12px; align-items: center; padding: 12px 14px; border-radius: 14px; cursor: pointer;
-            background: rgba(255, 255, 255, .02); border: 1px solid rgba(255, 255, 255, .08);
-            color: rgba(255, 255, 255, .6); text-align: left; font: inherit; width: 100%;
+            background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .18);
+            color: rgba(255, 255, 255, .75); text-align: left; font: inherit; width: 100%;
             transition: background .22s ease, border-color .22s ease, color .22s ease, transform .22s ease;
         }
         .t-mod-nav-item:hover {
-            color: #fff; background: rgba(255, 255, 255, .05); border-color: rgba(255, 255, 255, .18); transform: translateX(2px);
+            color: #fff; background: rgba(255, 255, 255, .14); border-color: rgba(255, 255, 255, .35); transform: translateX(2px);
         }
         .t-mod-nav-item.is-active {
-            color: #fff; background: rgba(242, 107, 33, .12); border-color: rgba(242, 107, 33, .5);
-            box-shadow: 0 14px 28px -12px rgba(242, 107, 33, .5);
+            color: #fff; background: rgba(25, 18, 75, .35); border-color: rgba(25, 18, 75, .7);
+            box-shadow: 0 14px 28px -12px rgba(25, 18, 75, .55);
         }
         .t-mod-nav-num {
             width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
-            background: rgba(255, 255, 255, .05); border: 1px solid rgba(255, 255, 255, .1);
-            font-weight: 800; font-size: 13px; color: #F26B21;
+            background: rgba(255, 255, 255, .18); border: 1px solid rgba(255, 255, 255, .3);
+            font-weight: 800; font-size: 13px; color: #fff;
             transition: background .22s ease, border-color .22s ease, color .22s ease;
         }
         .t-mod-nav-item.is-active .t-mod-nav-num {
-            background: #F26B21; color: #fff; border-color: #F26B21;
+            background: #19124B; color: #fff; border-color: #19124B;
         }
-        .t-mod-nav-arrow { opacity: 0; transform: translateX(-4px); transition: opacity .2s ease, transform .2s ease; color: #F26B21; }
+        .t-mod-nav-arrow { opacity: 0; transform: translateX(-4px); transition: opacity .2s ease, transform .2s ease; color: #fff; }
         .t-mod-nav-item:hover .t-mod-nav-arrow, .t-mod-nav-item.is-active .t-mod-nav-arrow { opacity: 1; transform: translateX(0); }
 
         .t-mod-stage {
             position: relative; overflow: hidden; border-radius: 22px;
-            background: radial-gradient(520px 260px at 80% 0%, rgba(242, 107, 33, .18), transparent 60%),
-                        rgba(255, 255, 255, .04);
-            border: 1px solid rgba(255, 255, 255, .1);
+            background: radial-gradient(520px 260px at 80% 0%, rgba(255, 244, 214, .22), transparent 60%),
+                        rgba(255, 255, 255, .1);
+            border: 1px solid rgba(255, 255, 255, .22);
         }
         .t-mod-stage::before {
             content: ""; position: absolute; inset: 0; pointer-events: none;
@@ -646,22 +590,23 @@
                 </p>
             </div>
 
-            {{-- Thrive in the Middle — the flagship dark hero card --}}
+            {{-- Thrive in the Middle — the flagship warm hero card --}}
             <div class="mt-10 t-reveal" x-data x-intersect.once="$el.classList.add('in')">
-                <div class="relative overflow-hidden rounded-3xl bg-accent text-white p-6 md:p-10">
-                    {{-- ambient glow --}}
+                <div class="relative overflow-hidden rounded-3xl text-white p-6 md:p-10"
+                    style="background: linear-gradient(135deg, #F26B21 0%, #ee6520 55%, #d55612 100%);">
+                    {{-- ambient glow: bright cream lift + a small navy accent for balance --}}
                     <div aria-hidden="true"
-                        class="absolute -top-24 -right-24 size-[420px] rounded-full t-blob t-float pointer-events-none"
-                        style="background: radial-gradient(closest-side, rgba(242,107,33,.35), rgba(242,107,33,0));"></div>
+                        class="absolute -top-28 -right-28 size-[460px] rounded-full t-blob t-float pointer-events-none"
+                        style="background: radial-gradient(closest-side, rgba(255,244,214,.42), rgba(255,244,214,0));"></div>
                     <div aria-hidden="true"
-                        class="absolute -bottom-24 -left-24 size-[360px] rounded-full t-blob t-float pointer-events-none"
-                        style="background: radial-gradient(closest-side, rgba(235,179,5,.20), rgba(235,179,5,0)); animation-delay: -3s;"></div>
+                        class="absolute -bottom-20 -left-20 size-[240px] rounded-full t-blob t-float pointer-events-none"
+                        style="background: radial-gradient(closest-side, rgba(25,18,75,.5), rgba(25,18,75,0)); animation-delay: -3s;"></div>
 
                     <div class="relative">
                         {{-- Header row: kicker on the left, program stats on the right --}}
                         <div class="flex flex-wrap items-start justify-between gap-4">
-                            <span class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.22em] text-primary">
-                                <span class="inline-block h-1.5 w-1.5 rounded-full bg-primary t-pulse"></span>
+                            <span class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.22em] text-white">
+                                <span class="inline-block h-1.5 w-1.5 rounded-full bg-white t-pulse"></span>
                                 Flagship &middot; 7-week cohort
                             </span>
                             <div class="flex items-stretch gap-3 text-white/85">
@@ -701,35 +646,6 @@
                             </div>
                         </div>
 
-                        {{-- ============ THE PATHWAY (horizontal animated timeline) ============ --}}
-                        <div class="mt-12">
-                            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                                <p class="text-[10px] font-bold uppercase tracking-[0.22em] text-primary">The pathway</p>
-                                <p class="text-xs text-white/50">How each participant moves through the seven weeks</p>
-                            </div>
-
-                            <div class="mt-8 t-path-track">
-                                <div class="hidden md:block t-path-line"></div>
-                                <div class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8">
-                                    @foreach ($titmStages as $i => $st)
-                                        <div class="t-path-item text-center md:text-left">
-                                            <div class="t-path-node relative z-10 mx-auto md:mx-0 size-[60px] rounded-2xl bg-white/[0.06] border border-white/15 flex items-center justify-center text-primary">
-                                                <svg class="size-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="{{ $st['icon'] }}" />
-                                                </svg>
-                                            </div>
-                                            <div class="mt-4 flex items-center justify-center md:justify-start gap-2">
-                                                <span class="text-[10px] font-bold uppercase tracking-widest text-primary tabular-nums">{{ $st['n'] }} · {{ $st['k'] }}</span>
-                                            </div>
-                                            <p class="mt-1 text-[10px] font-semibold uppercase tracking-widest text-white/45">{{ $st['week'] }}</p>
-                                            <h4 class="mt-1.5 text-base font-bold text-white">{{ $st['title'] }}</h4>
-                                            <p class="mt-1.5 text-xs/relaxed text-white/55">{{ $st['desc'] }}</p>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-
                         {{-- ============ THE MODULES (interactive spotlight) ============ --}}
                         <div class="mt-14"
                             x-data="{
@@ -743,8 +659,8 @@
                                 pick(i) { this.active = i; this.touched = true; },
                             }">
                             <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-6">
-                                <p class="text-[10px] font-bold uppercase tracking-[0.22em] text-primary">The modules</p>
-                                <p class="text-xs text-white/50">Six competencies the cohort works through together</p>
+                                <p class="text-[10px] font-bold uppercase tracking-[0.22em] text-white">The modules</p>
+                                <p class="text-xs text-white/70">Six competencies the cohort works through together</p>
                             </div>
 
                             <div class="grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] gap-5 lg:gap-6 items-start">
@@ -775,35 +691,35 @@
                                             x-transition:enter-end="opacity-100 translate-y-0">
                                             <div class="flex items-start justify-between gap-4">
                                                 <div class="flex items-center gap-3">
-                                                    <span class="size-11 rounded-xl bg-primary/15 border border-primary/30 text-primary flex items-center justify-center flex-none">
+                                                    <span class="size-11 rounded-xl bg-white/20 border border-white/40 text-white flex items-center justify-center flex-none">
                                                         <svg class="size-5" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
                                                             <path stroke-linecap="round" stroke-linejoin="round" d="{{ $m['icon'] }}" />
                                                         </svg>
                                                     </span>
                                                     <div>
-                                                        <p class="text-[10px] font-bold uppercase tracking-[0.22em] text-primary">{{ $m['tag'] }}</p>
+                                                        <p class="text-[10px] font-bold uppercase tracking-[0.22em] text-white/85">{{ $m['tag'] }}</p>
                                                         <h5 class="mt-0.5 text-xl md:text-2xl font-bold uppercase leading-tight text-white">{{ $m['name'] }}</h5>
                                                     </div>
                                                 </div>
                                                 <span class="t-mod-bignum leading-none opacity-90">{{ str_pad($i + 1, 2, '0', STR_PAD_LEFT) }}</span>
                                             </div>
 
-                                            <p class="mt-5 text-base/relaxed text-white/90 font-semibold [text-wrap:balance]">{{ $m['lead'] }}</p>
+                                            <p class="mt-5 text-base/relaxed text-white font-semibold [text-wrap:balance]">{{ $m['lead'] }}</p>
 
-                                            <div class="mt-4 rounded-xl border border-white/10 bg-white/[0.04] p-4">
-                                                <p class="text-[10px] font-bold uppercase tracking-widest text-primary mb-1.5">The question every participant tackles</p>
-                                                <p class="text-sm/relaxed text-white/75 italic">&ldquo;{{ $m['question'] }}&rdquo;</p>
+                                            <div class="mt-4 rounded-xl border border-white/20 bg-white/[0.08] p-4">
+                                                <p class="text-[10px] font-bold uppercase tracking-widest text-white/85 mb-1.5">The question every participant tackles</p>
+                                                <p class="text-sm/relaxed text-white/90 italic">&ldquo;{{ $m['question'] }}&rdquo;</p>
                                             </div>
 
                                             <div class="mt-5">
-                                                <p class="text-[10px] font-bold uppercase tracking-widest text-primary mb-3">What they walk away with</p>
+                                                <p class="text-[10px] font-bold uppercase tracking-widest text-white/85 mb-3">What they walk away with</p>
                                                 <ul class="grid sm:grid-cols-3 gap-2">
                                                     @foreach ($m['outcomes'] as $o)
-                                                        <li class="flex items-start gap-2 rounded-lg border border-white/10 bg-white/[0.03] p-2.5">
-                                                            <svg class="size-3.5 mt-0.5 text-primary flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24">
+                                                        <li class="flex items-start gap-2 rounded-lg border border-white/20 bg-white/[0.08] p-2.5">
+                                                            <svg class="size-3.5 mt-0.5 text-white flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24">
                                                                 <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                                                             </svg>
-                                                            <span class="text-xs/relaxed font-medium text-white/85">{{ $o }}</span>
+                                                            <span class="text-xs/relaxed font-medium text-white">{{ $o }}</span>
                                                         </li>
                                                     @endforeach
                                                 </ul>
@@ -924,13 +840,7 @@
         </div>
 
         <div class="max-w-7xl mx-auto px-4 md:px-8 relative">
-            <div class="t-reveal inline-flex items-center gap-2.5 mb-6" x-data x-intersect.once="$el.classList.add('in')">
-                <span class="inline-block h-2 w-2 rounded-full bg-primary shadow-[0_0_0_4px_rgba(242,107,33,0.18)]"></span>
-                <span class="text-[11px] font-bold uppercase tracking-[0.22em] text-primary">Learning with WhyLead makes a real impact</span>
-                <span class="hidden sm:inline-block h-px w-16 bg-gradient-to-r from-primary/60 to-transparent"></span>
-            </div>
-
-            <div class="t-reveal max-w-5xl" x-data x-intersect.once="$el.classList.add('in')">
+            <div class="t-reveal mx-auto text-center" x-data x-intersect.once="$el.classList.add('in')">
                 @php
                     // Reusable highlighted phrase — a gradient text with a soft primary underline.
                     $mkHighlight = function ($text, $gradient) {
@@ -940,13 +850,14 @@
                             . '</span>';
                     };
                 @endphp
-                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-[1.1] tracking-tight">
-                    <span class="block">People leave {!! $mkHighlight('changed', 'from-primary to-[#EBB305]') !!}.</span>
-                    <span class="block">Teams leave {!! $mkHighlight('sharper', 'from-primary via-[#c94210] to-accent') !!}.</span>
+                <h2 class="text-[clamp(1rem,2.7vw,2.25rem)] md:whitespace-nowrap font-bold uppercase leading-[1.15] tracking-tight">
+                    <span class="block">People leave {!! $mkHighlight('changed', 'from-primary to-[#EBB305]') !!}. Teams leave {!! $mkHighlight('sharper', 'from-primary via-[#c94210] to-accent') !!}.</span>
                     <span class="block">Organisations leave {!! $mkHighlight('measurably better', 'from-[#EBB305] via-primary to-accent') !!}.</span>
                 </h2>
 
-                <div class="mt-8 flex items-center gap-2.5" aria-hidden="true">
+                <div class="mt-8 flex justify-center items-center gap-2.5" aria-hidden="true">
+                    <span class="h-[3px] w-3 rounded-full bg-primary/30"></span>
+                    <span class="h-[3px] w-8 rounded-full bg-primary/50"></span>
                     <span class="h-[3px] w-16 rounded-full bg-gradient-to-r from-primary to-[#EBB305]"></span>
                     <span class="h-[3px] w-8 rounded-full bg-primary/50"></span>
                     <span class="h-[3px] w-3 rounded-full bg-primary/30"></span>

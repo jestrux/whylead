@@ -47,10 +47,11 @@
 
 <style>
     #wlFooter {
-        /* Deep navy panel, always dark — this is the site's closing statement,
-           independent of the reading canvas above it. */
+        /* Deep navy panel by default — flipped to a warm off-white when the
+           site is in light mode via body:not(.dark) overrides below. */
         --wf-navy: #0B1330;
         --wf-navy-2: #0F1B3D;
+        --wf-navy-end: #0a1330;
         --wf-indigo: #1a1c4a;
         --wf-orange: #E8521A;
         --wf-orange-strong: #ff6a2b;
@@ -63,6 +64,11 @@
         --wf-panel: rgba(255,255,255,0.03);
         --wf-panel-hover: rgba(255,255,255,0.055);
         --wf-tint: rgba(232,82,26,0.12);
+        --wf-glow-orange: rgba(232,82,26,0.16);
+        --wf-glow-indigo: rgba(60,74,180,0.28);
+        --wf-grid-major: rgba(255,255,255,0.03);
+        --wf-grid-minor: rgba(255,255,255,0.02);
+        --wf-surface-rgb: 255 255 255;
 
         position: relative;
         isolation: isolate;
@@ -74,27 +80,49 @@
         overflow: hidden;
     }
 
-    /* Radial orange glow drifts across the deep navy — restrained, mostly
+    /* Light-mode palette — warm off-white panel that keeps the grid so the
+       footer still reads as its own section beneath the reading canvas. */
+    body:not(.dark) #wlFooter {
+        --wf-navy: #F5F1EA;
+        --wf-navy-2: #EAE3D5;
+        --wf-navy-end: #E2DAC8;
+        --wf-white: #0B1330;
+        --wf-warm: #0B1330;
+        --wf-muted: #5F6B7A;
+        --wf-muted-strong: #2C3444;
+        --wf-border: rgba(11,19,48,0.12);
+        --wf-border-strong: rgba(11,19,48,0.22);
+        --wf-panel: rgba(11,19,48,0.03);
+        --wf-panel-hover: rgba(11,19,48,0.06);
+        --wf-tint: rgba(232,82,26,0.10);
+        --wf-glow-orange: rgba(232,82,26,0.10);
+        --wf-glow-indigo: rgba(60,74,180,0.14);
+        --wf-grid-major: rgba(11,19,48,0.07);
+        --wf-grid-minor: rgba(11,19,48,0.05);
+        --wf-surface-rgb: 11 19 48;
+    }
+
+    /* Radial orange glow drifts across the panel — restrained, mostly
        hidden behind the composition. */
     #wlFooter::before {
         content: "";
         position: absolute; inset: -20% -10% -30% -10%;
         background:
-            radial-gradient(60% 55% at 12% 8%, rgba(232,82,26,0.16) 0%, rgba(232,82,26,0) 65%),
-            radial-gradient(45% 50% at 88% 100%, rgba(60,74,180,0.28) 0%, rgba(60,74,180,0) 60%),
-            linear-gradient(180deg, var(--wf-navy) 0%, var(--wf-navy-2) 55%, #0a1330 100%);
+            radial-gradient(60% 55% at 12% 8%, var(--wf-glow-orange) 0%, rgba(232,82,26,0) 65%),
+            radial-gradient(45% 50% at 88% 100%, var(--wf-glow-indigo) 0%, rgba(60,74,180,0) 60%),
+            linear-gradient(180deg, var(--wf-navy) 0%, var(--wf-navy-2) 55%, var(--wf-navy-end) 100%);
         z-index: -2;
         opacity: 1;
         pointer-events: none;
     }
 
-    /* Faint structural grid lines. */
+    /* Faint structural grid lines — the "checked boxes" that anchor the footer visually. */
     #wlFooter::after {
         content: "";
         position: absolute; inset: 0;
         background:
-            linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px) 0 0/72px 100%,
-            linear-gradient(180deg, rgba(255,255,255,0.02) 1px, transparent 1px) 0 0/100% 72px;
+            linear-gradient(90deg, var(--wf-grid-major) 1px, transparent 1px) 0 0/72px 100%,
+            linear-gradient(180deg, var(--wf-grid-minor) 1px, transparent 1px) 0 0/100% 72px;
         z-index: -1;
         pointer-events: none;
         mask-image: radial-gradient(120% 120% at 50% 30%, #000 30%, transparent 85%);
@@ -163,7 +191,7 @@
         display: inline-flex; align-items: center; gap: 8px;
         color: var(--wf-white);
         font-weight: 500; font-size: 14px;
-        border-bottom: 1px solid rgba(255,255,255,0.15);
+        border-bottom: 1px solid rgb(var(--wf-surface-rgb) / 0.15);
         padding-bottom: 3px;
         transition: color .18s ease, border-color .18s ease, transform .18s ease;
     }
@@ -188,7 +216,7 @@
     /* Ecosystem card */
     .wf-eco {
         position: relative;
-        background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.015) 100%);
+        background: linear-gradient(180deg, rgb(var(--wf-surface-rgb) / 0.04) 0%, rgb(var(--wf-surface-rgb) / 0.015) 100%);
         border: 1px solid var(--wf-border);
         border-radius: 20px;
         padding: 28px 28px 20px;
@@ -211,7 +239,7 @@
         gap: 16px;
         padding: 16px 16px 16px 14px;
         border: 1px solid var(--wf-border);
-        background: rgba(255,255,255,0.02);
+        background: rgb(var(--wf-surface-rgb) / 0.02);
         border-radius: 14px;
         transition: background .18s ease, border-color .18s ease, transform .18s ease;
     }
@@ -237,12 +265,12 @@
         color: #fff;
     }
     .wf-mark--acend {
-        background: rgba(255,255,255,0.06);
+        background: rgb(var(--wf-surface-rgb) / 0.06);
         color: var(--wf-white);
         border: 1px solid var(--wf-border-strong);
     }
     .wf-mark--tb {
-        background: rgba(255,255,255,0.03);
+        background: rgb(var(--wf-surface-rgb) / 0.03);
         color: var(--wf-orange-strong);
         border: 1px solid rgba(232,82,26,0.4);
     }
@@ -301,7 +329,7 @@
         align-items: center;
         padding: 18px 22px 18px 18px;
         border: 1px solid var(--wf-border);
-        background: linear-gradient(180deg, rgba(255,255,255,0.045) 0%, rgba(255,255,255,0.02) 100%);
+        background: linear-gradient(180deg, rgb(var(--wf-surface-rgb) / 0.045) 0%, rgb(var(--wf-surface-rgb) / 0.02) 100%);
         border-radius: 18px;
         transition: border-color .2s ease, background .2s ease, box-shadow .25s ease;
         position: relative;
@@ -316,7 +344,7 @@
     }
     .wf-podcast:hover {
         border-color: rgba(232,82,26,0.35);
-        background: linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.025) 100%);
+        background: linear-gradient(180deg, rgb(var(--wf-surface-rgb) / 0.06) 0%, rgb(var(--wf-surface-rgb) / 0.025) 100%);
         box-shadow: 0 20px 44px -24px rgba(0,0,0,0.5);
     }
     .wf-podcast-art {
