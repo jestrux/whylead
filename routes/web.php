@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home.index');
 Route::view('/consultancy', 'consultancy.index');
+Route::view('/consultancy/facilitation', 'consultancy.facilitation');
 Route::view('/training', 'training.index');
 Route::view('/about', 'about.index');
 Route::view('/apply-for-job', 'about.apply-for-job');
