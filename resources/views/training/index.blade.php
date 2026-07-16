@@ -413,20 +413,7 @@
 
                     <div class="t-reveal t-d4 mt-10">
                         <p class="text-[11px] font-bold uppercase tracking-widest opacity-40">Trusted by</p>
-                        <div class="mt-4 flex flex-wrap items-center gap-x-8 gap-y-5">
-                            @php
-                                $trusted = [
-                                    ['src' => 'img/clients/vodacom.png',    'alt' => 'Vodacom',          'h' => 'h-6 md:h-7'],
-                                    ['src' => 'img/clients/crdb.png',       'alt' => 'CRDB Bank',        'h' => 'h-8 md:h-9'],
-                                    ['src' => 'img/clients/malala.svg',     'alt' => 'Malala Fund',      'h' => 'h-5 md:h-6'],
-                                    ['src' => 'img/clients/women-lift.png', 'alt' => 'Womenlift Health', 'h' => 'h-6 md:h-7'],
-                                ];
-                            @endphp
-                            @foreach ($trusted as $logo)
-                                <img src="{{ asset($logo['src']) }}" alt="{{ $logo['alt'] }}"
-                                    class="{{ $logo['h'] }} w-auto object-contain brightness-0 dark:invert opacity-55 hover:opacity-100 transition-opacity duration-300" />
-                            @endforeach
-                        </div>
+                        @include('partials.trusted-marquee')
                     </div>
                 </div>
 
