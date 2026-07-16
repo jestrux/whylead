@@ -47,8 +47,8 @@
     // delivers an item; links that live off this site are absolute URLs.
     $wlNav = [
         'Solutions' => [
-            ['label' => 'Strategy & Team Building Facilitation',              'url' => url('/consultancy')],
-            ['label' => 'Leadership Development Training',                  'url' => url('/consultancy')],
+            ['label' => 'Strategy & Team Building Facilitation',              'url' => url('/consultancy/facilitation')],
+            ['label' => 'Leadership Development Training',                  'url' => url('/training')],
             ['label' => 'Performance Management', 'tag' => 'Thriving Boundlessly', 'url' => 'https://www.thriveboundlessly.com'],
             ['label' => 'Leadership Assessments', 'tag' => 'ACEND',               'url' => 'https://acend.whyleadothers.com'],
         ],
