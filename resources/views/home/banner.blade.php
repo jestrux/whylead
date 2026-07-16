@@ -163,45 +163,105 @@
     </div>
 </section>
 
-<section class="px-6 mt-8 md:mt-4">
-    <div class="flex flex-col items-center justify-center">
-        <div class="max-w-2xl mx-auto mb-7 text-center">
+<section class="px-6 mt-8 md:mt-12 mb-10 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+        {{-- Line 1: centered heading + tagline --}}
+        <div class="text-center mb-5">
             <h2 class="text-2xl/none md:text-3xl/none font-bold">
                 <span class="uppercase tracking-wide">
                     <span class="font-light text-primary">Trusted </span>
                     Globally
                 </span>
             </h2>
+            <p class="mt-2 text-[11px] md:text-xs text-content/60 uppercase tracking-[0.18em]">
+                Across 12 industries and 3 continents
+            </p>
         </div>
 
-        <div class="max-w-5xl mx-auto flex flex-wrap gap-6 md:gap-8 items-center justify-center">
-            <img class="grayscale h-6" src="{{ asset('img/clients/malala.svg') }}" />
+        @php
+            // Two marquee rows. Each row = [ ['sector' => 'X', 'logos' => [...]], ... ].
+            // Circled anchors (CRDB, Oryx, Ifakara, RTI) lead their industry groups.
+            // A logo entry is either a real image (has 'src') or a text wordmark (has 'text').
+            // Replace text entries with real images by adding an 'src' pointing at public/img/clients/…
+            $rowA = [
+                ['sector' => 'Banking',    'logos' => [['src' => 'img/clients/crdb.png',    'alt' => 'CRDB Bank',     'h' => 'h-8']]],
+                ['sector' => 'Energy',     'logos' => [['src' => 'img/clients/oryx.png',    'alt' => 'Oryx Energies', 'h' => 'h-7']]],
+                ['sector' => 'Mining',     'logos' => [['src' => 'img/clients/rida.png',    'alt' => 'RIDA',          'h' => 'h-8']]],
+                ['sector' => 'Industry',   'logos' => [['src' => 'img/clients/knauf.svg',   'alt' => 'Knauf',         'h' => 'h-6']]],
+                ['sector' => 'Shipping',   'logos' => [['src' => 'img/clients/cma-cgm.png', 'alt' => 'CMA CGM',       'h' => 'h-8']]],
+                ['sector' => 'Telecom',    'logos' => [['src' => 'img/clients/vodacom.png', 'alt' => 'Vodacom',       'h' => 'h-7']]],
+            ];
+            $rowB = [
+                ['sector' => 'Public Health', 'logos' => [
+                    ['src' => 'img/clients/ifakara.png',    'alt' => 'Ifakara Health Institute', 'h' => 'h-10'],
+                    ['src' => 'img/clients/women-lift.png', 'alt' => 'WomenLift Health',         'h' => 'h-8'],
+                    ['src' => 'img/clients/d-tree.png',     'alt' => 'D-tree',                   'h' => 'h-7'],
+                    ['src' => 'img/clients/nest.webp',      'alt' => 'NEST360',                  'h' => 'h-7'],
+                ]],
+                ['sector' => 'Development', 'logos' => [
+                    ['src' => 'img/clients/rti.png',        'alt' => 'RTI International',        'h' => 'h-7'],
+                    ['src' => 'img/clients/dot.png',        'alt' => 'Digital Opportunity Trust','h' => 'h-5'],
+                    ['src' => 'img/clients/jane-goodall.png','alt' => 'Jane Goodall Institute',  'h' => 'h-7'],
+                ]],
+                ['sector' => 'Education', 'logos' => [
+                    ['src' => 'img/clients/malala.svg',     'alt' => 'Malala Fund',              'h' => 'h-6'],
+                    ['src' => 'img/clients/ubongo.png',     'alt' => 'Ubongo',                   'h' => 'h-7'],
+                    ['src' => 'img/clients/uongozi.svg',    'alt' => 'Uongozi Institute',        'h' => 'h-6'],
+                    ['src' => 'img/clients/haus.png',       'alt' => 'HAUS Finland',             'h' => 'h-7'],
+                ]],
+            ];
+        @endphp
 
-            <img class="grayscale h-12" src="{{ asset('img/clients/women-lift.png') }}" />
+        {{-- Lines 2 & 3: two marquees, opposite directions, seamless loop --}}
+        @foreach ([['groups' => $rowA, 'dir' => 'left', 'dur' => '55s'], ['groups' => $rowB, 'dir' => 'right', 'dur' => '65s']] as $row)
+            <div class="tg-marquee group py-3 first:border-t first:border-stroke border-b border-stroke relative">
+                {{-- edge fades --}}
+                <div class="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-24 z-10 bg-gradient-to-r from-canvas to-transparent"></div>
+                <div class="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-24 z-10 bg-gradient-to-l from-canvas to-transparent"></div>
 
-            <img class="grayscale h-10" src="{{ asset('img/clients/crdb.png') }}" />
-
-            <img class="grayscale h-8" src="{{ asset('img/clients/oryx.png') }}" />
-
-            <img class="grayscale h-8" src="{{ asset('img/clients/jane-goodall.png') }}" />
-
-            <img class="grayscale h-8" src="{{ asset('img/clients/ubongo.png') }}" />
-
-            <img class="grayscale h-8" src="{{ asset('img/clients/rti.png') }}" />
-
-            <img class="grayscale h-8" src="{{ asset('img/clients/vodacom.png') }}" />
-
-            <img class="grayscale h-8" src="{{ asset('img/clients/knauf.svg') }}" />
-
-            <img class="grayscale h-6" src="{{ asset('img/clients/uongozi.svg') }}" />
-
-            <img class="grayscale h-8" src="{{ asset('img/clients/d-tree.png') }}" />
-
-            <img class="grayscale h-14" src="{{ asset('img/clients/ifakara.png') }}" />
-
-            <img class="grayscale h-5" src="{{ asset('img/clients/dot.png') }}" />
-
-            <img class="grayscale h-8" src="{{ asset('img/clients/nest.webp') }}" />
-        </div>
+                <div class="tg-track flex items-center gap-x-10 md:gap-x-14 whitespace-nowrap w-max"
+                     style="animation: tg-scroll-{{ $row['dir'] }} {{ $row['dur'] }} linear infinite;">
+                    @for ($copy = 0; $copy < 2; $copy++)
+                        @foreach ($row['groups'] as $i => $group)
+                            <div class="flex items-baseline gap-x-4 md:gap-x-5 shrink-0" aria-hidden="{{ $copy === 1 ? 'true' : 'false' }}">
+                                <span class="text-xs md:text-sm font-bold uppercase tracking-[0.16em] text-primary shrink-0">
+                                    {{ $group['sector'] }}
+                                </span>
+                                <span class="text-primary/40 shrink-0 font-light select-none" aria-hidden="true">/</span>
+                                <div class="flex items-center gap-x-6 md:gap-x-8 shrink-0">
+                                    @foreach ($group['logos'] as $logo)
+                                        @if (isset($logo['src']))
+                                            <img
+                                                class="grayscale opacity-80 group-hover:opacity-100 group-hover:grayscale-0 transition-opacity duration-500 shrink-0 {{ $logo['h'] }}"
+                                                src="{{ asset($logo['src']) }}"
+                                                alt="{{ $copy === 0 ? $logo['alt'] : '' }}"
+                                                loading="lazy"
+                                            />
+                                        @else
+                                            <span
+                                                class="text-content/80 font-bold tracking-[0.06em] text-lg md:text-xl shrink-0 opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+                                                aria-label="{{ $copy === 0 ? $logo['alt'] : '' }}"
+                                            >{{ $logo['text'] }}</span>
+                                        @endif
+                                    @endforeach
+                                </div>
+                            </div>
+                        @endforeach
+                    @endfor
+                </div>
+            </div>
+        @endforeach
     </div>
 </section>
+
+@once
+    <style>
+        @keyframes tg-scroll-left  { from { transform: translate3d(0, 0, 0); }   to { transform: translate3d(-50%, 0, 0); } }
+        @keyframes tg-scroll-right { from { transform: translate3d(-50%, 0, 0); } to { transform: translate3d(0, 0, 0); } }
+        .tg-marquee { overflow: hidden; }
+        .tg-marquee:hover .tg-track { animation-play-state: paused; }
+        @media (prefers-reduced-motion: reduce) {
+            .tg-track { animation: none !important; transform: translate3d(-25%, 0, 0); }
+        }
+    </style>
+@endonce
