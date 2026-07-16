@@ -540,7 +540,7 @@
     {{-- ============ TEAM BUILDING & RETREATS (human level) ============ --}}
     <section class="relative py-12 md:py-16 bg-accent/[0.04]">
         <div class="max-w-7xl mx-auto px-4 md:px-8">
-            @php $tbPhotos = ['retreat-2.jpg', 'retreat-1.jpg', 'retreat-3.jpg', 'retreat-5.jpg']; @endphp
+            @php $tbPhotos = ['retreat-1.jpg', 'retreat-2.jpg', 'retreat-3.jpg', 'retreat-4.jpg']; @endphp
             <div class="lg:grid grid-cols-2 gap-12 xl:gap-16 items-center"
                 x-data="{ active: 0, rx: 0, ry: 0,
                     tilt(e) { const r = e.currentTarget.getBoundingClientRect(); this.ry = ((e.clientX - r.left) / r.width - .5) * 7; this.rx = -((e.clientY - r.top) / r.height - .5) * 7; },
@@ -596,7 +596,7 @@
                             <p x-show="active === {{ $i }}" x-cloak x-transition
                                 class="absolute left-6 bottom-6 right-6 text-white font-bold text-lg leading-snug pointer-events-none">{{ strip_tags(html_entity_decode($c['title'])) }}</p>
                         @endforeach
-                        <span class="absolute left-6 top-6 text-[10px] font-bold uppercase tracking-widest text-white/70 pointer-events-none">Out of the comfort zone, together</span>
+                        <span class="absolute left-6 top-6 text-[10px] font-bold uppercase tracking-widest text-white/70 pointer-events-none">On retreat, together</span>
                     </div>
                     <p class="mt-4 text-center lg:text-left text-xs opacity-50">Hover a card to explore &middot; move your cursor over the photo</p>
                 </div>
