@@ -19,9 +19,12 @@
     <meta property="og:url" content="https://whyleadothers.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="@yield('image', $defaultImage)" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="WhyLead Consultancy — developing thriving leaders, teams and organizations" />
 
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="@yield('title', $defaultTitle)" />
     <meta name="twitter:description" content="@yield('description', $defaultDescription)" />
     <meta name="twitter:site" content="@whyleadothers" />
