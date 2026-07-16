@@ -59,8 +59,8 @@
     if ($wlNavRows->isEmpty()) {
         $wlNavRows = collect([
             ['title' => 'Solutions', 'direct_url' => '', 'items' => [
-                ['label' => 'Strategy & Team Building Facilitation', 'tag' => '', 'url' => url('/consultancy')],
-                ['label' => 'Leadership Development Training',       'tag' => '', 'url' => url('/consultancy')],
+                ['label' => 'Strategy & Team Building Facilitation', 'tag' => '', 'url' => url('/consultancy/facilitation')],
+                ['label' => 'Leadership Development Training',       'tag' => '', 'url' => url('/training')],
                 ['label' => 'Performance Management', 'tag' => 'Thriving Boundlessly', 'url' => 'https://www.thriveboundlessly.com'],
                 ['label' => 'Leadership Assessments', 'tag' => 'ACEND',               'url' => 'https://acend.whyleadothers.com'],
             ]],

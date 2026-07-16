@@ -36,11 +36,11 @@ nav_groups:
       -
         label: 'Strategy & Team Building Facilitation'
         tag: ''
-        url: /consultancy
+        url: /consultancy/facilitation
       -
         label: 'Leadership Development Training'
         tag: ''
-        url: /consultancy
+        url: /training
       -
         label: 'Performance Management'
         tag: 'Thriving Boundlessly'
