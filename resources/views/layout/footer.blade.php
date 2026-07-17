@@ -20,14 +20,14 @@
         'acend' => [
             'label'       => 'ACEND',
             'tagline'     => 'Leadership intelligence for middle managers.',
-            'url'         => 'https://acend.whyleadothers.com',
+            'url'         => url('/acend'),
             'mark_class'  => 'wf-mark--acend',
             'contextual_cta' => ['label' => 'Assess your managers', 'url' => 'https://acend.whyleadothers.com'],
         ],
         'tb' => [
             'label'       => 'Thriving Boundlessly',
             'tagline'     => 'Performance intelligence for better people decisions.',
-            'url'         => 'https://www.thriveboundlessly.com',
+            'url'         => url('/thriving-boundlessly'),
             'mark_class'  => 'wf-mark--tb',
             'contextual_cta' => ['label' => 'Request a demo', 'url' => 'https://www.thriveboundlessly.com'],
         ],
@@ -40,93 +40,44 @@
     $wfYear = now()->year;
 @endphp
 
-{{-- Fonts used only inside the footer (loaded here to keep the change scoped). --}}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
 <style>
     #wlFooter {
-        /* Deep navy panel by default — flipped to a warm off-white when the
-           site is in light mode via body:not(.dark) overrides below. */
-        --wf-navy: #0B1330;
-        --wf-navy-2: #0F1B3D;
-        --wf-navy-end: #0a1330;
-        --wf-indigo: #1a1c4a;
-        --wf-orange: #E8521A;
-        --wf-orange-strong: #ff6a2b;
-        --wf-white: #F5F1EA;
-        --wf-warm: #ffffff;
-        --wf-muted: #8b95a8;
-        --wf-muted-strong: #b6bfd0;
-        --wf-border: rgba(255,255,255,0.09);
-        --wf-border-strong: rgba(255,255,255,0.18);
-        --wf-panel: rgba(255,255,255,0.03);
-        --wf-panel-hover: rgba(255,255,255,0.055);
-        --wf-tint: rgba(232,82,26,0.12);
-        --wf-glow-orange: rgba(232,82,26,0.16);
-        --wf-glow-indigo: rgba(60,74,180,0.28);
-        --wf-grid-major: rgba(255,255,255,0.03);
-        --wf-grid-minor: rgba(255,255,255,0.02);
-        --wf-surface-rgb: 255 255 255;
+        /* Everything derives from the site's semantic tokens (style guide:
+           /styleguide) — the footer themes with light / dark mode for free.
+           Gotham only; the "technical" labels are uppercase tracked Gotham. */
+        --wf-orange: #F26B21;                              /* = primary */
+        --wf-orange-dark: #D55612;                         /* = primary-dark */
+        --wf-bg: rgb(var(--canvas-color));
+        --wf-white: rgb(var(--content-color));             /* primary text */
+        --wf-warm: rgb(var(--content-color));              /* headings */
+        --wf-muted: rgb(var(--content-color) / 0.5);
+        --wf-muted-strong: rgb(var(--content-color) / 0.72);
+        --wf-border: rgb(var(--content-color) / 0.1);
+        --wf-border-strong: rgb(var(--content-color) / 0.2);
+        --wf-panel: rgb(var(--content-color) / 0.03);
+        --wf-panel-hover: rgb(var(--content-color) / 0.055);
+        --wf-tint: rgba(242,107,33,0.10);
+        --wf-surface-rgb: var(--content-color);
 
         position: relative;
         isolation: isolate;
-        background: var(--wf-navy);
+        background: var(--wf-bg);
         color: var(--wf-white);
-        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        border-top: 1px solid rgb(var(--stroke-color));
         font-size: 15px;
         line-height: 1.55;
         overflow: hidden;
     }
 
-    /* Light-mode palette — warm off-white panel that keeps the grid so the
-       footer still reads as its own section beneath the reading canvas. */
-    body:not(.dark) #wlFooter {
-        --wf-navy: #F5F1EA;
-        --wf-navy-2: #EAE3D5;
-        --wf-navy-end: #E2DAC8;
-        --wf-white: #0B1330;
-        --wf-warm: #0B1330;
-        --wf-muted: #5F6B7A;
-        --wf-muted-strong: #2C3444;
-        --wf-border: rgba(11,19,48,0.12);
-        --wf-border-strong: rgba(11,19,48,0.22);
-        --wf-panel: rgba(11,19,48,0.03);
-        --wf-panel-hover: rgba(11,19,48,0.06);
-        --wf-tint: rgba(232,82,26,0.10);
-        --wf-glow-orange: rgba(232,82,26,0.10);
-        --wf-glow-indigo: rgba(60,74,180,0.14);
-        --wf-grid-major: rgba(11,19,48,0.07);
-        --wf-grid-minor: rgba(11,19,48,0.05);
-        --wf-surface-rgb: 11 19 48;
-    }
-
-    /* Radial orange glow drifts across the panel — restrained, mostly
-       hidden behind the composition. */
+    /* Soft peach wash — the site's warm backdrop motif, kept restrained. */
     #wlFooter::before {
-        content: "";
-        position: absolute; inset: -20% -10% -30% -10%;
-        background:
-            radial-gradient(60% 55% at 12% 8%, var(--wf-glow-orange) 0%, rgba(232,82,26,0) 65%),
-            radial-gradient(45% 50% at 88% 100%, var(--wf-glow-indigo) 0%, rgba(60,74,180,0) 60%),
-            linear-gradient(180deg, var(--wf-navy) 0%, var(--wf-navy-2) 55%, var(--wf-navy-end) 100%);
-        z-index: -2;
-        opacity: 1;
-        pointer-events: none;
-    }
-
-    /* Faint structural grid lines — the "checked boxes" that anchor the footer visually. */
-    #wlFooter::after {
         content: "";
         position: absolute; inset: 0;
         background:
-            linear-gradient(90deg, var(--wf-grid-major) 1px, transparent 1px) 0 0/72px 100%,
-            linear-gradient(180deg, var(--wf-grid-minor) 1px, transparent 1px) 0 0/100% 72px;
+            radial-gradient(55% 50% at 10% 0%, rgba(242,107,33,0.07) 0%, rgba(242,107,33,0) 65%),
+            radial-gradient(45% 45% at 95% 100%, rgba(242,107,33,0.05) 0%, rgba(242,107,33,0) 60%);
         z-index: -1;
         pointer-events: none;
-        mask-image: radial-gradient(120% 120% at 50% 30%, #000 30%, transparent 85%);
-        -webkit-mask-image: radial-gradient(120% 120% at 50% 30%, #000 30%, transparent 85%);
     }
 
     #wlFooter a { color: inherit; text-decoration: none; }
@@ -144,23 +95,22 @@
 
     /* ---------- Typography helpers ---------- */
     .wf-label {
-        font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
         font-size: 11px;
-        font-weight: 500;
+        font-weight: 600;
         letter-spacing: 0.14em;
         text-transform: uppercase;
         color: var(--wf-muted);
     }
     .wf-h,
     .wf-headline {
-        font-family: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         color: var(--wf-warm);
-        line-height: 1.14;
-        letter-spacing: -0.015em;
+        line-height: 1.2;
     }
     .wf-headline {
-        font-size: clamp(30px, 3.4vw, 46px);
-        font-weight: 600;
+        font-size: clamp(24px, 2.6vw, 36px);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
         max-width: 640px;
         margin: 22px 0 20px;
     }
@@ -173,16 +123,16 @@
     .wf-lead + .wf-lead { margin-top: 14px; }
 
     /* ---------- Actions ---------- */
+    /* Matches the site .btn: uppercase tracked, primary → primary-dark, rounded-md */
     .wf-cta {
         display: inline-flex; align-items: center; gap: 10px;
         background: var(--wf-orange); color: #fff;
-        font-family: "Inter", sans-serif;
-        font-size: 14px; font-weight: 600; letter-spacing: 0.005em;
-        padding: 12px 20px; border-radius: 10px;
-        box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset, 0 10px 24px -14px rgba(232,82,26,0.7);
-        transition: background .18s ease, transform .1s ease, box-shadow .18s ease;
+        border: 1px solid var(--wf-orange);
+        font-size: 13px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+        padding: 12px 18px; border-radius: 6px;
+        transition: background .18s ease, transform .1s ease;
     }
-    .wf-cta:hover { background: var(--wf-orange-strong); box-shadow: 0 1px 0 rgba(255,255,255,0.08) inset, 0 14px 30px -14px rgba(232,82,26,0.75); }
+    .wf-cta:hover { background: var(--wf-orange-dark); }
     .wf-cta:active { transform: translateY(1px); }
     .wf-cta .wf-arrow { transition: transform .2s ease; }
     .wf-cta:hover .wf-arrow { transform: translateX(3px); }
@@ -195,7 +145,7 @@
         padding-bottom: 3px;
         transition: color .18s ease, border-color .18s ease, transform .18s ease;
     }
-    .wf-textlink:hover { color: var(--wf-orange-strong); border-color: var(--wf-orange-strong); }
+    .wf-textlink:hover { color: var(--wf-orange); border-color: var(--wf-orange); }
     .wf-textlink .wf-arrow { transition: transform .2s ease; }
     .wf-textlink:hover .wf-arrow { transform: translateX(3px); }
 
@@ -227,8 +177,7 @@
         margin-bottom: 22px;
     }
     .wf-eco-parent {
-        font-family: "JetBrains Mono", monospace;
-        font-size: 10.5px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase;
+        font-size: 10.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
         color: var(--wf-muted);
     }
     .wf-eco-list { display: flex; flex-direction: column; gap: 8px; }
@@ -249,37 +198,34 @@
     }
     .wf-eco-card.is-here {
         background: var(--wf-tint);
-        border-color: rgba(232,82,26,0.35);
+        border-color: rgba(242,107,33,0.35);
     }
     .wf-eco-mark {
         width: 44px; height: 44px;
         border-radius: 12px;
         display: flex; align-items: center; justify-content: center;
-        font-family: "JetBrains Mono", monospace;
-        font-size: 14px; font-weight: 600;
+        font-size: 14px; font-weight: 700;
         letter-spacing: 0.02em;
         flex: none;
     }
     .wf-mark--whylead {
-        background: linear-gradient(135deg, var(--wf-orange) 0%, #c94210 100%);
+        background: linear-gradient(135deg, var(--wf-orange) 0%, var(--wf-orange-dark) 100%);
         color: #fff;
     }
     .wf-mark--acend {
-        background: rgb(var(--wf-surface-rgb) / 0.06);
-        color: var(--wf-white);
-        border: 1px solid var(--wf-border-strong);
+        background: rgb(var(--accent-color));  /* accent navy — matches the ACEND letter tiles */
+        color: #fff;
     }
     .wf-mark--tb {
         background: rgb(var(--wf-surface-rgb) / 0.03);
-        color: var(--wf-orange-strong);
-        border: 1px solid rgba(232,82,26,0.4);
+        color: var(--wf-orange);
+        border: 1px solid rgba(242,107,33,0.4);
     }
     .wf-eco-body { min-width: 0; }
     .wf-eco-name {
         display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
         color: var(--wf-warm);
-        font-family: "Hanken Grotesk", sans-serif;
-        font-size: 16px; font-weight: 600; letter-spacing: -0.005em;
+        font-size: 16px; font-weight: 600;
         line-height: 1.2;
     }
     .wf-eco-desc {
@@ -288,10 +234,9 @@
         margin-top: 4px;
     }
     .wf-here-pill {
-        font-family: "JetBrains Mono", monospace;
-        font-size: 9.5px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
-        color: var(--wf-orange-strong);
-        border: 1px solid rgba(232,82,26,0.4);
+        font-size: 9.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+        color: var(--wf-orange);
+        border: 1px solid rgba(242,107,33,0.4);
         padding: 2px 8px 3px;
         border-radius: 999px;
     }
@@ -299,7 +244,7 @@
         color: var(--wf-muted);
         transition: color .18s ease, transform .2s ease;
     }
-    .wf-eco-card:hover .wf-eco-arrow { color: var(--wf-orange-strong); transform: translateX(3px); }
+    .wf-eco-card:hover .wf-eco-arrow { color: var(--wf-orange); transform: translateX(3px); }
 
     .wf-eco-note {
         margin-top: 18px;
@@ -343,9 +288,9 @@
         transition: box-shadow .25s ease;
     }
     .wf-podcast:hover {
-        border-color: rgba(232,82,26,0.35);
+        border-color: rgba(242,107,33,0.35);
         background: linear-gradient(180deg, rgb(var(--wf-surface-rgb) / 0.06) 0%, rgb(var(--wf-surface-rgb) / 0.025) 100%);
-        box-shadow: 0 20px 44px -24px rgba(0,0,0,0.5);
+        box-shadow: 0 20px 44px -24px rgb(var(--content-color) / 0.3);
     }
     .wf-podcast-art {
         position: relative;
@@ -353,7 +298,7 @@
         border-radius: 12px;
         overflow: hidden;
         flex: none;
-        background: #0a0f24;
+        background: rgb(var(--content-color) / 0.05);
         border: 1px solid var(--wf-border);
         transition: transform .3s ease;
     }
@@ -366,8 +311,7 @@
     .wf-podcast-body { min-width: 0; }
     .wf-podcast-meta {
         display: inline-flex; align-items: center; gap: 10px;
-        font-family: "JetBrains Mono", monospace;
-        font-size: 10.5px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+        font-size: 10.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
         color: var(--wf-muted);
         margin-bottom: 8px;
     }
@@ -377,9 +321,7 @@
     }
     .wf-podcast-title {
         color: var(--wf-warm);
-        font-family: "Hanken Grotesk", sans-serif;
         font-size: 19px; font-weight: 600; line-height: 1.3;
-        letter-spacing: -0.005em;
         margin-bottom: 6px;
     }
     .wf-podcast-excerpt {
@@ -396,16 +338,14 @@
     .wf-podcast-play {
         display: inline-flex; align-items: center; gap: 8px;
         color: var(--wf-warm);
-        font-family: "Hanken Grotesk", sans-serif;
         font-size: 14px; font-weight: 600;
         transition: color .18s ease;
     }
-    .wf-podcast:hover .wf-podcast-play { color: var(--wf-orange-strong); }
+    .wf-podcast:hover .wf-podcast-play { color: var(--wf-orange); }
     .wf-podcast-play .wf-arrow { transition: transform .2s ease; }
     .wf-podcast:hover .wf-podcast-play .wf-arrow { transform: translateX(3px); }
     .wf-podcast-browse {
-        font-family: "JetBrains Mono", monospace;
-        font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+        font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
         color: var(--wf-muted);
         transition: color .18s ease;
     }
@@ -428,8 +368,7 @@
     }
     .wf-legal-left {
         display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
-        font-family: "JetBrains Mono", monospace;
-        font-size: 11.5px; font-weight: 400; letter-spacing: 0.06em;
+        font-size: 12px; letter-spacing: 0.02em;
         color: var(--wf-muted);
     }
     .wf-legal-left a:hover { color: var(--wf-white); }
@@ -523,7 +462,8 @@
                 <div class="wf-reveal" data-delay="0">
                     <div class="wf-label">WHYLEAD — LEADERSHIP &amp; PERFORMANCE SYSTEMS</div>
                     <h2 id="wlFooterHeading" class="wf-headline">
-                        Build the leadership and performance systems that make strategy work.
+                        <span class="outline-text">Build the</span> leadership and performance systems
+                        <span class="outline-text">that make</span> strategy work.
                     </h2>
                     <p class="wf-lead">
                         WhyLead helps organisations develop stronger leaders, healthier teams,

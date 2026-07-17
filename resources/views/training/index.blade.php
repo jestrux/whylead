@@ -139,7 +139,7 @@
     // A navy, C orange, E navy, N emerald, D purple.
     $acend = [
         ['letter' => 'A', 'name' => 'Align',   'desc' => 'Turn strategy into shared direction.',       'bg' => '#19124B', 'fg' => '#ffffff'],
-        ['letter' => 'C', 'name' => 'Change',  'desc' => 'Lead change and build momentum.',           'bg' => '#E8521A', 'fg' => '#ffffff'],
+        ['letter' => 'C', 'name' => 'Change',  'desc' => 'Lead change and build momentum.',           'bg' => '#F26B21', 'fg' => '#ffffff'],
         ['letter' => 'E', 'name' => 'Execute', 'desc' => 'Drive outcomes with accountability.',       'bg' => '#19124B', 'fg' => '#ffffff'],
         ['letter' => 'N', 'name' => 'Nurture', 'desc' => 'Grow trust and psychological safety.',      'bg' => '#0E9F6E', 'fg' => '#ffffff'],
         ['letter' => 'D', 'name' => 'Develop', 'desc' => 'Coach others to stretch performance.',      'bg' => '#7C3AED', 'fg' => '#ffffff'],
@@ -234,12 +234,12 @@
         .t-nav { position: relative; display: grid; gap: 8px; align-content: start; padding: 6px 0; }
         .t-nav::before {
             content: ""; position: absolute; left: 26px; top: 30px; bottom: 30px; width: 2px; border-radius: 999px;
-            background: linear-gradient(180deg, rgba(232, 82, 26, .35), rgb(var(--stroke-color)));
+            background: linear-gradient(180deg, rgba(242, 107, 33, .35), rgb(var(--stroke-color)));
         }
         .t-nav::after {
             content: ""; position: absolute; left: 21px; top: 30px; width: 11px; height: 11px; border-radius: 50%;
-            background: radial-gradient(circle, #f26a22 0%, rgba(232, 82, 26, .55) 45%, rgba(232, 82, 26, 0) 80%);
-            box-shadow: 0 0 18px 4px rgba(232, 82, 26, .45); pointer-events: none; will-change: transform, opacity;
+            background: radial-gradient(circle, #F26B21 0%, rgba(242, 107, 33, .55) 45%, rgba(242, 107, 33, 0) 80%);
+            box-shadow: 0 0 18px 4px rgba(242, 107, 33, .45); pointer-events: none; will-change: transform, opacity;
             animation: tComet 4.2s ease-in-out infinite;
         }
         .t-nav.is-touched::after { opacity: 0; animation-play-state: paused; transition: opacity .45s ease; }
@@ -267,31 +267,25 @@
         }
         .t-nav-item:hover .t-nav-ico { transform: translateY(-2px); }
         .t-nav-item.is-active .t-nav-ico {
-            color: #e8521a; border-color: rgba(232, 82, 26, .34);
-            box-shadow: 0 0 0 7px rgba(232, 82, 26, .08), 0 14px 30px rgba(232, 82, 26, .16);
+            color: #F26B21; border-color: rgba(242, 107, 33, .34);
+            box-shadow: 0 0 0 7px rgba(242, 107, 33, .08), 0 14px 30px rgba(242, 107, 33, .16);
         }
         .t-nav-kicker { font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: rgb(var(--content-color) / .45); transition: color .22s ease; }
-        .t-nav-item.is-active .t-nav-kicker { color: #e8521a; }
+        .t-nav-item.is-active .t-nav-kicker { color: #F26B21; }
         .t-nav-title { font-size: 17px; font-weight: 700; line-height: 1.12; transition: font-weight .2s ease; }
         .t-nav-item.is-active .t-nav-title { font-weight: 800; }
 
         .t-stage {
             position: relative; min-height: 340px; border: 1px solid rgb(var(--stroke-color)); border-radius: 26px; overflow: hidden;
-            background: radial-gradient(520px 260px at 60% 12%, rgba(232, 82, 26, .08), transparent 64%), rgb(var(--card-color));
-            box-shadow: 0 26px 58px rgba(15, 27, 61, .08);
-        }
-        .t-stage::before {
-            content: ""; position: absolute; inset: 0; pointer-events: none;
-            background: linear-gradient(90deg, rgb(var(--content-color) / .03) 1px, transparent 1px),
-                        linear-gradient(180deg, rgb(var(--content-color) / .03) 1px, transparent 1px);
-            background-size: 64px 64px; mask-image: linear-gradient(180deg, transparent, #000 16%, #000 82%, transparent);
+            background: radial-gradient(520px 260px at 60% 12%, rgba(242, 107, 33, .08), transparent 64%), rgb(var(--card-color));
+            box-shadow: 0 26px 58px rgb(var(--content-color) / .08);
         }
         @media (prefers-reduced-motion: reduce) { .t-nav::after { animation: none; opacity: 0; } }
 
-        /* KASH letter mark in the stage — big, brand-y */
+        /* KASH letter mark in the stage — big, brand-y (brand gradient: primary fading out) */
         .t-kash-letter {
             font-size: clamp(88px, 12vw, 148px); line-height: 1; font-weight: 800; letter-spacing: -.03em;
-            background: linear-gradient(180deg, #F26B21 0%, #EBB305 100%); -webkit-background-clip: text; background-clip: text; color: transparent;
+            background: linear-gradient(180deg, #F26B21 0%, rgba(242, 107, 33, .3) 100%); -webkit-background-clip: text; background-clip: text; color: transparent;
         }
 
         /* ---- Thrive modules: interactive spotlight (light card, orange accents, navy for active) ---- */
@@ -333,15 +327,7 @@
                         rgb(var(--content-color) / .02);
             border: 1px solid rgb(var(--content-color) / .1);
         }
-        .t-mod-stage::before {
-            content: ""; position: absolute; inset: 0; pointer-events: none;
-            background: linear-gradient(90deg, rgb(var(--content-color) / .04) 1px, transparent 1px),
-                        linear-gradient(180deg, rgb(var(--content-color) / .04) 1px, transparent 1px);
-            background-size: 44px 44px;
-            mask-image: linear-gradient(180deg, transparent, #000 22%, #000 78%, transparent);
-        }
         .t-mod-bignum {
-            font-family: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
             font-weight: 800; letter-spacing: -.06em; line-height: 1;
             font-size: clamp(64px, 12vw, 128px);
             background: linear-gradient(180deg, rgb(var(--content-color) / .18) 0%, rgb(var(--content-color) / .03) 100%);
@@ -877,8 +863,6 @@
                 style="background: radial-gradient(closest-side, rgba(242,107,33,.35), rgba(242,107,33,0));"></div>
             <div class="absolute -bottom-32 -right-24 size-[560px] rounded-full t-blob t-float"
                 style="background: radial-gradient(closest-side, rgba(25,18,75,.32), rgba(25,18,75,0)); animation-delay: -3.5s;"></div>
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[420px] rounded-full t-blob"
-                style="background: radial-gradient(closest-side, rgba(235,179,5,.22), rgba(235,179,5,0)); opacity:.4;"></div>
             <div class="absolute inset-0 opacity-[0.07]"
                 style="background-image: radial-gradient(rgb(var(--content-color)) 1px, transparent 1px); background-size: 22px 22px;
                        -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
@@ -887,24 +871,16 @@
 
         <div class="max-w-7xl mx-auto px-4 md:px-8 relative">
             <div class="t-reveal mx-auto text-center" x-data x-intersect.once="$el.classList.add('in')">
-                @php
-                    // Reusable highlighted phrase — a gradient text with a soft primary underline.
-                    $mkHighlight = function ($text, $gradient) {
-                        return '<span class="relative inline-block align-baseline">'
-                            . '<span class="relative z-10 bg-gradient-to-r ' . $gradient . ' bg-clip-text text-transparent">' . $text . '</span>'
-                            . '<span aria-hidden="true" class="absolute left-0 right-0 bottom-[0.12em] h-[0.18em] bg-primary/25 rounded-sm -z-0"></span>'
-                            . '</span>';
-                    };
-                @endphp
-                <h2 class="text-[clamp(1rem,2.7vw,2.25rem)] md:whitespace-nowrap font-bold uppercase leading-[1.15] tracking-tight">
-                    <span class="block">People leave {!! $mkHighlight('changed', 'from-primary to-[#EBB305]') !!}. Teams leave {!! $mkHighlight('sharper', 'from-primary via-[#c94210] to-accent') !!}.</span>
-                    <span class="block">Organisations leave {!! $mkHighlight('measurably better', 'from-[#EBB305] via-primary to-accent') !!}.</span>
+                {{-- Two-tone headline (style guide): light + bold segments, one primary phrase max --}}
+                <h2 class="text-[clamp(1rem,2.7vw,2.25rem)] md:whitespace-nowrap font-bold uppercase leading-[1.15] tracking-wide">
+                    <span class="block"><span class="outline-text">People leave</span> changed. <span class="outline-text">Teams leave</span> sharper.</span>
+                    <span class="block"><span class="outline-text">Organisations leave</span> <span class="text-primary">measurably better</span>.</span>
                 </h2>
 
                 <div class="mt-8 flex justify-center items-center gap-2.5" aria-hidden="true">
                     <span class="h-[3px] w-3 rounded-full bg-primary/30"></span>
                     <span class="h-[3px] w-8 rounded-full bg-primary/50"></span>
-                    <span class="h-[3px] w-16 rounded-full bg-gradient-to-r from-primary to-[#EBB305]"></span>
+                    <span class="h-[3px] w-16 rounded-full bg-primary/70"></span>
                     <span class="h-[3px] w-8 rounded-full bg-primary/50"></span>
                     <span class="h-[3px] w-3 rounded-full bg-primary/30"></span>
                 </div>
@@ -983,6 +959,10 @@
 
         </div>
     </section>
+
+    @include('home.faqs')
+
+    @include('home.cta', ['interest' => 'Training'])
 @endsection
 
 @section('scripts')

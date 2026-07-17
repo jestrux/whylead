@@ -111,7 +111,7 @@
     $ttiScore = 60;
     $ttiDims = [
         [
-            'label' => 'Trust &amp; safety', 'val' => 74, 'note' => 'strength',
+            'label' => 'Trust & safety', 'val' => 74, 'note' => 'strength',
             'today' => 'A genuine strength &mdash; people broadly feel safe to speak up and disagree.',
             'after' => 'Protected and deepened, so the harder ownership conversations can actually happen.',
             'decision' => 'Protect this strength', 'why' => 'Trust is the foundation the other fixes stand on &mdash; don&rsquo;t spend it while resetting ownership.',
@@ -246,13 +246,13 @@
         .f-nav { position: relative; display: grid; gap: 8px; align-content: start; padding: 6px 0; }
         .f-nav::before {
             content: ""; position: absolute; left: 26px; top: 30px; bottom: 30px; width: 2px; border-radius: 999px;
-            background: linear-gradient(180deg, rgba(232, 82, 26, .35), rgb(var(--stroke-color)));
+            background: linear-gradient(180deg, rgba(242, 107, 33, .35), rgb(var(--stroke-color)));
         }
         /* energy "comet" travelling down the rail */
         .f-nav::after {
             content: ""; position: absolute; left: 21px; top: 30px; width: 11px; height: 11px; border-radius: 50%;
-            background: radial-gradient(circle, #f26a22 0%, rgba(232, 82, 26, .55) 45%, rgba(232, 82, 26, 0) 80%);
-            box-shadow: 0 0 18px 4px rgba(232, 82, 26, .45); pointer-events: none; will-change: transform, opacity;
+            background: radial-gradient(circle, #F26B21 0%, rgba(242, 107, 33, .55) 45%, rgba(242, 107, 33, 0) 80%);
+            box-shadow: 0 0 18px 4px rgba(242, 107, 33, .45); pointer-events: none; will-change: transform, opacity;
             animation: fComet 4.2s ease-in-out infinite;
         }
         .f-nav.is-touched::after { opacity: 0; animation-play-state: paused; transition: opacity .45s ease; }
@@ -279,24 +279,18 @@
         }
         .f-nav-item:hover .f-nav-ico { transform: translateY(-2px); }
         .f-nav-item.is-active .f-nav-ico {
-            color: #e8521a; border-color: rgba(232, 82, 26, .34);
-            box-shadow: 0 0 0 7px rgba(232, 82, 26, .08), 0 14px 30px rgba(232, 82, 26, .16);
+            color: #F26B21; border-color: rgba(242, 107, 33, .34);
+            box-shadow: 0 0 0 7px rgba(242, 107, 33, .08), 0 14px 30px rgba(242, 107, 33, .16);
         }
         .f-nav-kicker { font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: rgb(var(--content-color) / .45); transition: color .22s ease; }
-        .f-nav-item.is-active .f-nav-kicker { color: #e8521a; }
+        .f-nav-item.is-active .f-nav-kicker { color: #F26B21; }
         .f-nav-title { font-size: 17px; font-weight: 700; line-height: 1.12; transition: font-weight .2s ease; }
         .f-nav-item.is-active .f-nav-title { font-weight: 800; }
 
         .f-stage {
             position: relative; min-height: 340px; border: 1px solid rgb(var(--stroke-color)); border-radius: 26px; overflow: hidden;
-            background: radial-gradient(520px 260px at 60% 12%, rgba(232, 82, 26, .08), transparent 64%), rgb(var(--card-color));
-            box-shadow: 0 26px 58px rgba(15, 27, 61, .08);
-        }
-        .f-stage::before {
-            content: ""; position: absolute; inset: 0; pointer-events: none;
-            background: linear-gradient(90deg, rgb(var(--content-color) / .03) 1px, transparent 1px),
-                        linear-gradient(180deg, rgb(var(--content-color) / .03) 1px, transparent 1px);
-            background-size: 64px 64px; mask-image: linear-gradient(180deg, transparent, #000 16%, #000 82%, transparent);
+            background: radial-gradient(520px 260px at 60% 12%, rgba(242, 107, 33, .08), transparent 64%), rgb(var(--card-color));
+            box-shadow: 0 26px 58px rgb(var(--content-color) / .08);
         }
         @media (prefers-reduced-motion: reduce) { .f-nav::after { animation: none; opacity: 0; } }
 
@@ -746,13 +740,15 @@
 
             {{-- Big statement --}}
             <div class="f-reveal max-w-5xl" x-data x-intersect.once="$el.classList.add('in')">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-[1.08] tracking-tight [text-wrap:balance]">
-                    Teams leave <span class="relative inline-block align-baseline"><span class="relative z-10 bg-gradient-to-r from-primary to-[#EBB305] bg-clip-text text-transparent">aligned</span><span aria-hidden="true" class="absolute left-0 right-0 bottom-[0.12em] h-[0.18em] bg-primary/25 rounded-sm -z-0"></span></span>, <span class="relative inline-block align-baseline"><span class="relative z-10 bg-gradient-to-r from-primary via-[#c94210] to-accent bg-clip-text text-transparent">stronger</span><span aria-hidden="true" class="absolute left-0 right-0 bottom-[0.12em] h-[0.18em] bg-primary/25 rounded-sm -z-0"></span></span> and <span class="relative inline-block align-baseline"><span class="relative z-10 bg-gradient-to-r from-[#EBB305] via-primary to-accent bg-clip-text text-transparent">united</span><span aria-hidden="true" class="absolute left-0 right-0 bottom-[0.12em] h-[0.18em] bg-primary/25 rounded-sm -z-0"></span></span> as a result of our facilitation.
+                {{-- Two-tone headline (style guide): light + bold segments, one primary phrase max --}}
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-[1.08] tracking-wide [text-wrap:balance]">
+                    <span class="outline-text">Teams leave</span> <span class="text-primary">aligned</span>, stronger and united
+                    <span class="outline-text">as a result of our</span> facilitation.
                 </h2>
 
                 {{-- Decorative flourish --}}
                 <div class="mt-8 flex items-center gap-2.5" aria-hidden="true">
-                    <span class="h-[3px] w-16 rounded-full bg-gradient-to-r from-primary to-[#EBB305]"></span>
+                    <span class="h-[3px] w-16 rounded-full bg-primary/70"></span>
                     <span class="h-[3px] w-8 rounded-full bg-primary/50"></span>
                     <span class="h-[3px] w-3 rounded-full bg-primary/30"></span>
                 </div>
@@ -832,6 +828,7 @@
         </div>
     </section>
 
+    @include('home.cta', ['interest' => 'Strategy & Team Building Facilitation'])
 @endsection
 
 @section('scripts')

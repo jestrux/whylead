@@ -8,9 +8,14 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'home.index');
 Route::view('/consultancy', 'consultancy.index');
 Route::view('/consultancy/facilitation', 'consultancy.facilitation');
+Route::view('/consultancy/facilitation-new', 'consultancy.facilitation-new.index');
 Route::view('/training', 'training.index');
+Route::view('/acend', 'products.acend');
+Route::view('/thriving-boundlessly', 'products.thriving-boundlessly');
 Route::view('/about', 'about.index');
 Route::view('/apply-for-job', 'about.apply-for-job');
+Route::view('/styleguide', 'styleguide.index');
+Route::view('/lab', 'styleguide.lab');
 Route::get('/contacts', function () {
     return view('contacts', [
         "countries" => Country::all(),

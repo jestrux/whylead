@@ -224,10 +224,10 @@
                     @for ($copy = 0; $copy < 2; $copy++)
                         @foreach ($row['groups'] as $i => $group)
                             <div class="flex items-baseline gap-x-4 md:gap-x-5 shrink-0" aria-hidden="{{ $copy === 1 ? 'true' : 'false' }}">
-                                <span class="text-xs md:text-sm font-bold uppercase tracking-[0.16em] text-primary shrink-0">
+                                <span class="text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-content/50 shrink-0">
                                     {{ $group['sector'] }}
                                 </span>
-                                <span class="text-primary/40 shrink-0 font-light select-none" aria-hidden="true">/</span>
+                                <span class="text-content/25 shrink-0 font-light select-none" aria-hidden="true">/</span>
                                 <div class="flex items-center gap-x-6 md:gap-x-8 shrink-0">
                                     @foreach ($group['logos'] as $logo)
                                         @if (isset($logo['src']))
