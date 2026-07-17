@@ -1,0 +1,202 @@
+<!--
+    ============================================================================
+    Team Tower — ACEND workshop-registration prefill
+    ============================================================================
+
+    RECOMMENDED (one-line install)
+    ------------------------------
+    Add this single line to the ACEND app's workshop-registration template
+    (inside <head> or just before </body>):
+
+        <script src="https://whyleadothers.com/js/team-tower-prefill.js" defer></script>
+
+    That script lives at /public/js/team-tower-prefill.js in the whyleadothers.com
+    repo. Any future tweaks to the banner or prefill logic go there — ACEND does
+    not need to redeploy.
+
+    What it does when a visitor arrives with ?tower=<base64url JSON>:
+      1. Renders a lavender/indigo result banner directly above the form.
+      2. Pre-selects the `interested_in` <select>.
+      3. Fills `expected_outcomes` <textarea> with a readable narrative of the picks.
+      4. Appends a hidden `team_tower_result` field for redundant capture.
+
+    Fails silently if no param, malformed param, or the form is missing — the
+    form works normally in that case.
+
+    Expected form field names (verified against the live DOM 2026-07-17):
+      first_name, last_name, email, phone, interested_in (select),
+      company_name, company_size, country, expected_outcomes (textarea).
+
+    If the form is rebuilt with different names, update the FIELDS object in
+    /public/js/team-tower-prefill.js.
+
+    ============================================================================
+    ALTERNATIVE (fully inline paste)
+    ============================================================================
+
+    If you'd rather not depend on the WhyLead-hosted file, the exact same script
+    is inlined below — copy the entire <style> + <script> block into the ACEND
+    workshop-registration template.
+-->
+
+<style>
+    .tt-result-banner {
+        background-color: #C3BBFF;
+        color: #19124B;
+        border-radius: 14px;
+        padding: 22px 24px;
+        margin: 0 0 28px 0;
+        box-shadow: 0 12px 28px -12px rgba(25, 18, 75, 0.28);
+        opacity: 0;
+        transform: translateY(-8px);
+        transition: opacity 500ms ease, transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .tt-result-banner.is-in { opacity: 1; transform: translateY(0); }
+    .tt-result-banner .tt-kicker {
+        font-size: 11px; font-weight: 700; letter-spacing: 0.16em;
+        text-transform: uppercase; opacity: 0.75; margin-bottom: 4px;
+    }
+    .tt-result-banner .tt-arch    { font-size: 22px; font-weight: 800; line-height: 1.2; }
+    .tt-result-banner .tt-service { font-size: 13px; margin-top: 6px; }
+    .tt-result-banner .tt-service strong { font-weight: 700; }
+    .tt-result-banner ul.tt-picks {
+        margin: 14px 0 0 0; padding: 0; list-style: none; display: grid; gap: 6px;
+    }
+    .tt-result-banner ul.tt-picks li {
+        font-size: 13px; line-height: 1.4; padding-left: 18px; position: relative;
+    }
+    .tt-result-banner ul.tt-picks li::before {
+        content: ''; position: absolute; left: 0; top: 8px;
+        width: 8px; height: 8px; border-radius: 999px; background-color: #F26B21;
+    }
+</style>
+
+<script>
+(function () {
+    'use strict';
+
+    // Selectors are ordered lists — first match wins, with generic fallbacks so
+    // renaming a field on the ACEND side doesn't silently break prefill.
+    var FIELDS = {
+        form: ['form.wl-form-grid', 'form'],
+        interestedIn: [
+            'select[name="interested_in"]',
+            'select[name="service"]',
+            'select[name="interest"]',
+            'select',
+        ],
+        notesTextarea: [
+            'textarea[name="expected_outcomes"]',
+            'textarea[name="additional_context"]',
+            'textarea[name="additional_notes"]',
+            'textarea[name="context"]',
+            'textarea[name="notes"]',
+            'textarea[name="message"]',
+            'textarea[name="objectives"]',
+            'textarea',
+        ],
+        hiddenName: 'team_tower_result',
+    };
+
+    function firstMatch(root, selectors) {
+        for (var i = 0; i < selectors.length; i++) {
+            var el = root.querySelector(selectors[i]);
+            if (el) return el;
+        }
+        return null;
+    }
+
+    function decodePayload(raw) {
+        if (!raw) return null;
+        try {
+            var b64 = raw.replace(/-/g, '+').replace(/_/g, '/');
+            var pad = b64.length % 4;
+            if (pad) b64 += '===='.slice(0, 4 - pad);
+            var json = decodeURIComponent(escape(atob(b64)));
+            var obj = JSON.parse(json);
+            if (!obj || typeof obj !== 'object') return null;
+            if (!obj.archetype || !Array.isArray(obj.picks)) return null;
+            return obj;
+        } catch (e) { return null; }
+    }
+
+    function h(tag, attrs, children) {
+        var el = document.createElement(tag);
+        if (attrs) Object.keys(attrs).forEach(function (k) {
+            if (k === 'className') el.className = attrs[k];
+            else el.setAttribute(k, attrs[k]);
+        });
+        (children || []).forEach(function (c) {
+            if (c == null) return;
+            el.appendChild(typeof c === 'string' ? document.createTextNode(c) : c);
+        });
+        return el;
+    }
+
+    function buildNarrative(data) {
+        var lines = ['[Team Tower audit result]', 'Team type: ' + data.archetype];
+        if (data.service) lines.push('Recommended: ' + data.service);
+        lines.push('', 'The 6 truths they recognized:');
+        (data.picks || []).forEach(function (p, i) { lines.push((i + 1) + '. ' + p); });
+        return lines.join('\n');
+    }
+
+    function init() {
+        var params = new URLSearchParams(window.location.search);
+        var raw = params.get('tower');
+        var data = decodePayload(raw);
+        if (!data) return;
+
+        var form = firstMatch(document, FIELDS.form);
+        if (!form) return;
+
+        var kids = [
+            h('div', { className: 'tt-kicker' }, ['Your Team Tower result']),
+            h('div', { className: 'tt-arch' }, [data.archetype]),
+        ];
+        if (data.service) kids.push(h('div', { className: 'tt-service' }, [
+            document.createTextNode('Recommended: '),
+            h('strong', null, [data.service]),
+        ]));
+        if (data.picks && data.picks.length) {
+            kids.push(h('ul', { className: 'tt-picks' }, data.picks.map(function (p) {
+                return h('li', null, [String(p)]);
+            })));
+        }
+        var banner = h('div', { className: 'tt-result-banner', role: 'note' }, kids);
+        form.parentNode.insertBefore(banner, form);
+        requestAnimationFrame(function () {
+            requestAnimationFrame(function () { banner.classList.add('is-in'); });
+        });
+        try { banner.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (e) {}
+
+        var sel = firstMatch(form, FIELDS.interestedIn);
+        if (sel && sel.tagName === 'SELECT' && data.interested_in) {
+            var opt = Array.prototype.find.call(sel.options, function (o) { return o.value === data.interested_in; });
+            if (opt) {
+                sel.value = data.interested_in;
+                sel.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+        }
+
+        var narrative = buildNarrative(data);
+        var ta = firstMatch(form, FIELDS.notesTextarea);
+        if (ta && ta.tagName === 'TEXTAREA') {
+            ta.value = ta.value && ta.value.trim().length ? narrative + '\n\n---\n\n' + ta.value : narrative;
+            ta.dispatchEvent(new Event('input', { bubbles: true }));
+        }
+
+        var hidden = document.createElement('input');
+        hidden.type = 'hidden';
+        hidden.name = FIELDS.hiddenName;
+        hidden.value = narrative;
+        form.appendChild(hidden);
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
+</script>
