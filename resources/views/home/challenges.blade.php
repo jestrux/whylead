@@ -46,6 +46,22 @@
                 document.documentElement.classList.toggle("overflow-hidden", newValue);
                 document.body.classList.toggle("overflow-hidden", newValue);
             },
+            workshopUrl(solutionTitle) {
+                const map = {
+                    'Performance Management': 'Performance Management',
+                    'Facilitating Strategic Gatherings': 'Strategy Facilitation',
+                    'Training': 'Leadership Development Training',
+                    'Leadership Development': 'Leadership Development Training',
+                    'Thriving Teams': 'Team Building Facilitation',
+                    'Team Building': 'Team Building Facilitation',
+                    'Thrive in the Middle': 'Thrive in the Middle',
+                    'Consulting on Workplace Culture': 'Other / Not Sure Yet',
+                    'Keynote Speaking': 'Other / Not Sure Yet',
+                    'Happier Workplace': 'Other / Not Sure Yet',
+                };
+                const value = map[solutionTitle] || 'Other / Not Sure Yet';
+                return 'https://acend.whyleadothers.com/workshop-registration?interested_in=' + encodeURIComponent(value);
+            },
         }));
     });
 </script>
@@ -114,7 +130,8 @@
 
                                                 <a
                                                     class="self-end mt-auto mb-2 -mr-3 btn btn-outline btn-xs capitalize !text-content/80 border-none"
-                                                    x-bind:href="'{{ url('/contacts') }}?interest=' + solution.title">
+                                                    x-bind:href="workshopUrl(solution.title)"
+                                                    target="_blank" rel="noopener">
                                                     Get in touch
 
                                                     <svg class="-mr-1 size-3.5" fill="none" viewBox="0 0 24 24"

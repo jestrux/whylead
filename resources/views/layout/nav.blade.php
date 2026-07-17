@@ -18,7 +18,7 @@
             'desc'  => 'Organizational transformation and advisory',
             'blurb' => 'Leadership programs, culture, team effectiveness, facilitation and organizational development.',
             'url'   => 'https://whyleadothers.com',
-            'cta'   => ['label' => 'Talk to WhyLead', 'url' => url('/contacts')],
+            'cta'   => ['label' => 'Talk to WhyLead', 'url' => 'https://acend.whyleadothers.com/workshop-registration'],
         ],
         'acend' => [
             'label' => 'ACEND',

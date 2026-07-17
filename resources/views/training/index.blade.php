@@ -169,7 +169,7 @@
         ],
     ];
 
-    $contactUrl = url('/contacts?interest=Training');
+    $contactUrl = 'https://acend.whyleadothers.com/workshop-registration?interested_in=' . rawurlencode('Leadership Development Training');
 @endphp
 
 @section('content')
@@ -396,7 +396,7 @@
                     </p>
 
                     <div class="t-reveal t-d3 mt-8 flex flex-wrap items-center gap-3">
-                        <a href="{{ $contactUrl }}" class="btn">Plan Your Training</a>
+                        <a href="{{ $contactUrl }}" target="_blank" rel="noopener" class="btn">Plan Your Training</a>
                         <a href="#programs"
                             class="btn btn-outline group">
                             Explore Flagship Programs
@@ -765,7 +765,7 @@
 
                         <div class="mt-10 flex flex-wrap items-center gap-3">
                             <a href="{{ url('/thrive-in-the-middle') }}" class="btn">Explore Thrive in the Middle</a>
-                            <a href="{{ $contactUrl }}" class="btn btn-outline text-content">Bring it to your organisation</a>
+                            <a href="{{ $contactUrl }}" target="_blank" rel="noopener" class="btn btn-outline text-content">Bring it to your organisation</a>
                         </div>
                     </div>
                 </div>
@@ -850,7 +850,7 @@
                             @endforeach
                         </ul>
 
-                        <a href="{{ url('/contacts?interest=Thrive on Feedback') }}" class="btn mt-6 w-full sm:w-auto self-start">Enrol your managers</a>
+                        <a href="https://acend.whyleadothers.com/workshop-registration?interested_in={{ rawurlencode('Thrive on Feedback') }}" target="_blank" rel="noopener" class="btn mt-6 w-full sm:w-auto self-start">Enrol your managers</a>
                     </div>
                 </div>
             </div>

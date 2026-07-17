@@ -16,7 +16,7 @@
         </div>
 
         <div class="mb-4 w-full flex flex-col md:flex-row items-center justify-center gap-3">
-            <a href="{{ url('/contacts' . (isset($interest) ? "?interest=$interest" : '')) }}" class="btn">
+            <a href="https://acend.whyleadothers.com/workshop-registration{{ isset($interest) ? '?interested_in=' . rawurlencode($interest) : '' }}" target="_blank" rel="noopener" class="btn">
                 <span class="mx-5">
                     Get in touch
                 </span>

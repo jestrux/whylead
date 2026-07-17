@@ -15,7 +15,7 @@
             'tagline'     => 'Organisational transformation, leadership development, facilitation, coaching, and culture work.',
             'url'         => 'https://whyleadothers.com',
             'mark_class'  => 'wf-mark--whylead',
-            'contextual_cta' => ['label' => 'Talk to WhyLead', 'url' => url('/contacts')],
+            'contextual_cta' => ['label' => 'Talk to WhyLead', 'url' => 'https://acend.whyleadothers.com/workshop-registration'],
         ],
         'acend' => [
             'label'       => 'ACEND',

@@ -157,7 +157,7 @@
                                 </ul>
 
                                 <div class="mt-5">
-                                    <a href="{{ url('/contacts?interest=Training') }}" class="btn w-full md:w-auto">
+                                    <a href="https://acend.whyleadothers.com/workshop-registration?interested_in={{ rawurlencode('Leadership Development Training') }}" target="_blank" rel="noopener" class="btn w-full md:w-auto">
                                         Transform Your Leaders
                                     </a>
                                 </div>

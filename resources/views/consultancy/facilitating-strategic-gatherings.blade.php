@@ -71,7 +71,7 @@
                 </div>
 
                 <div class="mt-5 gap-3">
-                    <a href="{{ url('/contacts?interest=Facilitating Strategic Gatherings') }}" class="btn w-full md:w-auto">
+                    <a href="https://acend.whyleadothers.com/workshop-registration?interested_in={{ rawurlencode('Strategy Facilitation') }}" target="_blank" rel="noopener" class="btn w-full md:w-auto">
                         Get in touch
                     </a>
                 </div>

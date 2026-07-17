@@ -98,7 +98,7 @@
                 </ul>
 
                 <div class="mt-5 gap-3">
-                    <a href="{{ url('/contacts?interest=Thriving Teams') }}" class="btn w-full md:w-auto">
+                    <a href="https://acend.whyleadothers.com/workshop-registration?interested_in={{ rawurlencode('Team Building Facilitation') }}" target="_blank" rel="noopener" class="btn w-full md:w-auto">
                         Get in touch
                     </a>
                 </div>
