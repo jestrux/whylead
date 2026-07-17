@@ -21,7 +21,7 @@
              'desc' => 'Organizational transformation and advisory',
              'blurb' => 'Leadership programs, culture, team effectiveness, facilitation and organizational development.',
              'url' => 'https://whyleadothers.com',
-             'cta_label' => 'Talk to WhyLead', 'cta_url' => url('/contacts')],
+             'cta_label' => 'Talk to WhyLead', 'cta_url' => 'https://acend.whyleadothers.com/workshop-registration'],
             ['key' => 'acend', 'label' => 'ACEND', 'here' => 'ACEND',
              'desc' => 'Leadership intelligence for the middle',
              'blurb' => 'Assess, understand and develop the managers responsible for turning strategy into execution.',
@@ -43,7 +43,7 @@
         'url'   => $row['url'] ?? '#',
         'cta'   => [
             'label' => $row['cta_label'] ?? 'Get in touch',
-            'url'   => $row['cta_url'] ?? url('/contacts'),
+            'url'   => $row['cta_url'] ?? 'https://acend.whyleadothers.com/workshop-registration',
         ],
     ])->all();
 

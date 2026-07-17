@@ -39,6 +39,17 @@
                 });
 
                 this.updateScroll();
+            },
+            workshopUrl(course) {
+                const map = {
+                    'Develop Thriving Leaders': 'Leadership Development Training',
+                    'Develop Thriving Teams': 'Team Building Facilitation',
+                    'Performance Management': 'Performance Management',
+                    'Strengthen/Transform Our Culture': 'Other / Not Sure Yet',
+                    'Thrive in The Middle': 'Thrive in the Middle',
+                };
+                const value = map[course.title] || 'Other / Not Sure Yet';
+                return 'https://acend.whyleadothers.com/workshop-registration?interested_in=' + encodeURIComponent(value);
             }
         }));
     });
@@ -193,8 +204,11 @@
 
                         <span></span>
 
-                        <a x-bind:href="'{{ url('/') }}' + course.action + (course.action == '/contacts' ?
-                            ('?interest=' + course.title) : '')"
+                        <a x-bind:href="course.action == '/contacts'
+                            ? workshopUrl(course)
+                            : ('{{ url('/') }}' + course.action)"
+                            x-bind:target="course.action == '/contacts' ? '_blank' : ''"
+                            x-bind:rel="course.action == '/contacts' ? 'noopener' : ''"
                             x-on:click="showPrompt = false" class="btn btn-sm srounded-r-full flex-shrink-0">
                             Get in touch
 

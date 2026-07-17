@@ -43,7 +43,7 @@
                 </p>
 
                 <div class="mt-2">
-                    <a href="{{ url('/contacts') }}" class="btn w-full lg:w-auto">
+                    <a href="https://acend.whyleadothers.com/workshop-registration?interested_in={{ rawurlencode('Team Building Facilitation') }}" target="_blank" rel="noopener" class="btn w-full lg:w-auto">
                         Build a thriving team today
                     </a>
                 </div>

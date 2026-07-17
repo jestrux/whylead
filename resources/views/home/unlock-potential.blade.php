@@ -85,7 +85,7 @@
 
             <div class="text-center">
                 <p class="text-lg opacity-70">Ready to take your organisation to the next level?</p>
-                <a href="{{ url('/contacts') }}" class="mt-3 btn w-full md:w-auto">
+                <a href="https://acend.whyleadothers.com/workshop-registration" target="_blank" rel="noopener" class="mt-3 btn w-full md:w-auto">
                     Tell us your needs
                 </a>
             </div>

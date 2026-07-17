@@ -185,7 +185,7 @@
         ],
     ];
 
-    $contactUrl = url('/contacts?interest=Facilitating Strategic Gatherings');
+    $contactUrl = 'https://acend.whyleadothers.com/workshop-registration?interested_in=' . rawurlencode('Strategy Facilitation');
 @endphp
 
 @section('content')
@@ -347,7 +347,7 @@
                     </p>
 
                     <div class="f-reveal f-d3 mt-8 flex flex-wrap items-center gap-3">
-                        <a href="{{ $contactUrl }}" class="btn">Plan Your Session</a>
+                        <a href="{{ $contactUrl }}" target="_blank" rel="noopener" class="btn">Plan Your Session</a>
                         <a href="#sessions"
                             class="btn btn-outline group">
                             Explore Facilitation Services
@@ -516,7 +516,7 @@
                                     </li>
                                 @endforeach
                             </ul>
-                            <a href="{{ $contactUrl }}" class="btn mt-7">Plan a {{ \Illuminate\Support\Str::before($s['name'], ' Sessions') }} session</a>
+                            <a href="{{ $contactUrl }}" target="_blank" rel="noopener" class="btn mt-7">Plan a {{ \Illuminate\Support\Str::before($s['name'], ' Sessions') }} session</a>
                         </div>
                     @endforeach
                 </div>

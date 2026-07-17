@@ -63,7 +63,7 @@
                 <p class="text-xl opacity-70">
                     We are on a mission to help organizations thrive
                 </p>
-                <a href="{{ url('/contacts') }}" class="mt-3 btn w-full md:w-auto">
+                <a href="https://acend.whyleadothers.com/workshop-registration" target="_blank" rel="noopener" class="mt-3 btn w-full md:w-auto">
                     Hire WhyLead today
                 </a>
             </div>
