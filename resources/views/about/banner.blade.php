@@ -295,10 +295,10 @@
                              timeline. Fades out once the first story beat is
                              armed. --}}
                         <div class="story-scroll-hint" aria-hidden="true">
+                            <span>Scroll to see more</span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M12 5v14M6 13l6 6 6-6" />
                             </svg>
-                            <span>Scroll to see more</span>
                         </div>
 
                         <p class="story-p mt-1 text-base/loose opacity-70" data-story-p="1">
