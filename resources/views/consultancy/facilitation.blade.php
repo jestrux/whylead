@@ -1,24 +1,7 @@
 @php
-    // Facilitation page entry — meta_title and meta_description are editable
-    // from Statamic (Collections > Pages > Facilitation). Defaults below match
-    // the design copy so the page reads well even if the entry is empty.
-    $_g = \Statamic\Facades\Entry::query()
-        ->where('collection', 'pages')
-        ->where('slug', 'facilitation')
-        ->first();
-    $_metaTitle = $_g?->get('meta_title')
-        ?: 'Strategy Facilitation & Team Building in Dar es Salaam, Tanzania | WhyLead';
-    $_metaDescription = $_g?->get('meta_description')
-        ?: 'WhyLead is a strategy facilitation, leadership retreat and corporate team-building partner in Dar es Salaam, Tanzania and across East Africa — helping leadership teams turn important conversations into clear decisions, shared priorities and practical next steps.';
-
-    // Hero image — reuses the consultancy page's facilitating-gatherings image
-    // from Statamic, with a safe fallback.
-    $_consultancy = \Statamic\Facades\Entry::query()
-        ->where('collection', 'pages')
-        ->where('slug', 'consultancy')
-        ->first();
-    $heroImage = $_consultancy?->augmentedValue('facilitating_gatherings_image')->value()?->url()
-        ?: asset('img/uploads/pier_files/MF_20221101_0338_1715093295.jpg');
+    $_metaTitle = 'Strategy Facilitation & Team Building in Dar es Salaam, Tanzania | WhyLead';
+    $_metaDescription = 'WhyLead is a strategy facilitation, leadership retreat and corporate team-building partner in Dar es Salaam, Tanzania and across East Africa — helping leadership teams turn important conversations into clear decisions, shared priorities and practical next steps.';
+    $heroImage = asset('img/uploads/pier_files/MF_20221101_0338_1715093295.jpg');
 @endphp
 
 @extends('layout.index')

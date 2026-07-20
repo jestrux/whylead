@@ -16,11 +16,20 @@
 
             <ul role="list" class="w-full grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-8">
                 @php
-                    $_about_page = $_about_page ?? \Statamic\Facades\Entry::query()->where('collection', 'pages')->where('slug', 'about')->first();
-                    $values = collect($_about_page?->get('values') ?? [])->map(fn($v) => [
-                        'title' => $v['title'] ?? '',
-                        'description' => $v['description'] ?? '',
-                    ])->values()->all();
+                    $values = [
+                        [
+                            'title' => 'Ubuntu Kwanza',
+                            'description' => 'Treating All as Ends, Never Means. Working to create win-win outcomes for all earthlings.',
+                        ],
+                        [
+                            'title' => 'Game 6',
+                            'description' => 'We do what we say we do. We are who we say we are. We seize every opportunity we say yes to. We go ALL-IN and Give our absolute best.',
+                        ],
+                        [
+                            'title' => 'Data-Driven',
+                            'description' => "If we have data, let's look at data. If all we have are opinions, let's go look for data.",
+                        ],
+                    ];
 
                     $characters = [
                         'Ubuntu Kwanza' => [
