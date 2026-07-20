@@ -1,10 +1,30 @@
+@php
+    // Facilitation page entry — meta_title and meta_description are editable
+    // from Statamic (Collections > Pages > Facilitation). Defaults below match
+    // the design copy so the page reads well even if the entry is empty.
+    $_g = \Statamic\Facades\Entry::query()
+        ->where('collection', 'pages')
+        ->where('slug', 'facilitation')
+        ->first();
+    $_metaTitle = $_g?->get('meta_title')
+        ?: 'Strategy Facilitation & Team Building in Dar es Salaam, Tanzania | WhyLead';
+    $_metaDescription = $_g?->get('meta_description')
+        ?: 'WhyLead is a strategy facilitation, leadership retreat and corporate team-building partner in Dar es Salaam, Tanzania and across East Africa — helping leadership teams turn important conversations into clear decisions, shared priorities and practical next steps.';
+
+    // Hero image — reuses the consultancy page's facilitating-gatherings image
+    // from Statamic, with a safe fallback.
+    $_consultancy = \Statamic\Facades\Entry::query()
+        ->where('collection', 'pages')
+        ->where('slug', 'consultancy')
+        ->first();
+    $heroImage = $_consultancy?->augmentedValue('facilitating_gatherings_image')->value()?->url()
+        ?: asset('img/uploads/pier_files/MF_20221101_0338_1715093295.jpg');
+@endphp
+
 @extends('layout.index')
 
-@section('title', 'Strategy Facilitation & Team Building in Dar es Salaam, Tanzania | WhyLead')
-@section('description',
-    'WhyLead is a strategy facilitation, leadership retreat and corporate team-building partner in Dar es Salaam,
-    Tanzania and across East Africa — helping leadership teams turn important conversations into clear decisions,
-    shared priorities and practical next steps.')
+@section('title', $_metaTitle)
+@section('description', $_metaDescription)
 
 @section('meta')
     <meta name="keywords"
@@ -12,13 +32,6 @@
 @endsection
 
 @php
-    // Hero image comes from the same Content model the consultancy page uses,
-    // with a safe fallback so the page always renders.
-    $content = collect(pierData('Content', ['wherePage' => 'Consultancy'])['data'] ?? []);
-    $heroImage = optional($content->first(fn ($i) => ($i->name ?? '') === 'Facilitating Strategic Gatherings Image'))->image;
-    $heroImage = $heroImage
-        ? str_replace('http://localhost:8000/', asset(''), $heroImage)
-        : asset('img/uploads/pier_files/MF_20221101_0338_1715093295.jpg');
 
     $sessions = [
         [
@@ -172,7 +185,7 @@
         ],
     ];
 
-    $contactUrl = url('/contacts?interest=Facilitating Strategic Gatherings');
+    $contactUrl = 'https://acend.whyleadothers.com/workshop-registration?interested_in=' . rawurlencode('Strategy Facilitation');
 @endphp
 
 @section('content')
@@ -334,7 +347,7 @@
                     </p>
 
                     <div class="f-reveal f-d3 mt-8 flex flex-wrap items-center gap-3">
-                        <a href="{{ $contactUrl }}" class="btn">Plan Your Session</a>
+                        <a href="{{ $contactUrl }}" target="_blank" rel="noopener" class="btn">Plan Your Session</a>
                         <a href="#sessions"
                             class="btn btn-outline group">
                             Explore Facilitation Services
@@ -351,20 +364,7 @@
 
                     <div class="f-reveal f-d4 mt-10">
                         <p class="text-[11px] font-bold uppercase tracking-widest opacity-40">Trusted by</p>
-                        <div class="mt-4 flex flex-wrap items-center gap-x-8 gap-y-5">
-                            @php
-                                $trusted = [
-                                    ['src' => 'img/clients/vodacom.png',    'alt' => 'Vodacom',          'h' => 'h-6 md:h-7'],
-                                    ['src' => 'img/clients/crdb.png',       'alt' => 'CRDB Bank',        'h' => 'h-8 md:h-9'],
-                                    ['src' => 'img/clients/malala.svg',     'alt' => 'Malala Fund',      'h' => 'h-5 md:h-6'],
-                                    ['src' => 'img/clients/women-lift.png', 'alt' => 'Womenlift Health', 'h' => 'h-6 md:h-7'],
-                                ];
-                            @endphp
-                            @foreach ($trusted as $logo)
-                                <img src="{{ asset($logo['src']) }}" alt="{{ $logo['alt'] }}"
-                                    class="{{ $logo['h'] }} w-auto object-contain brightness-0 dark:invert opacity-55 hover:opacity-100 transition-opacity duration-300" />
-                            @endforeach
-                        </div>
+                        @include('partials.trusted-marquee')
                     </div>
                 </div>
 
@@ -516,7 +516,7 @@
                                     </li>
                                 @endforeach
                             </ul>
-                            <a href="{{ $contactUrl }}" class="btn mt-7">Plan a {{ \Illuminate\Support\Str::before($s['name'], ' Sessions') }} session</a>
+                            <a href="{{ $contactUrl }}" target="_blank" rel="noopener" class="btn mt-7">Plan a {{ \Illuminate\Support\Str::before($s['name'], ' Sessions') }} session</a>
                         </div>
                     @endforeach
                 </div>
@@ -527,7 +527,7 @@
     {{-- ============ TEAM BUILDING & RETREATS (human level) ============ --}}
     <section class="relative py-12 md:py-16 bg-accent/[0.04]">
         <div class="max-w-7xl mx-auto px-4 md:px-8">
-            @php $tbPhotos = ['retreat-2.jpg', 'retreat-1.jpg', 'retreat-3.jpg', 'retreat-5.jpg']; @endphp
+            @php $tbPhotos = ['retreat-1.jpg', 'retreat-2.jpg', 'retreat-3.jpg', 'retreat-4.jpg']; @endphp
             <div class="lg:grid grid-cols-2 gap-12 xl:gap-16 items-center"
                 x-data="{ active: 0, rx: 0, ry: 0,
                     tilt(e) { const r = e.currentTarget.getBoundingClientRect(); this.ry = ((e.clientX - r.left) / r.width - .5) * 7; this.rx = -((e.clientY - r.top) / r.height - .5) * 7; },
@@ -583,7 +583,7 @@
                             <p x-show="active === {{ $i }}" x-cloak x-transition
                                 class="absolute left-6 bottom-6 right-6 text-white font-bold text-lg leading-snug pointer-events-none">{{ strip_tags(html_entity_decode($c['title'])) }}</p>
                         @endforeach
-                        <span class="absolute left-6 top-6 text-[10px] font-bold uppercase tracking-widest text-white/70 pointer-events-none">Out of the comfort zone, together</span>
+                        <span class="absolute left-6 top-6 text-[10px] font-bold uppercase tracking-widest text-white/70 pointer-events-none">On retreat, together</span>
                     </div>
                     <p class="mt-4 text-center lg:text-left text-xs opacity-50">Hover a card to explore &middot; move your cursor over the photo</p>
                 </div>
