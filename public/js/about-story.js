@@ -188,10 +188,13 @@
             var blueWord = section.querySelector(".treat-blue");
             var storyBtn = section.querySelector(".story-btn");
             var btnOutlinePath = section.querySelector(".story-btn-outline path");
+            var scrollHint = section.querySelector(".story-scroll-hint");
 
-            // Initial states.
+            // Initial states. Heading stays visible from first paint so the
+            // page never lands on an empty viewport — the story unfolds as the
+            // reader scrolls, but the "Once Upon A Time" beat is already there.
             gsap.set(thread, { scaleY: 0, transformOrigin: "top center" });
-            gsap.set(headingWords, { autoAlpha: 0, yPercent: 110 });
+            gsap.set(headingWords, { autoAlpha: 1, yPercent: 0 });
             if (scrap) {
                 gsap.set(scrap, { autoAlpha: 0, y: -30, rotate: -12, scale: 0.9, transformOrigin: "60% 40%" });
             }
@@ -231,13 +234,13 @@
                 },
             });
 
-            /* Headline assembles + thread grows. */
-            tl.to(
-                headingWords,
-                { autoAlpha: 1, yPercent: 0, duration: 0.08, stagger: 0.02, ease: "back.out(1.6)" },
-                0,
-            );
+            /* Thread grows down the narrative gutter. Heading is visible from
+               the start, so no headline assemble here — the scroll hint below
+               tells the reader to start scrolling. */
             tl.to(thread, { scaleY: 1, duration: 1, ease: "none" }, 0);
+            if (scrollHint) {
+                tl.to(scrollHint, { autoAlpha: 0, duration: 0.05 }, 0);
+            }
 
             /* Scrap photo slaps down like a polaroid dropped on the page. */
             if (scrap) {
@@ -354,7 +357,9 @@
                 gsap.set(thread, { display: "none" });
             }
 
-            gsap.set(headingWords, { autoAlpha: 0, yPercent: 60 });
+            var scrollHint = section.querySelector(".story-scroll-hint");
+
+            gsap.set(headingWords, { autoAlpha: 1, yPercent: 0 });
             if (scrap) {
                 gsap.set(scrap, { autoAlpha: 0, y: -20, rotate: -8, scale: 0.94 });
             }
@@ -378,20 +383,16 @@
                 p.classList.add("story-p--armed");
             });
 
-            ScrollTrigger.create({
-                trigger: section,
-                start: "top 80%",
-                once: true,
-                onEnter: function () {
-                    gsap.to(headingWords, {
-                        autoAlpha: 1,
-                        yPercent: 0,
-                        duration: 0.5,
-                        stagger: 0.08,
-                        ease: "back.out(1.4)",
-                    });
-                },
-            });
+            if (scrollHint) {
+                ScrollTrigger.create({
+                    trigger: section,
+                    start: "top 40%",
+                    once: true,
+                    onEnter: function () {
+                        gsap.to(scrollHint, { autoAlpha: 0, duration: 0.4 });
+                    },
+                });
+            }
 
             if (scrap) {
                 ScrollTrigger.create({

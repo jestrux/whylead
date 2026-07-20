@@ -75,11 +75,38 @@
     html.js-story #aboutUs .story-p:not(.is-split) { opacity: 0; }
     html.js-story #aboutUs .story-p.is-split { opacity: 1; visibility: hidden; }
     html.js-story #aboutUs .story-p.is-split.story-p--armed { visibility: visible; }
-    html.js-story #aboutUs .story-headline-word { opacity: 0; }
     html.js-story #aboutUs .story-btn { opacity: 0; }
     html.js-story #aboutUs .story-card { opacity: 0; }
     html.js-story #aboutUs .story-badge { opacity: 0; }
     html.js-story #aboutUs .story-scrap { opacity: 0; }
+
+    /* Scroll-to-see-more hint — visible on first paint below the heading.
+       Fades out via GSAP once the first story beat is armed. */
+    #aboutUs .story-scroll-hint {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 20px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #F26B21;
+        opacity: 0.85;
+        pointer-events: none;
+    }
+    #aboutUs .story-scroll-hint svg {
+        width: 14px;
+        height: 14px;
+        animation: story-scroll-nudge 1.6s ease-in-out infinite;
+    }
+    @keyframes story-scroll-nudge {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(4px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+        #aboutUs .story-scroll-hint svg { animation: none; }
+    }
 
     /* Inline word treatments — "Intervene" underline. */
     #aboutUs .treat-underline {
@@ -263,6 +290,16 @@
                                 <span class="story-headline-word">Time</span>
                             </span>
                         </h2>
+
+                        {{-- Scroll hint — nudges the reader into the pinned
+                             timeline. Fades out once the first story beat is
+                             armed. --}}
+                        <div class="story-scroll-hint" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 5v14M6 13l6 6 6-6" />
+                            </svg>
+                            <span>Scroll to see more</span>
+                        </div>
 
                         <p class="story-p mt-1 text-base/loose opacity-70" data-story-p="1">
                             We began with a simple but profound question: <span class="treat-whylead">Why lead?</span>
